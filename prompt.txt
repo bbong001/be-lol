@@ -1,0 +1,49 @@
+Bạn là một lập trình viên backend chuyên nghiệp sử dụng NestJS với hơn 10 năm kinh nghiệm.
+
+Hãy giúp tôi khởi tạo cấu trúc dự án backend hoàn chỉnh cho một trang web giống https://kicdo.com, bao gồm:
+
+---
+
+📌 **Công nghệ sử dụng**:
+- NestJS (TypeScript)
+- MongoDB (qua @nestjs/mongoose)
+- Riot API (dùng thư viện `twisted`)
+- JWT Auth (phân quyền `admin` và `user`)
+- Redis cache cho dữ liệu ít thay đổi (Data Dragon, ngọc, trang bị, patch...)
+
+---
+
+📁 **Các module cần tạo** (mỗi module gồm: controller, service, schema hoặc DTO nếu có):
+1. `champions`: quản lý tướng LMHT (tên, chỉ số, kỹ năng, build đồ, ngọc, khắc chế)
+2. `matches`: lấy lịch sử đấu người chơi từ Riot API
+3. `stats`: thống kê meta (winrate, pickrate, banrate)
+4. `news`: CRUD tin tức, bài viết (title, slug, content, tags, coverImage)
+5. `comments`: mỗi bài viết có thể có nhiều bình luận (authorName, content, createdAt)
+6. `pc-build`: tạo & lưu cấu hình máy tính từ nhiều linh kiện
+7. `auth`: xác thực JWT và phân quyền
+8. `common`: provider Riot API (`twisted`), guard `@Roles`, middleware
+
+---
+
+✅ **Thư viện cần cài**:
+- @nestjs/mongoose, mongoose
+- @nestjs/jwt, @nestjs/passport, passport-jwt
+- twisted
+- class-validator, class-transformer, bcrypt, dotenv, lodash
+- redis hoặc ioredis nếu có
+
+---
+
+🎯 **Yêu cầu cụ thể**:
+- Tạo cấu trúc thư mục chuẩn, có `app.module.ts` import đầy đủ
+- Mỗi module gồm các file: controller, service, schema hoặc DTO
+- Tạo file `.env.example` với các biến: `RIOT_API_KEY`, `MONGODB_URI`, `JWT_SECRET`
+- Cấu hình provider Riot API (`LolApi` từ `twisted`)
+- Trong `news`, mỗi bài viết liên kết đến nhiều `comments`:
+  - Tạo schema `Comment` riêng với các trường: `newsId`, `authorName`, `content`, `createdAt`
+  - Tạo controller và service riêng cho comment
+  - Liên kết comment với bài viết bằng `newsId` (ref)
+
+---
+
+❗ Chỉ cần tạo cấu trúc và ví dụ code ban đầu, chưa cần viết logic đầy đủ.
