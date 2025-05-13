@@ -21,6 +21,7 @@ import {
   ApiQuery,
   ApiBearerAuth,
 } from '@nestjs/swagger';
+import { CreatePCBuildDto } from './dtos/create-pc-build.dto';
 
 @ApiTags('pc-builds')
 @Controller('pc-build')
@@ -120,6 +121,23 @@ export class PcBuildController {
     return {
       status: 'success',
       data: await this.pcBuildService.findUserBuilds(req.user.userId),
+    };
+  }
+
+  @ApiOperation({ summary: 'Create a new PC build' })
+  @ApiResponse({ status: 201, description: 'Build created successfully' })
+  @ApiResponse({ status: 401, description: 'Unauthorized' })
+  @ApiBearerAuth()
+  @UseGuards(JwtAuthGuard)
+  @Post('builds')
+  async createBuild(
+    @Body() body: CreatePCBuildDto,
+    @Request() req
+  ) {
+    const build = await this.pcBuildService.createBuild(body, req.user.userId);
+    return {
+      status: 'success',
+      data: build,
     };
   }
 }

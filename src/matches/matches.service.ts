@@ -73,7 +73,7 @@ export class MatchesService {
       console.log(encodedGameName);
       const encodedTagLine = encodeURIComponent(tagLine);
       const accountResponse = await fetch(
-        `https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/H%E1%BB%95n%20%C4%91%E1%BB%99n%20ma%20th%E1%BA%A7n/vn2?api_key=RGAPI-f7a69b0b-748f-45ee-9d82-a9be2e937c12`,
+        `https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/H%E1%BB%95n%20%C4%91%E1%BB%99n%20ma%20th%E1%BA%A7n/vn2?api_key=RGAPI-747d0ef4-f392-4992-b3c6-dcd5930ba196`,
       );
 
       console.log(accountResponse);
@@ -185,7 +185,7 @@ export class MatchesService {
         const newMatchPromises = newMatchIds.map(async (matchId) => {
           try {
             const matchResponse = await fetch(
-              `https://${region}.api.riotgames.com/lol/match/v5/matches/${matchId}?api_key=${apiKey}`,
+              `https://sea.api.riotgames.com/lol/match/v5/matches/${matchId}?api_key=${apiKey}`,
             );
 
             if (!matchResponse.ok) {

@@ -74,4 +74,17 @@ export class PcBuildService {
       .populate('components.component')
       .lean();
   }
+
+  async createBuild(createPCBuildDto: any, userId: string): Promise<PCBuild> {
+    const build = new this.pcBuildModel({
+      ...createPCBuildDto,
+      user: userId,
+    });
+    await build.save();
+    return this.pcBuildModel
+      .findById(build._id)
+      .populate('user', 'name')
+      // .populate('components.component')
+      .lean();
+  }
 }
