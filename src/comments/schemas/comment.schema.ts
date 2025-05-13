@@ -15,9 +15,18 @@ export class Comment {
   @ApiProperty({
     description: 'ID of the news article this comment belongs to',
     example: '507f1f77bcf86cd799439011',
+    required: false,
   })
-  @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'Article', required: true })
-  newsId: MongooseSchema.Types.ObjectId;
+  @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'Article', default: null })
+  newsId: MongooseSchema.Types.ObjectId | null;
+
+  @ApiProperty({
+    description: 'ID of the PC build this comment belongs to',
+    example: '507f1f77bcf86cd799439011',
+    required: false,
+  })
+  @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'PCBuild', default: null })
+  pcBuildId: MongooseSchema.Types.ObjectId | null;
 
   @ApiProperty({ description: 'Name of the author', example: 'John Doe' })
   @Prop({ required: true })

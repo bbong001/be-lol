@@ -18,8 +18,11 @@ export class CommentsService {
     limit = 10,
     page = 1,
     newsId?: string,
+    pcBuildId?: string,
   ): Promise<{ comments: Comment[]; total: number }> {
-    const filter = newsId ? { newsId: new Types.ObjectId(newsId) } : {};
+    let filter: any = {};
+    if (newsId) filter.newsId = newsId;
+    if (pcBuildId) filter.pcBuildId = pcBuildId;
     const skip = (page - 1) * limit;
 
     const [comments, total] = await Promise.all([
@@ -49,10 +52,6 @@ export class CommentsService {
   }
 
   async create(createCommentDto: CreateCommentDto): Promise<Comment> {
-    if (!Types.ObjectId.isValid(createCommentDto.newsId as unknown as string)) {
-      throw new BadRequestException('Invalid news ID');
-    }
-
     const comment = new this.commentModel(createCommentDto);
     return comment.save();
   }
@@ -62,11 +61,15 @@ export class CommentsService {
     limit = 10,
     page = 1,
   ): Promise<{ comments: Comment[]; total: number }> {
-    if (!Types.ObjectId.isValid(newsId)) {
-      throw new BadRequestException('Invalid news ID');
-    }
+    return this.findAll(limit, page, newsId, undefined);
+  }
 
-    return this.findAll(limit, page, newsId);
+  async findByPcBuildId(
+    pcBuildId: string,
+    limit = 10,
+    page = 1,
+  ): Promise<{ comments: Comment[]; total: number }> {
+    return this.findAll(limit, page, undefined, pcBuildId);
   }
 
   async deleteById(id: string): Promise<void> {

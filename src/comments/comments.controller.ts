@@ -20,6 +20,7 @@ import {
   ApiQuery,
   ApiBearerAuth,
 } from '@nestjs/swagger';
+import { Types } from 'mongoose';
 
 @ApiTags('comments')
 @Controller('comments')
@@ -98,19 +99,64 @@ export class CommentsController {
     };
   }
 
-  @ApiOperation({ summary: 'Create a new comment' })
-  @ApiResponse({ status: 201, description: 'Comment created successfully' })
-  @ApiResponse({ status: 400, description: 'Bad request' })
-  @Post()
-  async create(@Body() createCommentDto: CreateCommentDto, @Request() req) {
-    // If user is authenticated, add userId to the comment
-    if (req.user) {
-      createCommentDto.userId = req.user.userId;
-    }
-
+  @ApiOperation({ summary: 'Get comments for a specific PC build' })
+  @ApiParam({ name: 'pcBuildId', description: 'PC Build ID' })
+  @ApiQuery({ name: 'limit', description: 'Number of comments to return', required: false, type: Number })
+  @ApiQuery({ name: 'page', description: 'Page number', required: false, type: Number })
+  @ApiResponse({ status: 200, description: 'Comments retrieved successfully' })
+  @ApiResponse({ status: 400, description: 'Invalid PC Build ID' })
+  @Get('/pc-build/:pcBuildId')
+  async findByPcBuildId(
+    @Param('pcBuildId') pcBuildId: string,
+    @Query('limit') limit: string,
+    @Query('page') page: string,
+  ) {
+    const limitNumber = limit ? parseInt(limit, 10) : 10;
+    const pageNumber = page ? parseInt(page, 10) : 1;
     return {
       status: 'success',
-      data: await this.commentsService.create(createCommentDto),
+      data: await this.commentsService.findByPcBuildId(
+        pcBuildId,
+        limitNumber,
+        pageNumber,
+      ),
+    };
+  }
+
+  @ApiOperation({ summary: 'Create a new comment for a news article' })
+  @ApiResponse({ status: 201, description: 'Comment created successfully' })
+  @ApiResponse({ status: 400, description: 'Bad request' })
+
+  @Post('/news/:newsId')
+  async createForNews(@Param('newsId') newsId: string, @Body() dto: CreateCommentDto, @Request() req) {
+    const commentData: any = {
+      ...dto,
+      newsId: new Types.ObjectId(newsId),
+      pcBuildId: undefined,
+      userId: req.user ? req.user.userId : undefined,
+      authorName: req.user ? req.user.name : 'Ẩn danh',
+    };
+    return {
+      status: 'success',
+      data: await this.commentsService.create(commentData),
+    };
+  }
+
+  @ApiOperation({ summary: 'Create a new comment for a PC build' })
+  @ApiResponse({ status: 201, description: 'Comment created successfully' })
+  @ApiResponse({ status: 400, description: 'Bad request' })
+  @Post('/pc-build/:pcBuildId')
+  async createForPcBuild(@Param('pcBuildId') pcBuildId: string, @Body() dto: CreateCommentDto, @Request() req) {
+    const commentData: any = {
+      ...dto,
+      pcBuildId: new Types.ObjectId(pcBuildId),
+      newsId: undefined,
+      userId: req.user ? req.user.userId : undefined,
+      authorName: req.user ? req.user.name : 'Ẩn danh',
+    };
+    return {
+      status: 'success',
+      data: await this.commentsService.create(commentData),
     };
   }
 

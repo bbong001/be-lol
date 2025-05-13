@@ -45,7 +45,6 @@ export class PcBuildService {
         .skip(skip)
         .limit(limit)
         .populate('user', 'name')
-        .populate('components.component')
         .lean(),
       this.pcBuildModel.countDocuments({ isPublic: true }),
     ]);
