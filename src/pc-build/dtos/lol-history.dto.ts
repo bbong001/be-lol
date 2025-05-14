@@ -9,4 +9,4 @@ export class LolHistoryQueryDto {
   @ApiProperty({ example: 'vn2', description: 'Tag server hoặc mã định danh' })
   @IsString()
   tag: string;
-} 
+}

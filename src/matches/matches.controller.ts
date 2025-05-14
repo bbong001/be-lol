@@ -122,7 +122,8 @@ export class MatchesController {
   @ApiOperation({ summary: 'Lấy chi tiết trận đấu từ LeagueOfGraphs' })
   @ApiParam({
     name: 'matchPath',
-    description: 'Đường dẫn trận đấu (ví dụ: /vn/match/vn/876142021#participant4)',
+    description:
+      'Đường dẫn trận đấu (ví dụ: /vn/match/vn/876142021#participant4)',
   })
   @ApiResponse({
     status: 200,

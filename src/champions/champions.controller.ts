@@ -72,6 +72,24 @@ export class ChampionsController {
     };
   }
 
+  @ApiOperation({ summary: 'Get champion details by name from Data Dragon' })
+  @ApiParam({
+    name: 'name',
+    description: 'Champion name or partial name to search',
+  })
+  @ApiResponse({
+    status: 200,
+    description: 'Champion details from Data Dragon',
+  })
+  @ApiResponse({ status: 404, description: 'No champions found' })
+  @Get('details/:name')
+  async getDetailsByName(@Param('name') name: string) {
+    return {
+      status: 'success',
+      data: await this.championsService.findDetailsByName(name),
+    };
+  }
+
   @ApiOperation({ summary: 'Get champion by ID' })
   @ApiParam({ name: 'id', description: 'Champion ID' })
   @ApiResponse({ status: 200, description: 'Champion details' })

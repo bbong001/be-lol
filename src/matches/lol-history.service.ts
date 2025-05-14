@@ -22,9 +22,16 @@ export class LolHistoryService {
         const row = $(el);
 
         // Loại trừ các row không phải trận đấu (header, "xem thêm", v.v.)
-        if (!row.find('td.championCellLight img, td.championCellDark img').length) return;
+        if (
+          !row.find('td.championCellLight img, td.championCellDark img').length
+        )
+          return;
 
-        const champion = row.find('td.championCellLight img, td.championCellDark img').first().attr('alt') || '';
+        const champion =
+          row
+            .find('td.championCellLight img, td.championCellDark img')
+            .first()
+            .attr('alt') || '';
 
         if (!champion) return;
 
@@ -41,12 +48,15 @@ export class LolHistoryService {
         const cs = row.find('.cs .number').first().text().trim();
 
         const items: string[] = [];
-        row.find('td.itemsColumnLight img, td.itemsColumnDark img').each((_, item) => {
-          const alt = $(item).attr('alt');
-          if (alt) items.push(alt);
-        });
+        row
+          .find('td.itemsColumnLight img, td.itemsColumnDark img')
+          .each((_, item) => {
+            const alt = $(item).attr('alt');
+            if (alt) items.push(alt);
+          });
 
-        const matchLinkRel = row.find('a[href*="/match/"]').first().attr('href') || '';
+        const matchLinkRel =
+          row.find('a[href*="/match/"]').first().attr('href') || '';
         const matchLink = matchLinkRel ? matchLinkRel : '';
 
         matches.push({

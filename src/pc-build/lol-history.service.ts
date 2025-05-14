@@ -20,4 +20,4 @@ export class LolHistoryService {
       // Thêm các trường lịch sử đấu thực tế sau khi parse
     };
   }
-} 
+}

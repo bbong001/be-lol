@@ -9,4 +9,4 @@ export class LolMatchDetailsParamDto {
   @IsString()
   @IsNotEmpty()
   matchPath: string;
-} 
+}
