@@ -4,6 +4,8 @@ import { MatchesController } from './matches.controller';
 import { MatchesService } from './matches.service';
 import { Match, MatchSchema } from './schemas/match.schema';
 import { Summoner, SummonerSchema } from './schemas/summoner.schema';
+import { LolHistoryService } from './lol-history.service';
+import { LolMatchDetailsService } from './lol-match-details.service';
 
 @Module({
   imports: [
@@ -13,7 +15,7 @@ import { Summoner, SummonerSchema } from './schemas/summoner.schema';
     ]),
   ],
   controllers: [MatchesController],
-  providers: [MatchesService],
+  providers: [MatchesService, LolHistoryService, LolMatchDetailsService],
   exports: [MatchesService],
 })
 export class MatchesModule {}

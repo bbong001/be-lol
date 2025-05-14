@@ -20,7 +20,7 @@ export class CommentsService {
     newsId?: string,
     pcBuildId?: string,
   ): Promise<{ comments: Comment[]; total: number }> {
-    let filter: any = {};
+    const filter: any = {};
     if (newsId) filter.newsId = newsId;
     if (pcBuildId) filter.pcBuildId = pcBuildId;
     const skip = (page - 1) * limit;

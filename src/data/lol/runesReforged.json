@@ -1,0 +1,610 @@
+[
+    {
+      "id": 8100,
+      "key": "Domination",
+      "icon": "perk-images/Styles/7200_Domination.png",
+      "name": "Áp Đảo",
+      "slots": [
+        {
+          "runes": [
+            {
+              "id": 8112,
+              "key": "Electrocute",
+              "icon": "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+              "name": "Sốc Điện",
+              "shortDesc": "3 kỹ năng hoặc đòn đánh \u003Cb\u003Eriêng biệt\u003C/b\u003E trúng một tướng trong vòng 3 giây gây thêm \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'\u003Esát thương thích ứng\u003C/lol-uikit-tooltipped-keyword\u003E.",
+              "longDesc": "Đánh trúng tướng với 3 đòn đánh hoặc kỹ năng \u003Cb\u003Eriêng biệt\u003C/b\u003E trong vòng 3 giây gây thêm \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'\u003E\u003Cfont color='#48C4B7'\u003Esát thương thích ứng\u003C/font\u003E\u003C/lol-uikit-tooltipped-keyword\u003E.\u003Cbr\u003E\u003Cbr\u003ESát thương: 70 - 240 (+0.1 SMCK cộng thêm, +0.05 SMPT) sát thương.\u003Cbr\u003EHồi chiêu: 20 giây\u003Cbr\u003E\u003Cbr\u003E\u003Ci\u003E'Thật lạ khi chúng ta gọi họ là \"Thần Sấm\" trong khi sét mới là thứ họ dùng.'\u003C/i\u003E"
+            },
+            {
+              "id": 8128,
+              "key": "DarkHarvest",
+              "icon": "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+              "name": "Thu Thập Hắc Ám",
+              "shortDesc": "Sát thương tướng địch thấp máu gây \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'\u003Esát thương thích ứng\u003C/lol-uikit-tooltipped-keyword\u003E và thu hồn của nạn nhân.",
+              "longDesc": "Gây sát thương lên tướng còn dưới 50% máu gây \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'\u003Esát thương thích ứng\u003C/lol-uikit-tooltipped-keyword\u003E và thu hồn của kẻ đó, tăng vĩnh viễn sát thương của Thu Thập Hắc Ám thêm 11.\u003Cbr\u003E\u003Cbr\u003ESát thương Thu Thập Hắc Ám: 30 (+11 sát thương mỗi linh hồn) (+0.1 SMCK cộng thêm) (+0.05 SMPT)\u003Cbr\u003EHồi chiêu: 35 giây (đặt lại còn 1.0 giây khi tham gia hạ gục)"
+            },
+            {
+              "id": 9923,
+              "key": "HailOfBlades",
+              "icon": "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+              "name": "Mưa Kiếm",
+              "shortDesc": "Nhận một lượng lớn Tốc độ Đánh trong 3 đòn đánh đầu tiên lên tướng.",
+              "longDesc": "Nhận thêm 140% (80% với tướng đánh xa) Tốc Độ Đánh khi tấn công tướng địch trong tối đa 3 đòn đánh.\u003Cbr\u003E\u003Cbr\u003EThời gian giữa mỗi đòn đánh không vượt quá 3 giây nếu không hiệu ứng sẽ kết thúc.\u003Cbr\u003E\u003Cbr\u003EHồi chiêu: 10 giây.\u003Cbr\u003E\u003Cbr\u003E\u003Crules\u003ETái tạo đòn đánh sẽ tăng giới hạn đòn đánh thêm 1.\u003Cbr\u003ECho phép bạn tạm thời vượt quá giới hạn tốc độ đánh.\u003C/rules\u003E"
+            }
+          ]
+        },
+        {
+          "runes": [
+            {
+              "id": 8126,
+              "key": "CheapShot",
+              "icon": "perk-images/Styles/Domination/CheapShot/CheapShot.png",
+              "name": "Phát Bắn Đơn Giản",
+              "shortDesc": "Gây thêm sát thương chuẩn lên tướng địch bị \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_ImpairAct'\u003Ehạn chế di chuyển hoặc hành động\u003C/lol-uikit-tooltipped-keyword\u003E. ",
+              "longDesc": "Gây sát thương lên tướng bị \u003Cb\u003Ehạn chế di chuyển hoặc hành động\u003C/b\u003E gây thêm 10 - 45 sát thương chuẩn (theo cấp).\u003Cbr\u003E\u003Cbr\u003EHồi chiêu: 4 giây\u003Cbr\u003E\u003Crules\u003EKích hoạt với sát thương gây ra sau khi hạn chế bắt đầu.\u003C/rules\u003E"
+            },
+            {
+              "id": 8139,
+              "key": "TasteOfBlood",
+              "icon": "perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png",
+              "name": "Vị Máu",
+              "shortDesc": "Hồi máu khi bạn gây sát thương lên tướng địch.",
+              "longDesc": "Hồi máu khi gây sát thương tướng địch.\u003Cbr\u003E\u003Cbr\u003EHồi máu: 16-40 (+0.1 SMCK cộng thêm, +0.05 SMPT) máu (theo cấp)\u003Cbr\u003E\u003Cbr\u003EHồi chiêu: 20 giây"
+            },
+            {
+              "id": 8143,
+              "key": "SuddenImpact",
+              "icon": "perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png",
+              "name": "Tác Động Bất Chợt",
+              "shortDesc": "Sát thương từ đòn đánh và kỹ năng gây thêm sát thương chuẩn lên tướng địch sau khi dùng lướt, nhảy, bay, dịch chuyển, hoặc khi thoát tàng hình.",
+              "longDesc": "Sát thương từ đòn đánh và các kỹ năng gây thêm \u003CtrueDamage\u003E20 - 80 Sát Thương Chuẩn\u003C/trueDamage\u003E (theo cấp) lên tướng địch sau khi lướt, nhảy, bay, dịch chuyển, hoặc sau khi thoát tàng hình trong 4 giây.\u003Cbr\u003E\u003Cbr\u003EHồi chiêu: 10 giây."
+            }
+          ]
+        },
+        {
+          "runes": [
+            {
+              "id": 8137,
+              "key": "SixthSense",
+              "icon": "perk-images/Styles/Domination/SixthSense/SixthSense.png",
+              "name": "Giác Quan Thứ Sáu",
+              "shortDesc": "Với Hồi Chiêu dài, tự động cảm nhận một con mắt ở gần chưa bị phát hiện, đánh dấu nó cho toàn đội. \u003Cbr\u003E\u003Cbr\u003ECấp 11: Đồng thời làm lộ diện mắt đó trong 10 giây.",
+              "longDesc": "Tự động cảm nhận một con mắt ở gần chưa bị phát hiện, đánh dấu nó cho toàn đội. \u003Cbr\u003E\u003Cbr\u003ECấp 11: Đồng thời làm lộ diện mắt đó trong 10 giây.\u003Cbr\u003E\u003Cbr\u003EThời gian Hồi Chiêu của hiệu ứng này là 250 giây."
+            },
+            {
+              "id": 8140,
+              "key": "GrislyMementos",
+              "icon": "perk-images/Styles/Domination/GrislyMementos/GrislyMementos.png",
+              "name": "Ký Ức Kinh Hoàng",
+              "shortDesc": "Thu thập 1 ký ức khi \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'\u003Etham gia hạ gục\u003C/lol-uikit-tooltipped-keyword\u003E tướng, tổng cộng tối đa 18.\u003Cbr\u003E\u003Cbr\u003ENhận 6 Điểm Hồi Phụ Kiện với mỗi ký ức đã thu thập.",
+              "longDesc": "Thu thập 1 ký ức khi \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'\u003Etham gia hạ gục\u003C/lol-uikit-tooltipped-keyword\u003E tướng, tổng cộng tối đa 18.\u003Cbr\u003E\u003Cbr\u003ENhận 6 Điểm Hồi Phụ Kiện với mỗi ký ức đã thu thập. Trong các chế độ chơi mà Phụ Kiện tầm nhìn không tồn tại, thay vào đó nhận 3 Điểm Hồi Phép Bổ Trợ."
+            },
+            {
+              "id": 8141,
+              "key": "DeepWard",
+              "icon": "perk-images/Styles/Domination/DeepWard/DeepWard.png",
+              "name": "Cắm Mắt Sâu",
+              "shortDesc": "Mắt trong rừng địch của bạn được tính là \u003CkeywordMajor\u003ECắm Sâu\u003C/keywordMajor\u003E, được tăng Máu và Thời Gian Tồn Tại.\u003Cbr\u003E\u003Cbr\u003ECấp 9: Mắt trên sông cũng được coi là \u003CkeywordMajor\u003ECắm Sâu\u003C/keywordMajor\u003E.",
+              "longDesc": "Mắt trong rừng địch của bạn được tính là \u003CkeywordMajor\u003ECắm Sâu\u003C/keywordMajor\u003E. Mắt \u003CkeywordMajor\u003ECắm Sâu\u003C/keywordMajor\u003E nhận thêm +1 máu và +[30 - 45] giây thời gian tồn tại (+[45 - 150] giây với mắt xanh Phụ Kiện).\u003Cbr\u003E\u003Cbr\u003ECấp 9: Mắt trên sông cũng được coi là \u003CkeywordMajor\u003ECắm Sâu\u003C/keywordMajor\u003E."
+            }
+          ]
+        },
+        {
+          "runes": [
+            {
+              "id": 8135,
+              "key": "TreasureHunter",
+              "icon": "perk-images/Styles/Domination/TreasureHunter/TreasureHunter.png",
+              "name": "Thợ Săn Kho Báu",
+              "shortDesc": "\u003Cb\u003E\u003C/b\u003E \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'\u003ETham Gia Hạ Gục\u003C/lol-uikit-tooltipped-keyword\u003E Duy Nhất lần đầu tiên sẽ cho thêm vàng.",
+              "longDesc": "Nhận thêm \u003Cgold\u003E50 vàng\u003C/gold\u003E trong lần tiếp theo bạn thu thập vàng từ cộng dồn \u003Ci\u003EThợ Săn Tiền Thưởng\u003C/i\u003E. Tăng lượng vàng nhận được thêm \u003Cgold\u003E20 vàng\u003C/gold\u003E với mỗi cộng dồn \u003Ci\u003EThợ Săn Tiền Thưởng\u003C/i\u003E, tối đa \u003Cgold\u003E130 vàng\u003C/gold\u003E.\u003Cbr\u003E\u003Cbr\u003ENhận 1 cộng dồn \u003Ci\u003EThợ Săn Tiền Thưởng\u003C/i\u003E khi tham gia hạ gục kẻ địch lần đầu (tối đa 5)."
+            },
+            {
+              "id": 8105,
+              "key": "RelentlessHunter",
+              "icon": "perk-images/Styles/Domination/RelentlessHunter/RelentlessHunter.png",
+              "name": "Thợ Săn Tàn Nhẫn",
+              "shortDesc": "\u003Clol-uikit-tooltipped-keyword key=\"LinkTooltip_Description_Takedown\"\u003ETham gia hạ gục\u003C/lol-uikit-tooltipped-keyword\u003E \u003Cb\u003Eduy nhất\u003C/b\u003E cho vĩnh viễn \u003Cb\u003E\u003Clol-uikit-tooltipped-keyword key=\"LinkTooltip_Description_MS\"\u003ETốc độ Di chuyển\u003C/lol-uikit-tooltipped-keyword\u003E ngoài giao tranh\u003C/b\u003E. ",
+              "longDesc": "Nhận được \u003Cspeed\u003E8 Tốc Độ Di Chuyển\u003C/speed\u003E ngoài giao tranh với mỗi điểm \u003Ci\u003EThợ Săn Tiền Thưởng\u003C/i\u003E. Bạn sẽ nhận được 1 điểm \u003Ci\u003EThợ Săn Tiền Thưởng\u003C/i\u003E mỗi khi tham gia hạ gục tướng địch lần đầu."
+            },
+            {
+              "id": 8106,
+              "key": "UltimateHunter",
+              "icon": "perk-images/Styles/Domination/UltimateHunter/UltimateHunter.png",
+              "name": "Thợ Săn Tối Thượng",
+              "shortDesc": "\u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'\u003ETham gia hạ gục\u003C/lol-uikit-tooltipped-keyword\u003E \u003Cb\u003Eduy nhất\u003C/b\u003E tăng vĩnh viễn giảm hồi chiêu chiêu cuối. ",
+              "longDesc": "Chiêu cuối của bạn được \u003Cattention\u003E6\u003C/attention\u003E Điểm Hồi Kỹ Năng, cộng thêm \u003Cattention\u003E5\u003C/attention\u003E Điểm Hồi Kỹ Năng với mỗi cộng dồn \u003Ci\u003EThợ Săn Tiền Thưởng\u003C/i\u003E. Nhận 1 cộng dồn \u003Ci\u003EThợ Săn Tiền Thưởng\u003C/i\u003E khi tham gia hạ gục kẻ địch lần đầu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8300,
+      "key": "Inspiration",
+      "icon": "perk-images/Styles/7203_Whimsy.png",
+      "name": "Cảm Hứng",
+      "slots": [
+        {
+          "runes": [
+            {
+              "id": 8351,
+              "key": "GlacialAugment",
+              "icon": "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+              "name": "Nâng Cấp Băng Giá",
+              "shortDesc": "Làm bất động tướng địch sẽ tạo ra 3 vệt băng làm chậm kẻ địch xung quanh và giảm sát thương chúng gây ra lên đồng minh của bạn.",
+              "longDesc": "Làm bất động tướng địch sẽ tạo ra 3 vệt băng kéo dài từ mục tiêu đến chỗ bản thân và các tướng xung quanh trong vòng 3 (+ thời gian hiệu ứng bất động ban đầu) giây, làm chậm kẻ địch đi 20% (+90% mỗi 100% Sức Mạnh Lá Chắn và Hồi Máu) (+6% mỗi 100 Sức Mạnh Phép Thuật) (+7% mỗi 100 Sức Mạnh Công Kích Cộng Thêm) và giảm 15% sát thương chúng gây ra lên đồng minh (không bao gồm bản thân). \u003Cbr\u003E\u003Cbr\u003EHồi chiêu: 25 giây."
+            },
+            {
+              "id": 8360,
+              "key": "UnsealedSpellbook",
+              "icon": "perk-images/Styles/Inspiration/UnsealedSpellbook/UnsealedSpellbook.png",
+              "name": "Sách Phép",
+              "shortDesc": "Đổi Phép Bổ Trợ khi không giao tranh. Đổi một Phép Bổ Trợ riêng biệt sẽ giảm thời gian bạn có thể tiếp tục đổi trong tương lai.",
+              "longDesc": "Đổi một trong các Phép Bổ Trợ bạn đang dùng lấy một Phép Bổ Trợ mới chỉ dùng một lần. Mỗi Phép Bổ Trợ riêng biệt bạn đổi sẽ giảm vĩnh viễn hồi chiêu của Ngọc Bổ Trợ này đi 25 giây (hồi chiêu ban đầu là 5 phút). \u003Cbr\u003E\u003Cbr\u003EBạn có thể đổi lần đầu tiên vào phút 6. \u003Cbr\u003E\u003Crules\u003E\u003Cbr\u003EChỉ có thể đổi Phép Bổ Trợ ngoài giao tranh. \u003Cbr\u003ESau khi dùng một Phép Bổ Trợ đã đổi, bạn phải đổi thêm 3 lần nữa thì mới chọn lại được Phép Bổ Trợ đó. \u003Cbr\u003ETrừng Phạt được tăng sát thương sau hai lần đổi Phép Bổ Trợ. \u003C/rules\u003E"
+            },
+            {
+              "id": 8369,
+              "key": "FirstStrike",
+              "icon": "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+              "name": "Đòn Phủ Đầu",
+              "shortDesc": "Khi khởi đầu giao tranh với tướng, gây thêm 7% sát thương trong vòng 3 giây và nhận vàng dựa trên lượng sát thương thêm đã gây ra.",
+              "longDesc": "Đòn đánh và kỹ năng lên tướng địch trong vòng 0.25 giây sau khi bắt đầu giao tranh với tướng sẽ cho 10 vàng và được \u003Cb\u003EĐánh Phủ Đầu\u003C/b\u003E trong 3 giây, khiến bản thân gây \u003Ctruedamage\u003E7%\u003C/truedamage\u003E \u003Ctruedamage\u003Esát thương\u003C/truedamage\u003E cộng thêm lên tướng và cho lượng \u003Cgold\u003Evàng\u003C/gold\u003E tương đương với \u003Cgold\u003E50% (35% đối với tướng đánh xa)\u003C/gold\u003E sát thương cộng thêm gây ra.\u003Cbr\u003E\u003Cbr\u003EHồi Chiêu: \u003CscaleLevel\u003E25 - 15\u003C/scaleLevel\u003E giây"
+            }
+          ]
+        },
+        {
+          "runes": [
+            {
+              "id": 8306,
+              "key": "HextechFlashtraption",
+              "icon": "perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png",
+              "name": "Tốc Biến Ma Thuật",
+              "shortDesc": "Tốc Biến khi đang hồi chiêu được thay bằng \u003Ci\u003ETốc Biến Ma Thuật\u003C/i\u003E.\u003Cbr\u003E\u003Cbr\u003E\u003Ci\u003ETốc Biến Ma Thuật\u003C/i\u003E: Vận sức, sau đó dịch chuyển tức thời đến một địa điểm mới.",
+              "longDesc": "Khi Tốc Biến đang hồi chiêu, nó được thay thế bởi \u003Ci\u003ETốc Biến Ma Thuật\u003C/i\u003E.\u003Cbr\u003E\u003Cbr\u003E\u003Ci\u003ETốc Biến Ma Thuật\u003C/i\u003E: Vận sức trong 2.0 giây để dịch chuyển tức thời tới chỗ khác.\u003Cbr\u003E\u003Cbr\u003EHồi Chiêu: 20 giây. Mất tác dụng trong 10 giây khi giao tranh với tướng.\u003Cbr\u003E"
+            },
+            {
+              "id": 8304,
+              "key": "MagicalFootwear",
+              "icon": "perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png",
+              "name": "Bước Chân Màu Nhiệm",
+              "shortDesc": "Bạn nhận được giày miễn phí vào phút 12 nhưng trước đó không thể mua giày. Mỗi lần \u003Clol-uikit-tooltipped-keyword key=\"LinkTooltip_Description_Takedown\"\u003Etham gia hạ gục\u003C/lol-uikit-tooltipped-keyword\u003E sẽ khiến giày có sớm hơn 45 giây.",
+              "longDesc": "Bạn nhận miễn phí Giày Xịn ở phút thứ 12, nhưng không thể mua giày trước lúc đó. Với mỗi tham gia hạ gục, bạn sẽ nhận được giày sớm hơn 45 giây.\u003Cbr\u003E\u003Cbr\u003EGiày Xịn tăng thêm cho bạn \u003Cspeed\u003E10 Tốc độ Di chuyển\u003C/speed\u003E."
+            },
+            {
+              "id": 8321,
+              "key": "CashBack",
+              "icon": "perk-images/Styles/Inspiration/CashBack/CashBack2.png",
+              "name": "Hoàn Tiền",
+              "shortDesc": "Nhận một chút vàng hoàn lại khi mua Trang Bị Huyền Thoại.",
+              "longDesc": "Nhận 6% Vàng hoàn lại khi mua Trang Bị Huyền Thoại."
+            }
+          ]
+        },
+        {
+          "runes": [
+            {
+              "id": 8313,
+              "key": "PerfectTiming",
+              "icon": "perk-images/Styles/Inspiration/PerfectTiming/AlchemistCabinet.png",
+              "name": "Thuốc Thần Nhân Ba",
+              "shortDesc": "Khi đạt tới cấp 3, nhận 1 Dược Phẩm Tham Lam.\u003Cbr\u003EKhi đạt tới cấp 6, nhận 1 Dược Phẩm Thần Lực.\u003Cbr\u003EKhi đạt tới cấp 9, nhận 1 Dược Phẩm Kỹ Năng. ",
+              "longDesc": "Khi đạt tới cấp 3, nhận 1 Dược Phẩm Tham Lam.\u003Cbr\u003EKhi đạt tới cấp 6, nhận 1 Dược Phẩm Thần Lực.\u003Cbr\u003EKhi đạt tới cấp 9, nhận 1 Dược Phẩm Kỹ Năng. "
+            },
+            {
+              "id": 8352,
+              "key": "TimeWarpTonic",
+              "icon": "perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png",
+              "name": "Thuốc Thời Gian",
+              "shortDesc": "Bình thuốc hồi lại một phần máu ngay lập tức.",
+              "longDesc": "Dùng bình thuốc sẽ lập tức nhận được 40% lượng hồi máu."
+            },
+            {
+              "id": 8345,
+              "key": "BiscuitDelivery",
+              "icon": "perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png",
+              "name": "Giao Hàng Bánh Quy",
+              "shortDesc": "Nhận được một Bánh Quy miễn phí mỗi 2 phút, cho đến phút 6. Dùng hoặc bán Bánh Quy tăng vĩnh viễn máu tối đa và hồi Máu.",
+              "longDesc": "Giao Hàng Bánh Quy:  Nhận được một Bánh Quy mỗi 2 phút cho đến phút 6.\u003Cbr\u003E\u003Cbr\u003EBánh quy hồi lại 20 + 2% máu tối đa của bạn, tăng tối đa 100% dựa trên Máu đã mất. Dùng hoặc bán Bánh Quy tăng vĩnh viễn máu tối đa của bạn lên 30. "
+            }
+          ]
+        },
+        {
+          "runes": [
+            {
+              "id": 8347,
+              "key": "CosmicInsight",
+              "icon": "perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png",
+              "name": "Thấu Thị Vũ Trụ",
+              "shortDesc": "+\u003Cattention\u003E18\u003C/attention\u003E Điểm hồi Phép Bổ Trợ\u003Cbr\u003E+\u003Cattention\u003E10\u003C/attention\u003E Điểm hồi Trang bị",
+              "longDesc": "+\u003Cattention\u003E18\u003C/attention\u003E Điểm hồi Phép Bổ Trợ\u003Cbr\u003E+\u003Cattention\u003E10\u003C/attention\u003E Điểm hồi Trang bị"
+            },
+            {
+              "id": 8410,
+              "key": "ApproachVelocity",
+              "icon": "perk-images/Styles/Resolve/ApproachVelocity/ApproachVelocity.png",
+              "name": "Vận Tốc Tiếp Cận",
+              "shortDesc": "Tăng \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'\u003ETốc độ Di chuyển\u003C/lol-uikit-tooltipped-keyword\u003E về phía tướng địch gần đó đang bị \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_ImpairMov'\u003Ehạn chế di chuyển\u003C/lol-uikit-tooltipped-keyword\u003E, tăng thêm về phía tướng địch bị bạn hạn chế di chuyển.",
+              "longDesc": "Tăng thêm \u003Cspeed\u003E7.5% Tốc độ Di chuyển\u003C/speed\u003E về phía tướng địch gần đó đang bị hạn chế di chuyển. Lượng chỉ số này tăng lên \u003Cspeed\u003E15% Tốc độ Di chuyển\u003C/speed\u003E về phía tướng địch bị bạn hạn chế di chuyển. \u003Cbr\u003E\u003Cbr\u003ETầm Kích hoạt với hiệu ứng của đồng minh: 1000"
+            },
+            {
+              "id": 8316,
+              "key": "JackOfAllTrades",
+              "icon": "perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png",
+              "name": "Nhạc Nào Cũng Nhảy",
+              "shortDesc": "Với mỗi chỉ số khác nhau nhận được từ trang bị, nhận 1 cộng dồn Jack. Mỗi cộng dồn sẽ cho bạn \u003Cspeed\u003E1 Điểm Hồi Kỹ Năng\u003C/speed\u003E.\u003Cbr\u003E\u003Cbr\u003ENhận thêm \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'\u003ESức Mạnh Thích Ứng\u003C/lol-uikit-tooltipped-keyword\u003E ở 5 và 10 cộng dồn.",
+              "longDesc": "Với mỗi chỉ số khác nhau nhận được từ trang bị, nhận 1 cộng dồn Jack. Mỗi cộng dồn sẽ cho bạn \u003Cspeed\u003E1 Điểm Hồi Kỹ Năng\u003C/speed\u003E.\u003Cbr\u003E\u003Cbr\u003ENhận thêm tương ứng 10 hoặc 25 \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'\u003ESức Mạnh Thích Ứng\u003C/lol-uikit-tooltipped-keyword\u003E ở 5 và 10 cộng dồn."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8000,
+      "key": "Precision",
+      "icon": "perk-images/Styles/7201_Precision.png",
+      "name": "Chuẩn Xác",
+      "slots": [
+        {
+          "runes": [
+            {
+              "id": 8005,
+              "key": "PressTheAttack",
+              "icon": "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+              "name": "Sẵn Sàng Tấn Công",
+              "shortDesc": "Tấn công một tướng địch 3 lần liên tục sẽ gây thêm sát thương và khuếch đại sát thương của bạn đến khi rời khỏi giao tranh với tướng.",
+              "longDesc": "Đánh trúng tướng địch 3 đòn liên tiếp gây thêm 40 - 160 \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'\u003E\u003Cfont color='#48C4B7'\u003Esát thương thích ứng\u003C/font\u003E\u003C/lol-uikit-tooltipped-keyword\u003E (theo cấp) và khuếch đại sát thương bạn gây ra thêm 8% đến khi rời khỏi giao tranh với tướng."
+            },
+            {
+              "id": 8008,
+              "key": "LethalTempo",
+              "icon": "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+              "name": "Nhịp Độ Chết Người",
+              "shortDesc": "Tấn công tướng địch sẽ cho bạn thêm Tốc Độ Đánh, tối đa 6 cộng dồn. Ở số cộng dồn tối đa, gây thêm \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'\u003E\u003Cfont color='#48C4B7'\u003Esát thương thích ứng\u003C/font\u003E\u003C/lol-uikit-tooltipped-keyword\u003E Trên Đòn Đánh.",
+              "longDesc": "Tấn công tướng địch sẽ cho bạn [6% cận chiến || 4% đánh xa] Tốc Độ Đánh trong 6 giây, tối đa 6. Ở số cộng dồn tối đa, gây thêm [9 - 30 cận chiến || 6 - 24 đánh xa] \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'\u003Esát thương thích ứng Trên Đòn Đánh, tăng thêm 1% với mỗi 1% Tốc Độ Đánh Cộng Thêm\u003C/lol-uikit-tooltipped-keyword\u003E."
+            },
+            {
+              "id": 8021,
+              "key": "FleetFootwork",
+              "icon": "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+              "name": "Bước Chân Thần Tốc",
+              "shortDesc": "Tấn công và di chuyển tăng cộng dồn Tích Điện. Ở 100 cộng dồn, đòn đánh kế tiếp của bạn hồi máu và tăng \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'\u003ETốc độ Di chuyển\u003C/lol-uikit-tooltipped-keyword\u003E.",
+              "longDesc": "Tấn công và di chuyển sẽ tăng cộng dồn Tích Điện. Khi đạt 100 cộng dồn, đòn đánh kế tiếp của bạn được Tích Điện.\u003Cbr\u003E\u003Cbr\u003EĐòn đánh Tích Điện hồi cho bạn 10 - 130 (+0.1 SMCK cộng thêm, +0.05 SMPT) và tăng \u003Cspeed\u003E20% Tốc Độ Di Chuyển\u003C/speed\u003E trong 1 giây.\u003Cbr\u003E\u003Cbr\u003EVới Tướng Đánh Xa, hồi Máu chỉ còn 60% hiệu lực và Tốc Độ Di Chuyển chỉ còn 75% hiệu lực. Mọi hiệu ứng hồi máu từ lính chỉ còn 15% hiệu lực."
+            },
+            {
+              "id": 8010,
+              "key": "Conqueror",
+              "icon": "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+              "name": "Chinh Phục",
+              "shortDesc": "Tích cộng dồn sức mạnh thích ứng khi tấn công tướng địch. Khi đạt 12 cộng dồn, hồi máu bằng một phần sát thương gây lên tướng.",
+              "longDesc": "Gây sát thương lên tướng địch bằng đòn đánh hoặc kỹ năng cho 2 cộng dồn Chinh Phục trong 5 giây, giúp tăng 1.8-4 \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'\u003E\u003Cfont color='#48C4B7'\u003ESức mạnh Thích ứng\u003C/font\u003E\u003C/lol-uikit-tooltipped-keyword\u003E mỗi cộng dồn. Cộng dồn tối đa 12 lần. Tướng đánh xa chỉ được 1 cộng dồn mỗi lần đánh thường.\u003Cbr\u003E\u003Cbr\u003EKhi đạt cộng dồn tối đa, hồi máu bằng 8% sát thương bạn gây lên tướng. (5% với tướng đánh xa)."
+            }
+          ]
+        },
+        {
+          "runes": [
+            {
+              "id": 9101,
+              "key": "AbsorbLife",
+              "icon": "perk-images/Styles/Precision/AbsorbLife/AbsorbLife.png",
+              "name": "Hấp Thụ Sinh Mệnh",
+              "shortDesc": "Hạ gục một mục tiêu sẽ hồi máu cho bạn.",
+              "longDesc": "Hạ gục một mục tiêu sẽ hồi cho bạn @HealAmount@ máu."
+            },
+            {
+              "id": 9111,
+              "key": "Triumph",
+              "icon": "perk-images/Styles/Precision/Triumph.png",
+              "name": "Đắc Thắng",
+              "shortDesc": "\u003Clol-uikit-tooltipped-keyword key=\"LinkTooltip_Description_Takedown\"\u003ETham gia hạ gục\u003C/lol-uikit-tooltipped-keyword\u003E hồi 5% máu đã mất và cho thêm 20 vàng.",
+              "longDesc": "Tham gia hạ gục hồi lại 5% máu đã mất, 2.5% máu tối đa và cho thêm 20 vàng. \u003Cbr\u003E\u003Cbr\u003E\u003Chr\u003E\u003Cbr\u003E\u003Ci\u003E'Trò chơi nguy hiểm nhất đem lại vinh quang lớn lao nhất.' \u003Cbr\u003E— Đấu Sĩ Noxus\u003C/i\u003E"
+            },
+            {
+              "id": 8009,
+              "key": "PresenceOfMind",
+              "icon": "perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png",
+              "name": "Hiện Diện Trí Tuệ",
+              "shortDesc": "Hồi lại một lượng nhỏ năng lượng hoặc nội năng khi gây sát thương lên tướng địch. Tham gia hạ gục hồi lại năng lượng hoặc nội năng.",
+              "longDesc": "Gây sát thương lên tướng địch sẽ hồi lại 6 - 50 (80% đối với tướng đánh xa) năng lượng hoặc 6 nội năng.\u003Cbr\u003E\u003Cbr\u003ETham gia hạ gục giúp hồi lại 15% năng lượng hoặc nội năng tối đa. \u003Cbr\u003E\u003Cbr\u003EHồi chiêu của hiệu ứng hồi phục khi gây sát thương: 8 giây"
+            }
+          ]
+        },
+        {
+          "runes": [
+            {
+              "id": 9104,
+              "key": "LegendAlacrity",
+              "icon": "perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png",
+              "name": "Huyền Thoại: Tốc Độ Đánh",
+              "shortDesc": "\u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'\u003ETham gia hạ gục\u003C/lol-uikit-tooltipped-keyword\u003E kẻ địch để nhận thêm vĩnh viễn \u003Cb\u003ETốc độ Đánh\u003C/b\u003E. ",
+              "longDesc": "Nhận 3% tốc độ đánh, thêm 1.5% với mỗi cộng dồn \u003Ci\u003EHuyền Thoại\u003C/i\u003E. (\u003CstatGood\u003Etối đa 10 cộng dồn\u003C/statGood\u003E).\u003Cbr\u003E\u003Cbr\u003ETăng tiến trình cộng dồn \u003Ci\u003EHuyền Thoại\u003C/i\u003E với mỗi tham gia hạ gục tướng, tham gia hạ gục quái khủng, hạ gục quái to, và lính."
+            },
+            {
+              "id": 9105,
+              "key": "LegendHaste",
+              "icon": "perk-images/Styles/Precision/LegendHaste/LegendHaste.png",
+              "name": "Huyền Thoại: Gia Tốc",
+              "shortDesc": "\u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'\u003ETham Gia Hạ Gục\u003C/lol-uikit-tooltipped-keyword\u003E kẻ địch tăng vĩnh viễn \u003Cb\u003EĐiểm Hồi Kỹ Năng\u003C/b\u003E Cơ Bản. ",
+              "longDesc": "Nhận 1,5 điểm hồi kỹ năng cơ bản với mỗi cộng dồn \u003Ci\u003EHuyền Thoại\u003C/i\u003E (\u003CstatGood\u003Etối đa 10 cộng dồn\u003C/statGood\u003E).\u003Cbr\u003E\u003Cbr\u003ETăng tiến trình cộng dồn \u003Ci\u003EHuyền Thoại\u003C/i\u003E mỗi khi hạ gục tướng, quái khủng, quái to và lính."
+            },
+            {
+              "id": 9103,
+              "key": "LegendBloodline",
+              "icon": "perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png",
+              "name": "Huyền Thoại: Hút Máu",
+              "shortDesc": "\u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'\u003ETham Gia Hạ Gục\u003C/lol-uikit-tooltipped-keyword\u003E kẻ địch sẽ cho vĩnh viễn \u003Cb\u003EHút Máu\u003C/b\u003E, đến một mốc tối đa. Khi đạt tối đa cộng dồn, tăng thêm một lượng máu tối đa. Yếu đầu trận nhưng sẽ mạnh hơn về cuối so với các Ngọc Huyền Thoại khác.",
+              "longDesc": "Nhận được \u003CscaleAD\u003E0.35% Hút Máu\u003C/scaleAD\u003E với mỗi cộng dồn \u003Ci\u003EHuyền Thoại\u003C/i\u003E (\u003CstatGood\u003Etối đa 15 cộng dồn\u003C/statGood\u003E). Ở cộng dồn \u003Ci\u003EHuyền Thoại\u003C/i\u003E tối đa, nhận \u003CscaleHealth\u003E85 máu tối đa\u003C/scaleHealth\u003E.\u003Cbr\u003E\u003Cbr\u003ETăng tiến trình cộng dồn \u003Ci\u003EHuyền Thoại\u003C/i\u003E mỗi khi hạ gục tướng, tiêu diệt quái khủng, quái to và lính."
+            }
+          ]
+        },
+        {
+          "runes": [
+            {
+              "id": 8014,
+              "key": "CoupDeGrace",
+              "icon": "perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png",
+              "name": "Nhát Chém Ân Huệ",
+              "shortDesc": "Gây thêm sát thương lên tướng địch thấp máu.",
+              "longDesc": "Gây thêm 8% sát thương lên tướng có ít hơn 40% máu."
+            },
+            {
+              "id": 8017,
+              "key": "CutDown",
+              "icon": "perk-images/Styles/Precision/CutDown/CutDown.png",
+              "name": "Đốn Hạ",
+              "shortDesc": "Gây thêm sát thương lên tướng địch nhiều máu.",
+              "longDesc": "Gây thêm 8% sát thương lên tướng có nhiều hơn 60% máu."
+            },
+            {
+              "id": 8299,
+              "key": "LastStand",
+              "icon": "perk-images/Styles/Sorcery/LastStand/LastStand.png",
+              "name": "Chốt Chặn Cuối Cùng",
+              "shortDesc": "Gây thêm sát thương lên tướng khi bạn thấp máu.",
+              "longDesc": "Gây thêm 5% - 11% sát thương lên tướng khi còn dưới 60% Máu. Đạt tối đa khi còn 30% máu. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8400,
+      "key": "Resolve",
+      "icon": "perk-images/Styles/7204_Resolve.png",
+      "name": "Kiên Định",
+      "slots": [
+        {
+          "runes": [
+            {
+              "id": 8437,
+              "key": "GraspOfTheUndying",
+              "icon": "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+              "name": "Quyền Năng Bất Diệt",
+              "shortDesc": "Mỗi 4 giây, đòn đánh kế tiếp lên tướng gây thêm sát thương phép, hồi máu cho bạn và tăng vĩnh viễn máu tối đa.",
+              "longDesc": "Mỗi 4 giây trong giao tranh, đòn đánh kế tiếp lên tướng sẽ:\u003Cli\u003EGây thêm sát thương phép bằng 3.5% máu tối đa của bản thân\u003Cli\u003EHồi lại 1.3% máu tối đa\u003Cli\u003ETăng vĩnh viễn 5 Máu\u003Cbr\u003E\u003Crules\u003E\u003Ci\u003EĐánh xa:\u003C/i\u003E Hiệu lực sát thương, hồi máu và máu vĩnh viễn nhận được chỉ còn 60%.\u003C/rules\u003E"
+            },
+            {
+              "id": 8439,
+              "key": "Aftershock",
+              "icon": "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+              "name": "Dư Chấn",
+              "shortDesc": "Sau khi \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_Immobilize'\u003Ebất động\u003C/lol-uikit-tooltipped-keyword\u003E một tướng địch, nhận thêm chống chịu và sau đó gây sát thương phép ra xung quanh.",
+              "longDesc": "Sau khi làm bất động 1 tướng địch, tăng Giáp và Kháng Phép thêm 35 + 80% chống chịu cộng thêm trong 2.5 giây. Sau đó, gây sát thương phép lên kẻ địch xung quanh.\u003Cbr\u003E\u003Cbr\u003ESát thương: 25 - 120 (+8% máu tối đa)\u003Cbr\u003EHồi chiêu: 20 giây\u003Cbr\u003E\u003Cbr\u003EChống chịu tăng từ Dư Chấn giới hạn ở: 80-150 (theo cấp)\u003Cbr\u003E"
+            },
+            {
+              "id": 8465,
+              "key": "Guardian",
+              "icon": "perk-images/Styles/Resolve/Guardian/Guardian.png",
+              "name": "Hộ Vệ",
+              "shortDesc": "Hộ vệ đồng minh bạn dùng phép lên hoặc những người ở rất gần bạn. Nếu bạn hoặc đồng minh được hộ vệ chịu sát thương dựa trên cấp độ, cả hai được thêm một lớp lá chắn.",
+              "longDesc": "\u003Ci\u003EHộ Vệ\u003C/i\u003E đồng minh đứng cách bạn 350 đơn vị, và đồng minh bạn dùng phép lên trong 2.5 giây. Khi \u003Ci\u003EHộ Vệ\u003C/i\u003E, nếu bạn hoặc đồng minh chịu một lượng sát thương vừa đủ ngưỡng trong thời gian \u003Ci\u003EHộ Vệ\u003C/i\u003E, cả hai sẽ nhận lá chắn trong 1.5 giây.\u003Cbr\u003E\u003Cbr\u003EHồi chiêu: \u003CscaleLevel\u003E90 - 40\u003C/scaleLevel\u003E giây\u003Cbr\u003ELá chắn: \u003CscaleLevel\u003E45 - 120\u003C/scaleLevel\u003E + \u003CscaleAP\u003E12.5%\u003C/scaleAP\u003E sức mạnh phép thuật + \u003Cscalehealth\u003E8%\u003C/scalehealth\u003E máu cộng thêm\u003Cbr\u003ENgưỡng Kích hoạt: \u003CscaleLevel\u003E90 - 250\u003C/scaleLevel\u003E sát thương sau kháng"
+            }
+          ]
+        },
+        {
+          "runes": [
+            {
+              "id": 8446,
+              "key": "Demolish",
+              "icon": "perk-images/Styles/Resolve/Demolish/Demolish.png",
+              "name": "Tàn Phá Hủy Diệt",
+              "shortDesc": "Tích tụ một đòn đánh cực mạnh lên trụ khi đứng gần nó.",
+              "longDesc": "Vận một đòn đánh cực mạnh lên trụ trong vòng 3 giây khi đứng trong bán kính 600 quanh nó. Đòn đánh đó gây thêm sát thương vật lý bằng 100 (+35% máu tối đa của bạn). \u003Cbr\u003E\u003Cbr\u003EHồi chiêu: 45 giây"
+            },
+            {
+              "id": 8463,
+              "key": "FontOfLife",
+              "icon": "perk-images/Styles/Resolve/FontOfLife/FontOfLife.png",
+              "name": "Suối Nguồn Sinh Mệnh",
+              "shortDesc": "\u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_ImpairMov'\u003EHạn chế\u003C/lol-uikit-tooltipped-keyword\u003E di chuyển một tướng địch sẽ hồi máu cho các tướng đồng minh gần bên. ",
+              "longDesc": "Bạn và tướng đồng minh thấp máu nhất gần bên sẽ được hồi \u003Chealing\u003E@BaseHeal@ Máu\u003C/healing\u003E khi hạn chế di chuyển một tướng địch.\u003Cbr\u003E\u003Cbr\u003E70% hiệu ứng đối với Tướng Đánh Xa.\u003Cbr\u003E\u003Cbr\u003EHồi Chiêu: 20 giây"
+            },
+            {
+              "id": 8401,
+              "key": "ShieldBash",
+              "icon": "perk-images/Styles/Resolve/MirrorShell/MirrorShell.png",
+              "name": "Nện Khiên",
+              "shortDesc": "Mỗi khi nhận được lá chắn, đòn đánh kế tiếp lên tướng gây thêm sát thương \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'\u003E\u003Cfont color='#48C4B7'\u003Ethích ứng\u003C/font\u003E\u003C/lol-uikit-tooltipped-keyword\u003E.",
+              "longDesc": "Mỗi khi nhận được một lá chắn mới, đòn đánh kế tiếp lên tướng gây thêm \u003CscaleLevel\u003E5 - 30\u003C/scaleLevel\u003E \u003CscaleHealth\u003E(+2.5% máu cộng thêm)\u003C/scaleHealth\u003E \u003CscaleMana\u003E(+15.0% lượng lá chắn)\u003C/scaleMana\u003E \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'\u003E\u003Cfont color='#48C4B7'\u003Esát thương thích ứng\u003C/font\u003E\u003C/lol-uikit-tooltipped-keyword\u003E.\u003Cbr\u003E\u003Cbr\u003EBạn có nhiều nhất 2 giây sau khi hết khiên để dùng hiệu ứng này."
+            }
+          ]
+        },
+        {
+          "runes": [
+            {
+              "id": 8429,
+              "key": "Conditioning",
+              "icon": "perk-images/Styles/Resolve/Conditioning/Conditioning.png",
+              "name": "Kiểm Soát Điều Kiện",
+              "shortDesc": "Sau 12 phút nhận +8 Giáp và +8 Kháng Phép, đồng thời tăng 3% Giáp và Kháng Phép.",
+              "longDesc": "Sau 12 phút nhận +8 Giáp và +8 Kháng Phép, đồng thời tăng 3% Giáp và Kháng Phép."
+            },
+            {
+              "id": 8444,
+              "key": "SecondWind",
+              "icon": "perk-images/Styles/Resolve/SecondWind/SecondWind.png",
+              "name": "Ngọn Gió Thứ Hai",
+              "shortDesc": "Sau khi chịu sát thương từ tướng địch, hồi lại một phần máu đã mất theo thời gian.",
+              "longDesc": "Sau khi chịu sát thương từ một tướng địch, hồi lại 3 +4% máu đã mất của bạn trong vòng 10 giây."
+            },
+            {
+              "id": 8473,
+              "key": "BonePlating",
+              "icon": "perk-images/Styles/Resolve/BonePlating/BonePlating.png",
+              "name": "Giáp Cốt",
+              "shortDesc": "Sau khi chịu sát thương từ tướng địch, 3 kỹ năng hoặc đòn đánh tiếp theo của kẻ đó lên bạn gây ít đi 30 - 60 sát thương (tùy theo cấp).\u003Cbr\u003E\u003Cbr\u003EThời gian: 1.5 giây\u003Cbr\u003EHồi chiêu: 55 giây",
+              "longDesc": "Sau khi chịu sát thương từ tướng địch, 3 kỹ năng hoặc đòn đánh tiếp theo của kẻ đó lên bạn gây ít đi 30 - 60 sát thương (tùy theo cấp).\u003Cbr\u003E\u003Cbr\u003EThời gian: 1.5 giây\u003Cbr\u003EHồi chiêu: 55 giây"
+            }
+          ]
+        },
+        {
+          "runes": [
+            {
+              "id": 8451,
+              "key": "Overgrowth",
+              "icon": "perk-images/Styles/Resolve/Overgrowth/Overgrowth.png",
+              "name": "Lan Tràn",
+              "shortDesc": "Tăng máu vĩnh viễn khi có lính hoặc quái chết gần bạn.",
+              "longDesc": "Hấp thu tinh hoa từ quái hoặc lính địch chết gần bạn, tăng vĩnh viễn 3 máu tối đa với mỗi 8 con.\u003Cbr\u003E\u003Cbr\u003EKhi hấp thụ 120 lính hoặc quái, nhận thêm 3.5% máu tối đa."
+            },
+            {
+              "id": 8453,
+              "key": "Revitalize",
+              "icon": "perk-images/Styles/Resolve/Revitalize/Revitalize.png",
+              "name": "Tiếp Sức",
+              "shortDesc": "Nhận 5% hiệu lực Hồi máu và tạo Lá chắn.\u003Cbr\u003E\u003Cbr\u003EHồi máu và lá chắn bạn sử dụng hoặc nhận được mạnh hơn 10% trên mục tiêu dưới 40% Máu.",
+              "longDesc": "Nhận 5% Hiệu lực Hồi máu và Lá chắn.\u003Cbr\u003E\u003Cbr\u003EHồi máu và lá chắn bạn sử dụng hoặc nhận được mạnh hơn 10% trên mục tiêu dưới 40% Máu."
+            },
+            {
+              "id": 8242,
+              "key": "Unflinching",
+              "icon": "perk-images/Styles/Sorcery/Unflinching/Unflinching.png",
+              "name": "Kiên Cường",
+              "shortDesc": "Nhận Giáp và Kháng Phép khi chịu hiệu ứng khống chế.",
+              "longDesc": "Nhận 10 - 10 (tùy theo cấp) Giáp và Kháng Phép khi bị khống chế và trong 2 giây sau đó."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8200,
+      "key": "Sorcery",
+      "icon": "perk-images/Styles/7202_Sorcery.png",
+      "name": "Pháp Thuật",
+      "slots": [
+        {
+          "runes": [
+            {
+              "id": 8214,
+              "key": "SummonAery",
+              "icon": "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+              "name": "Triệu Hồi Aery",
+              "shortDesc": "Đòn đánh và kỹ năng đưa Aery đến chỗ mục tiêu, gây sát thương kẻ địch hoặc che chắn cho đồng minh.",
+              "longDesc": "Gây sát thương lên tướng địch bằng đòn đánh hoặc kỹ năng sẽ đưa Aery tới chúng, gây 10 đến 50 sát thương dựa trên cấp độ (+\u003CscaleAP\u003E0.05 SMPT\u003C/scaleAP\u003E) (+\u003CscaleAD\u003E0.1 SMCK cộng thêm\u003C/scaleAD\u003E).\u003Cbr\u003E\u003Cbr\u003ECường hóa hoặc bảo hộ cho đồng minh bằng kỹ năng cũng sẽ đưa Aery tới họ, tạo 30 đến 100 Lá Chắn dựa trên cấp độ (+\u003CscaleAP\u003E0.05 SMPT\u003C/scaleAP\u003E) (+\u003CscaleAD\u003E0.1 SMCK cộng thêm\u003C/scaleAD\u003E).\u003Cbr\u003E\u003Cbr\u003EAery không thể được gửi đi tiếp cho đến khi nó quay về với bạn."
+            },
+            {
+              "id": 8229,
+              "key": "ArcaneComet",
+              "icon": "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+              "name": "Thiên Thạch Bí Ẩn",
+              "shortDesc": "Gây sát thương lên tướng bằng kỹ năng thả một thiên thạch xuống chỗ kẻ đó.",
+              "longDesc": "Gây sát thương lên tướng bằng khả năng thả một thiên thạch xuống chỗ của kẻ đó, hoặc, nếu Thiên Thạch Bí Ẩn đang hồi, giảm hồi chiêu còn lại của nó.\u003Cbr\u003E\u003Cbr\u003E\u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'\u003E\u003Cfont color='#48C4B7'\u003ESát thương Thích ứng\u003C/font\u003E\u003C/lol-uikit-tooltipped-keyword\u003E: 30 - 130 theo cấp (\u003CscaleAP\u003E+0.05 SMPT\u003C/scaleAP\u003E and \u003CscaleAD\u003E+0.1 SMCK cộng thêm\u003C/scaleAD\u003E)\u003Cbr\u003EHồi chiêu: 20 - 8 giây\u003Cbr\u003E\u003Crules\u003E\u003Cbr\u003EGiảm Hồi chiêu:\u003Cbr\u003EĐơn mục tiêu: 20%.\u003Cbr\u003EDiện rộng: 10%.\u003Cbr\u003ESát thương theo thời gian: 5%.\u003Cbr\u003E\u003C/rules\u003E"
+            },
+            {
+              "id": 8230,
+              "key": "PhaseRush",
+              "icon": "perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
+              "name": "Tăng Tốc Pha",
+              "shortDesc": "Đánh trúng tướng địch bằng 3 đòn đánh hoặc kỹ năng \u003Cb\u003Eriêng biệt\u003C/b\u003E sẽ tăng mạnh \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'\u003ETốc Độ Di Chuyển\u003C/lol-uikit-tooltipped-keyword\u003E và Kháng Làm Chậm. ",
+              "longDesc": "Đánh trúng tướng địch bằng 3 đòn đánh hoặc kỹ năng \u003Cb\u003Eriêng biệt\u003C/b\u003E trong vòng 4 giây sẽ tăng thêm \u003Cspeed\u003E25 - 50% Tốc Độ Di Chuyển\u003C/speed\u003E tùy theo cấp và \u003Cstatus\u003E75% Kháng Làm Chậm\u003C/status\u003E trong 3 giây. Tốc Độ Di Chuyển có 75% hiệu lực đối với tướng đánh xa.\u003Cbr\u003EHồi chiêu: 30 giây - 10 giây"
+            }
+          ]
+        },
+        {
+          "runes": [
+            {
+              "id": 8224,
+              "key": "NullifyingOrb",
+              "icon": "perk-images/Styles/Sorcery/NullifyingOrb/Axiom_Arcanist.png",
+              "name": "Bậc Thầy Nguyên Tố",
+              "shortDesc": "Chiêu Cuối của bạn đã được tăng sát thương, khả năng hồi máu và lá chắn. Tham gia hạ gục tướng địch sẽ giảm hồi chiêu hiện tại cho Chiêu Cuối của bạn.",
+              "longDesc": "Chiêu Cuối của bạn được tăng 12% sát thương, khả năng hồi máu và lá chắn. \u003Cbr\u003E(Sát thương diện rộng chỉ tăng thêm 8%)\u003Cbr\u003E\u003Cbr\u003ETham gia hạ gục tướng địch sẽ giảm hồi chiêu hiện tại cho Chiêu Cuối của bạn đi 7%."
+            },
+            {
+              "id": 8226,
+              "key": "ManaflowBand",
+              "icon": "perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png",
+              "name": "Dải Băng Năng Lượng",
+              "shortDesc": "Dùng kỹ năng trúng một tướng địch tăng vĩnh viễn 25 năng lượng, tối đa 250.\u003Cbr\u003E\u003Cbr\u003EKhi có 250 năng lượng cộng thêm, hồi 1% năng lượng đã mất mỗi 5 giây.",
+              "longDesc": "Dùng kỹ năng trúng một tướng địch tăng vĩnh viễn 25 năng lượng, tối đa 250.\u003Cbr\u003E\u003Cbr\u003EKhi có 250 năng lượng cộng thêm, hồi 1% năng lượng đã mất mỗi 5 giây.\u003Cbr\u003E\u003Cbr\u003EHồi chiêu: 15 giây"
+            },
+            {
+              "id": 8275,
+              "key": "NimbusCloak",
+              "icon": "perk-images/Styles/Sorcery/NimbusCloak/6361.png",
+              "name": "Áo Choàng Mây",
+              "shortDesc": "Sau khi sử dụng Phép Bổ Trợ, tăng \u003Cspeed\u003ETốc độ Di chuyển\u003C/speed\u003E và cho phép đi xuyên các đơn vị.",
+              "longDesc": "Sau khi sử dụng Phép Bổ Trợ, tăng \u003Cspeed\u003ETốc độ Di chuyển\u003C/speed\u003E trong 2 giây và cho phép đi xuyên các đơn vị.\u003Cbr\u003E\u003Cbr\u003ETăng: \u003Cspeed\u003E14% - 40% Tốc độ Di chuyển\u003C/speed\u003E dựa theo hồi chiêu Phép Bổ Trợ. (Phép Bổ Trợ có hồi chiêu cao hơn cho nhiều \u003Cspeed\u003ETốc độ Di chuyển\u003C/speed\u003E hơn). "
+            }
+          ]
+        },
+        {
+          "runes": [
+            {
+              "id": 8210,
+              "key": "Transcendence",
+              "icon": "perk-images/Styles/Sorcery/Transcendence/Transcendence.png",
+              "name": "Thăng Tiến Sức Mạnh",
+              "shortDesc": "Nhận thêm chỉ số khi đạt cấp độ tương ứng:\u003Cbr\u003ECấp 5: +5 \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'\u003EĐiểm hồi Kỹ năng\u003C/lol-uikit-tooltipped-keyword\u003E \u003Cbr\u003ECấp 8: +5 \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'\u003EĐiểm hồi Kỹ năng\u003C/lol-uikit-tooltipped-keyword\u003E \u003Cbr\u003ECấp 11: Khi tham gia hạ gục Tướng, giảm thời gian hồi chiêu còn lại của các kỹ năng cơ bản đi 20%.",
+              "longDesc": "Nhận thêm chỉ số khi đạt cấp độ tương ứng:\u003Cbr\u003ECấp 5: +5 \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'\u003EĐiểm Hồi Kỹ Năng\u003C/lol-uikit-tooltipped-keyword\u003E \u003Cbr\u003ECấp 8: +5 \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'\u003EĐiểm Hồi Kỹ Năng\u003C/lol-uikit-tooltipped-keyword\u003E \u003Cbr\u003ECấp 11: Khi tham gia hạ gục Tướng, giảm thời gian hồi chiêu còn lại của các kỹ năng cơ bản đi 20%."
+            },
+            {
+              "id": 8234,
+              "key": "Celerity",
+              "icon": "perk-images/Styles/Sorcery/Celerity/CelerityTemp.png",
+              "name": "Mau Lẹ",
+              "shortDesc": "\u003Cspeed\u003ETốc độ Di chuyển\u003C/speed\u003E cộng thêm tăng 7% hiệu lực với bạn, đồng thời bạn được tăng thêm \u003Cspeed\u003E1% Tốc độ Di chuyển\u003C/speed\u003E.",
+              "longDesc": "Tốc độ di chuyển cộng thêm tăng 7% hiệu lực với bạn, đồng thời bạn được tăng thêm \u003Cspeed\u003E1% Tốc độ Di chuyển\u003C/speed\u003E."
+            },
+            {
+              "id": 8233,
+              "key": "AbsoluteFocus",
+              "icon": "perk-images/Styles/Sorcery/AbsoluteFocus/AbsoluteFocus.png",
+              "name": "Tập Trung Tuyệt Đối",
+              "shortDesc": "Khi có trên 70% máu, nhận thêm \u003Clol-uikit-tooltipped-keyword key=\"LinkTooltip_Description_AdaptiveDmg\"\u003Esát thương thích ứng\u003C/lol-uikit-tooltipped-keyword\u003E.",
+              "longDesc": "Khi trên 70% máu, nhận Cộng thêm 18 sức mạnh công kích hoặc 30 sức mạnh phép thuật, \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'\u003E\u003Cfont color='#48C4B7'\u003Ethích ứng\u003C/font\u003E\u003C/lol-uikit-tooltipped-keyword\u003E (tùy cấp độ). \u003Cbr\u003E\u003Cbr\u003ECho 1.8 Sức mạnh Công kích hoặc 3 Sức mạnh Phép thuật ở cấp 1. "
+            }
+          ]
+        },
+        {
+          "runes": [
+            {
+              "id": 8237,
+              "key": "Scorch",
+              "icon": "perk-images/Styles/Sorcery/Scorch/Scorch.png",
+              "name": "Thiêu Rụi",
+              "shortDesc": "Mỗi 10 giây, kỹ năng đầu tiên trúng đích đốt cháy tướng địch.",
+              "longDesc": "Kỹ năng trúng đích kế tiếp đốt cháy tướng địch, gây thêm 20 - 40 sát thương phép theo cấp sau 1 giây.\u003Cbr\u003E\u003Cbr\u003EHồi chiêu: 10 giây"
+            },
+            {
+              "id": 8232,
+              "key": "Waterwalking",
+              "icon": "perk-images/Styles/Sorcery/Waterwalking/Waterwalking.png",
+              "name": "Thủy Thượng Phiêu",
+              "shortDesc": "Nhận thêm \u003Clol-uikit-tooltipped-keyword key=\"LinkTooltip_Description_MS\"\u003ETốc độ Di chuyển\u003C/lol-uikit-tooltipped-keyword\u003E và SMPT hoặc SMCK, \u003Clol-uikit-tooltipped-keyword key=\"LinkTooltip_Description_Adaptive\"\u003EThích Ứng\u003C/lol-uikit-tooltipped-keyword\u003E khi đi trên sông.",
+              "longDesc": "Nhận được \u003Cspeed\u003E10 Tốc Độ Di Chuyển\u003C/speed\u003E và \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'\u003E\u003Cfont color='#48C4B7'\u003E13 - 30 Sức Mạnh Thích Ứng\u003C/font\u003E\u003C/lol-uikit-tooltipped-keyword\u003E (tùy theo cấp) khi đi trên sông.\u003Cbr\u003E\u003Cbr\u003E\u003Ci\u003ECầu cho bạn nhanh như nước sông chảy siết và lanh lẹ như một chú Cua Kỳ Cục bị giật mình.\u003C/i\u003E"
+            },
+            {
+              "id": 8236,
+              "key": "GatheringStorm",
+              "icon": "perk-images/Styles/Sorcery/GatheringStorm/GatheringStorm.png",
+              "name": "Cuồng Phong Tích Tụ",
+              "shortDesc": "Nhận thêm SMCK hoặc SMPT, \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'\u003Ethích ứng\u003C/lol-uikit-tooltipped-keyword\u003E theo thời gian trận đấu tiếp diễn.",
+              "longDesc": "Sau mỗi 10 phút nhận thêm SMPT hoặc SMCK, \u003Clol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'\u003E\u003Cfont color='#48C4B7'\u003Ethích ứng\u003C/font\u003E\u003C/lol-uikit-tooltipped-keyword\u003E.\u003Cbr\u003E\u003Cbr\u003E\u003Ci\u003E10 phút\u003C/i\u003E: + 8 SMPT hoặc 5 SMCK \u003Cbr\u003E\u003Ci\u003E20 phút\u003C/i\u003E: + 24 SMPT hoặc 14 SMCK\u003Cbr\u003E\u003Ci\u003E30 phút\u003C/i\u003E: + 48 SMPT hoặc 29 SMCK\u003Cbr\u003E\u003Ci\u003E40 phút\u003C/i\u003E: + 80 SMPT hoặc 48 SMCK\u003Cbr\u003E\u003Ci\u003E50 phút\u003C/i\u003E: + 120 SMPT hoặc 72 SMCK\u003Cbr\u003E\u003Ci\u003E60 phút\u003C/i\u003E: + 168 SMPT hoặc 101 SMCK\u003Cbr\u003Ev.v."
+            }
+          ]
+        }
+      ]
+    }
+  ]

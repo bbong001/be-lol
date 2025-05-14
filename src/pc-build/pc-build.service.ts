@@ -80,10 +80,12 @@ export class PcBuildService {
       user: userId,
     });
     await build.save();
-    return this.pcBuildModel
-      .findById(build._id)
-      .populate('user', 'name')
-      // .populate('components.component')
-      .lean();
+    return (
+      this.pcBuildModel
+        .findById(build._id)
+        .populate('user', 'name')
+        // .populate('components.component')
+        .lean()
+    );
   }
 }

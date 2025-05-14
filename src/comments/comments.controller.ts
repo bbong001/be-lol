@@ -101,8 +101,18 @@ export class CommentsController {
 
   @ApiOperation({ summary: 'Get comments for a specific PC build' })
   @ApiParam({ name: 'pcBuildId', description: 'PC Build ID' })
-  @ApiQuery({ name: 'limit', description: 'Number of comments to return', required: false, type: Number })
-  @ApiQuery({ name: 'page', description: 'Page number', required: false, type: Number })
+  @ApiQuery({
+    name: 'limit',
+    description: 'Number of comments to return',
+    required: false,
+    type: Number,
+  })
+  @ApiQuery({
+    name: 'page',
+    description: 'Page number',
+    required: false,
+    type: Number,
+  })
   @ApiResponse({ status: 200, description: 'Comments retrieved successfully' })
   @ApiResponse({ status: 400, description: 'Invalid PC Build ID' })
   @Get('/pc-build/:pcBuildId')
@@ -126,9 +136,12 @@ export class CommentsController {
   @ApiOperation({ summary: 'Create a new comment for a news article' })
   @ApiResponse({ status: 201, description: 'Comment created successfully' })
   @ApiResponse({ status: 400, description: 'Bad request' })
-
   @Post('/news/:newsId')
-  async createForNews(@Param('newsId') newsId: string, @Body() dto: CreateCommentDto, @Request() req) {
+  async createForNews(
+    @Param('newsId') newsId: string,
+    @Body() dto: CreateCommentDto,
+    @Request() req,
+  ) {
     const commentData: any = {
       ...dto,
       newsId: new Types.ObjectId(newsId),
@@ -146,7 +159,11 @@ export class CommentsController {
   @ApiResponse({ status: 201, description: 'Comment created successfully' })
   @ApiResponse({ status: 400, description: 'Bad request' })
   @Post('/pc-build/:pcBuildId')
-  async createForPcBuild(@Param('pcBuildId') pcBuildId: string, @Body() dto: CreateCommentDto, @Request() req) {
+  async createForPcBuild(
+    @Param('pcBuildId') pcBuildId: string,
+    @Body() dto: CreateCommentDto,
+    @Request() req,
+  ) {
     const commentData: any = {
       ...dto,
       pcBuildId: new Types.ObjectId(pcBuildId),

@@ -16,7 +16,7 @@ async function bootstrap() {
   try {
     // Find first admin user or create one if none exists
     let adminUser = await userModel.findOne({ role: 'admin' });
-    
+
     if (!adminUser) {
       console.log('No admin user found, creating one...');
       adminUser = await userModel.create({
@@ -50,7 +50,10 @@ async function bootstrap() {
         if (error.message.includes('already exists')) {
           console.log(`Article already exists: ${article.title}`);
         } else {
-          console.error(`Error creating article ${article.title}:`, error.message);
+          console.error(
+            `Error creating article ${article.title}:`,
+            error.message,
+          );
         }
       }
     }
@@ -63,4 +66,4 @@ async function bootstrap() {
   }
 }
 
-bootstrap(); 
+bootstrap();

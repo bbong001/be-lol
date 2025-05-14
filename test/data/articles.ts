@@ -12,12 +12,13 @@ export const testArticles: Partial<Article>[] = [
     - New tournament format
     - Record-breaking prize pool
     - Special in-game events and rewards`,
-    summary: 'Riot Games announces the details for the 2024 League of Legends World Championship, featuring a new format and record prize pool.',
+    summary:
+      'Riot Games announces the details for the 2024 League of Legends World Championship, featuring a new format and record prize pool.',
     imageUrl: 'https://example.com/images/worlds-2024.jpg',
     tags: ['Worlds', 'Tournament', 'Esports', 'League of Legends'],
     published: true,
     publishedAt: new Date('2024-03-15'),
-    viewCount: 15000
+    viewCount: 15000,
   },
   {
     title: 'New Champion Revealed: The Shadow Weaver',
@@ -30,12 +31,13 @@ export const testArticles: Partial<Article>[] = [
     - W: Shadow Step
     - E: Void Shield
     - R: Shadow Storm`,
-    summary: 'Meet the newest champion joining the League of Legends roster - The Shadow Weaver, a powerful mage from the Shadow Isles.',
+    summary:
+      'Meet the newest champion joining the League of Legends roster - The Shadow Weaver, a powerful mage from the Shadow Isles.',
     imageUrl: 'https://example.com/images/shadow-weaver.jpg',
     tags: ['New Champion', 'Shadow Isles', 'Mage', 'Gameplay'],
     published: true,
     publishedAt: new Date('2024-03-10'),
-    viewCount: 25000
+    viewCount: 25000,
   },
   {
     title: 'Patch 14.6 Notes: Major Balance Changes',
@@ -47,12 +49,13 @@ export const testArticles: Partial<Article>[] = [
     - New Item: Celestial Blade
     - Dragon Soul Changes
     - Rune Adjustments`,
-    summary: 'Detailed breakdown of all changes coming in Patch 14.6, including champion balance updates and new items.',
+    summary:
+      'Detailed breakdown of all changes coming in Patch 14.6, including champion balance updates and new items.',
     imageUrl: 'https://example.com/images/patch-14-6.jpg',
     tags: ['Patch Notes', 'Balance', 'Game Updates', 'Meta'],
     published: true,
     publishedAt: new Date('2024-03-05'),
-    viewCount: 35000
+    viewCount: 35000,
   },
   {
     title: "Pro Player Spotlight: Faker's Journey to Greatness",
@@ -64,12 +67,13 @@ export const testArticles: Partial<Article>[] = [
     - Multiple LCK titles
     - Record-breaking achievements
     - Impact on the game`,
-    summary: 'Exploring the legendary career of Faker, the greatest League of Legends player of all time.',
+    summary:
+      'Exploring the legendary career of Faker, the greatest League of Legends player of all time.',
     imageUrl: 'https://example.com/images/faker-spotlight.jpg',
     tags: ['Pro Players', 'Faker', 'Esports', 'LCK'],
     published: true,
     publishedAt: new Date('2024-03-01'),
-    viewCount: 45000
+    viewCount: 45000,
   },
   {
     title: 'Upcoming Events in March 2024',
@@ -81,11 +85,12 @@ export const testArticles: Partial<Article>[] = [
     - Community Tournaments
     - In-game Events
     - Special Promotions`,
-    summary: 'Your complete guide to all League of Legends events and tournaments happening in March 2024.',
+    summary:
+      'Your complete guide to all League of Legends events and tournaments happening in March 2024.',
     imageUrl: 'https://example.com/images/march-events.jpg',
     tags: ['Events', 'Tournaments', 'Community', 'Schedule'],
     published: true,
     publishedAt: new Date('2024-02-28'),
-    viewCount: 20000
-  }
-]; 
+    viewCount: 20000,
+  },
+];
