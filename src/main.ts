@@ -39,7 +39,7 @@ async function bootstrap() {
   SwaggerModule.setup('api/docs', app, document);
 
   // Start the application
-  const port = process.env.PORT ?? 3000;
+  const port = process.env.PORT || 4000;
   await app.listen(port);
   console.log(`Application is running on: ${await app.getUrl()}`);
   console.log(`Swagger documentation: ${await app.getUrl()}/api/docs`);
