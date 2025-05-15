@@ -73,7 +73,7 @@ export class ChampionsService {
     if (!this.champions['data']) {
       await this.loadChampionsData();
     }
-    
+
     if (!this.champions['data']) {
       throw new NotFoundException('Champions data not loaded');
     }
@@ -101,7 +101,7 @@ export class ChampionsService {
         }
       }),
     );
-console.log(championsDetails);
+    console.log(championsDetails);
     return {
       results: matchedChampions.length,
       champions: championsDetails,
@@ -153,7 +153,7 @@ console.log(championsDetails);
     await this.championModel.insertMany(champions);
 
     console.log(`Synced ${champions.length} champions to database`);
-    
+
     // Reload champions data
     await this.loadChampionsData();
   }
