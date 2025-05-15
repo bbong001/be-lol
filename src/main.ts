@@ -41,7 +41,8 @@ async function bootstrap() {
   // Start the application
   const port = process.env.PORT || 4000;
   await app.listen(port);
-  console.log(`Application is running on: ${await app.getUrl()}`);
+  console.log(`Application is running on port: ${port}`);
+  console.log(`Application URL: ${await app.getUrl()}`);
   console.log(`Swagger documentation: ${await app.getUrl()}/api/docs`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`Using config file: config.env`);
