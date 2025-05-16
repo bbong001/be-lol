@@ -3,6 +3,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Champion, ChampionDocument } from './schemas/champion.schema';
 import { RiotApiService } from '../common/services/riot-api.service';
+import { ChampionBuildCrawlerService } from './services/champion-build-crawler.service';
 import axios from 'axios';
 
 @Injectable()
@@ -13,6 +14,7 @@ export class ChampionsService {
   constructor(
     @InjectModel(Champion.name) private championModel: Model<ChampionDocument>,
     private riotApiService: RiotApiService,
+    private championBuildCrawlerService: ChampionBuildCrawlerService,
   ) {
     // Load champions data on service initialization
     this.loadChampionsData();
@@ -156,5 +158,106 @@ export class ChampionsService {
 
     // Reload champions data
     await this.loadChampionsData();
+  }
+
+  /**
+   * Get champion build items from u.gg
+   * @param championName Name of the champion
+   * @param position Position (top, jungle, mid, adc, support)
+   * @returns Champion build data
+   */
+  async getChampionBuild(
+    championName: string,
+    position: string = 'top',
+  ): Promise<any> {
+    try {
+      // Validate if champion exists
+      if (!this.champions['data']) {
+        await this.loadChampionsData();
+      }
+
+      // Find champion by name
+      const namePattern = new RegExp(championName, 'i');
+      const matchedChampions = Object.values(this.champions['data']).filter(
+        (champ: any) => namePattern.test(champ.name),
+      );
+
+      if (!matchedChampions.length) {
+        throw new NotFoundException(
+          `No champions found matching '${championName}'`,
+        );
+      }
+
+      // Type casting to avoid TypeScript errors
+      const champion = matchedChampions[0] as { id: string; name: string };
+      
+      // Fetch build data from u.gg
+      const buildData = await this.championBuildCrawlerService.crawlChampionBuild(
+        champion.id,
+        position,
+      );
+
+      // Update champion in the database with build information
+      await this.championModel.updateOne(
+        { id: champion.id },
+        {
+          $set: {
+            recommendedRunes: buildData.runes,
+            recommendedItems: buildData.items,
+          },
+        },
+      );
+
+      return {
+        champion: {
+          id: champion.id,
+          name: champion.name,
+        },
+        buildData,
+      };
+    } catch (error) {
+      throw new Error(`Error fetching champion build: ${error.message}`);
+    }
+  }
+
+  /**
+   * Update recommended builds for all champions
+   */
+  async updateAllChampionBuilds(): Promise<any> {
+    try {
+      // Get all champions
+      const champions = await this.championModel.find().lean();
+      
+      const results = [];
+      
+      // Update builds one by one to avoid rate limiting
+      for (const champion of champions) {
+        try {
+          const buildData = await this.getChampionBuild(champion.id);
+          results.push({
+            champion: champion.name,
+            status: 'success',
+          });
+        } catch (error) {
+          results.push({
+            champion: champion.name,
+            status: 'error',
+            message: error.message,
+          });
+        }
+        
+        // Wait a bit between requests to avoid rate limiting
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+      }
+      
+      return {
+        total: champions.length,
+        updated: results.filter((r) => r.status === 'success').length,
+        failed: results.filter((r) => r.status === 'error').length,
+        results,
+      };
+    } catch (error) {
+      throw new Error(`Error updating champion builds: ${error.message}`);
+    }
   }
 }

@@ -56,7 +56,6 @@ export class PcBuildService {
     const build = await this.pcBuildModel
       .findById(id)
       .populate('user', 'name')
-      .populate('components.component')
       .lean();
 
     if (!build) {
@@ -70,7 +69,6 @@ export class PcBuildService {
     return this.pcBuildModel
       .find({ user: userId })
       .sort({ createdAt: -1 })
-      .populate('components.component')
       .lean();
   }
 
