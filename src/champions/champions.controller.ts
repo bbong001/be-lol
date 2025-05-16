@@ -5,6 +5,7 @@ import {
   Post,
   Query,
   UseGuards,
+  NotFoundException,
 } from '@nestjs/common';
 import { ChampionsService } from './champions.service';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
@@ -17,11 +18,15 @@ import {
   ApiParam,
   ApiQuery,
 } from '@nestjs/swagger';
+import { ChampionBuildCrawlerService } from './services/champion-build-crawler.service';
 
 @ApiTags('champions')
 @Controller('champions')
 export class ChampionsController {
-  constructor(private readonly championsService: ChampionsService) {}
+  constructor(
+    private readonly championsService: ChampionsService,
+    private readonly championBuildCrawlerService: ChampionBuildCrawlerService,
+  ) {}
 
   @ApiOperation({ summary: 'Get all champions with pagination' })
   @ApiResponse({
@@ -93,18 +98,11 @@ export class ChampionsController {
     return this.championsService.findById(id);
   }
 
-  /**
-   * Get champion build items from u.gg
-   * @param name Champion name
-   * @param position Optional position (default: 'top')
-   * @returns Champion build data
-   */
+  @ApiOperation({ summary: 'Get champion build data for a specific champion' })
+  @ApiParam({ name: 'name', description: 'Champion name' })
   @Get('build/:name')
-  async getChampionBuild(
-    @Param('name') name: string,
-    @Query('position') position: string = 'top',
-  ) {
-    return this.championsService.getChampionBuild(name, position);
+  getChampionBuild(@Param('name') name: string) {
+    return this.championsService.getChampionBuild(name);
   }
 
   /**
@@ -116,5 +114,19 @@ export class ChampionsController {
   @Roles(Role.ADMIN)
   async updateAllChampionBuilds() {
     return this.championsService.updateAllChampionBuilds();
+  }
+
+  @ApiOperation({ summary: 'Find champion by name or ID' })
+  @ApiParam({ name: 'query', description: 'Champion name or ID' })
+  @Get('search/:query')
+  async searchChampion(@Param('query') query: string) {
+    const champion = await this.championsService.findByName(query);
+    if (!champion) {
+      throw new NotFoundException(
+        `No champion found with name or ID '${query}'`,
+      );
+    }
+    // Get detailed information with builds
+    return this.championsService.findDetailsByName(champion.name);
   }
 }

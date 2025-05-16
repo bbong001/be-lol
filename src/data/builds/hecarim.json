@@ -1,0 +1,276 @@
+{
+  "championInfo": {
+    "tier": "3",
+    "winRate": "50.12%",
+    "pickRate": "4.95%",
+    "banRate": "4.97%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Pháp Thuật",
+      "runes": [
+        "Tăng Tốc Pha",
+        "Áo Choàng Mây",
+        "Mau Lẹ"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Chuẩn Xác",
+      "runes": [
+        "Thủy Thượng Phiêu",
+        "Đắc Thắng"
+      ]
+    },
+    "statShards": [
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Hành",
+    "Trừng Phạt",
+    "Tốc Biến",
+    "Trừng Phạt"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Quét",
+      "Trận",
+      "Diệt"
+    ],
+    "sequence": [
+      "Q",
+      "W",
+      "Q",
+      "E",
+      "Q",
+      "R",
+      "Q",
+      "W",
+      "Q",
+      "W",
+      "R",
+      "W",
+      "W",
+      "E",
+      "E"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Linh Hồn Phong Hồ"
+        ],
+        "pickRate": "51.42%",
+        "winRate": "51.17%"
+      },
+      {
+        "items": [
+          "Linh Hồn Phong Hồ",
+          "Bình Máu"
+        ],
+        "pickRate": "45.54%",
+        "winRate": "50.09%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Khai Sáng Ionia",
+        "pickRate": "83.51%",
+        "winRate": "51.53%"
+      },
+      {
+        "name": "Giày Thủy Ngân",
+        "pickRate": "6.91%",
+        "winRate": "48.01%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Nguyệt Đao",
+          "Rìu Đen",
+          "Vũ Điệu Tử Thần"
+        ],
+        "pickRate": "22.87%",
+        "winRate": "57.93%"
+      },
+      {
+        "items": [
+          "Nguyệt Đao",
+          "Rìu Đen",
+          "Ngọn Giáo Shojin"
+        ],
+        "pickRate": "7.75%",
+        "winRate": "63.06%"
+      },
+      {
+        "items": [
+          "Nguyệt Đao",
+          "Ngọn Giáo Shojin",
+          "Rìu Đen"
+        ],
+        "pickRate": "7.18%",
+        "winRate": "55.33%"
+      },
+      {
+        "items": [
+          "Nguyệt Đao",
+          "Rìu Đen",
+          "Tụ Bão Zeke"
+        ],
+        "pickRate": "6.93%",
+        "winRate": "58.16%"
+      },
+      {
+        "items": [
+          "Nguyệt Đao",
+          "Ngọn Giáo Shojin",
+          "Vũ Điệu Tử Thần"
+        ],
+        "pickRate": "6.47%",
+        "winRate": "55.21%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Vũ Điệu Tử Thần",
+          "winRate": "63.66%",
+          "matches": "688"
+        },
+        {
+          "name": "Chùy Gai Malmortius",
+          "winRate": "60.69%",
+          "matches": "379"
+        },
+        {
+          "name": "Móng Vuốt Sterak",
+          "winRate": "59.78%",
+          "matches": "368"
+        },
+        {
+          "name": "Ngọn Giáo Shojin",
+          "winRate": "69.66%",
+          "matches": "234"
+        },
+        {
+          "name": "Tụ Bão Zeke",
+          "winRate": "61.24%",
+          "matches": "129"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Vũ Điệu Tử Thần",
+          "winRate": "58.95%",
+          "matches": "95"
+        },
+        {
+          "name": "Móng Vuốt Sterak",
+          "winRate": "70.65%",
+          "matches": "92"
+        },
+        {
+          "name": "Chùy Gai Malmortius",
+          "winRate": "63.77%",
+          "matches": "69"
+        },
+        {
+          "name": "Ngọn Giáo Shojin",
+          "winRate": "58.46%",
+          "matches": "65"
+        },
+        {
+          "name": "Tụ Bão Zeke",
+          "winRate": "59.68%",
+          "matches": "62"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Giáp Liệt Sĩ",
+          "winRate": "70%",
+          "matches": "10"
+        },
+        {
+          "name": "Kiếm Ma Youmuu",
+          "winRate": "60%",
+          "matches": "5"
+        },
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "75%",
+          "matches": "4"
+        },
+        {
+          "name": "Đao Thủy Ngân",
+          "winRate": "66.67%",
+          "matches": "3"
+        },
+        {
+          "name": "Vòng Sắt Cổ Tự",
+          "winRate": "0%",
+          "matches": "2"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Rammus",
+        "winRate": "35.9%",
+        "matches": "39"
+      },
+      {
+        "championName": "Briar",
+        "winRate": "39.22%",
+        "matches": "102"
+      },
+      {
+        "championName": "Bel'Veth",
+        "winRate": "43.43%",
+        "matches": "99"
+      },
+      {
+        "championName": "Evelynn",
+        "winRate": "43.48%",
+        "matches": "115"
+      },
+      {
+        "championName": "Dr. Mundo",
+        "winRate": "43.75%",
+        "matches": "64"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Warwick",
+        "winRate": "65.59%",
+        "matches": "93"
+      },
+      {
+        "championName": "Skarner",
+        "winRate": "61.54%",
+        "matches": "39"
+      },
+      {
+        "championName": "Ngộ Không",
+        "winRate": "59.76%",
+        "matches": "82"
+      },
+      {
+        "championName": "Karthus",
+        "winRate": "56.73%",
+        "matches": "104"
+      },
+      {
+        "championName": "Naafiri",
+        "winRate": "56.67%",
+        "matches": "180"
+      }
+    ]
+  }
+}

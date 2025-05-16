@@ -1,0 +1,279 @@
+{
+  "championInfo": {
+    "tier": "3",
+    "winRate": "52.17%",
+    "pickRate": "1.66%",
+    "banRate": "0.89%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Pháp Thuật",
+      "runes": [
+        "Triệu Hồi Aery",
+        "Áo Choàng Mây",
+        "Thăng Tiến Sức Mạnh"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Cảm Hứng",
+      "runes": [
+        "Thủy Thượng Phiêu",
+        "Hoàn Tiền"
+      ]
+    },
+    "statShards": [
+      "Điểm Hồi Kỹ Năng",
+      "Tốc Độ Di Chuyển",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Trừng Phạt",
+    "Tốc Hành",
+    "Trừng Phạt"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Hỏng",
+      "Rối",
+      "Bụi"
+    ],
+    "sequence": [
+      "Q",
+      "E",
+      "W",
+      "E",
+      "E",
+      "R",
+      "E",
+      "Q",
+      "E",
+      "Q",
+      "R",
+      "Q",
+      "Q",
+      "W",
+      "W"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Linh Hồn Phong Hồ"
+        ],
+        "pickRate": "48.63%",
+        "winRate": "51.62%"
+      },
+      {
+        "items": [
+          "Linh Hồn Phong Hồ",
+          "Bình Máu"
+        ],
+        "pickRate": "43.49%",
+        "winRate": "52.9%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Khai Sáng Ionia",
+        "pickRate": "87.06%",
+        "winRate": "52.16%"
+      },
+      {
+        "name": "Giày Đồng Bộ",
+        "pickRate": "9.67%",
+        "winRate": "54.55%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Dây Chuyền Chuộc Tội",
+          "Bùa Nguyệt Thạch",
+          "Lõi Bình Minh"
+        ],
+        "pickRate": "16.83%",
+        "winRate": "47.95%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Chuộc Tội",
+          "Bùa Nguyệt Thạch",
+          "Lư Hương Sôi Sục"
+        ],
+        "pickRate": "9.02%",
+        "winRate": "54.71%"
+      },
+      {
+        "items": [
+          "Phong Ấn Hắc Ám",
+          "Dây Chuyền Chuộc Tội",
+          "Bùa Nguyệt Thạch",
+          "Lõi Bình Minh"
+        ],
+        "pickRate": "4.56%",
+        "winRate": "60.47%"
+      },
+      {
+        "items": [
+          "Phong Ấn Hắc Ám",
+          "Dây Chuyền Chuộc Tội",
+          "Bùa Nguyệt Thạch",
+          "Lư Hương Sôi Sục"
+        ],
+        "pickRate": "2.49%",
+        "winRate": "63.83%"
+      },
+      {
+        "items": [
+          "Bùa Nguyệt Thạch",
+          "Dây Chuyền Chuộc Tội",
+          "Lõi Bình Minh"
+        ],
+        "pickRate": "2.02%",
+        "winRate": "57.89%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Lõi Bình Minh",
+          "winRate": "68.28%",
+          "matches": "145"
+        },
+        {
+          "name": "Lư Hương Sôi Sục",
+          "winRate": "61.42%",
+          "matches": "127"
+        },
+        {
+          "name": "Trượng Lưu Thủy",
+          "winRate": "54.64%",
+          "matches": "97"
+        },
+        {
+          "name": "Vương Miện Shurelya",
+          "winRate": "60%",
+          "matches": "95"
+        },
+        {
+          "name": "Sách Chiêu Hồn Mejai",
+          "winRate": "79.22%",
+          "matches": "77"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Vương Miện Shurelya",
+          "winRate": "65.79%",
+          "matches": "38"
+        },
+        {
+          "name": "Sách Chiêu Hồn Mejai",
+          "winRate": "74.29%",
+          "matches": "35"
+        },
+        {
+          "name": "Lõi Bình Minh",
+          "winRate": "60%",
+          "matches": "30"
+        },
+        {
+          "name": "Lư Hương Sôi Sục",
+          "winRate": "66.67%",
+          "matches": "21"
+        },
+        {
+          "name": "Trượng Lưu Thủy",
+          "winRate": "42.86%",
+          "matches": "21"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Động Cơ Vũ Trụ",
+          "winRate": "50%",
+          "matches": "2"
+        },
+        {
+          "name": "Vòng Sắt Cổ Tự",
+          "winRate": "0%",
+          "matches": "1"
+        },
+        {
+          "name": "Sách Chiêu Hồn Mejai",
+          "winRate": "100%",
+          "matches": "1"
+        },
+        {
+          "name": "Vương Miện Shurelya",
+          "winRate": "100%",
+          "matches": "1"
+        },
+        {
+          "name": "Giáp Gai",
+          "winRate": "100%",
+          "matches": "1"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Rengar",
+        "winRate": "40%",
+        "matches": "35"
+      },
+      {
+        "championName": "Evelynn",
+        "winRate": "40.63%",
+        "matches": "32"
+      },
+      {
+        "championName": "Elise",
+        "winRate": "41.86%",
+        "matches": "43"
+      },
+      {
+        "championName": "Diana",
+        "winRate": "43.18%",
+        "matches": "44"
+      },
+      {
+        "championName": "Fiddlesticks",
+        "winRate": "43.9%",
+        "matches": "41"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Nunu & Willump",
+        "winRate": "60.87%",
+        "matches": "46"
+      },
+      {
+        "championName": "Vi",
+        "winRate": "60.71%",
+        "matches": "56"
+      },
+      {
+        "championName": "Pantheon",
+        "winRate": "58.62%",
+        "matches": "58"
+      },
+      {
+        "championName": "Nocturne",
+        "winRate": "58.33%",
+        "matches": "96"
+      },
+      {
+        "championName": "Zac",
+        "winRate": "56.86%",
+        "matches": "51"
+      }
+    ]
+  }
+}

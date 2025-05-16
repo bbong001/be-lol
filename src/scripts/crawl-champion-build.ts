@@ -6,27 +6,21 @@ async function main() {
   try {
     // Create a NestJS application context
     const app = await NestFactory.createApplicationContext(AppModule);
-    
+
     // Get the ChampionsService
     const championsService = app.get(ChampionsService);
-    
+
     // Define which champion to crawl
     const championName = process.argv[2] || 'aatrox';
-    const position = process.argv[3] || 'top';
-    
-    console.log(
-      `Crawling build data for ${championName} in ${position} position...`,
-    );
-    
+
+    console.log(`Crawling build data for ${championName}...`);
+
     // Fetch the build data
-    const buildData = await championsService.getChampionBuild(
-      championName,
-      position,
-    );
-    
+    const buildData = await championsService.getChampionBuild(championName);
+
     // Output the result
     console.log(JSON.stringify(buildData, null, 2));
-    
+
     // Close the application
     await app.close();
   } catch (error) {
@@ -36,4 +30,4 @@ async function main() {
 }
 
 // Run the script
-main(); 
+main();

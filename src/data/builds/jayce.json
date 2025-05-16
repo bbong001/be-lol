@@ -1,0 +1,282 @@
+{
+  "championInfo": {
+    "tier": "3",
+    "winRate": "48.87%",
+    "pickRate": "6.87%",
+    "banRate": "9.24%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Quyền Năng Bất Diệt",
+        "Tàn Phá Hủy Diệt",
+        "Ngọn Gió Thứ Hai"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Cảm Hứng",
+      "runes": [
+        "Lan Tràn",
+        "Bước Chân Màu Nhiệm"
+      ]
+    },
+    "statShards": [
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Dịch Chuyển",
+    "Tốc Biến",
+    "Thiêu Đốt"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Sấm",
+      "Tụ",
+      "Tốc"
+    ],
+    "sequence": [
+      "Q",
+      "E",
+      "W",
+      "Q",
+      "Q",
+      "W",
+      "Q",
+      "W",
+      "Q",
+      "W",
+      "Q",
+      "W",
+      "W",
+      "E",
+      "E"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Kiếm Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "89.01%",
+        "winRate": "49.33%"
+      },
+      {
+        "items": [
+          "Khiên Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "6.16%",
+        "winRate": "43.66%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Thép Gai",
+        "pickRate": "36.94%",
+        "winRate": "51.73%"
+      },
+      {
+        "name": "Giày Khai Sáng Ionia",
+        "pickRate": "36.2%",
+        "winRate": "50.16%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Kiếm Ma Youmuu",
+          "Thần Kiếm Muramana",
+          "Thương Phục Hận Serylda"
+        ],
+        "pickRate": "10.64%",
+        "winRate": "57.16%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Nguyệt Đao",
+          "Thần Kiếm Muramana",
+          "Thương Phục Hận Serylda"
+        ],
+        "pickRate": "10.6%",
+        "winRate": "53.79%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Ngọn Giáo Shojin",
+          "Thần Kiếm Muramana",
+          "Rìu Đen"
+        ],
+        "pickRate": "10.54%",
+        "winRate": "56%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Ngọn Giáo Shojin",
+          "Thần Kiếm Muramana",
+          "Thương Phục Hận Serylda"
+        ],
+        "pickRate": "8.18%",
+        "winRate": "52.75%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Nguyệt Đao",
+          "Thần Kiếm Muramana",
+          "Kiếm Ma Youmuu"
+        ],
+        "pickRate": "4.23%",
+        "winRate": "47.59%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Áo Choàng Bóng Tối",
+          "winRate": "58.77%",
+          "matches": "861"
+        },
+        {
+          "name": "Thương Phục Hận Serylda",
+          "winRate": "56.54%",
+          "matches": "810"
+        },
+        {
+          "name": "Kiếm Ác Xà",
+          "winRate": "52.23%",
+          "matches": "494"
+        },
+        {
+          "name": "Ngọn Giáo Shojin",
+          "winRate": "55.85%",
+          "matches": "376"
+        },
+        {
+          "name": "Kiếm Ma Youmuu",
+          "winRate": "55.77%",
+          "matches": "208"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Áo Choàng Bóng Tối",
+          "winRate": "59.55%",
+          "matches": "220"
+        },
+        {
+          "name": "Kiếm Ác Xà",
+          "winRate": "48.59%",
+          "matches": "142"
+        },
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "58.04%",
+          "matches": "112"
+        },
+        {
+          "name": "Thương Phục Hận Serylda",
+          "winRate": "53.61%",
+          "matches": "97"
+        },
+        {
+          "name": "Kiếm Ma Youmuu",
+          "winRate": "54.65%",
+          "matches": "86"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Kiếm Ma Youmuu",
+          "winRate": "45.45%",
+          "matches": "11"
+        },
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "60%",
+          "matches": "10"
+        },
+        {
+          "name": "Kiếm Ác Xà",
+          "winRate": "66.67%",
+          "matches": "6"
+        },
+        {
+          "name": "Ngọn Giáo Shojin",
+          "winRate": "0%",
+          "matches": "3"
+        },
+        {
+          "name": "Áo Choàng Bóng Tối",
+          "winRate": "66.67%",
+          "matches": "3"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Tahm Kench",
+        "winRate": "31.91%",
+        "matches": "47"
+      },
+      {
+        "championName": "Urgot",
+        "winRate": "37.98%",
+        "matches": "129"
+      },
+      {
+        "championName": "Cho'Gath",
+        "winRate": "40%",
+        "matches": "95"
+      },
+      {
+        "championName": "Warwick",
+        "winRate": "40.21%",
+        "matches": "97"
+      },
+      {
+        "championName": "Varus",
+        "winRate": "41.27%",
+        "matches": "63"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Aurora",
+        "winRate": "62.16%",
+        "matches": "37"
+      },
+      {
+        "championName": "Volibear",
+        "winRate": "60%",
+        "matches": "80"
+      },
+      {
+        "championName": "Sylas",
+        "winRate": "58.67%",
+        "matches": "75"
+      },
+      {
+        "championName": "Trundle",
+        "winRate": "57.58%",
+        "matches": "33"
+      },
+      {
+        "championName": "Yone",
+        "winRate": "57.34%",
+        "matches": "293"
+      }
+    ]
+  }
+}

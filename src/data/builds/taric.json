@@ -1,0 +1,234 @@
+{
+  "championInfo": {
+    "tier": "2",
+    "winRate": "53.23%",
+    "pickRate": "1.38%",
+    "banRate": "0.20%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Cảm Hứng",
+      "runes": [
+        "Nâng Cấp Băng Giá",
+        "Bước Chân Màu Nhiệm",
+        "Giao Hàng Bánh Quy"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Thấu Thị Vũ Trụ",
+        "Kiểm Soát Điều Kiện"
+      ]
+    },
+    "statShards": [
+      "Tốc Độ Đánh",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Thiêu Đốt",
+    "Kiệt Sức",
+    "Tốc Biến"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Lóa",
+      "Tú",
+      "Cố"
+    ],
+    "sequence": [
+      "E",
+      "W",
+      "Q",
+      "E",
+      "E",
+      "R",
+      "E",
+      "Q",
+      "E",
+      "Q",
+      "R",
+      "Q",
+      "Q",
+      "W",
+      "W"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "96.75%",
+        "winRate": "52.65%"
+      },
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "2.27%",
+        "winRate": "58.49%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Thép Gai",
+        "pickRate": "37.17%",
+        "winRate": "51.68%"
+      },
+      {
+        "name": "Giày Khai Sáng Ionia",
+        "pickRate": "21.7%",
+        "winRate": "55.65%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Dây Chuyền Iron Solari",
+          "Băng Giáp Vĩnh Cửu",
+          "Lời Thề Hiệp Sĩ"
+        ],
+        "pickRate": "18.23%",
+        "winRate": "64.95%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Dây Chuyền Iron Solari",
+          "Băng Giáp Vĩnh Cửu",
+          "Tim Băng"
+        ],
+        "pickRate": "6.39%",
+        "winRate": "73.53%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Dây Chuyền Iron Solari",
+          "Băng Giáp Vĩnh Cửu",
+          "Giáp Gai"
+        ],
+        "pickRate": "6.39%",
+        "winRate": "52.94%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Dây Chuyền Iron Solari",
+          "Lời Thề Hiệp Sĩ",
+          "Băng Giáp Vĩnh Cửu"
+        ],
+        "pickRate": "4.89%",
+        "winRate": "69.23%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Dây Chuyền Iron Solari",
+          "Tim Băng",
+          "Băng Giáp Vĩnh Cửu"
+        ],
+        "pickRate": "3.57%",
+        "winRate": "68.42%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Giáp Gai",
+          "winRate": "56.25%",
+          "matches": "16"
+        },
+        {
+          "name": "Băng Giáp Vĩnh Cửu",
+          "winRate": "55.56%",
+          "matches": "9"
+        },
+        {
+          "name": "Tim Băng",
+          "winRate": "75%",
+          "matches": "8"
+        },
+        {
+          "name": "Giáp Tâm Linh",
+          "winRate": "42.86%",
+          "matches": "7"
+        },
+        {
+          "name": "Dây Chuyền Chuộc Tội",
+          "winRate": "75%",
+          "matches": "4"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Dây Chuyền Chữ Thập",
+          "winRate": "100%",
+          "matches": "1"
+        }
+      ],
+      "sixthItems": []
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Milio",
+        "winRate": "38.1%",
+        "matches": "63"
+      },
+      {
+        "championName": "Vel'Koz",
+        "winRate": "38.71%",
+        "matches": "31"
+      },
+      {
+        "championName": "Thresh",
+        "winRate": "41.9%",
+        "matches": "105"
+      },
+      {
+        "championName": "Soraka",
+        "winRate": "43.18%",
+        "matches": "44"
+      },
+      {
+        "championName": "Morgana",
+        "winRate": "43.75%",
+        "matches": "32"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Senna",
+        "winRate": "68.97%",
+        "matches": "58"
+      },
+      {
+        "championName": "Janna",
+        "winRate": "66.04%",
+        "matches": "53"
+      },
+      {
+        "championName": "Fiddlesticks",
+        "winRate": "63.33%",
+        "matches": "30"
+      },
+      {
+        "championName": "Karma",
+        "winRate": "61.84%",
+        "matches": "76"
+      },
+      {
+        "championName": "Rakan",
+        "winRate": "61.82%",
+        "matches": "55"
+      }
+    ]
+  }
+}

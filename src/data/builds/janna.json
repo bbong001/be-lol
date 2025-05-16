@@ -1,0 +1,251 @@
+{
+  "championInfo": {
+    "tier": "2",
+    "winRate": "51.96%",
+    "pickRate": "4.52%",
+    "banRate": "1.76%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Pháp Thuật",
+      "runes": [
+        "Triệu Hồi Aery",
+        "Dải Băng Năng Lượng",
+        "Mau Lẹ"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Cuồng Phong Tích Tụ",
+        "Suối Nguồn Sinh Mệnh"
+      ]
+    },
+    "statShards": [
+      "Sức Mạnh Thích Ứng",
+      "Tốc Độ Di Chuyển",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Hồi Máu",
+    "Tốc Biến",
+    "Thiêu Đốt"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Tây",
+      "Bão",
+      "Lốc"
+    ],
+    "sequence": [
+      "W",
+      "Q",
+      "E",
+      "W",
+      "W",
+      "R",
+      "W",
+      "E",
+      "W",
+      "E",
+      "R",
+      "E",
+      "E",
+      "Q",
+      "Q"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "97.72%",
+        "winRate": "52.12%"
+      },
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "1.64%",
+        "winRate": "56.8%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Bạc",
+        "pickRate": "75.76%",
+        "winRate": "52.87%"
+      },
+      {
+        "name": "Giày Khai Sáng Ionia",
+        "pickRate": "15.29%",
+        "winRate": "52.96%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Bùa Nguyệt Thạch",
+          "Dây Chuyền Chuộc Tội",
+          "Vương Miện Shurelya"
+        ],
+        "pickRate": "6.6%",
+        "winRate": "65%"
+      },
+      {
+        "items": [
+          "Bùa Nguyệt Thạch",
+          "Dây Chuyền Chuộc Tội",
+          "Lõi Bình Minh"
+        ],
+        "pickRate": "4.29%",
+        "winRate": "58.24%"
+      },
+      {
+        "items": [
+          "Bùa Nguyệt Thạch",
+          "Dây Chuyền Chuộc Tội",
+          "Lư Hương Sôi Sục"
+        ],
+        "pickRate": "3.58%",
+        "winRate": "59.21%"
+      },
+      {
+        "items": [
+          "Bùa Nguyệt Thạch",
+          "Vương Miện Shurelya",
+          "Dây Chuyền Chuộc Tội"
+        ],
+        "pickRate": "3.49%",
+        "winRate": "55.41%"
+      },
+      {
+        "items": [
+          "Phong Ấn Hắc Ám",
+          "Bùa Nguyệt Thạch",
+          "Dây Chuyền Chuộc Tội",
+          "Sách Chiêu Hồn Mejai"
+        ],
+        "pickRate": "3.21%",
+        "winRate": "85.29%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Sách Chiêu Hồn Mejai",
+          "winRate": "65.96%",
+          "matches": "47"
+        },
+        {
+          "name": "Lư Hương Sôi Sục",
+          "winRate": "65.91%",
+          "matches": "44"
+        },
+        {
+          "name": "Dây Chuyền Chuộc Tội",
+          "winRate": "70%",
+          "matches": "40"
+        },
+        {
+          "name": "Lõi Bình Minh",
+          "winRate": "63.16%",
+          "matches": "38"
+        },
+        {
+          "name": "Vương Miện Shurelya",
+          "winRate": "66.67%",
+          "matches": "30"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Vương Miện Shurelya",
+          "winRate": "33.33%",
+          "matches": "3"
+        },
+        {
+          "name": "Lõi Bình Minh",
+          "winRate": "0%",
+          "matches": "1"
+        },
+        {
+          "name": "Trát Lệnh Đế Vương",
+          "winRate": "100%",
+          "matches": "1"
+        },
+        {
+          "name": "Trượng Lưu Thủy",
+          "winRate": "100%",
+          "matches": "1"
+        },
+        {
+          "name": "Lời Thề Hiệp Sĩ",
+          "winRate": "100%",
+          "matches": "1"
+        }
+      ],
+      "sixthItems": []
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Taric",
+        "winRate": "33.96%",
+        "matches": "53"
+      },
+      {
+        "championName": "Fiddlesticks",
+        "winRate": "40.78%",
+        "matches": "103"
+      },
+      {
+        "championName": "Tahm Kench",
+        "winRate": "42.22%",
+        "matches": "45"
+      },
+      {
+        "championName": "Morgana",
+        "winRate": "43.48%",
+        "matches": "92"
+      },
+      {
+        "championName": "Zyra",
+        "winRate": "43.66%",
+        "matches": "71"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Nidalee",
+        "winRate": "69.7%",
+        "matches": "33"
+      },
+      {
+        "championName": "Brand",
+        "winRate": "64.71%",
+        "matches": "34"
+      },
+      {
+        "championName": "Shen",
+        "winRate": "62.86%",
+        "matches": "35"
+      },
+      {
+        "championName": "Shaco",
+        "winRate": "61.04%",
+        "matches": "77"
+      },
+      {
+        "championName": "Mel",
+        "winRate": "60%",
+        "matches": "60"
+      }
+    ]
+  }
+}

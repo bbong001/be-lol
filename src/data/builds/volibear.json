@@ -1,0 +1,277 @@
+{
+  "championInfo": {
+    "tier": "2",
+    "winRate": "51.77%",
+    "pickRate": "3.60%",
+    "banRate": "4.30%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Chuẩn Xác",
+      "runes": [
+        "Sẵn Sàng Tấn Công",
+        "Đắc Thắng",
+        "Huyền Thoại: Gia Tốc"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Pháp Thuật",
+      "runes": [
+        "Chốt Chặn Cuối Cùng",
+        "Mau Lẹ"
+      ]
+    },
+    "statShards": [
+      "Tốc Độ Đánh",
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Trừng Phạt",
+    "Tốc Hành",
+    "Trừng Phạt"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Động",
+      "Xé",
+      "Bão"
+    ],
+    "sequence": [
+      "E",
+      "W",
+      "Q",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "W",
+      "Q",
+      "W",
+      "R",
+      "W",
+      "W",
+      "E",
+      "E"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Linh Hồn Phong Hồ"
+        ],
+        "pickRate": "49.25%",
+        "winRate": "51.27%"
+      },
+      {
+        "items": [
+          "Linh Hồn Phong Hồ",
+          "Bình Máu"
+        ],
+        "pickRate": "40.91%",
+        "winRate": "51.94%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Bạc",
+        "pickRate": "28.06%",
+        "winRate": "54.02%"
+      },
+      {
+        "name": "Giày Thủy Ngân",
+        "pickRate": "26.3%",
+        "winRate": "52.92%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Động Cơ Vũ Trụ",
+          "Đao Chớp Navori",
+          "Giáp Tâm Linh"
+        ],
+        "pickRate": "21.85%",
+        "winRate": "57.31%"
+      },
+      {
+        "items": [
+          "Động Cơ Vũ Trụ",
+          "Đao Chớp Navori",
+          "Giáp Liệt Sĩ"
+        ],
+        "pickRate": "10.92%",
+        "winRate": "57.53%"
+      },
+      {
+        "items": [
+          "Động Cơ Vũ Trụ",
+          "Găng Tay Băng Giá",
+          "Giáp Tâm Linh"
+        ],
+        "pickRate": "4.74%",
+        "winRate": "64.74%"
+      },
+      {
+        "items": [
+          "Rìu Đen",
+          "Găng Tay Băng Giá",
+          "Giáp Tâm Linh"
+        ],
+        "pickRate": "4.39%",
+        "winRate": "64.2%"
+      },
+      {
+        "items": [
+          "Trượng Trường Sinh",
+          "Đao Chớp Navori",
+          "Giáp Tâm Linh"
+        ],
+        "pickRate": "3.42%",
+        "winRate": "58.39%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Giáp Tâm Linh",
+          "winRate": "62.81%",
+          "matches": "484"
+        },
+        {
+          "name": "Giáp Gai",
+          "winRate": "54.21%",
+          "matches": "321"
+        },
+        {
+          "name": "Giáp Liệt Sĩ",
+          "winRate": "68.79%",
+          "matches": "282"
+        },
+        {
+          "name": "Áo Choàng Diệt Vong",
+          "winRate": "58.55%",
+          "matches": "152"
+        },
+        {
+          "name": "Khiên Băng Randuin",
+          "winRate": "53.19%",
+          "matches": "94"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Áo Choàng Diệt Vong",
+          "winRate": "65.17%",
+          "matches": "89"
+        },
+        {
+          "name": "Giáp Gai",
+          "winRate": "58.33%",
+          "matches": "84"
+        },
+        {
+          "name": "Giáp Liệt Sĩ",
+          "winRate": "75.44%",
+          "matches": "57"
+        },
+        {
+          "name": "Giáp Tâm Linh",
+          "winRate": "43.14%",
+          "matches": "51"
+        },
+        {
+          "name": "Jak'Sho, Vỏ Bọc Thích Nghi",
+          "winRate": "60.42%",
+          "matches": "48"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Giáp Liệt Sĩ",
+          "winRate": "50%",
+          "matches": "4"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "50%",
+          "matches": "2"
+        },
+        {
+          "name": "Khiên Băng Randuin",
+          "winRate": "50%",
+          "matches": "2"
+        },
+        {
+          "name": "Đao Chớp Navori",
+          "winRate": "0%",
+          "matches": "2"
+        },
+        {
+          "name": "Áo Choàng Diệt Vong",
+          "winRate": "50%",
+          "matches": "2"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Rek'Sai",
+        "winRate": "32.26%",
+        "matches": "31"
+      },
+      {
+        "championName": "Ngộ Không",
+        "winRate": "37.31%",
+        "matches": "67"
+      },
+      {
+        "championName": "Bel'Veth",
+        "winRate": "37.68%",
+        "matches": "69"
+      },
+      {
+        "championName": "Trundle",
+        "winRate": "43.59%",
+        "matches": "39"
+      },
+      {
+        "championName": "Nocturne",
+        "winRate": "44.39%",
+        "matches": "187"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Sejuani",
+        "winRate": "66.67%",
+        "matches": "60"
+      },
+      {
+        "championName": "Shyvana",
+        "winRate": "62.5%",
+        "matches": "56"
+      },
+      {
+        "championName": "Nidalee",
+        "winRate": "60.61%",
+        "matches": "66"
+      },
+      {
+        "championName": "Diana",
+        "winRate": "58.97%",
+        "matches": "117"
+      },
+      {
+        "championName": "Kha'Zix",
+        "winRate": "56.86%",
+        "matches": "153"
+      }
+    ]
+  }
+}

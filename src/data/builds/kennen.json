@@ -1,0 +1,278 @@
+{
+  "championInfo": {
+    "tier": "3",
+    "winRate": "51.59%",
+    "pickRate": "2.19%",
+    "banRate": "1.96%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Áp Đảo",
+      "runes": [
+        "Sốc Điện",
+        "Vị Máu",
+        "Ký Ức Kinh Hoàng"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Pháp Thuật",
+      "runes": [
+        "Thợ Săn Tối Thượng",
+        "Tập Trung Tuyệt Đối"
+      ]
+    },
+    "statShards": [
+      "Tốc Độ Đánh",
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Dịch Chuyển",
+    "Tốc Biến",
+    "Thiêu Đốt"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Sét",
+      "Sét",
+      "Sét"
+    ],
+    "sequence": [
+      "Q",
+      "W",
+      "E",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "W",
+      "Q",
+      "W",
+      "R",
+      "W",
+      "W",
+      "E",
+      "E"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Kiếm Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "61.81%",
+        "winRate": "50.36%"
+      },
+      {
+        "items": [
+          "Nhẫn Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "25.86%",
+        "winRate": "53.74%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Pháp Sư",
+        "pickRate": "90.69%",
+        "winRate": "52.31%"
+      },
+      {
+        "name": "Giày Bạc",
+        "pickRate": "3.89%",
+        "winRate": "50%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Đai Tên Lửa Hextech",
+          "Ngọn Lửa Hắc Hóa",
+          "Đồng Hồ Cát Zhonya"
+        ],
+        "pickRate": "19.67%",
+        "winRate": "54.14%"
+      },
+      {
+        "items": [
+          "Đai Tên Lửa Hextech",
+          "Ngọn Lửa Hắc Hóa",
+          "Mũ Phù Thủy Rabadon"
+        ],
+        "pickRate": "10.95%",
+        "winRate": "56.31%"
+      },
+      {
+        "items": [
+          "Đai Tên Lửa Hextech",
+          "Quyền Trượng Bão Tố",
+          "Ngọn Lửa Hắc Hóa"
+        ],
+        "pickRate": "3.94%",
+        "winRate": "60%"
+      },
+      {
+        "items": [
+          "Đai Tên Lửa Hextech",
+          "Đồng Hồ Cát Zhonya",
+          "Ngọn Lửa Hắc Hóa"
+        ],
+        "pickRate": "3.4%",
+        "winRate": "53.62%"
+      },
+      {
+        "items": [
+          "Đai Tên Lửa Hextech",
+          "Quyền Trượng Bão Tố",
+          "Đồng Hồ Cát Zhonya"
+        ],
+        "pickRate": "3.01%",
+        "winRate": "59.02%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Mũ Phù Thủy Rabadon",
+          "winRate": "64.55%",
+          "matches": "220"
+        },
+        {
+          "name": "Trượng Hư Vô",
+          "winRate": "52.23%",
+          "matches": "157"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "63.09%",
+          "matches": "149"
+        },
+        {
+          "name": "Ngọn Lửa Hắc Hóa",
+          "winRate": "53.85%",
+          "matches": "52"
+        },
+        {
+          "name": "Dây Chuyền Chữ Thập",
+          "winRate": "59.52%",
+          "matches": "42"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Trượng Hư Vô",
+          "winRate": "70.45%",
+          "matches": "44"
+        },
+        {
+          "name": "Mũ Phù Thủy Rabadon",
+          "winRate": "66.67%",
+          "matches": "36"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "68.97%",
+          "matches": "29"
+        },
+        {
+          "name": "Dây Chuyền Chữ Thập",
+          "winRate": "50%",
+          "matches": "20"
+        },
+        {
+          "name": "Quyền Trượng Bão Tố",
+          "winRate": "61.54%",
+          "matches": "13"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Dây Chuyền Chữ Thập",
+          "winRate": "100%",
+          "matches": "2"
+        },
+        {
+          "name": "Kính Nhắm Ma Pháp",
+          "winRate": "100%",
+          "matches": "1"
+        },
+        {
+          "name": "Ngọn Lửa Hắc Hóa",
+          "winRate": "100%",
+          "matches": "1"
+        },
+        {
+          "name": "Đai Tên Lửa Hextech",
+          "winRate": "0%",
+          "matches": "1"
+        },
+        {
+          "name": "Quyền Trượng Bão Tố",
+          "winRate": "100%",
+          "matches": "1"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Dr. Mundo",
+        "winRate": "36.49%",
+        "matches": "74"
+      },
+      {
+        "championName": "Nasus",
+        "winRate": "38.24%",
+        "matches": "68"
+      },
+      {
+        "championName": "Cho'Gath",
+        "winRate": "39.02%",
+        "matches": "41"
+      },
+      {
+        "championName": "Yorick",
+        "winRate": "40.74%",
+        "matches": "54"
+      },
+      {
+        "championName": "Irelia",
+        "winRate": "41.98%",
+        "matches": "81"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Volibear",
+        "winRate": "62.5%",
+        "matches": "40"
+      },
+      {
+        "championName": "Teemo",
+        "winRate": "60.87%",
+        "matches": "46"
+      },
+      {
+        "championName": "Tryndamere",
+        "winRate": "60.61%",
+        "matches": "33"
+      },
+      {
+        "championName": "Darius",
+        "winRate": "59.66%",
+        "matches": "119"
+      },
+      {
+        "championName": "Rumble",
+        "winRate": "58.7%",
+        "matches": "46"
+      }
+    ]
+  }
+}

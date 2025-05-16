@@ -1,0 +1,284 @@
+{
+  "championInfo": {
+    "tier": "4",
+    "winRate": "50.23%",
+    "pickRate": "2.40%",
+    "banRate": "1.06%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Chuẩn Xác",
+      "runes": [
+        "Chinh Phục",
+        "Hiện Diện Trí Tuệ",
+        "Huyền Thoại: Tốc Độ Đánh"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Cảm Hứng",
+      "runes": [
+        "Đốn Hạ",
+        "Giao Hàng Bánh Quy"
+      ]
+    },
+    "statShards": [
+      "Tốc Độ Đánh",
+      "Sức Mạnh Thích Ứng",
+      "Máu"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Lá Chắn",
+    "Thanh Tẩy",
+    "Tốc Biến"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Phốt-pho",
+      "Máy",
+      "Lửa"
+    ],
+    "sequence": [
+      "E",
+      "Q",
+      "W",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "E",
+      "Q",
+      "E",
+      "R",
+      "E",
+      "E",
+      "W",
+      "W"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Kiếm Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "96.38%",
+        "winRate": "50.12%"
+      },
+      {
+        "items": [
+          "Giày",
+          "Kiếm Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "0.94%",
+        "winRate": "62.5%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Thép Gai",
+        "pickRate": "58.56%",
+        "winRate": "51.99%"
+      },
+      {
+        "name": "Giày Bạc",
+        "pickRate": "18.9%",
+        "winRate": "51.06%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Tam Hợp Kiếm",
+          "Thần Kiếm Muramana",
+          "Đại Bác Liên Thanh"
+        ],
+        "pickRate": "30.11%",
+        "winRate": "55.1%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Tam Hợp Kiếm",
+          "Thần Kiếm Muramana",
+          "Vô Cực Kiếm"
+        ],
+        "pickRate": "22.98%",
+        "winRate": "51.11%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Tam Hợp Kiếm",
+          "Thần Kiếm Muramana",
+          "Nỏ Thần Dominik"
+        ],
+        "pickRate": "8.4%",
+        "winRate": "49.3%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Tam Hợp Kiếm",
+          "Thần Kiếm Muramana",
+          "Lời Nhắc Tử Vong"
+        ],
+        "pickRate": "7.29%",
+        "winRate": "51.89%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Tam Hợp Kiếm",
+          "Thần Kiếm Muramana",
+          "Ngọn Giáo Shojin"
+        ],
+        "pickRate": "4.45%",
+        "winRate": "51.33%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Vô Cực Kiếm",
+          "winRate": "53.99%",
+          "matches": "363"
+        },
+        {
+          "name": "Đại Bác Liên Thanh",
+          "winRate": "49.78%",
+          "matches": "225"
+        },
+        {
+          "name": "Nỏ Thần Dominik",
+          "winRate": "54.46%",
+          "matches": "213"
+        },
+        {
+          "name": "Lời Nhắc Tử Vong",
+          "winRate": "44.33%",
+          "matches": "97"
+        },
+        {
+          "name": "Huyết Kiếm",
+          "winRate": "48.84%",
+          "matches": "43"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Nỏ Thần Dominik",
+          "winRate": "51.06%",
+          "matches": "47"
+        },
+        {
+          "name": "Vô Cực Kiếm",
+          "winRate": "47.5%",
+          "matches": "40"
+        },
+        {
+          "name": "Đại Bác Liên Thanh",
+          "winRate": "55%",
+          "matches": "40"
+        },
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "51.43%",
+          "matches": "35"
+        },
+        {
+          "name": "Huyết Kiếm",
+          "winRate": "68.18%",
+          "matches": "22"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "75%",
+          "matches": "4"
+        },
+        {
+          "name": "Đại Bác Liên Thanh",
+          "winRate": "66.67%",
+          "matches": "3"
+        },
+        {
+          "name": "Chùy Gai Malmortius",
+          "winRate": "50%",
+          "matches": "2"
+        },
+        {
+          "name": "Huyết Kiếm",
+          "winRate": "100%",
+          "matches": "2"
+        },
+        {
+          "name": "Ma Vũ Song Kiếm",
+          "winRate": "50%",
+          "matches": "2"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Sivir",
+        "winRate": "39.02%",
+        "matches": "41"
+      },
+      {
+        "championName": "Mel",
+        "winRate": "42.86%",
+        "matches": "35"
+      },
+      {
+        "championName": "Senna",
+        "winRate": "43.86%",
+        "matches": "114"
+      },
+      {
+        "championName": "Smolder",
+        "winRate": "44.64%",
+        "matches": "168"
+      },
+      {
+        "championName": "Caitlyn",
+        "winRate": "44.88%",
+        "matches": "127"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Kalista",
+        "winRate": "63.64%",
+        "matches": "33"
+      },
+      {
+        "championName": "Ashe",
+        "winRate": "57.26%",
+        "matches": "124"
+      },
+      {
+        "championName": "Draven",
+        "winRate": "55.84%",
+        "matches": "77"
+      },
+      {
+        "championName": "Twitch",
+        "winRate": "55.22%",
+        "matches": "67"
+      },
+      {
+        "championName": "Vayne",
+        "winRate": "54.69%",
+        "matches": "64"
+      }
+    ]
+  }
+}

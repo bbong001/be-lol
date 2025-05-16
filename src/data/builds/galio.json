@@ -1,0 +1,268 @@
+{
+  "championInfo": {
+    "tier": "1",
+    "winRate": "52.52%",
+    "pickRate": "4.50%",
+    "banRate": "3.44%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Dư Chấn",
+        "Nện Khiên",
+        "Giáp Cốt"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Pháp Thuật",
+      "runes": [
+        "Lan Tràn",
+        "Áo Choàng Mây"
+      ]
+    },
+    "statShards": [
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Dịch Chuyển",
+    "Tốc Biến",
+    "Thiêu Đốt"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Trận",
+      "Durand",
+      "Lý"
+    ],
+    "sequence": [
+      "Q",
+      "W",
+      "E",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "W",
+      "Q",
+      "W",
+      "R",
+      "W",
+      "W",
+      "E",
+      "E"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Nhẫn Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "85.36%",
+        "winRate": "52.95%"
+      },
+      {
+        "items": [
+          "Khiên Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "12.02%",
+        "winRate": "49.47%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Thủy Ngân",
+        "pickRate": "50.58%",
+        "winRate": "52.7%"
+      },
+      {
+        "name": "Giày Thép Gai",
+        "pickRate": "26.59%",
+        "winRate": "52.37%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Áo Choàng Hắc Quang",
+          "Quyền Trượng Ác Thần",
+          "Đồng Hồ Cát Zhonya"
+        ],
+        "pickRate": "19.58%",
+        "winRate": "58.19%"
+      },
+      {
+        "items": [
+          "Áo Choàng Hắc Quang",
+          "Quyền Trượng Ác Thần",
+          "Giáp Gai"
+        ],
+        "pickRate": "7.53%",
+        "winRate": "52.61%"
+      },
+      {
+        "items": [
+          "Trượng Trường Sinh",
+          "Quyền Trượng Ác Thần",
+          "Đồng Hồ Cát Zhonya"
+        ],
+        "pickRate": "3.34%",
+        "winRate": "65.69%"
+      },
+      {
+        "items": [
+          "Phong Ấn Hắc Ám",
+          "Áo Choàng Hắc Quang",
+          "Quyền Trượng Ác Thần",
+          "Đồng Hồ Cát Zhonya"
+        ],
+        "pickRate": "2.55%",
+        "winRate": "69.23%"
+      },
+      {
+        "items": [
+          "Áo Choàng Hắc Quang",
+          "Quyền Trượng Ác Thần",
+          "Tim Băng"
+        ],
+        "pickRate": "2.42%",
+        "winRate": "48.65%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "73.1%",
+          "matches": "145"
+        },
+        {
+          "name": "Giáp Gai",
+          "winRate": "50.41%",
+          "matches": "121"
+        },
+        {
+          "name": "Mũ Phù Thủy Rabadon",
+          "winRate": "65.77%",
+          "matches": "111"
+        },
+        {
+          "name": "Tim Băng",
+          "winRate": "65%",
+          "matches": "80"
+        },
+        {
+          "name": "Sách Chiêu Hồn Mejai",
+          "winRate": "89.66%",
+          "matches": "58"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Mũ Phù Thủy Rabadon",
+          "winRate": "58.82%",
+          "matches": "17"
+        },
+        {
+          "name": "Tim Băng",
+          "winRate": "70.59%",
+          "matches": "17"
+        },
+        {
+          "name": "Sách Chiêu Hồn Mejai",
+          "winRate": "75%",
+          "matches": "16"
+        },
+        {
+          "name": "Trượng Hư Vô",
+          "winRate": "84.62%",
+          "matches": "13"
+        },
+        {
+          "name": "Giáp Gai",
+          "winRate": "40%",
+          "matches": "10"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Trượng Hư Vô",
+          "winRate": "33.33%",
+          "matches": "3"
+        },
+        {
+          "name": "Động Cơ Vũ Trụ",
+          "winRate": "0%",
+          "matches": "1"
+        },
+        {
+          "name": "Quyền Trượng Ác Thần",
+          "winRate": "0%",
+          "matches": "1"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Pantheon",
+        "winRate": "37.5%",
+        "matches": "56"
+      },
+      {
+        "championName": "Swain",
+        "winRate": "39.13%",
+        "matches": "46"
+      },
+      {
+        "championName": "Qiyana",
+        "winRate": "42.11%",
+        "matches": "57"
+      },
+      {
+        "championName": "Anivia",
+        "winRate": "43.28%",
+        "matches": "67"
+      },
+      {
+        "championName": "Vex",
+        "winRate": "43.75%",
+        "matches": "80"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Katarina",
+        "winRate": "61.75%",
+        "matches": "251"
+      },
+      {
+        "championName": "Aurora",
+        "winRate": "60.81%",
+        "matches": "74"
+      },
+      {
+        "championName": "Akshan",
+        "winRate": "60.66%",
+        "matches": "61"
+      },
+      {
+        "championName": "Tristana",
+        "winRate": "60.61%",
+        "matches": "33"
+      },
+      {
+        "championName": "Smolder",
+        "winRate": "59.62%",
+        "matches": "52"
+      }
+    ]
+  }
+}

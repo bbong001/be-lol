@@ -1,0 +1,278 @@
+{
+  "championInfo": {
+    "tier": "4",
+    "winRate": "47.89%",
+    "pickRate": "6.10%",
+    "banRate": "6.56%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Chuẩn Xác",
+      "runes": [
+        "Nhịp Độ Chết Người",
+        "Hấp Thụ Sinh Mệnh",
+        "Huyền Thoại: Tốc Độ Đánh"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Chốt Chặn Cuối Cùng",
+        "Ngọn Gió Thứ Hai"
+      ]
+    },
+    "statShards": [
+      "Tốc Độ Đánh",
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Dịch Chuyển",
+    "Tốc Biến",
+    "Thiêu Đốt"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Kiếm",
+      "Hồn",
+      "Hồn"
+    ],
+    "sequence": [
+      "Q",
+      "W",
+      "E",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "E",
+      "Q",
+      "E",
+      "R",
+      "E",
+      "E",
+      "W",
+      "W"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Khiên Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "65.48%",
+        "winRate": "46.77%"
+      },
+      {
+        "items": [
+          "Kiếm Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "32.78%",
+        "winRate": "48.45%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Cuồng Nộ",
+        "pickRate": "96.14%",
+        "winRate": "47.82%"
+      },
+      {
+        "name": "Giày Thủy Ngân",
+        "pickRate": "2.75%",
+        "winRate": "44.18%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Gươm Suy Vong",
+          "Nỏ Tử Thủ",
+          "Vô Cực Kiếm"
+        ],
+        "pickRate": "54.58%",
+        "winRate": "58.59%"
+      },
+      {
+        "items": [
+          "Gươm Suy Vong",
+          "Nỏ Tử Thủ",
+          "Đao Tím"
+        ],
+        "pickRate": "5.58%",
+        "winRate": "46.82%"
+      },
+      {
+        "items": [
+          "Gươm Suy Vong",
+          "Vô Cực Kiếm",
+          "Nỏ Tử Thủ"
+        ],
+        "pickRate": "5.36%",
+        "winRate": "59.58%"
+      },
+      {
+        "items": [
+          "Gươm Suy Vong",
+          "Nỏ Tử Thủ",
+          "Lời Nhắc Tử Vong"
+        ],
+        "pickRate": "3.66%",
+        "winRate": "53.06%"
+      },
+      {
+        "items": [
+          "Mũi Tên Yun Tal",
+          "Vô Cực Kiếm",
+          "Huyết Kiếm"
+        ],
+        "pickRate": "1.72%",
+        "winRate": "66.3%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Vũ Điệu Tử Thần",
+          "winRate": "58.09%",
+          "matches": "692"
+        },
+        {
+          "name": "Đao Tím",
+          "winRate": "54.29%",
+          "matches": "315"
+        },
+        {
+          "name": "Vô Cực Kiếm",
+          "winRate": "58.6%",
+          "matches": "186"
+        },
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "65.94%",
+          "matches": "138"
+        },
+        {
+          "name": "Huyết Kiếm",
+          "winRate": "65.79%",
+          "matches": "114"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "55.88%",
+          "matches": "136"
+        },
+        {
+          "name": "Vũ Điệu Tử Thần",
+          "winRate": "46.75%",
+          "matches": "77"
+        },
+        {
+          "name": "Đao Tím",
+          "winRate": "50%",
+          "matches": "44"
+        },
+        {
+          "name": "Jak'Sho, Vỏ Bọc Thích Nghi",
+          "winRate": "64.29%",
+          "matches": "42"
+        },
+        {
+          "name": "Huyết Kiếm",
+          "winRate": "54.29%",
+          "matches": "35"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Ma Vũ Song Kiếm",
+          "winRate": "66.67%",
+          "matches": "6"
+        },
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "25%",
+          "matches": "4"
+        },
+        {
+          "name": "Khiên Băng Randuin",
+          "winRate": "100%",
+          "matches": "2"
+        },
+        {
+          "name": "Móc Diệt Thủy Quái",
+          "winRate": "50%",
+          "matches": "2"
+        },
+        {
+          "name": "Mũi Tên Yun Tal",
+          "winRate": "0%",
+          "matches": "1"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Cho'Gath",
+        "winRate": "37.21%",
+        "matches": "43"
+      },
+      {
+        "championName": "Jayce",
+        "winRate": "37.25%",
+        "matches": "51"
+      },
+      {
+        "championName": "Fizz",
+        "winRate": "40.51%",
+        "matches": "79"
+      },
+      {
+        "championName": "Annie",
+        "winRate": "40.88%",
+        "matches": "181"
+      },
+      {
+        "championName": "Swain",
+        "winRate": "41.03%",
+        "matches": "39"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Mel",
+        "winRate": "56.96%",
+        "matches": "230"
+      },
+      {
+        "championName": "Gragas",
+        "winRate": "56.76%",
+        "matches": "37"
+      },
+      {
+        "championName": "Aurelion Sol",
+        "winRate": "54.65%",
+        "matches": "86"
+      },
+      {
+        "championName": "Veigar",
+        "winRate": "54.43%",
+        "matches": "79"
+      },
+      {
+        "championName": "Azir",
+        "winRate": "53.69%",
+        "matches": "203"
+      }
+    ]
+  }
+}

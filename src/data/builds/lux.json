@@ -1,0 +1,260 @@
+{
+  "championInfo": {
+    "tier": "4",
+    "winRate": "48.38%",
+    "pickRate": "4.86%",
+    "banRate": "2.97%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Pháp Thuật",
+      "runes": [
+        "Thiên Thạch Bí Ẩn",
+        "Dải Băng Năng Lượng",
+        "Thăng Tiến Sức Mạnh"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Áp Đảo",
+      "runes": [
+        "Thiêu Rụi",
+        "Phát Bắn Đơn Giản"
+      ]
+    },
+    "statShards": [
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Thiêu Đốt",
+    "Tốc Biến",
+    "Hồi Máu"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Sáng",
+      "Sáng",
+      "Hộ"
+    ],
+    "sequence": [
+      "E",
+      "Q",
+      "W",
+      "E",
+      "E",
+      "R",
+      "E",
+      "Q",
+      "E",
+      "Q",
+      "R",
+      "Q",
+      "Q",
+      "W",
+      "W"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "95.3%",
+        "winRate": "48.86%"
+      },
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "3.22%",
+        "winRate": "48.09%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Pháp Sư",
+        "pickRate": "81.75%",
+        "winRate": "49.57%"
+      },
+      {
+        "name": "Giày Khai Sáng Ionia",
+        "pickRate": "14.49%",
+        "winRate": "49.19%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Súng Lục Luden",
+          "Quyền Trượng Bão Tố",
+          "Ngọn Lửa Hắc Hóa"
+        ],
+        "pickRate": "12.64%",
+        "winRate": "57.43%"
+      },
+      {
+        "items": [
+          "Hỏa Khuẩn",
+          "Quyền Trượng Bão Tố",
+          "Ngọn Lửa Hắc Hóa"
+        ],
+        "pickRate": "4.37%",
+        "winRate": "54.65%"
+      },
+      {
+        "items": [
+          "Súng Lục Luden",
+          "Quyền Trượng Bão Tố",
+          "Mũ Phù Thủy Rabadon"
+        ],
+        "pickRate": "3.35%",
+        "winRate": "63.64%"
+      },
+      {
+        "items": [
+          "Súng Lục Luden",
+          "Quyền Trượng Bão Tố",
+          "Kính Nhắm Ma Pháp"
+        ],
+        "pickRate": "3.1%",
+        "winRate": "49.18%"
+      },
+      {
+        "items": [
+          "Súng Lục Luden",
+          "Quyền Trượng Bão Tố",
+          "Hỏa Khuẩn"
+        ],
+        "pickRate": "2.89%",
+        "winRate": "56.14%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Mũ Phù Thủy Rabadon",
+          "winRate": "62.11%",
+          "matches": "95"
+        },
+        {
+          "name": "Ngọn Lửa Hắc Hóa",
+          "winRate": "67.57%",
+          "matches": "37"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "42.86%",
+          "matches": "35"
+        },
+        {
+          "name": "Quỷ Thư Morello",
+          "winRate": "57.58%",
+          "matches": "33"
+        },
+        {
+          "name": "Sách Chiêu Hồn Mejai",
+          "winRate": "66.67%",
+          "matches": "27"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Trượng Hư Vô",
+          "winRate": "60%",
+          "matches": "5"
+        },
+        {
+          "name": "Mũ Phù Thủy Rabadon",
+          "winRate": "80%",
+          "matches": "5"
+        },
+        {
+          "name": "Ngọn Lửa Hắc Hóa",
+          "winRate": "33.33%",
+          "matches": "3"
+        },
+        {
+          "name": "Quyền Trượng Bão Tố",
+          "winRate": "33.33%",
+          "matches": "3"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "100%",
+          "matches": "3"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Trượng Hư Vô",
+          "winRate": "100%",
+          "matches": "1"
+        },
+        {
+          "name": "Hỏa Khuẩn",
+          "winRate": "100%",
+          "matches": "1"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Sylas",
+        "winRate": "35.42%",
+        "matches": "48"
+      },
+      {
+        "championName": "Zilean",
+        "winRate": "37.23%",
+        "matches": "94"
+      },
+      {
+        "championName": "Blitzcrank",
+        "winRate": "40%",
+        "matches": "205"
+      },
+      {
+        "championName": "Pyke",
+        "winRate": "40.24%",
+        "matches": "251"
+      },
+      {
+        "championName": "Sona",
+        "winRate": "40.87%",
+        "matches": "115"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Pantheon",
+        "winRate": "59.8%",
+        "matches": "102"
+      },
+      {
+        "championName": "Brand",
+        "winRate": "56.67%",
+        "matches": "60"
+      },
+      {
+        "championName": "Rakan",
+        "winRate": "54.31%",
+        "matches": "116"
+      },
+      {
+        "championName": "Maokai",
+        "winRate": "54.05%",
+        "matches": "37"
+      },
+      {
+        "championName": "Bard",
+        "winRate": "53.64%",
+        "matches": "151"
+      }
+    ]
+  }
+}

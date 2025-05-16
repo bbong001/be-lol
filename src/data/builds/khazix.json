@@ -1,0 +1,276 @@
+{
+  "championInfo": {
+    "tier": "1",
+    "winRate": "51.46%",
+    "pickRate": "6.53%",
+    "banRate": "4.52%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Áp Đảo",
+      "runes": [
+        "Thu Thập Hắc Ám",
+        "Tác Động Bất Chợt",
+        "Ký Ức Kinh Hoàng"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Pháp Thuật",
+      "runes": [
+        "Thợ Săn Kho Báu",
+        "Tập Trung Tuyệt Đối"
+      ]
+    },
+    "statShards": [
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Trừng Phạt",
+    "Tốc Hành",
+    "Trừng Phạt"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Hãi",
+      "Không",
+      "Nhảy"
+    ],
+    "sequence": [
+      "Q",
+      "W",
+      "E",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "W",
+      "Q",
+      "W",
+      "R",
+      "W",
+      "W",
+      "E",
+      "E"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Linh Hồn Phong Hồ",
+          "Bình Máu"
+        ],
+        "pickRate": "50.56%",
+        "winRate": "51.14%"
+      },
+      {
+        "items": [
+          "Linh Hồn Phong Hồ"
+        ],
+        "pickRate": "31.56%",
+        "winRate": "53.07%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Khai Sáng Ionia",
+        "pickRate": "66.63%",
+        "winRate": "53.11%"
+      },
+      {
+        "name": "Giày Thủy Ngân",
+        "pickRate": "15.43%",
+        "winRate": "52.61%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Kiếm Ma Youmuu",
+          "Gươm Thức Thời",
+          "Áo Choàng Bóng Tối"
+        ],
+        "pickRate": "19.84%",
+        "winRate": "56.47%"
+      },
+      {
+        "items": [
+          "Kiếm Ma Youmuu",
+          "Gươm Thức Thời",
+          "Thương Phục Hận Serylda"
+        ],
+        "pickRate": "8.76%",
+        "winRate": "53.77%"
+      },
+      {
+        "items": [
+          "Kiếm Ma Youmuu",
+          "Áo Choàng Bóng Tối",
+          "Thương Phục Hận Serylda"
+        ],
+        "pickRate": "4.02%",
+        "winRate": "55.93%"
+      },
+      {
+        "items": [
+          "Gươm Thức Thời",
+          "Kiếm Ma Youmuu",
+          "Áo Choàng Bóng Tối"
+        ],
+        "pickRate": "3.14%",
+        "winRate": "55.64%"
+      },
+      {
+        "items": [
+          "Kiếm Ma Youmuu",
+          "Nguyệt Quế Cao Ngạo",
+          "Áo Choàng Bóng Tối"
+        ],
+        "pickRate": "2.6%",
+        "winRate": "61.03%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Thương Phục Hận Serylda",
+          "winRate": "64.47%",
+          "matches": "1,807"
+        },
+        {
+          "name": "Áo Choàng Bóng Tối",
+          "winRate": "62.14%",
+          "matches": "1,075"
+        },
+        {
+          "name": "Kiếm Ác Xà",
+          "winRate": "55.67%",
+          "matches": "406"
+        },
+        {
+          "name": "Gươm Thức Thời",
+          "winRate": "62.69%",
+          "matches": "268"
+        },
+        {
+          "name": "Chùy Gai Malmortius",
+          "winRate": "54.13%",
+          "matches": "242"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "67.12%",
+          "matches": "292"
+        },
+        {
+          "name": "Kiếm Ác Xà",
+          "winRate": "65.26%",
+          "matches": "213"
+        },
+        {
+          "name": "Thương Phục Hận Serylda",
+          "winRate": "63.19%",
+          "matches": "163"
+        },
+        {
+          "name": "Áo Choàng Bóng Tối",
+          "winRate": "64.52%",
+          "matches": "155"
+        },
+        {
+          "name": "Chùy Gai Malmortius",
+          "winRate": "67.13%",
+          "matches": "143"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "67.65%",
+          "matches": "34"
+        },
+        {
+          "name": "Chùy Gai Malmortius",
+          "winRate": "69.23%",
+          "matches": "13"
+        },
+        {
+          "name": "Mãng Xà Kích",
+          "winRate": "50%",
+          "matches": "12"
+        },
+        {
+          "name": "Kiếm Ác Xà",
+          "winRate": "54.55%",
+          "matches": "11"
+        },
+        {
+          "name": "Giáp Liệt Sĩ",
+          "winRate": "66.67%",
+          "matches": "9"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Bel'Veth",
+        "winRate": "40.38%",
+        "matches": "104"
+      },
+      {
+        "championName": "Volibear",
+        "winRate": "43.14%",
+        "matches": "153"
+      },
+      {
+        "championName": "Amumu",
+        "winRate": "44.58%",
+        "matches": "83"
+      },
+      {
+        "championName": "Naafiri",
+        "winRate": "45.2%",
+        "matches": "177"
+      },
+      {
+        "championName": "Gragas",
+        "winRate": "45.21%",
+        "matches": "73"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Karthus",
+        "winRate": "58.18%",
+        "matches": "110"
+      },
+      {
+        "championName": "Pantheon",
+        "winRate": "57.48%",
+        "matches": "214"
+      },
+      {
+        "championName": "Nidalee",
+        "winRate": "57.14%",
+        "matches": "189"
+      },
+      {
+        "championName": "Kayn",
+        "winRate": "56.94%",
+        "matches": "425"
+      },
+      {
+        "championName": "Skarner",
+        "winRate": "55.88%",
+        "matches": "34"
+      }
+    ]
+  }
+}

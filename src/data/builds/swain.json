@@ -1,0 +1,255 @@
+{
+  "championInfo": {
+    "tier": "5",
+    "winRate": "49.05%",
+    "pickRate": "1.79%",
+    "banRate": "0.80%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Chuẩn Xác",
+      "runes": [
+        "Chinh Phục",
+        "Hiện Diện Trí Tuệ",
+        "Huyền Thoại: Gia Tốc"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Chốt Chặn Cuối Cùng",
+        "Kiểm Soát Điều Kiện"
+      ]
+    },
+    "statShards": [
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Thiêu Đốt",
+    "Kiệt Sức",
+    "Tốc Biến"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Thần",
+      "Chủ",
+      "Buộc"
+    ],
+    "sequence": [
+      "E",
+      "W",
+      "Q",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "W",
+      "Q",
+      "W",
+      "R",
+      "W",
+      "W",
+      "E",
+      "E"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "95.89%",
+        "winRate": "48.96%"
+      },
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "2.62%",
+        "winRate": "44.3%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Thép Gai",
+        "pickRate": "30.33%",
+        "winRate": "51.06%"
+      },
+      {
+        "name": "Giày Pháp Sư",
+        "pickRate": "30.29%",
+        "winRate": "49.82%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Trượng Pha Lê Rylai",
+          "Mặt Nạ Đọa Đày Liandry",
+          "Đồng Hồ Cát Zhonya"
+        ],
+        "pickRate": "9.2%",
+        "winRate": "56.25%"
+      },
+      {
+        "items": [
+          "Trượng Pha Lê Rylai",
+          "Đồng Hồ Cát Zhonya",
+          "Mặt Nạ Đọa Đày Liandry"
+        ],
+        "pickRate": "3.45%",
+        "winRate": "58.33%"
+      },
+      {
+        "items": [
+          "Trượng Pha Lê Rylai",
+          "Hỏa Khuẩn",
+          "Đồng Hồ Cát Zhonya"
+        ],
+        "pickRate": "2.87%",
+        "winRate": "70%"
+      },
+      {
+        "items": [
+          "Trượng Pha Lê Rylai",
+          "Mặt Nạ Đọa Đày Liandry",
+          "Giáp Tâm Linh"
+        ],
+        "pickRate": "2.3%",
+        "winRate": "75%"
+      },
+      {
+        "items": [
+          "Trượng Pha Lê Rylai",
+          "Đồng Hồ Cát Zhonya",
+          "Quỷ Thư Morello"
+        ],
+        "pickRate": "2.3%",
+        "winRate": "37.5%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "71.43%",
+          "matches": "28"
+        },
+        {
+          "name": "Quỷ Thư Morello",
+          "winRate": "52.94%",
+          "matches": "17"
+        },
+        {
+          "name": "Áo Choàng Diệt Vong",
+          "winRate": "64.71%",
+          "matches": "17"
+        },
+        {
+          "name": "Giáp Tâm Linh",
+          "winRate": "64.29%",
+          "matches": "14"
+        },
+        {
+          "name": "Mặt Nạ Đọa Đày Liandry",
+          "winRate": "55.56%",
+          "matches": "9"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Jak'Sho, Vỏ Bọc Thích Nghi",
+          "winRate": "100%",
+          "matches": "2"
+        },
+        {
+          "name": "Quỷ Thư Morello",
+          "winRate": "0%",
+          "matches": "1"
+        },
+        {
+          "name": "Trượng Pha Lê Rylai",
+          "winRate": "100%",
+          "matches": "1"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "0%",
+          "matches": "1"
+        },
+        {
+          "name": "Giáp Tâm Linh",
+          "winRate": "0%",
+          "matches": "1"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Giáp Gai",
+          "winRate": "0%",
+          "matches": "1"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Elise",
+        "winRate": "33.33%",
+        "matches": "30"
+      },
+      {
+        "championName": "Poppy",
+        "winRate": "36.84%",
+        "matches": "38"
+      },
+      {
+        "championName": "Nami",
+        "winRate": "38.13%",
+        "matches": "160"
+      },
+      {
+        "championName": "Milio",
+        "winRate": "39.02%",
+        "matches": "82"
+      },
+      {
+        "championName": "Thresh",
+        "winRate": "40%",
+        "matches": "165"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Zilean",
+        "winRate": "60.61%",
+        "matches": "33"
+      },
+      {
+        "championName": "Sona",
+        "winRate": "58.54%",
+        "matches": "41"
+      },
+      {
+        "championName": "Rakan",
+        "winRate": "55.56%",
+        "matches": "45"
+      },
+      {
+        "championName": "Neeko",
+        "winRate": "54.84%",
+        "matches": "31"
+      },
+      {
+        "championName": "Lux",
+        "winRate": "54.69%",
+        "matches": "64"
+      }
+    ]
+  }
+}

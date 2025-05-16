@@ -1,0 +1,229 @@
+{
+  "championInfo": {
+    "tier": "1",
+    "winRate": "52.66%",
+    "pickRate": "7.99%",
+    "banRate": "9.96%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Hộ Vệ",
+        "Suối Nguồn Sinh Mệnh",
+        "Giáp Cốt"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Cảm Hứng",
+      "runes": [
+        "Kiên Cường",
+        "Giao Hàng Bánh Quy"
+      ]
+    },
+    "statShards": [
+      "Tốc Độ Đánh",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Thiêu Đốt",
+    "Kiệt Sức",
+    "Tốc Biến"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Tái",
+      "Cường",
+      "Ta"
+    ],
+    "sequence": [
+      "Q",
+      "E",
+      "W",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "E",
+      "Q",
+      "E",
+      "R",
+      "E",
+      "E",
+      "W",
+      "W"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "98.06%",
+        "winRate": "52.89%"
+      },
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "1.12%",
+        "winRate": "51.32%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Thép Gai",
+        "pickRate": "57.73%",
+        "winRate": "53.09%"
+      },
+      {
+        "name": "Giày Thủy Ngân",
+        "pickRate": "28.82%",
+        "winRate": "52.85%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Lời Thề Hiệp Sĩ",
+          "Giáp Gai"
+        ],
+        "pickRate": "21.41%",
+        "winRate": "63.59%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Lời Thề Hiệp Sĩ",
+          "Tim Băng"
+        ],
+        "pickRate": "10.15%",
+        "winRate": "60.54%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Lời Thề Hiệp Sĩ",
+          "Vòng Sắt Cổ Tự"
+        ],
+        "pickRate": "8.67%",
+        "winRate": "60.13%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Lời Thề Hiệp Sĩ",
+          "Dây Chuyền Chuộc Tội"
+        ],
+        "pickRate": "5.76%",
+        "winRate": "67.62%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Giáp Gai",
+          "Lời Thề Hiệp Sĩ"
+        ],
+        "pickRate": "4.88%",
+        "winRate": "65.17%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Vòng Sắt Cổ Tự",
+          "winRate": "70.83%",
+          "matches": "24"
+        },
+        {
+          "name": "Tim Băng",
+          "winRate": "60.87%",
+          "matches": "23"
+        },
+        {
+          "name": "Giáp Gai",
+          "winRate": "42.11%",
+          "matches": "19"
+        },
+        {
+          "name": "Lời Thề Hiệp Sĩ",
+          "winRate": "58.82%",
+          "matches": "17"
+        },
+        {
+          "name": "Dây Chuyền Chuộc Tội",
+          "winRate": "62.5%",
+          "matches": "8"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Áo Choàng Diệt Vong",
+          "winRate": "0%",
+          "matches": "1"
+        }
+      ],
+      "sixthItems": []
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Elise",
+        "winRate": "45.03%",
+        "matches": "171"
+      },
+      {
+        "championName": "Hwei",
+        "winRate": "45.24%",
+        "matches": "42"
+      },
+      {
+        "championName": "Brand",
+        "winRate": "45.31%",
+        "matches": "64"
+      },
+      {
+        "championName": "Sona",
+        "winRate": "45.6%",
+        "matches": "125"
+      },
+      {
+        "championName": "Soraka",
+        "winRate": "46.85%",
+        "matches": "222"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Tahm Kench",
+        "winRate": "67.15%",
+        "matches": "137"
+      },
+      {
+        "championName": "Galio",
+        "winRate": "66.67%",
+        "matches": "45"
+      },
+      {
+        "championName": "Sylas",
+        "winRate": "63.64%",
+        "matches": "55"
+      },
+      {
+        "championName": "Shen",
+        "winRate": "61.7%",
+        "matches": "47"
+      },
+      {
+        "championName": "Annie",
+        "winRate": "61.54%",
+        "matches": "39"
+      }
+    ]
+  }
+}

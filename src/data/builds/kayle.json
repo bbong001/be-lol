@@ -1,0 +1,278 @@
+{
+  "championInfo": {
+    "tier": "2",
+    "winRate": "53.31%",
+    "pickRate": "3.11%",
+    "banRate": "2.85%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Chuẩn Xác",
+      "runes": [
+        "Sẵn Sàng Tấn Công",
+        "Hấp Thụ Sinh Mệnh",
+        "Huyền Thoại: Tốc Độ Đánh"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Pháp Thuật",
+      "runes": [
+        "Chốt Chặn Cuối Cùng",
+        "Mau Lẹ"
+      ]
+    },
+    "statShards": [
+      "Tốc Độ Đánh",
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Dịch Chuyển",
+    "Tốc Biến",
+    "Tốc Hành"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Phạt",
+      "Hỏa",
+      "Phước"
+    ],
+    "sequence": [
+      "E",
+      "Q",
+      "W",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "E",
+      "Q",
+      "E",
+      "R",
+      "E",
+      "E",
+      "W",
+      "W"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Kiếm Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "56.88%",
+        "winRate": "52.64%"
+      },
+      {
+        "items": [
+          "Khiên Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "20.68%",
+        "winRate": "51.07%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Bạc",
+        "pickRate": "70.99%",
+        "winRate": "53.37%"
+      },
+      {
+        "name": "Giày Cuồng Nộ",
+        "pickRate": "23.31%",
+        "winRate": "50.64%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Nanh Nashor",
+          "Mũ Phù Thủy Rabadon",
+          "Kiếm Tai Ương"
+        ],
+        "pickRate": "19.24%",
+        "winRate": "62.66%"
+      },
+      {
+        "items": [
+          "Nanh Nashor",
+          "Mũ Phù Thủy Rabadon",
+          "Ngọn Lửa Hắc Hóa"
+        ],
+        "pickRate": "17.77%",
+        "winRate": "59.22%"
+      },
+      {
+        "items": [
+          "Nanh Nashor",
+          "Ngọn Lửa Hắc Hóa",
+          "Mũ Phù Thủy Rabadon"
+        ],
+        "pickRate": "6.61%",
+        "winRate": "56.36%"
+      },
+      {
+        "items": [
+          "Nanh Nashor",
+          "Kiếm Tai Ương",
+          "Mũ Phù Thủy Rabadon"
+        ],
+        "pickRate": "5.59%",
+        "winRate": "65.59%"
+      },
+      {
+        "items": [
+          "Cuồng Đao Guinsoo",
+          "Nanh Nashor",
+          "Trượng Pha Lê Rylai"
+        ],
+        "pickRate": "5.26%",
+        "winRate": "56.57%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Ngọn Lửa Hắc Hóa",
+          "winRate": "67.12%",
+          "matches": "365"
+        },
+        {
+          "name": "Kiếm Tai Ương",
+          "winRate": "67.42%",
+          "matches": "267"
+        },
+        {
+          "name": "Trượng Hư Vô",
+          "winRate": "58.33%",
+          "matches": "228"
+        },
+        {
+          "name": "Trượng Pha Lê Rylai",
+          "winRate": "61.66%",
+          "matches": "193"
+        },
+        {
+          "name": "Mũ Phù Thủy Rabadon",
+          "winRate": "69.95%",
+          "matches": "193"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Trượng Hư Vô",
+          "winRate": "66.41%",
+          "matches": "131"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "67.31%",
+          "matches": "104"
+        },
+        {
+          "name": "Kiếm Tai Ương",
+          "winRate": "66.67%",
+          "matches": "66"
+        },
+        {
+          "name": "Ngọn Lửa Hắc Hóa",
+          "winRate": "59.38%",
+          "matches": "64"
+        },
+        {
+          "name": "Trượng Pha Lê Rylai",
+          "winRate": "69.77%",
+          "matches": "43"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Động Cơ Vũ Trụ",
+          "winRate": "66.67%",
+          "matches": "6"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "33.33%",
+          "matches": "6"
+        },
+        {
+          "name": "Kiếm Tai Ương",
+          "winRate": "25%",
+          "matches": "4"
+        },
+        {
+          "name": "Dây Chuyền Chữ Thập",
+          "winRate": "75%",
+          "matches": "4"
+        },
+        {
+          "name": "Trượng Pha Lê Rylai",
+          "winRate": "100%",
+          "matches": "3"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Irelia",
+        "winRate": "40.94%",
+        "matches": "127"
+      },
+      {
+        "championName": "Gragas",
+        "winRate": "41.18%",
+        "matches": "68"
+      },
+      {
+        "championName": "Kennen",
+        "winRate": "41.94%",
+        "matches": "62"
+      },
+      {
+        "championName": "Malphite",
+        "winRate": "44%",
+        "matches": "100"
+      },
+      {
+        "championName": "Sett",
+        "winRate": "45.36%",
+        "matches": "183"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Trundle",
+        "winRate": "72.09%",
+        "matches": "43"
+      },
+      {
+        "championName": "Quinn",
+        "winRate": "65.71%",
+        "matches": "35"
+      },
+      {
+        "championName": "Pantheon",
+        "winRate": "62.96%",
+        "matches": "54"
+      },
+      {
+        "championName": "Yone",
+        "winRate": "60.17%",
+        "matches": "118"
+      },
+      {
+        "championName": "Sylas",
+        "winRate": "60%",
+        "matches": "50"
+      }
+    ]
+  }
+}

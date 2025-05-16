@@ -1,0 +1,279 @@
+{
+  "championInfo": {
+    "tier": "4",
+    "winRate": "49.89%",
+    "pickRate": "2.09%",
+    "banRate": "0.70%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Pháp Thuật",
+      "runes": [
+        "Thiên Thạch Bí Ẩn",
+        "Dải Băng Năng Lượng",
+        "Tập Trung Tuyệt Đối"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Thiêu Rụi",
+        "Giáp Cốt"
+      ]
+    },
+    "statShards": [
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Dịch Chuyển",
+    "Tốc Biến",
+    "Lá Chắn"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Tinh",
+      "Bí",
+      "Giới"
+    ],
+    "sequence": [
+      "E",
+      "Q",
+      "W",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "E",
+      "Q",
+      "E",
+      "R",
+      "E",
+      "E",
+      "W",
+      "W"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Nhẫn Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "89.73%",
+        "winRate": "49.77%"
+      },
+      {
+        "items": [
+          "Bình Máu",
+          "Nước Mắt Nữ Thần"
+        ],
+        "pickRate": "7.14%",
+        "winRate": "51.92%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Pháp Sư",
+        "pickRate": "81.71%",
+        "winRate": "52.41%"
+      },
+      {
+        "name": "Giày Thủy Ngân",
+        "pickRate": "10.41%",
+        "winRate": "50.63%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Đuốc Lửa Đen",
+          "Trượng Pha Lê Rylai",
+          "Mặt Nạ Đọa Đày Liandry"
+        ],
+        "pickRate": "23.79%",
+        "winRate": "58.1%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Trượng Pha Lê Rylai",
+          "Mặt Nạ Đọa Đày Liandry",
+          "Quyền Trượng Đại Thiên Sứ"
+        ],
+        "pickRate": "5.82%",
+        "winRate": "57.75%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Trượng Pha Lê Rylai",
+          "Quyền Trượng Đại Thiên Sứ",
+          "Mặt Nạ Đọa Đày Liandry"
+        ],
+        "pickRate": "4.1%",
+        "winRate": "53%"
+      },
+      {
+        "items": [
+          "Trượng Trường Sinh",
+          "Trượng Pha Lê Rylai",
+          "Mặt Nạ Đọa Đày Liandry"
+        ],
+        "pickRate": "3.9%",
+        "winRate": "51.58%"
+      },
+      {
+        "items": [
+          "Trượng Pha Lê Rylai",
+          "Đuốc Lửa Đen",
+          "Mặt Nạ Đọa Đày Liandry"
+        ],
+        "pickRate": "3.4%",
+        "winRate": "54.22%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Mũ Phù Thủy Rabadon",
+          "winRate": "61.15%",
+          "matches": "278"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "61.79%",
+          "matches": "246"
+        },
+        {
+          "name": "Trượng Hư Vô",
+          "winRate": "53.03%",
+          "matches": "132"
+        },
+        {
+          "name": "Mặt Nạ Đọa Đày Liandry",
+          "winRate": "60.26%",
+          "matches": "78"
+        },
+        {
+          "name": "Dây Chuyền Chữ Thập",
+          "winRate": "61.04%",
+          "matches": "77"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Mũ Phù Thủy Rabadon",
+          "winRate": "60.17%",
+          "matches": "118"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "62.69%",
+          "matches": "67"
+        },
+        {
+          "name": "Trượng Hư Vô",
+          "winRate": "51.16%",
+          "matches": "43"
+        },
+        {
+          "name": "Dây Chuyền Chữ Thập",
+          "winRate": "61.76%",
+          "matches": "34"
+        },
+        {
+          "name": "Quỷ Thư Morello",
+          "winRate": "42.31%",
+          "matches": "26"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Ngọn Lửa Hắc Hóa",
+          "winRate": "62.5%",
+          "matches": "8"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "71.43%",
+          "matches": "7"
+        },
+        {
+          "name": "Trượng Hư Vô",
+          "winRate": "33.33%",
+          "matches": "6"
+        },
+        {
+          "name": "Mũ Phù Thủy Rabadon",
+          "winRate": "66.67%",
+          "matches": "6"
+        },
+        {
+          "name": "Dây Chuyền Chữ Thập",
+          "winRate": "50%",
+          "matches": "4"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Kassadin",
+        "winRate": "30%",
+        "matches": "40"
+      },
+      {
+        "championName": "Diana",
+        "winRate": "37.25%",
+        "matches": "51"
+      },
+      {
+        "championName": "Katarina",
+        "winRate": "37.5%",
+        "matches": "72"
+      },
+      {
+        "championName": "Vex",
+        "winRate": "39.02%",
+        "matches": "41"
+      },
+      {
+        "championName": "Kayle",
+        "winRate": "40%",
+        "matches": "30"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Veigar",
+        "winRate": "63.41%",
+        "matches": "41"
+      },
+      {
+        "championName": "Mel",
+        "winRate": "61%",
+        "matches": "100"
+      },
+      {
+        "championName": "Malzahar",
+        "winRate": "59.6%",
+        "matches": "99"
+      },
+      {
+        "championName": "Xerath",
+        "winRate": "57.41%",
+        "matches": "54"
+      },
+      {
+        "championName": "Qiyana",
+        "winRate": "57.14%",
+        "matches": "35"
+      }
+    ]
+  }
+}

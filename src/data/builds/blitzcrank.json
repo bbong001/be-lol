@@ -1,0 +1,229 @@
+{
+  "championInfo": {
+    "tier": "3",
+    "winRate": "49.90%",
+    "pickRate": "4.94%",
+    "banRate": "12.80%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Cảm Hứng",
+      "runes": [
+        "Nâng Cấp Băng Giá",
+        "Tốc Biến Ma Thuật",
+        "Giao Hàng Bánh Quy"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Pháp Thuật",
+      "runes": [
+        "Thấu Thị Vũ Trụ",
+        "Áo Choàng Mây"
+      ]
+    },
+    "statShards": [
+      "Điểm Hồi Kỹ Năng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Thiêu Đốt",
+    "Kiệt Sức",
+    "Tốc Biến"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Tiễn",
+      "Móc",
+      "Tốc"
+    ],
+    "sequence": [
+      "Q",
+      "E",
+      "W",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "E",
+      "Q",
+      "E",
+      "R",
+      "E",
+      "E",
+      "W",
+      "W"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "96.06%",
+        "winRate": "50.58%"
+      },
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "2.59%",
+        "winRate": "45.83%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Bạc",
+        "pickRate": "54.21%",
+        "winRate": "51.39%"
+      },
+      {
+        "name": "Giày Đồng Bộ",
+        "pickRate": "33.17%",
+        "winRate": "50.95%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Tụ Bão Zeke",
+          "Giáp Gai"
+        ],
+        "pickRate": "7.4%",
+        "winRate": "59.48%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Tụ Bão Zeke",
+          "Hành Trang Thám Hiểm"
+        ],
+        "pickRate": "5.87%",
+        "winRate": "66.3%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Tụ Bão Zeke",
+          "Tim Băng"
+        ],
+        "pickRate": "5.62%",
+        "winRate": "54.55%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Tim Băng",
+          "Giáp Gai"
+        ],
+        "pickRate": "3.51%",
+        "winRate": "65.45%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Tim Băng",
+          "Tụ Bão Zeke"
+        ],
+        "pickRate": "3.38%",
+        "winRate": "56.6%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Vương Miện Shurelya",
+          "winRate": "53.33%",
+          "matches": "30"
+        },
+        {
+          "name": "Giáp Gai",
+          "winRate": "64%",
+          "matches": "25"
+        },
+        {
+          "name": "Tim Băng",
+          "winRate": "72.22%",
+          "matches": "18"
+        },
+        {
+          "name": "Hành Trang Thám Hiểm",
+          "winRate": "52.94%",
+          "matches": "17"
+        },
+        {
+          "name": "Tụ Bão Zeke",
+          "winRate": "53.85%",
+          "matches": "13"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Vương Miện Shurelya",
+          "winRate": "50%",
+          "matches": "2"
+        }
+      ],
+      "sixthItems": []
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Fiddlesticks",
+        "winRate": "37.66%",
+        "matches": "77"
+      },
+      {
+        "championName": "Taric",
+        "winRate": "38.64%",
+        "matches": "44"
+      },
+      {
+        "championName": "Morgana",
+        "winRate": "40.26%",
+        "matches": "154"
+      },
+      {
+        "championName": "Brand",
+        "winRate": "40.43%",
+        "matches": "47"
+      },
+      {
+        "championName": "Elise",
+        "winRate": "41.67%",
+        "matches": "84"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Xerath",
+        "winRate": "60.74%",
+        "matches": "163"
+      },
+      {
+        "championName": "Lux",
+        "winRate": "60%",
+        "matches": "205"
+      },
+      {
+        "championName": "Zyra",
+        "winRate": "58.21%",
+        "matches": "67"
+      },
+      {
+        "championName": "Pantheon",
+        "winRate": "56.25%",
+        "matches": "96"
+      },
+      {
+        "championName": "Maokai",
+        "winRate": "56.1%",
+        "matches": "41"
+      }
+    ]
+  }
+}

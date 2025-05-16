@@ -1,0 +1,260 @@
+{
+  "championInfo": {
+    "tier": "5",
+    "winRate": "47.80%",
+    "pickRate": "1.42%",
+    "banRate": "1.19%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Áp Đảo",
+      "runes": [
+        "Thu Thập Hắc Ám",
+        "Vị Máu",
+        "Ký Ức Kinh Hoàng"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Pháp Thuật",
+      "runes": [
+        "Thợ Săn Kho Báu",
+        "Dải Băng Năng Lượng"
+      ]
+    },
+    "statShards": [
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Thiêu Đốt",
+    "Kiệt Sức",
+    "Tốc Biến"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Lửa",
+      "Lửa",
+      "Cháy"
+    ],
+    "sequence": [
+      "W",
+      "Q",
+      "E",
+      "W",
+      "W",
+      "R",
+      "W",
+      "Q",
+      "W",
+      "Q",
+      "R",
+      "Q",
+      "Q",
+      "E",
+      "E"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "95.6%",
+        "winRate": "48.31%"
+      },
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "3.64%",
+        "winRate": "41.38%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Pháp Sư",
+        "pickRate": "78.23%",
+        "winRate": "49.58%"
+      },
+      {
+        "name": "Giày Khai Sáng Ionia",
+        "pickRate": "12.49%",
+        "winRate": "47.18%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Trượng Pha Lê Rylai",
+          "Mặt Nạ Đọa Đày Liandry",
+          "Quỷ Thư Morello"
+        ],
+        "pickRate": "11.06%",
+        "winRate": "46.48%"
+      },
+      {
+        "items": [
+          "Mặt Nạ Đọa Đày Liandry",
+          "Trượng Pha Lê Rylai",
+          "Quỷ Thư Morello"
+        ],
+        "pickRate": "7.48%",
+        "winRate": "47.92%"
+      },
+      {
+        "items": [
+          "Trượng Pha Lê Rylai",
+          "Mặt Nạ Đọa Đày Liandry",
+          "Đuốc Lửa Đen"
+        ],
+        "pickRate": "4.67%",
+        "winRate": "56.67%"
+      },
+      {
+        "items": [
+          "Trượng Pha Lê Rylai",
+          "Mặt Nạ Đọa Đày Liandry",
+          "Đồng Hồ Cát Zhonya"
+        ],
+        "pickRate": "4.36%",
+        "winRate": "39.29%"
+      },
+      {
+        "items": [
+          "Mặt Nạ Đọa Đày Liandry",
+          "Trượng Pha Lê Rylai",
+          "Đồng Hồ Cát Zhonya"
+        ],
+        "pickRate": "4.21%",
+        "winRate": "70.37%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Quỷ Thư Morello",
+          "winRate": "57.58%",
+          "matches": "33"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "37.5%",
+          "matches": "24"
+        },
+        {
+          "name": "Mũ Phù Thủy Rabadon",
+          "winRate": "55.56%",
+          "matches": "18"
+        },
+        {
+          "name": "Hỏa Khuẩn",
+          "winRate": "80%",
+          "matches": "10"
+        },
+        {
+          "name": "Trượng Pha Lê Rylai",
+          "winRate": "66.67%",
+          "matches": "9"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Quỷ Thư Morello",
+          "winRate": "50%",
+          "matches": "2"
+        },
+        {
+          "name": "Đuốc Lửa Đen",
+          "winRate": "50%",
+          "matches": "2"
+        },
+        {
+          "name": "Mũ Phù Thủy Rabadon",
+          "winRate": "100%",
+          "matches": "2"
+        },
+        {
+          "name": "Hỏa Khuẩn",
+          "winRate": "0%",
+          "matches": "1"
+        },
+        {
+          "name": "Lời Nguyền Huyết Tự",
+          "winRate": "0%",
+          "matches": "1"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Động Cơ Vũ Trụ",
+          "winRate": "0%",
+          "matches": "1"
+        },
+        {
+          "name": "Jak'Sho, Vỏ Bọc Thích Nghi",
+          "winRate": "100%",
+          "matches": "1"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Janna",
+        "winRate": "35.29%",
+        "matches": "34"
+      },
+      {
+        "championName": "Leona",
+        "winRate": "37.04%",
+        "matches": "54"
+      },
+      {
+        "championName": "Zyra",
+        "winRate": "38.24%",
+        "matches": "34"
+      },
+      {
+        "championName": "Yuumi",
+        "winRate": "40%",
+        "matches": "50"
+      },
+      {
+        "championName": "Mel",
+        "winRate": "41.46%",
+        "matches": "41"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Sona",
+        "winRate": "70%",
+        "matches": "30"
+      },
+      {
+        "championName": "Pantheon",
+        "winRate": "68.75%",
+        "matches": "32"
+      },
+      {
+        "championName": "Blitzcrank",
+        "winRate": "59.57%",
+        "matches": "47"
+      },
+      {
+        "championName": "Senna",
+        "winRate": "59.32%",
+        "matches": "59"
+      },
+      {
+        "championName": "Rell",
+        "winRate": "56.67%",
+        "matches": "30"
+      }
+    ]
+  }
+}

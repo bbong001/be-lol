@@ -1,0 +1,250 @@
+{
+  "championInfo": {
+    "tier": "5",
+    "winRate": "48.95%",
+    "pickRate": "2.66%",
+    "banRate": "1.89%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Pháp Thuật",
+      "runes": [
+        "Thiên Thạch Bí Ẩn",
+        "Dải Băng Năng Lượng",
+        "Thăng Tiến Sức Mạnh"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Áp Đảo",
+      "runes": [
+        "Thiêu Rụi",
+        "Phát Bắn Đơn Giản"
+      ]
+    },
+    "statShards": [
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Thiêu Đốt",
+    "Tốc Biến",
+    "Hồi Máu"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Hạt",
+      "Trói",
+      "Hình"
+    ],
+    "sequence": [
+      "Q",
+      "E",
+      "W",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "E",
+      "Q",
+      "E",
+      "R",
+      "E",
+      "E",
+      "W",
+      "W"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "97.54%",
+        "winRate": "49.02%"
+      },
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "1.47%",
+        "winRate": "53.03%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Khai Sáng Ionia",
+        "pickRate": "46.02%",
+        "winRate": "48.93%"
+      },
+      {
+        "name": "Giày Pháp Sư",
+        "pickRate": "39.43%",
+        "winRate": "50.06%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Đai Tên Lửa Hextech",
+          "Đồng Hồ Cát Zhonya",
+          "Quỷ Thư Morello"
+        ],
+        "pickRate": "11.79%",
+        "winRate": "54.67%"
+      },
+      {
+        "items": [
+          "Đai Tên Lửa Hextech",
+          "Đồng Hồ Cát Zhonya",
+          "Quyền Trượng Bão Tố"
+        ],
+        "pickRate": "10.38%",
+        "winRate": "54.55%"
+      },
+      {
+        "items": [
+          "Đai Tên Lửa Hextech",
+          "Quyền Trượng Bão Tố",
+          "Đồng Hồ Cát Zhonya"
+        ],
+        "pickRate": "6.76%",
+        "winRate": "34.88%"
+      },
+      {
+        "items": [
+          "Đai Tên Lửa Hextech",
+          "Đồng Hồ Cát Zhonya",
+          "Ngọn Lửa Hắc Hóa"
+        ],
+        "pickRate": "5.82%",
+        "winRate": "70.27%"
+      },
+      {
+        "items": [
+          "Đai Tên Lửa Hextech",
+          "Quyền Trượng Bão Tố",
+          "Ngọn Lửa Hắc Hóa"
+        ],
+        "pickRate": "2.83%",
+        "winRate": "50%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Quỷ Thư Morello",
+          "winRate": "46.15%",
+          "matches": "13"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "60%",
+          "matches": "10"
+        },
+        {
+          "name": "Quyền Trượng Bão Tố",
+          "winRate": "42.86%",
+          "matches": "7"
+        },
+        {
+          "name": "Ngọn Lửa Hắc Hóa",
+          "winRate": "42.86%",
+          "matches": "7"
+        },
+        {
+          "name": "Hỏa Khuẩn",
+          "winRate": "60%",
+          "matches": "5"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Dây Chuyền Chữ Thập",
+          "winRate": "0%",
+          "matches": "1"
+        },
+        {
+          "name": "Hỏa Khuẩn",
+          "winRate": "0%",
+          "matches": "1"
+        },
+        {
+          "name": "Ngọn Lửa Hắc Hóa",
+          "winRate": "100%",
+          "matches": "1"
+        },
+        {
+          "name": "Giáp Liệt Sĩ",
+          "winRate": "0%",
+          "matches": "1"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Mũ Phù Thủy Rabadon",
+          "winRate": "100%",
+          "matches": "1"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Zyra",
+        "winRate": "35.42%",
+        "matches": "48"
+      },
+      {
+        "championName": "Sona",
+        "winRate": "35.85%",
+        "matches": "53"
+      },
+      {
+        "championName": "Tahm Kench",
+        "winRate": "39.53%",
+        "matches": "43"
+      },
+      {
+        "championName": "Soraka",
+        "winRate": "41.57%",
+        "matches": "89"
+      },
+      {
+        "championName": "Elise",
+        "winRate": "42.5%",
+        "matches": "80"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Vel'Koz",
+        "winRate": "61.9%",
+        "matches": "42"
+      },
+      {
+        "championName": "Seraphine",
+        "winRate": "56.6%",
+        "matches": "53"
+      },
+      {
+        "championName": "Maokai",
+        "winRate": "56.25%",
+        "matches": "32"
+      },
+      {
+        "championName": "Senna",
+        "winRate": "53.64%",
+        "matches": "151"
+      },
+      {
+        "championName": "Shaco",
+        "winRate": "53.19%",
+        "matches": "47"
+      }
+    ]
+  }
+}

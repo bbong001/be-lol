@@ -1,0 +1,278 @@
+{
+  "championInfo": {
+    "tier": "4",
+    "winRate": "49.09%",
+    "pickRate": "3.21%",
+    "banRate": "2.29%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Chuẩn Xác",
+      "runes": [
+        "Chinh Phục",
+        "Đắc Thắng",
+        "Huyền Thoại: Gia Tốc"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Pháp Thuật",
+      "runes": [
+        "Nhát Chém Ân Huệ",
+        "Thăng Tiến Sức Mạnh"
+      ]
+    },
+    "statShards": [
+      "Tốc Độ Đánh",
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Trừng Phạt",
+    "Trừng Phạt",
+    "Thiêu Đốt"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Xé",
+      "Vả",
+      "Vồ"
+    ],
+    "sequence": [
+      "Q",
+      "E",
+      "W",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "E",
+      "Q",
+      "E",
+      "R",
+      "E",
+      "E",
+      "W",
+      "W"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Linh Hồn Hỏa Khuyển",
+          "Bình Máu"
+        ],
+        "pickRate": "52.63%",
+        "winRate": "49.13%"
+      },
+      {
+        "items": [
+          "Linh Hồn Hỏa Khuyển"
+        ],
+        "pickRate": "22.16%",
+        "winRate": "53.18%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Pháp Sư",
+        "pickRate": "80.74%",
+        "winRate": "50.15%"
+      },
+      {
+        "name": "Giày Khai Sáng Ionia",
+        "pickRate": "13.97%",
+        "winRate": "47.64%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Kiếm Tai Ương",
+          "Ngọn Lửa Hắc Hóa",
+          "Đồng Hồ Cát Zhonya"
+        ],
+        "pickRate": "5.7%",
+        "winRate": "49.7%"
+      },
+      {
+        "items": [
+          "Phong Ấn Hắc Ám",
+          "Kiếm Tai Ương",
+          "Ngọn Lửa Hắc Hóa",
+          "Đồng Hồ Cát Zhonya"
+        ],
+        "pickRate": "3.54%",
+        "winRate": "58.1%"
+      },
+      {
+        "items": [
+          "Mặt Nạ Đọa Đày Liandry",
+          "Kính Nhắm Ma Pháp",
+          "Đồng Hồ Cát Zhonya"
+        ],
+        "pickRate": "3.44%",
+        "winRate": "50.98%"
+      },
+      {
+        "items": [
+          "Kiếm Tai Ương",
+          "Ngọn Lửa Hắc Hóa",
+          "Mũ Phù Thủy Rabadon"
+        ],
+        "pickRate": "2.93%",
+        "winRate": "55.17%"
+      },
+      {
+        "items": [
+          "Kiếm Tai Ương",
+          "Quyền Trượng Bão Tố",
+          "Đồng Hồ Cát Zhonya"
+        ],
+        "pickRate": "2.06%",
+        "winRate": "45.9%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Mũ Phù Thủy Rabadon",
+          "winRate": "61.15%",
+          "matches": "260"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "64.8%",
+          "matches": "250"
+        },
+        {
+          "name": "Trượng Hư Vô",
+          "winRate": "56%",
+          "matches": "200"
+        },
+        {
+          "name": "Sách Chiêu Hồn Mejai",
+          "winRate": "86.78%",
+          "matches": "121"
+        },
+        {
+          "name": "Ngọn Lửa Hắc Hóa",
+          "winRate": "64.58%",
+          "matches": "96"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Mũ Phù Thủy Rabadon",
+          "winRate": "68.35%",
+          "matches": "79"
+        },
+        {
+          "name": "Trượng Hư Vô",
+          "winRate": "59.18%",
+          "matches": "49"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "59.46%",
+          "matches": "37"
+        },
+        {
+          "name": "Sách Chiêu Hồn Mejai",
+          "winRate": "73.53%",
+          "matches": "34"
+        },
+        {
+          "name": "Ngọn Lửa Hắc Hóa",
+          "winRate": "63.16%",
+          "matches": "19"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Quyền Trượng Bão Tố",
+          "winRate": "66.67%",
+          "matches": "3"
+        },
+        {
+          "name": "Dây Chuyền Chữ Thập",
+          "winRate": "0%",
+          "matches": "2"
+        },
+        {
+          "name": "Động Cơ Vũ Trụ",
+          "winRate": "50%",
+          "matches": "2"
+        },
+        {
+          "name": "Quỷ Thư Morello",
+          "winRate": "0%",
+          "matches": "1"
+        },
+        {
+          "name": "Mũ Phù Thủy Rabadon",
+          "winRate": "100%",
+          "matches": "1"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Amumu",
+        "winRate": "33.33%",
+        "matches": "36"
+      },
+      {
+        "championName": "Rek'Sai",
+        "winRate": "37.14%",
+        "matches": "35"
+      },
+      {
+        "championName": "Volibear",
+        "winRate": "39.39%",
+        "matches": "66"
+      },
+      {
+        "championName": "Udyr",
+        "winRate": "41.3%",
+        "matches": "46"
+      },
+      {
+        "championName": "Master Yi",
+        "winRate": "42.73%",
+        "matches": "110"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Karthus",
+        "winRate": "62.5%",
+        "matches": "64"
+      },
+      {
+        "championName": "Zyra",
+        "winRate": "57.14%",
+        "matches": "35"
+      },
+      {
+        "championName": "Ngộ Không",
+        "winRate": "56.41%",
+        "matches": "39"
+      },
+      {
+        "championName": "Sejuani",
+        "winRate": "56.14%",
+        "matches": "57"
+      },
+      {
+        "championName": "Kindred",
+        "winRate": "54.95%",
+        "matches": "91"
+      }
+    ]
+  }
+}

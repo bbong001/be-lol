@@ -1,0 +1,250 @@
+{
+  "championInfo": {
+    "tier": "2",
+    "winRate": "51.59%",
+    "pickRate": "4.53%",
+    "banRate": "1.02%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Áp Đảo",
+      "runes": [
+        "Sốc Điện",
+        "Phát Bắn Đơn Giản",
+        "Cắm Mắt Sâu"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Pháp Thuật",
+      "runes": [
+        "Thợ Săn Tàn Nhẫn",
+        "Mau Lẹ"
+      ]
+    },
+    "statShards": [
+      "Tốc Độ Đánh",
+      "Sức Mạnh Thích Ứng",
+      "Máu"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Thiêu Đốt",
+    "Kiệt Sức",
+    "Tốc Biến"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Gian",
+      "Lạc",
+      "Diệu"
+    ],
+    "sequence": [
+      "Q",
+      "W",
+      "E",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "W",
+      "Q",
+      "W",
+      "R",
+      "W",
+      "W",
+      "E",
+      "E"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "95.24%",
+        "winRate": "51.4%"
+      },
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "3.11%",
+        "winRate": "51.63%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Bạc",
+        "pickRate": "51.16%",
+        "winRate": "52.46%"
+      },
+      {
+        "name": "Giày Đồng Bộ",
+        "pickRate": "26.69%",
+        "winRate": "52.33%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Giáp Liệt Sĩ",
+          "Dây Chuyền Iron Solari",
+          "Dây Chuyền Chuộc Tội"
+        ],
+        "pickRate": "8.33%",
+        "winRate": "62.09%"
+      },
+      {
+        "items": [
+          "Giáp Liệt Sĩ",
+          "Mặt Nạ Đọa Đày Liandry",
+          "Đao Tím"
+        ],
+        "pickRate": "8.33%",
+        "winRate": "61.44%"
+      },
+      {
+        "items": [
+          "Giáp Liệt Sĩ",
+          "Mặt Nạ Đọa Đày Liandry",
+          "Dây Chuyền Iron Solari"
+        ],
+        "pickRate": "5.01%",
+        "winRate": "55.43%"
+      },
+      {
+        "items": [
+          "Giáp Liệt Sĩ",
+          "Mặt Nạ Đọa Đày Liandry",
+          "Lời Nguyền Huyết Tự"
+        ],
+        "pickRate": "4.52%",
+        "winRate": "51.81%"
+      },
+      {
+        "items": [
+          "Giáp Liệt Sĩ",
+          "Đao Tím",
+          "Mặt Nạ Đọa Đày Liandry"
+        ],
+        "pickRate": "3.65%",
+        "winRate": "55.22%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Dây Chuyền Chuộc Tội",
+          "winRate": "68.42%",
+          "matches": "38"
+        },
+        {
+          "name": "Dây Chuyền Iron Solari",
+          "winRate": "51.61%",
+          "matches": "31"
+        },
+        {
+          "name": "Đao Tím",
+          "winRate": "62.07%",
+          "matches": "29"
+        },
+        {
+          "name": "Vương Miện Shurelya",
+          "winRate": "56%",
+          "matches": "25"
+        },
+        {
+          "name": "Mặt Nạ Đọa Đày Liandry",
+          "winRate": "47.37%",
+          "matches": "19"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Động Cơ Vũ Trụ",
+          "winRate": "50%",
+          "matches": "2"
+        },
+        {
+          "name": "Lời Thề Hiệp Sĩ",
+          "winRate": "0%",
+          "matches": "1"
+        },
+        {
+          "name": "Mũ Phù Thủy Rabadon",
+          "winRate": "100%",
+          "matches": "1"
+        },
+        {
+          "name": "Dao Điện Statikk",
+          "winRate": "100%",
+          "matches": "1"
+        },
+        {
+          "name": "Mặt Nạ Đọa Đày Liandry",
+          "winRate": "100%",
+          "matches": "1"
+        }
+      ],
+      "sixthItems": []
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Taric",
+        "winRate": "40%",
+        "matches": "50"
+      },
+      {
+        "championName": "Poppy",
+        "winRate": "40.48%",
+        "matches": "84"
+      },
+      {
+        "championName": "Elise",
+        "winRate": "42.86%",
+        "matches": "105"
+      },
+      {
+        "championName": "Rakan",
+        "winRate": "43.98%",
+        "matches": "191"
+      },
+      {
+        "championName": "Milio",
+        "winRate": "45.02%",
+        "matches": "211"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Zoe",
+        "winRate": "66.67%",
+        "matches": "36"
+      },
+      {
+        "championName": "Tahm Kench",
+        "winRate": "59.02%",
+        "matches": "61"
+      },
+      {
+        "championName": "Shaco",
+        "winRate": "58.44%",
+        "matches": "77"
+      },
+      {
+        "championName": "Senna",
+        "winRate": "57.39%",
+        "matches": "284"
+      },
+      {
+        "championName": "Mel",
+        "winRate": "56.92%",
+        "matches": "65"
+      }
+    ]
+  }
+}

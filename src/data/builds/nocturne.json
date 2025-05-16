@@ -1,0 +1,277 @@
+{
+  "championInfo": {
+    "tier": "2",
+    "winRate": "51.29%",
+    "pickRate": "6.03%",
+    "banRate": "8.63%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Chuẩn Xác",
+      "runes": [
+        "Chinh Phục",
+        "Đắc Thắng",
+        "Huyền Thoại: Tốc Độ Đánh"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Áp Đảo",
+      "runes": [
+        "Chốt Chặn Cuối Cùng",
+        "Ký Ức Kinh Hoàng"
+      ]
+    },
+    "statShards": [
+      "Tốc Độ Đánh",
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Trừng Phạt",
+    "Trừng Phạt",
+    "Thiêu Đốt"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Tối",
+      "Độ",
+      "Phủ"
+    ],
+    "sequence": [
+      "Q",
+      "W",
+      "E",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "E",
+      "Q",
+      "E",
+      "R",
+      "E",
+      "E",
+      "W",
+      "W"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Linh Hồn Hỏa Khuyển",
+          "Bình Máu"
+        ],
+        "pickRate": "41.82%",
+        "winRate": "50.32%"
+      },
+      {
+        "items": [
+          "Linh Hồn Hỏa Khuyển"
+        ],
+        "pickRate": "34.57%",
+        "winRate": "52.87%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Thép Gai",
+        "pickRate": "49.3%",
+        "winRate": "51.69%"
+      },
+      {
+        "name": "Giày Thủy Ngân",
+        "pickRate": "37.71%",
+        "winRate": "52.8%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Chùy Phản Kích",
+          "Khiên Hextech Thử Nghiệm",
+          "Rìu Đen"
+        ],
+        "pickRate": "24.25%",
+        "winRate": "54.86%"
+      },
+      {
+        "items": [
+          "Chùy Phản Kích",
+          "Khiên Hextech Thử Nghiệm",
+          "Móng Vuốt Sterak"
+        ],
+        "pickRate": "8.36%",
+        "winRate": "58.12%"
+      },
+      {
+        "items": [
+          "Chùy Phản Kích",
+          "Rìu Đen",
+          "Móng Vuốt Sterak"
+        ],
+        "pickRate": "5.55%",
+        "winRate": "57.23%"
+      },
+      {
+        "items": [
+          "Khiên Hextech Thử Nghiệm",
+          "Chùy Phản Kích",
+          "Rìu Đen"
+        ],
+        "pickRate": "2.45%",
+        "winRate": "54.67%"
+      },
+      {
+        "items": [
+          "Mũi Tên Yun Tal",
+          "Rìu Đen",
+          "Vũ Điệu Tử Thần"
+        ],
+        "pickRate": "2.39%",
+        "winRate": "56.85%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Móng Vuốt Sterak",
+          "winRate": "58.51%",
+          "matches": "417"
+        },
+        {
+          "name": "Vũ Điệu Tử Thần",
+          "winRate": "58.71%",
+          "matches": "373"
+        },
+        {
+          "name": "Rìu Đen",
+          "winRate": "57.68%",
+          "matches": "241"
+        },
+        {
+          "name": "Chùy Gai Malmortius",
+          "winRate": "59.31%",
+          "matches": "145"
+        },
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "71.74%",
+          "matches": "138"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "57.65%",
+          "matches": "85"
+        },
+        {
+          "name": "Móng Vuốt Sterak",
+          "winRate": "66.67%",
+          "matches": "57"
+        },
+        {
+          "name": "Vũ Điệu Tử Thần",
+          "winRate": "56.14%",
+          "matches": "57"
+        },
+        {
+          "name": "Rìu Đen",
+          "winRate": "58.06%",
+          "matches": "31"
+        },
+        {
+          "name": "Khiên Băng Randuin",
+          "winRate": "66.67%",
+          "matches": "27"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "77.78%",
+          "matches": "9"
+        },
+        {
+          "name": "Jak'Sho, Vỏ Bọc Thích Nghi",
+          "winRate": "60%",
+          "matches": "5"
+        },
+        {
+          "name": "Nguyệt Đao",
+          "winRate": "50%",
+          "matches": "2"
+        },
+        {
+          "name": "Chùy Gai Malmortius",
+          "winRate": "0%",
+          "matches": "2"
+        },
+        {
+          "name": "Kiếm Ác Xà",
+          "winRate": "50%",
+          "matches": "2"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Taliyah",
+        "winRate": "40.54%",
+        "matches": "37"
+      },
+      {
+        "championName": "Ivern",
+        "winRate": "41.67%",
+        "matches": "96"
+      },
+      {
+        "championName": "Bel'Veth",
+        "winRate": "41.77%",
+        "matches": "79"
+      },
+      {
+        "championName": "Talon",
+        "winRate": "41.98%",
+        "matches": "293"
+      },
+      {
+        "championName": "Master Yi",
+        "winRate": "42.86%",
+        "matches": "196"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Rengar",
+        "winRate": "66.67%",
+        "matches": "108"
+      },
+      {
+        "championName": "Gragas",
+        "winRate": "63.46%",
+        "matches": "52"
+      },
+      {
+        "championName": "Karthus",
+        "winRate": "60.44%",
+        "matches": "91"
+      },
+      {
+        "championName": "Jax",
+        "winRate": "58.06%",
+        "matches": "31"
+      },
+      {
+        "championName": "Nidalee",
+        "winRate": "56%",
+        "matches": "125"
+      }
+    ]
+  }
+}

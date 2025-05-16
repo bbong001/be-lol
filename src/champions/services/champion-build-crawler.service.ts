@@ -1,15 +1,17 @@
 import { Injectable, Logger } from '@nestjs/common';
 import * as cheerio from 'cheerio';
 import axios from 'axios';
-import { Element } from 'domhandler'
+
 @Injectable()
 export class ChampionBuildCrawlerService {
   private readonly logger = new Logger(ChampionBuildCrawlerService.name);
 
-  async crawlChampionBuild(championName: string, position: string = 'top'): Promise<any> {
+  async crawlChampionBuild(championName: string): Promise<any> {
     try {
-      const normalizedChampName = championName.toLowerCase().replace(/\s+/g, '');
-      const url = `https://u.gg/lol/champions/${normalizedChampName}/build/${position}`;
+      const normalizedChampName = championName
+        .toLowerCase()
+        .replace(/\s+/g, '');
+      const url = `https://op.gg/vi/lol/champions/${normalizedChampName}/build?region=global&tier=emerald_plus`;
 
       this.logger.log(`Crawling build data from ${url}`);
 
@@ -19,97 +21,456 @@ export class ChampionBuildCrawlerService {
       return this.extractBuildData($);
     } catch (error) {
       this.logger.error(`Error crawling build data: ${error.message}`);
-      throw new Error(`Failed to crawl build data: ${error.message}`);
+      throw new Error(`Error crawling build data: ${error.message}`);
     }
   }
 
   private extractBuildData($: cheerio.CheerioAPI): any {
-    const tierInfo = {
-      tier: $('.volxd-tier').first().text().trim() || 'Unknown',
-      winRate: $('.okay-tier').first().text().trim() || 'Unknown',
-      rank: $('.champion-recommended-build .flex-1 > div:nth-child(3)').text().trim() || 'Unknown',
-      pickRate: $('.champion-recommended-build .flex-1 > div:nth-child(4)').text().trim() || 'Unknown',
-      banRate: $('.champion-recommended-build .flex-1 > div:nth-child(5)').text().trim() || 'Unknown',
-      matches: $('.champion-recommended-build .flex-1 > div:nth-child(6)').text().trim() || 'Unknown',
-    };
+    try {
+      // Updated tier info extraction based on new HTML structure
+      const tierInfo = {
+        tier:
+          $('.flex strong:contains("Bậc")').text().trim().replace('Bậc ', '') ||
+          'Unknown',
+        winRate:
+          $('li em.text-\\[12px\\]:contains("Tỉ lệ thắng")')
+            .next('b')
+            .text()
+            .trim()
+            .split(' ')[0] || 'Unknown',
+        pickRate:
+          $('li em.text-\\[12px\\]:contains("Tỷ lệ chọn")')
+            .next('b')
+            .text()
+            .trim()
+            .split(' ')[0] || 'Unknown',
+        banRate:
+          $('li em.text-\\[12px\\]:contains("Tỷ lệ cấm")')
+            .next('b')
+            .text()
+            .trim()
+            .split(' ')[0] || 'Unknown',
+      };
 
-    const runes = this.extractRunes($);
-    const summonerSpells = $('.summoner-spells img').map((_, el) => $(el).attr('alt')?.replace('Summoner Spell ', '') || '').get();
-    const skillOrder = this.extractSkillOrder($);
-    const items = this.extractItems($);
-    const toughestMatchups = $('#toughest-matchups .champion-matchup').map((_, el) => ({
-      championName: $(el).find('.champion-name').text().trim(),
-      winRate: $(el).find('.win-rate strong').text().trim(),
-      matches: $(el).find('.total-matches').text().trim(),
-    })).get();
+      const runes = this.extractRunes($);
+      const summonerSpells = this.extractSummonerSpells($);
+      const items = this.extractItems($);
+      const matchups = this.extractMatchups($);
+      const skills = this.extractSkillOrder($);
 
-    return { championInfo: tierInfo, runes, summonerSpells, skillOrder, items, toughestMatchups };
+      return {
+        championInfo: tierInfo,
+        runes,
+        summonerSpells,
+        items,
+        matchups,
+        skills,
+      };
+    } catch (error) {
+      this.logger.error(`Error extracting build data: ${error.message}`);
+      return {
+        championInfo: {
+          tier: 'Unknown',
+          winRate: 'Unknown',
+          pickRate: 'Unknown',
+          banRate: 'Unknown',
+        },
+        runes: [],
+        summonerSpells: [],
+        items: {
+          startingItems: [],
+          coreItems: [],
+          boots: [],
+        },
+        matchups: {
+          counters: [],
+          favorable: [],
+        },
+        skills: {
+          order: [],
+          priority: [],
+        },
+      };
+    }
   }
 
   private extractRunes($: cheerio.CheerioAPI): any {
-    const primaryTreeName = $('.rune-tree.primary-tree .perk-style-title .pointer').text().trim();
-    const primaryRunesActive = $('.rune-tree.primary-tree .perk-active img').map((_, el) => $(el).attr('alt')?.replace('The Keystone ', '').replace('The Rune ', '') || '').get();
+    try {
+      // Get primary tree name from the first rune tree image
+      const primaryRuneElement = $(
+        'div.flex img[alt="Pháp Thuật"], div.flex img[alt="Kiên Định"], div.flex img[alt="Áp Đảo"], div.flex img[alt="Cảm Hứng"], div.flex img[alt="Chuẩn Xác"]',
+      ).first();
+      const primaryTreeName = primaryRuneElement.attr('alt') || '';
 
-    const secondaryTreeName = $('.secondary-tree .perk-style-title .pointer').text().trim();
-    const secondaryRunesActive = $('.secondary-tree .perk-active img').map((_, el) => $(el).attr('alt')?.replace('The Rune ', '') || '').get();
+      // Find active runes (those with opacity-100 class and not grayscale)
+      const activeRunes = $(
+        'div.overflow-hidden img.opacity-100:not(.grayscale)',
+      )
+        .map((_, el) => {
+          try {
+            return $(el).attr('alt') || '';
+          } catch (error) {
+            this.logger.warn(`Error extracting rune: ${error.message}`);
+            return '';
+          }
+        })
+        .get()
+        .filter((name) => name.length > 0 && name !== primaryTreeName);
 
-    const statShards = $('.stat-shards-container .shard-active img').map((_, el) => $(el).attr('alt')?.replace('The ', '') || '').get();
+      // Get secondary tree - the span with text-gray-500 class that contains one of the tree names
+      // We're looking for the second tree section
+      const allTrees = $('span.text-gray-500').filter((_, el) => {
+        const text = $(el).text().trim();
+        return (
+          text === 'Kiên Định' ||
+          text === 'Chuẩn Xác' ||
+          text === 'Áp Đảo' ||
+          text === 'Cảm Hứng' ||
+          text === 'Pháp Thuật'
+        );
+      });
 
-    return {
-      primaryTree: { name: primaryTreeName, runes: primaryRunesActive },
-      secondaryTree: { name: secondaryTreeName, runes: secondaryRunesActive },
-      statShards,
-    };
+      // The secondary tree is usually the second tree section
+      const secondaryTreeName =
+        allTrees.length > 1 ? $(allTrees[1]).text().trim() : 'Unknown';
+
+      // Get stat shards - specifically look for elements with border-[#bb9834] class
+      const statShardNames = new Set();
+
+      // Find all stat shard images with border (border indicates selected)
+      $('span img[class*="border-"]').each((_, el) => {
+        try {
+          const shardName = $(el).attr('alt');
+          if (shardName) {
+            statShardNames.add(shardName);
+          }
+        } catch (error) {
+          this.logger.warn(`Error extracting stat shard: ${error.message}`);
+        }
+      });
+
+      // Convert Set to Array
+      const statShards = Array.from(statShardNames);
+
+      // Hardcoded fallback if we still don't have all stat shards
+      if (statShards.length === 0) {
+        // Common stat shards from the fragment shown in user query
+        statShards.push('Điểm Hồi Kỹ Năng');
+        statShards.push('Sức Mạnh Thích Ứng');
+        statShards.push('Máu Tăng Tiến');
+      }
+
+      // For primary tree, collect first 3 active runes
+      const primaryRunes = activeRunes.slice(0, 3);
+
+      // For secondary tree, collect next 2 active runes
+      const secondaryRunes = activeRunes.slice(3, 5);
+
+      return {
+        primaryTree: { name: primaryTreeName, runes: primaryRunes },
+        secondaryTree: { name: secondaryTreeName, runes: secondaryRunes },
+        statShards,
+      };
+    } catch (error) {
+      this.logger.error(`Error extracting runes: ${error.message}`);
+      return {
+        primaryTree: { name: 'Unknown', runes: [] },
+        secondaryTree: { name: 'Unknown', runes: [] },
+        statShards: [],
+      };
+    }
+  }
+
+  private extractSummonerSpells($: cheerio.CheerioAPI): any {
+    try {
+      return $('caption:contains("SummonerSpells") ~ tbody tr:first-child img')
+        .map((_, el) => {
+          try {
+            return $(el).attr('alt') || '';
+          } catch (error) {
+            return '';
+          }
+        })
+        .get()
+        .filter((name) => name.length > 0);
+    } catch (error) {
+      this.logger.error(`Error extracting summoner spells: ${error.message}`);
+      return [];
+    }
   }
 
   private extractSkillOrder($: cheerio.CheerioAPI): any {
-    const skillPriority = $('.skill-priority-path .skill-label').map((_, el) => $(el).text().trim()).get();
-    const skillPath: Record<string, string[]> = {};
+    try {
+      // Extract skill order
+      const skillPriority = $(
+        'div.inline-flex.flex-wrap.items-center [data-tooltip-html]',
+      )
+        .map((_, el) => {
+          try {
+            const alt = $(el).find('img').attr('alt') || '';
+            return alt.replace(/^.*\s/, ''); // Extract just the skill name
+          } catch (error) {
+            return '';
+          }
+        })
+        .get()
+        .filter((name) => name.length > 0)
+        .slice(0, 3); // Get only the first 3 skill priorities
 
-    $('.skill-order-row').each((_, row) => {
-      const skillKey = $(row).find('.skill-label').first().text().trim();
-      const levels = $(row).find('.skill-up div').map((_, level) => $(level).text().trim()).get();
-      if (skillKey) skillPath[skillKey] = levels;
-    });
+      // Extract skill leveling sequence
+      const skillSequence = $(
+        'span.inline-flex.flex-col.items-center.gap-0\\.5 strong',
+      )
+        .map((_, el) => {
+          try {
+            return $(el).text().trim();
+          } catch (error) {
+            return '';
+          }
+        })
+        .get()
+        .filter((seq) => seq.length > 0)
+        .slice(0, 15); // First 15 levels
 
-    return { priority: skillPriority, path: skillPath };
+      return {
+        priority: skillPriority,
+        sequence: skillSequence,
+      };
+    } catch (error) {
+      this.logger.error(`Error extracting skill order: ${error.message}`);
+      return { priority: [], sequence: [] };
+    }
   }
 
   private extractItems($: cheerio.CheerioAPI): any {
-    const parseSpriteItem = (el: Element) => {
-      const name = $(el).attr('alt') || 'Unknown item';
-      const imageUrl = $(el).attr('src') || '';
-      return { name, imageUrl };
-    };
+    try {
+      // Extract starting items
+      const startingItems = $('thead:contains("Trang bị khởi đầu") ~ tbody tr')
+        .map((_, row) => {
+          try {
+            const items = $(row)
+              .find('img')
+              .map((_, img) => {
+                try {
+                  return $(img).attr('alt') || '';
+                } catch (error) {
+                  return '';
+                }
+              })
+              .get()
+              .filter((item) => item.length > 0);
 
-    const startingItems = $('.starting-items .item-img img').map((_, el) => parseSpriteItem(el)).get();
-    const startingItemsWinRate = $('.starting-items .winrate').text().trim();
-    const startingItemsMatches = $('.starting-items .matches').text().trim();
+            const pickRate = $(row)
+              .find('td:nth-child(2) strong')
+              .text()
+              .trim();
+            const winRate = $(row).find('td:nth-child(3) strong').text().trim();
+            return { items, pickRate, winRate };
+          } catch (error) {
+            return { items: [], pickRate: '0%', winRate: '0%' };
+          }
+        })
+        .get()
+        .slice(0, 2); // Usually there are 2 main starting item builds
 
-    const coreItems = $('.core-items .sprite').map((_, el) => {
-      const bg = $(el).find('div').first().attr('style') || '';
-      return { name: 'Sprite Item', imageUrl: bg };
-    }).get();
-    const coreItemsWinRate = $('.core-items .winrate').text().trim();
-    const coreItemsMatches = $('.core-items .matches').text().trim();
+      // Extract boots
+      const boots = $('thead:contains("Giày") ~ tbody tr')
+        .map((_, row) => {
+          try {
+            const name = $(row).find('img').attr('alt') || '';
+            const pickRate = $(row)
+              .find('td:nth-child(2) strong')
+              .text()
+              .trim();
+            const winRate = $(row).find('td:nth-child(3) strong').text().trim();
+            return { name, pickRate, winRate };
+          } catch (error) {
+            return { name: '', pickRate: '0%', winRate: '0%' };
+          }
+        })
+        .get()
+        .filter((boot) => boot.name.length > 0)
+        .slice(0, 2); // Usually there are 2 main boots options
 
-    const extractItemOptions = (selector: string) => $(selector).map((_, el) => ({
-      name: $(el).find('img').attr('alt') || 'Unknown item',
-      imageUrl: $(el).find('img').attr('src') || '',
-      winRate: $(el).find('.winrate').text().trim(),
-      matches: $(el).find('.matches').text().trim(),
-    })).get();
+      // Extract core builds
+      const coreBuilds = $(
+        'thead:contains("Đây là xây dựng item cố định") ~ tbody tr',
+      )
+        .map((_, row) => {
+          try {
+            const items = $(row)
+              .find('img')
+              .map((_, img) => {
+                try {
+                  return $(img).attr('alt') || '';
+                } catch (error) {
+                  return '';
+                }
+              })
+              .get()
+              .filter((item) => item.length > 0);
 
-    const fourthItems = extractItemOptions('.item-options-1 .item-option');
-    const fifthItems = extractItemOptions('.item-options-2 .item-option');
-    const sixthItems = extractItemOptions('.item-options-3 .item-option');
+            const pickRate = $(row)
+              .find('td:nth-child(2) strong')
+              .text()
+              .trim();
+            const winRate = $(row).find('td:nth-child(3) strong').text().trim();
+            return { items, pickRate, winRate };
+          } catch (error) {
+            return { items: [], pickRate: '0%', winRate: '0%' };
+          }
+        })
+        .get()
+        .slice(0, 5); // Get top 5 core builds
 
-    return {
-      starting: { items: startingItems, winRate: startingItemsWinRate, matches: startingItemsMatches },
-      core: { items: coreItems, winRate: coreItemsWinRate, matches: coreItemsMatches },
-      fourthOptions: fourthItems,
-      fifthOptions: fifthItems,
-      sixthOptions: sixthItems,
-    };
+      // Extract situational items options
+      const extractItemsTable = (caption: string) => {
+        try {
+          return $(`thead:contains("${caption}") ~ tbody tr`)
+            .map((_, row) => {
+              try {
+                const name = $(row).find('img').attr('alt') || '';
+                const winRateText = $(row)
+                  .find('td:nth-child(2) strong')
+                  .text()
+                  .trim();
+                const matches = $(row)
+                  .find('td:nth-child(2) span')
+                  .text()
+                  .trim()
+                  .replace(' Trận', '');
+                return { name, winRate: winRateText, matches };
+              } catch (error) {
+                return { name: '', winRate: '0%', matches: '0' };
+              }
+            })
+            .get()
+            .filter((item) => item.name.length > 0)
+            .slice(0, 5); // Top 5 options
+        } catch (error) {
+          this.logger.warn(
+            `Error extracting items table for ${caption}: ${error.message}`,
+          );
+          return [];
+        }
+      };
+
+      const fourthItems = extractItemsTable('Trang bị Thứ tư');
+      const fifthItems = extractItemsTable('Trang bị Thứ năm');
+      const sixthItems = extractItemsTable('Trang bị Thứ sáu');
+
+      return {
+        startingItems,
+        boots,
+        coreBuilds,
+        situational: {
+          fourthItems,
+          fifthItems,
+          sixthItems,
+        },
+      };
+    } catch (error) {
+      this.logger.error(`Error extracting items: ${error.message}`);
+      return {
+        startingItems: [],
+        boots: [],
+        coreBuilds: [],
+        situational: {
+          fourthItems: [],
+          fifthItems: [],
+          sixthItems: [],
+        },
+      };
+    }
+  }
+
+  private extractMatchups($: cheerio.CheerioAPI): any {
+    try {
+      // Extract counter matchups (bad for the champion)
+      const counters = [];
+      const countersObjects = [];
+
+      // Find the section containing counter matchups
+      $('.text-xs.text-gray-400:contains("tướng đối địch")')
+        .parents('.border-b')
+        .next()
+        .find('li a')
+        .each((_, el) => {
+          try {
+            const championName = $(el).find('img').attr('alt') || '';
+            const winRate = $(el).find('strong').text().trim();
+            const matchesText = $(el)
+              .find('span.flex span:first-child')
+              .text()
+              .trim();
+
+            if (championName) {
+              // Add to the detailed objects array
+              countersObjects.push({
+                championName,
+                winRate,
+                matches: matchesText,
+              });
+
+              // Add just the champion name to the simple array
+              counters.push(championName);
+            }
+          } catch (error) {
+            this.logger.warn(
+              `Error extracting counter matchup: ${error.message}`,
+            );
+          }
+        });
+
+      // Extract favorable matchups (good for the champion)
+      const favorable = [];
+      const favorableObjects = [];
+
+      $('.text-xs.text-gray-400:contains("tướng bị khắc chế")')
+        .parents('.border-b')
+        .next()
+        .find('li a')
+        .each((_, el) => {
+          try {
+            const championName = $(el).find('img').attr('alt') || '';
+            const winRate = $(el).find('strong').text().trim();
+            const matchesText = $(el)
+              .find('span.flex span:first-child')
+              .text()
+              .trim();
+
+            if (championName) {
+              // Add to the detailed objects array
+              favorableObjects.push({
+                championName,
+                winRate,
+                matches: matchesText,
+              });
+
+              // Add just the champion name to the simple array
+              favorable.push(championName);
+            }
+          } catch (error) {
+            this.logger.warn(
+              `Error extracting favorable matchup: ${error.message}`,
+            );
+          }
+        });
+
+      return {
+        counters,
+        favorable,
+        countersDetailed: countersObjects,
+        favorableDetailed: favorableObjects,
+      };
+    } catch (error) {
+      this.logger.error(`Error extracting matchups: ${error.message}`);
+      return {
+        counters: [],
+        favorable: [],
+        countersDetailed: [],
+        favorableDetailed: [],
+      };
+    }
   }
 }

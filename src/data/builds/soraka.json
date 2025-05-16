@@ -1,0 +1,239 @@
+{
+  "championInfo": {
+    "tier": "2",
+    "winRate": "51.25%",
+    "pickRate": "5.01%",
+    "banRate": "2.23%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Pháp Thuật",
+      "runes": [
+        "Triệu Hồi Aery",
+        "Dải Băng Năng Lượng",
+        "Thăng Tiến Sức Mạnh"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Thiêu Rụi",
+        "Giáp Cốt"
+      ]
+    },
+    "statShards": [
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Hồi Máu",
+    "Kiệt Sức",
+    "Tốc Biến"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Mệnh",
+      "Tinh",
+      "Cực"
+    ],
+    "sequence": [
+      "Q",
+      "W",
+      "E",
+      "W",
+      "W",
+      "R",
+      "W",
+      "Q",
+      "W",
+      "Q",
+      "R",
+      "Q",
+      "Q",
+      "E",
+      "E"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "97.12%",
+        "winRate": "50.96%"
+      },
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "2.48%",
+        "winRate": "55.24%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Khai Sáng Ionia",
+        "pickRate": "70.15%",
+        "winRate": "52.41%"
+      },
+      {
+        "name": "Giày Bạc",
+        "pickRate": "22.59%",
+        "winRate": "50.8%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Bùa Nguyệt Thạch",
+          "Dây Chuyền Chuộc Tội",
+          "Lõi Bình Minh"
+        ],
+        "pickRate": "23.88%",
+        "winRate": "65.4%"
+      },
+      {
+        "items": [
+          "Bùa Nguyệt Thạch",
+          "Dây Chuyền Chuộc Tội",
+          "Lư Hương Sôi Sục"
+        ],
+        "pickRate": "6.7%",
+        "winRate": "66.99%"
+      },
+      {
+        "items": [
+          "Bùa Nguyệt Thạch",
+          "Lõi Bình Minh",
+          "Dây Chuyền Chuộc Tội"
+        ],
+        "pickRate": "5.73%",
+        "winRate": "64.77%"
+      },
+      {
+        "items": [
+          "Bùa Nguyệt Thạch",
+          "Dây Chuyền Chuộc Tội",
+          "Giáp Máu Warmog"
+        ],
+        "pickRate": "5.4%",
+        "winRate": "66.27%"
+      },
+      {
+        "items": [
+          "Bùa Nguyệt Thạch",
+          "Dây Chuyền Chuộc Tội",
+          "Dây Chuyền Iron Solari"
+        ],
+        "pickRate": "4.55%",
+        "winRate": "60%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Chuông Bảo Hộ Mikael",
+          "winRate": "64.29%",
+          "matches": "28"
+        },
+        {
+          "name": "Lõi Bình Minh",
+          "winRate": "59.09%",
+          "matches": "22"
+        },
+        {
+          "name": "Lư Hương Sôi Sục",
+          "winRate": "77.78%",
+          "matches": "18"
+        },
+        {
+          "name": "Dây Chuyền Iron Solari",
+          "winRate": "52.94%",
+          "matches": "17"
+        },
+        {
+          "name": "Dây Chuyền Chuộc Tội",
+          "winRate": "52.94%",
+          "matches": "17"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Dây Chuyền Iron Solari",
+          "winRate": "0%",
+          "matches": "1"
+        },
+        {
+          "name": "Lư Hương Sôi Sục",
+          "winRate": "0%",
+          "matches": "1"
+        },
+        {
+          "name": "Trượng Lưu Thủy",
+          "winRate": "100%",
+          "matches": "1"
+        }
+      ],
+      "sixthItems": []
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Maokai",
+        "winRate": "33.87%",
+        "matches": "62"
+      },
+      {
+        "championName": "Zoe",
+        "winRate": "37.14%",
+        "matches": "35"
+      },
+      {
+        "championName": "Zyra",
+        "winRate": "39.62%",
+        "matches": "106"
+      },
+      {
+        "championName": "Vel'Koz",
+        "winRate": "45.79%",
+        "matches": "107"
+      },
+      {
+        "championName": "Bard",
+        "winRate": "46.74%",
+        "matches": "184"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Neeko",
+        "winRate": "58.43%",
+        "matches": "89"
+      },
+      {
+        "championName": "Renata Glasc",
+        "winRate": "57.78%",
+        "matches": "45"
+      },
+      {
+        "championName": "Xerath",
+        "winRate": "57.14%",
+        "matches": "84"
+      },
+      {
+        "championName": "Taric",
+        "winRate": "56.82%",
+        "matches": "44"
+      },
+      {
+        "championName": "Karma",
+        "winRate": "56.29%",
+        "matches": "350"
+      }
+    ]
+  }
+}

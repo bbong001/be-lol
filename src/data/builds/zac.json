@@ -1,0 +1,278 @@
+{
+  "championInfo": {
+    "tier": "4",
+    "winRate": "48.51%",
+    "pickRate": "3.08%",
+    "banRate": "2.10%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Dư Chấn",
+        "Suối Nguồn Sinh Mệnh",
+        "Kiểm Soát Điều Kiện"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Chuẩn Xác",
+      "runes": [
+        "Tiếp Sức",
+        "Đắc Thắng"
+      ]
+    },
+    "statShards": [
+      "Điểm Hồi Kỹ Năng",
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Trừng Phạt",
+    "Trừng Phạt",
+    "Thiêu Đốt"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Su",
+      "Ổn",
+      "Giãn"
+    ],
+    "sequence": [
+      "W",
+      "Q",
+      "E",
+      "E",
+      "E",
+      "R",
+      "E",
+      "W",
+      "E",
+      "W",
+      "R",
+      "W",
+      "W",
+      "Q",
+      "Q"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Linh Hồn Mộc Long",
+          "Bình Máu"
+        ],
+        "pickRate": "33.74%",
+        "winRate": "47.97%"
+      },
+      {
+        "items": [
+          "Linh Hồn Mộc Long"
+        ],
+        "pickRate": "25.62%",
+        "winRate": "48.57%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Khai Sáng Ionia",
+        "pickRate": "47.84%",
+        "winRate": "50.8%"
+      },
+      {
+        "name": "Giày Thủy Ngân",
+        "pickRate": "28.92%",
+        "winRate": "47.57%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Đai Tên Lửa Hextech",
+          "Khiên Thái Dương",
+          "Giáp Tâm Linh"
+        ],
+        "pickRate": "11.41%",
+        "winRate": "43.96%"
+      },
+      {
+        "items": [
+          "Khiên Thái Dương",
+          "Giáp Tâm Linh",
+          "Giáp Gai"
+        ],
+        "pickRate": "10.03%",
+        "winRate": "52.19%"
+      },
+      {
+        "items": [
+          "Phong Ấn Hắc Ám",
+          "Đai Tên Lửa Hextech",
+          "Khiên Thái Dương",
+          "Giáp Tâm Linh"
+        ],
+        "pickRate": "8.09%",
+        "winRate": "63.57%"
+      },
+      {
+        "items": [
+          "Khiên Thái Dương",
+          "Giáp Tâm Linh",
+          "Áo Choàng Diệt Vong"
+        ],
+        "pickRate": "6.02%",
+        "winRate": "46.35%"
+      },
+      {
+        "items": [
+          "Khiên Thái Dương",
+          "Giáp Gai",
+          "Giáp Tâm Linh"
+        ],
+        "pickRate": "4.79%",
+        "winRate": "52.29%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Áo Choàng Diệt Vong",
+          "winRate": "59.93%",
+          "matches": "277"
+        },
+        {
+          "name": "Giáp Gai",
+          "winRate": "55.19%",
+          "matches": "270"
+        },
+        {
+          "name": "Giáp Tâm Linh",
+          "winRate": "59.38%",
+          "matches": "192"
+        },
+        {
+          "name": "Khiên Băng Randuin",
+          "winRate": "54.48%",
+          "matches": "145"
+        },
+        {
+          "name": "Sách Chiêu Hồn Mejai",
+          "winRate": "80.51%",
+          "matches": "118"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Áo Choàng Diệt Vong",
+          "winRate": "57.58%",
+          "matches": "66"
+        },
+        {
+          "name": "Khiên Băng Randuin",
+          "winRate": "56.67%",
+          "matches": "60"
+        },
+        {
+          "name": "Sách Chiêu Hồn Mejai",
+          "winRate": "79.66%",
+          "matches": "59"
+        },
+        {
+          "name": "Giáp Gai",
+          "winRate": "60%",
+          "matches": "45"
+        },
+        {
+          "name": "Jak'Sho, Vỏ Bọc Thích Nghi",
+          "winRate": "70.59%",
+          "matches": "34"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Quyền Trượng Ác Thần",
+          "winRate": "80%",
+          "matches": "5"
+        },
+        {
+          "name": "Jak'Sho, Vỏ Bọc Thích Nghi",
+          "winRate": "66.67%",
+          "matches": "3"
+        },
+        {
+          "name": "Khiên Băng Randuin",
+          "winRate": "50%",
+          "matches": "2"
+        },
+        {
+          "name": "Áo Choàng Diệt Vong",
+          "winRate": "0%",
+          "matches": "2"
+        },
+        {
+          "name": "Giáp Thiên Nhiên",
+          "winRate": "0%",
+          "matches": "2"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Poppy",
+        "winRate": "30.95%",
+        "matches": "42"
+      },
+      {
+        "championName": "Udyr",
+        "winRate": "32.81%",
+        "matches": "64"
+      },
+      {
+        "championName": "Karthus",
+        "winRate": "36.36%",
+        "matches": "55"
+      },
+      {
+        "championName": "Fiddlesticks",
+        "winRate": "39.68%",
+        "matches": "63"
+      },
+      {
+        "championName": "Ekko",
+        "winRate": "39.91%",
+        "matches": "223"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Ngộ Không",
+        "winRate": "60.29%",
+        "matches": "68"
+      },
+      {
+        "championName": "Amumu",
+        "winRate": "57.58%",
+        "matches": "66"
+      },
+      {
+        "championName": "Rengar",
+        "winRate": "56.86%",
+        "matches": "51"
+      },
+      {
+        "championName": "Graves",
+        "winRate": "55.83%",
+        "matches": "120"
+      },
+      {
+        "championName": "Rammus",
+        "winRate": "54.29%",
+        "matches": "35"
+      }
+    ]
+  }
+}

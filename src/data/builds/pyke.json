@@ -1,0 +1,249 @@
+{
+  "championInfo": {
+    "tier": "2",
+    "winRate": "50.28%",
+    "pickRate": "6.23%",
+    "banRate": "25.15%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Áp Đảo",
+      "runes": [
+        "Mưa Kiếm",
+        "Phát Bắn Đơn Giản",
+        "Giác Quan Thứ Sáu"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Thợ Săn Tối Thượng",
+        "Giáp Cốt"
+      ]
+    },
+    "statShards": [
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Thiêu Đốt",
+    "Kiệt Sức",
+    "Tốc Biến"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Xương",
+      "Quái",
+      "Tăm"
+    ],
+    "sequence": [
+      "Q",
+      "E",
+      "W",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "E",
+      "Q",
+      "E",
+      "R",
+      "E",
+      "E",
+      "W",
+      "W"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "95.88%",
+        "winRate": "50.49%"
+      },
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "2.3%",
+        "winRate": "49.18%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Đồng Bộ",
+        "pickRate": "53.47%",
+        "winRate": "50.94%"
+      },
+      {
+        "name": "Giày Bạc",
+        "pickRate": "28.26%",
+        "winRate": "51.18%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Kiếm Âm U",
+          "Kiếm Ma Youmuu",
+          "Áo Choàng Bóng Tối"
+        ],
+        "pickRate": "20.63%",
+        "winRate": "54.34%"
+      },
+      {
+        "items": [
+          "Kiếm Âm U",
+          "Áo Choàng Bóng Tối",
+          "Kiếm Ma Youmuu"
+        ],
+        "pickRate": "12.8%",
+        "winRate": "53.33%"
+      },
+      {
+        "items": [
+          "Kiếm Âm U",
+          "Kiếm Ma Youmuu",
+          "Nguyên Tố Luân"
+        ],
+        "pickRate": "3.93%",
+        "winRate": "60.14%"
+      },
+      {
+        "items": [
+          "Kiếm Âm U",
+          "Kiếm Ma Youmuu",
+          "Kiếm Điện Phong"
+        ],
+        "pickRate": "3.04%",
+        "winRate": "54.21%"
+      },
+      {
+        "items": [
+          "Kiếm Âm U",
+          "Áo Choàng Bóng Tối",
+          "Nguyên Tố Luân"
+        ],
+        "pickRate": "2.73%",
+        "winRate": "57.29%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Gươm Thức Thời",
+          "winRate": "49.6%",
+          "matches": "125"
+        },
+        {
+          "name": "Áo Choàng Bóng Tối",
+          "winRate": "58.93%",
+          "matches": "112"
+        },
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "57.95%",
+          "matches": "88"
+        },
+        {
+          "name": "Nguyên Tố Luân",
+          "winRate": "61.54%",
+          "matches": "78"
+        },
+        {
+          "name": "Kiếm Điện Phong",
+          "winRate": "56.16%",
+          "matches": "73"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Kiếm Ác Xà",
+          "winRate": "57.14%",
+          "matches": "7"
+        },
+        {
+          "name": "Kiếm Ma Youmuu",
+          "winRate": "0%",
+          "matches": "5"
+        },
+        {
+          "name": "Áo Choàng Bóng Tối",
+          "winRate": "75%",
+          "matches": "4"
+        },
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "33.33%",
+          "matches": "3"
+        },
+        {
+          "name": "Giáp Liệt Sĩ",
+          "winRate": "33.33%",
+          "matches": "3"
+        }
+      ],
+      "sixthItems": []
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Nidalee",
+        "winRate": "38.71%",
+        "matches": "31"
+      },
+      {
+        "championName": "Elise",
+        "winRate": "39.41%",
+        "matches": "170"
+      },
+      {
+        "championName": "Sylas",
+        "winRate": "43.28%",
+        "matches": "67"
+      },
+      {
+        "championName": "Pantheon",
+        "winRate": "45.13%",
+        "matches": "195"
+      },
+      {
+        "championName": "Vel'Koz",
+        "winRate": "45.88%",
+        "matches": "85"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Lux",
+        "winRate": "59.76%",
+        "matches": "251"
+      },
+      {
+        "championName": "Shaco",
+        "winRate": "56.76%",
+        "matches": "111"
+      },
+      {
+        "championName": "Sona",
+        "winRate": "56.52%",
+        "matches": "138"
+      },
+      {
+        "championName": "Blitzcrank",
+        "winRate": "55.9%",
+        "matches": "229"
+      },
+      {
+        "championName": "Xerath",
+        "winRate": "55.8%",
+        "matches": "181"
+      }
+    ]
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "championInfo": {
+    "tier": "4",
+    "winRate": "50.04%",
+    "pickRate": "1.60%",
+    "banRate": "0.54%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Chuẩn Xác",
+      "runes": [
+        "Nhịp Độ Chết Người",
+        "Đắc Thắng",
+        "Huyền Thoại: Tốc Độ Đánh"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Chốt Chặn Cuối Cùng",
+        "Tàn Phá Hủy Diệt"
+      ]
+    },
+    "statShards": [
+      "Tốc Độ Đánh",
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Dịch Chuyển",
+    "Tốc Hành",
+    "Dịch Chuyển"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Nuốt",
+      "Hàn",
+      "Băng"
+    ],
+    "sequence": [
+      "Q",
+      "W",
+      "E",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "W",
+      "Q",
+      "W",
+      "R",
+      "W",
+      "W",
+      "E",
+      "E"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Kiếm Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "68.09%",
+        "winRate": "49.24%"
+      },
+      {
+        "items": [
+          "Khiên Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "20.76%",
+        "winRate": "48.7%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Thép Gai",
+        "pickRate": "42.29%",
+        "winRate": "49.15%"
+      },
+      {
+        "name": "Giày Bạc",
+        "pickRate": "29.41%",
+        "winRate": "50%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Rìu Mãng Xà",
+          "Tam Hợp Kiếm",
+          "Búa Tiến Công "
+        ],
+        "pickRate": "18.78%",
+        "winRate": "52.1%"
+      },
+      {
+        "items": [
+          "Rìu Mãng Xà",
+          "Gươm Suy Vong",
+          "Búa Tiến Công "
+        ],
+        "pickRate": "14.89%",
+        "winRate": "56.73%"
+      },
+      {
+        "items": [
+          "Rìu Mãng Xà",
+          "Búa Tiến Công ",
+          "Tam Hợp Kiếm"
+        ],
+        "pickRate": "5.9%",
+        "winRate": "51.55%"
+      },
+      {
+        "items": [
+          "Rìu Mãng Xà",
+          "Gươm Suy Vong",
+          "Tam Hợp Kiếm"
+        ],
+        "pickRate": "4.26%",
+        "winRate": "52.86%"
+      },
+      {
+        "items": [
+          "Rìu Mãng Xà",
+          "Tam Hợp Kiếm",
+          "Gươm Suy Vong"
+        ],
+        "pickRate": "3.77%",
+        "winRate": "46.77%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Giáp Tâm Linh",
+          "winRate": "46.29%",
+          "matches": "175"
+        },
+        {
+          "name": "Giáp Gai",
+          "winRate": "57.14%",
+          "matches": "147"
+        },
+        {
+          "name": "Búa Tiến Công ",
+          "winRate": "53.57%",
+          "matches": "84"
+        },
+        {
+          "name": "Gươm Suy Vong",
+          "winRate": "43.08%",
+          "matches": "65"
+        },
+        {
+          "name": "Đao Tím",
+          "winRate": "52.83%",
+          "matches": "53"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Giáp Tâm Linh",
+          "winRate": "46%",
+          "matches": "50"
+        },
+        {
+          "name": "Giáp Gai",
+          "winRate": "50%",
+          "matches": "44"
+        },
+        {
+          "name": "Đao Tím",
+          "winRate": "36.84%",
+          "matches": "19"
+        },
+        {
+          "name": "Khiên Băng Randuin",
+          "winRate": "33.33%",
+          "matches": "18"
+        },
+        {
+          "name": "Tam Hợp Kiếm",
+          "winRate": "42.86%",
+          "matches": "14"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Giáp Tâm Linh",
+          "winRate": "0%",
+          "matches": "1"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Kayle",
+        "winRate": "27.91%",
+        "matches": "43"
+      },
+      {
+        "championName": "Irelia",
+        "winRate": "34.15%",
+        "matches": "41"
+      },
+      {
+        "championName": "Teemo",
+        "winRate": "35.48%",
+        "matches": "31"
+      },
+      {
+        "championName": "Gangplank",
+        "winRate": "35.56%",
+        "matches": "45"
+      },
+      {
+        "championName": "Jax",
+        "winRate": "37.65%",
+        "matches": "85"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Olaf",
+        "winRate": "68.89%",
+        "matches": "45"
+      },
+      {
+        "championName": "Yorick",
+        "winRate": "66.27%",
+        "matches": "83"
+      },
+      {
+        "championName": "Sion",
+        "winRate": "59.76%",
+        "matches": "82"
+      },
+      {
+        "championName": "Aatrox",
+        "winRate": "57.53%",
+        "matches": "73"
+      },
+      {
+        "championName": "Renekton",
+        "winRate": "57.35%",
+        "matches": "68"
+      }
+    ]
+  }
+}

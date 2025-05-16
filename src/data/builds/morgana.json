@@ -1,0 +1,239 @@
+{
+  "championInfo": {
+    "tier": "3",
+    "winRate": "50.96%",
+    "pickRate": "3.13%",
+    "banRate": "10.36%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Pháp Thuật",
+      "runes": [
+        "Thiên Thạch Bí Ẩn",
+        "Dải Băng Năng Lượng",
+        "Thăng Tiến Sức Mạnh"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Áp Đảo",
+      "runes": [
+        "Thiêu Rụi",
+        "Phát Bắn Đơn Giản"
+      ]
+    },
+    "statShards": [
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Thiêu Đốt",
+    "Kiệt Sức",
+    "Tốc Biến"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Tối",
+      "Chết",
+      "Đen"
+    ],
+    "sequence": [
+      "Q",
+      "W",
+      "E",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "W",
+      "Q",
+      "W",
+      "R",
+      "W",
+      "W",
+      "E",
+      "E"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "95.41%",
+        "winRate": "51.65%"
+      },
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "3.21%",
+        "winRate": "49.7%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Khai Sáng Ionia",
+        "pickRate": "55.29%",
+        "winRate": "50.58%"
+      },
+      {
+        "name": "Giày Bạc",
+        "pickRate": "22.9%",
+        "winRate": "53.68%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Mặt Nạ Đọa Đày Liandry",
+          "Đồng Hồ Cát Zhonya",
+          "Trượng Pha Lê Rylai"
+        ],
+        "pickRate": "6.41%",
+        "winRate": "52.54%"
+      },
+      {
+        "items": [
+          "Đuốc Lửa Đen",
+          "Đồng Hồ Cát Zhonya",
+          "Mặt Nạ Đọa Đày Liandry"
+        ],
+        "pickRate": "3.26%",
+        "winRate": "50%"
+      },
+      {
+        "items": [
+          "Mặt Nạ Đọa Đày Liandry",
+          "Đồng Hồ Cát Zhonya",
+          "Dây Chuyền Chuộc Tội"
+        ],
+        "pickRate": "2.93%",
+        "winRate": "44.44%"
+      },
+      {
+        "items": [
+          "Mặt Nạ Đọa Đày Liandry",
+          "Đồng Hồ Cát Zhonya",
+          "Kính Nhắm Ma Pháp"
+        ],
+        "pickRate": "2.82%",
+        "winRate": "61.54%"
+      },
+      {
+        "items": [
+          "Đuốc Lửa Đen",
+          "Mặt Nạ Đọa Đày Liandry",
+          "Đồng Hồ Cát Zhonya"
+        ],
+        "pickRate": "2.71%",
+        "winRate": "80%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Quỷ Thư Morello",
+          "winRate": "66.67%",
+          "matches": "30"
+        },
+        {
+          "name": "Hoa Tử Linh",
+          "winRate": "64.29%",
+          "matches": "14"
+        },
+        {
+          "name": "Kính Nhắm Ma Pháp",
+          "winRate": "66.67%",
+          "matches": "12"
+        },
+        {
+          "name": "Dây Chuyền Chuộc Tội",
+          "winRate": "63.64%",
+          "matches": "11"
+        },
+        {
+          "name": "Mặt Nạ Đọa Đày Liandry",
+          "winRate": "70%",
+          "matches": "10"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Hoa Tử Linh",
+          "winRate": "100%",
+          "matches": "1"
+        },
+        {
+          "name": "Trát Lệnh Đế Vương",
+          "winRate": "100%",
+          "matches": "1"
+        },
+        {
+          "name": "Mũ Phù Thủy Rabadon",
+          "winRate": "100%",
+          "matches": "1"
+        }
+      ],
+      "sixthItems": []
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Elise",
+        "winRate": "24.39%",
+        "matches": "41"
+      },
+      {
+        "championName": "Rakan",
+        "winRate": "43.33%",
+        "matches": "90"
+      },
+      {
+        "championName": "Alistar",
+        "winRate": "43.44%",
+        "matches": "122"
+      },
+      {
+        "championName": "Pyke",
+        "winRate": "44.88%",
+        "matches": "127"
+      },
+      {
+        "championName": "Zyra",
+        "winRate": "45.07%",
+        "matches": "71"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Blitzcrank",
+        "winRate": "59.74%",
+        "matches": "154"
+      },
+      {
+        "championName": "Swain",
+        "winRate": "58.82%",
+        "matches": "51"
+      },
+      {
+        "championName": "Zilean",
+        "winRate": "58.73%",
+        "matches": "63"
+      },
+      {
+        "championName": "Janna",
+        "winRate": "56.52%",
+        "matches": "92"
+      },
+      {
+        "championName": "Shaco",
+        "winRate": "56.25%",
+        "matches": "32"
+      }
+    ]
+  }
+}

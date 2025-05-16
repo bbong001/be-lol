@@ -1,0 +1,278 @@
+{
+  "championInfo": {
+    "tier": "4",
+    "winRate": "49.24%",
+    "pickRate": "5.12%",
+    "banRate": "1.23%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Chuẩn Xác",
+      "runes": [
+        "Sẵn Sàng Tấn Công",
+        "Hấp Thụ Sinh Mệnh",
+        "Huyền Thoại: Hút Máu"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Pháp Thuật",
+      "runes": [
+        "Đốn Hạ",
+        "Tập Trung Tuyệt Đối"
+      ]
+    },
+    "statShards": [
+      "Tốc Độ Đánh",
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Lá Chắn",
+    "Thanh Tẩy",
+    "Tốc Biến"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Khí",
+      "Khí",
+      "Đổi"
+    ],
+    "sequence": [
+      "Q",
+      "Q",
+      "Q",
+      "E",
+      "Q",
+      "E",
+      "Q",
+      "E",
+      "Q",
+      "E",
+      "E",
+      "E",
+      "W",
+      "W",
+      "W"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Kiếm Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "96.33%",
+        "winRate": "49.48%"
+      },
+      {
+        "items": [
+          "Lưỡi Hái",
+          "Bình Máu"
+        ],
+        "pickRate": "2.25%",
+        "winRate": "49.26%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Cuồng Nộ",
+        "pickRate": "80.83%",
+        "winRate": "49.78%"
+      },
+      {
+        "name": "Giày Bạc",
+        "pickRate": "13.88%",
+        "winRate": "53.5%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Súng Hải Tặc",
+          "Vô Cực Kiếm",
+          "Nỏ Thần Dominik"
+        ],
+        "pickRate": "26.05%",
+        "winRate": "60.12%"
+      },
+      {
+        "items": [
+          "Mũi Tên Yun Tal",
+          "Vô Cực Kiếm",
+          "Nỏ Thần Dominik"
+        ],
+        "pickRate": "10.51%",
+        "winRate": "54.56%"
+      },
+      {
+        "items": [
+          "Súng Hải Tặc",
+          "Vô Cực Kiếm",
+          "Lời Nhắc Tử Vong"
+        ],
+        "pickRate": "9.19%",
+        "winRate": "55.65%"
+      },
+      {
+        "items": [
+          "Súng Hải Tặc",
+          "Vô Cực Kiếm",
+          "Cuồng Cung Runaan"
+        ],
+        "pickRate": "6.77%",
+        "winRate": "53.1%"
+      },
+      {
+        "items": [
+          "Súng Hải Tặc",
+          "Nỏ Thần Dominik",
+          "Vô Cực Kiếm"
+        ],
+        "pickRate": "5.25%",
+        "winRate": "61.6%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Nỏ Tử Thủ",
+          "winRate": "57.69%",
+          "matches": "605"
+        },
+        {
+          "name": "Cuồng Cung Runaan",
+          "winRate": "56.38%",
+          "matches": "580"
+        },
+        {
+          "name": "Huyết Kiếm",
+          "winRate": "58.82%",
+          "matches": "357"
+        },
+        {
+          "name": "Nỏ Thần Dominik",
+          "winRate": "62.81%",
+          "matches": "320"
+        },
+        {
+          "name": "Vô Cực Kiếm",
+          "winRate": "57.52%",
+          "matches": "113"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Huyết Kiếm",
+          "winRate": "56.62%",
+          "matches": "302"
+        },
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "62.96%",
+          "matches": "162"
+        },
+        {
+          "name": "Cuồng Cung Runaan",
+          "winRate": "49.28%",
+          "matches": "69"
+        },
+        {
+          "name": "Nỏ Tử Thủ",
+          "winRate": "61.76%",
+          "matches": "68"
+        },
+        {
+          "name": "Đao Thủy Ngân",
+          "winRate": "52.38%",
+          "matches": "42"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "46.15%",
+          "matches": "13"
+        },
+        {
+          "name": "Ma Vũ Song Kiếm",
+          "winRate": "66.67%",
+          "matches": "6"
+        },
+        {
+          "name": "Cuồng Cung Runaan",
+          "winRate": "60%",
+          "matches": "5"
+        },
+        {
+          "name": "Kiếm Ma Youmuu",
+          "winRate": "0%",
+          "matches": "3"
+        },
+        {
+          "name": "Huyết Kiếm",
+          "winRate": "33.33%",
+          "matches": "3"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Nilah",
+        "winRate": "37.7%",
+        "matches": "61"
+      },
+      {
+        "championName": "Ziggs",
+        "winRate": "38.71%",
+        "matches": "31"
+      },
+      {
+        "championName": "Mel",
+        "winRate": "39.29%",
+        "matches": "56"
+      },
+      {
+        "championName": "Samira",
+        "winRate": "42.73%",
+        "matches": "110"
+      },
+      {
+        "championName": "Hwei",
+        "winRate": "42.86%",
+        "matches": "35"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Zeri",
+        "winRate": "55.56%",
+        "matches": "144"
+      },
+      {
+        "championName": "Varus",
+        "winRate": "54.77%",
+        "matches": "367"
+      },
+      {
+        "championName": "Draven",
+        "winRate": "53.85%",
+        "matches": "182"
+      },
+      {
+        "championName": "Kog'Maw",
+        "winRate": "53.45%",
+        "matches": "58"
+      },
+      {
+        "championName": "Ezreal",
+        "winRate": "51.86%",
+        "matches": "590"
+      }
+    ]
+  }
+}

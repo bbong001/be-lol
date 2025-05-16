@@ -1,0 +1,235 @@
+{
+  "championInfo": {
+    "tier": "5",
+    "winRate": "49.43%",
+    "pickRate": "1.47%",
+    "banRate": "0.20%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Hộ Vệ",
+        "Nện Khiên",
+        "Giáp Cốt"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Áp Đảo",
+      "runes": [
+        "Kiên Cường",
+        "Giác Quan Thứ Sáu"
+      ]
+    },
+    "statShards": [
+      "Tốc Độ Đánh",
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Hồi Máu",
+    "Tốc Biến",
+    "Thiêu Đốt"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Trợ",
+      "Cánh",
+      "Tay"
+    ],
+    "sequence": [
+      "E",
+      "Q",
+      "W",
+      "E",
+      "E",
+      "R",
+      "E",
+      "W",
+      "E",
+      "W",
+      "R",
+      "W",
+      "W",
+      "Q",
+      "Q"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "97.95%",
+        "winRate": "49.24%"
+      },
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "1.32%",
+        "winRate": "33.33%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Khai Sáng Ionia",
+        "pickRate": "79.81%",
+        "winRate": "49.49%"
+      },
+      {
+        "name": "Giày Bạc",
+        "pickRate": "8.92%",
+        "winRate": "50.91%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Dây Chuyền Chuộc Tội",
+          "Vương Miện Shurelya"
+        ],
+        "pickRate": "10.23%",
+        "winRate": "62.69%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Dây Chuyền Chuộc Tội",
+          "Lời Thề Hiệp Sĩ"
+        ],
+        "pickRate": "6.11%",
+        "winRate": "62.5%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Dây Chuyền Chuộc Tội",
+          "Chuông Bảo Hộ Mikael"
+        ],
+        "pickRate": "5.34%",
+        "winRate": "51.43%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Dây Chuyền Chuộc Tội",
+          "Trát Lệnh Đế Vương"
+        ],
+        "pickRate": "5.19%",
+        "winRate": "52.94%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Vương Miện Shurelya",
+          "Dây Chuyền Chuộc Tội"
+        ],
+        "pickRate": "4.73%",
+        "winRate": "45.16%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Lời Thề Hiệp Sĩ",
+          "winRate": "57.89%",
+          "matches": "19"
+        },
+        {
+          "name": "Vương Miện Shurelya",
+          "winRate": "92.31%",
+          "matches": "13"
+        },
+        {
+          "name": "Lư Hương Sôi Sục",
+          "winRate": "70%",
+          "matches": "10"
+        },
+        {
+          "name": "Dây Chuyền Chuộc Tội",
+          "winRate": "40%",
+          "matches": "10"
+        },
+        {
+          "name": "Chuông Bảo Hộ Mikael",
+          "winRate": "42.86%",
+          "matches": "7"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Hành Trang Thám Hiểm",
+          "winRate": "100%",
+          "matches": "1"
+        },
+        {
+          "name": "Trượng Lưu Thủy",
+          "winRate": "0%",
+          "matches": "1"
+        }
+      ],
+      "sixthItems": []
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Pantheon",
+        "winRate": "35%",
+        "matches": "40"
+      },
+      {
+        "championName": "Elise",
+        "winRate": "36.11%",
+        "matches": "36"
+      },
+      {
+        "championName": "Zyra",
+        "winRate": "40%",
+        "matches": "30"
+      },
+      {
+        "championName": "Lulu",
+        "winRate": "40.58%",
+        "matches": "138"
+      },
+      {
+        "championName": "Sona",
+        "winRate": "41.46%",
+        "matches": "41"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Leona",
+        "winRate": "60%",
+        "matches": "65"
+      },
+      {
+        "championName": "Nautilus",
+        "winRate": "57.27%",
+        "matches": "110"
+      },
+      {
+        "championName": "Poppy",
+        "winRate": "55%",
+        "matches": "40"
+      },
+      {
+        "championName": "Lux",
+        "winRate": "54.55%",
+        "matches": "33"
+      },
+      {
+        "championName": "Alistar",
+        "winRate": "54.32%",
+        "matches": "81"
+      }
+    ]
+  }
+}

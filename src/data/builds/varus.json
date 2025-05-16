@@ -1,0 +1,281 @@
+{
+  "championInfo": {
+    "tier": "3",
+    "winRate": "48.83%",
+    "pickRate": "9.03%",
+    "banRate": "4.93%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Chuẩn Xác",
+      "runes": [
+        "Nhịp Độ Chết Người",
+        "Hấp Thụ Sinh Mệnh",
+        "Huyền Thoại: Tốc Độ Đánh"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Cảm Hứng",
+      "runes": [
+        "Đốn Hạ",
+        "Giao Hàng Bánh Quy"
+      ]
+    },
+    "statShards": [
+      "Tốc Độ Đánh",
+      "Sức Mạnh Thích Ứng",
+      "Máu"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Lá Chắn",
+    "Thanh Tẩy",
+    "Tốc Biến"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Phá",
+      "Độc",
+      "Tên"
+    ],
+    "sequence": [
+      "E",
+      "W",
+      "Q",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "W",
+      "Q",
+      "W",
+      "R",
+      "W",
+      "W",
+      "E",
+      "E"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Kiếm Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "94.59%",
+        "winRate": "48.77%"
+      },
+      {
+        "items": [
+          "Kiếm Dài",
+          "Bình Máu"
+        ],
+        "pickRate": "1.49%",
+        "winRate": "45.76%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Cuồng Nộ",
+        "pickRate": "43.49%",
+        "winRate": "48.51%"
+      },
+      {
+        "name": "Giày Bạc",
+        "pickRate": "32.43%",
+        "winRate": "51.91%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Gươm Suy Vong",
+          "Cuồng Đao Guinsoo",
+          "Cung Chạng Vạng"
+        ],
+        "pickRate": "25.07%",
+        "winRate": "52.8%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Kiếm Ma Youmuu",
+          "Thần Kiếm Muramana",
+          "Áo Choàng Bóng Tối"
+        ],
+        "pickRate": "15.94%",
+        "winRate": "52.03%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Kiếm Ma Youmuu",
+          "Áo Choàng Bóng Tối",
+          "Thần Kiếm Muramana"
+        ],
+        "pickRate": "10.03%",
+        "winRate": "57.56%"
+      },
+      {
+        "items": [
+          "Gươm Suy Vong",
+          "Cuồng Đao Guinsoo",
+          "Đao Tím"
+        ],
+        "pickRate": "9.43%",
+        "winRate": "51.5%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Kiếm Ma Youmuu",
+          "Thần Kiếm Muramana",
+          "Thương Phục Hận Serylda"
+        ],
+        "pickRate": "5.1%",
+        "winRate": "46.61%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Thương Phục Hận Serylda",
+          "winRate": "52.79%",
+          "matches": "1,254"
+        },
+        {
+          "name": "Jak'Sho, Vỏ Bọc Thích Nghi",
+          "winRate": "51.79%",
+          "matches": "782"
+        },
+        {
+          "name": "Áo Choàng Bóng Tối",
+          "winRate": "54.44%",
+          "matches": "428"
+        },
+        {
+          "name": "Cung Chạng Vạng",
+          "winRate": "54.69%",
+          "matches": "320"
+        },
+        {
+          "name": "Đao Tím",
+          "winRate": "50.95%",
+          "matches": "263"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "61.01%",
+          "matches": "159"
+        },
+        {
+          "name": "Gươm Thức Thời",
+          "winRate": "43.7%",
+          "matches": "135"
+        },
+        {
+          "name": "Kiếm Ác Xà",
+          "winRate": "51.16%",
+          "matches": "129"
+        },
+        {
+          "name": "Thương Phục Hận Serylda",
+          "winRate": "51.49%",
+          "matches": "101"
+        },
+        {
+          "name": "Jak'Sho, Vỏ Bọc Thích Nghi",
+          "winRate": "55.67%",
+          "matches": "97"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "71.43%",
+          "matches": "14"
+        },
+        {
+          "name": "Ma Vũ Song Kiếm",
+          "winRate": "50%",
+          "matches": "4"
+        },
+        {
+          "name": "Kiếm Ác Xà",
+          "winRate": "0%",
+          "matches": "4"
+        },
+        {
+          "name": "Gươm Thức Thời",
+          "winRate": "50%",
+          "matches": "4"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "0%",
+          "matches": "3"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Seraphine",
+        "winRate": "37.78%",
+        "matches": "45"
+      },
+      {
+        "championName": "Samira",
+        "winRate": "42.86%",
+        "matches": "189"
+      },
+      {
+        "championName": "Sivir",
+        "winRate": "44.1%",
+        "matches": "229"
+      },
+      {
+        "championName": "Zeri",
+        "winRate": "44.95%",
+        "matches": "198"
+      },
+      {
+        "championName": "Aphelios",
+        "winRate": "45.23%",
+        "matches": "367"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Kalista",
+        "winRate": "57.14%",
+        "matches": "105"
+      },
+      {
+        "championName": "Mel",
+        "winRate": "55.68%",
+        "matches": "88"
+      },
+      {
+        "championName": "Kog'Maw",
+        "winRate": "54.84%",
+        "matches": "93"
+      },
+      {
+        "championName": "Senna",
+        "winRate": "52.59%",
+        "matches": "386"
+      },
+      {
+        "championName": "Draven",
+        "winRate": "50.97%",
+        "matches": "310"
+      }
+    ]
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "championInfo": {
+    "tier": "3",
+    "winRate": "48.03%",
+    "pickRate": "16.76%",
+    "banRate": "7.06%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Chuẩn Xác",
+      "runes": [
+        "Sẵn Sàng Tấn Công",
+        "Hiện Diện Trí Tuệ",
+        "Huyền Thoại: Hút Máu"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Cảm Hứng",
+      "runes": [
+        "Nhát Chém Ân Huệ",
+        "Bước Chân Màu Nhiệm"
+      ]
+    },
+    "statShards": [
+      "Tốc Độ Đánh",
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Lá Chắn",
+    "Thanh Tẩy",
+    "Tốc Biến"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Bí",
+      "Học",
+      "Chảy"
+    ],
+    "sequence": [
+      "Q",
+      "E",
+      "W",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "E",
+      "Q",
+      "E",
+      "R",
+      "E",
+      "E",
+      "W",
+      "W"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Kiếm Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "94.96%",
+        "winRate": "48.16%"
+      },
+      {
+        "items": [
+          "Bình Máu",
+          "Nước Mắt Nữ Thần"
+        ],
+        "pickRate": "2.79%",
+        "winRate": "44.54%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Khai Sáng Ionia",
+        "pickRate": "94.15%",
+        "winRate": "49.42%"
+      },
+      {
+        "name": "Giày Thép Gai",
+        "pickRate": "3.67%",
+        "winRate": "49.85%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Tam Hợp Kiếm",
+          "Thần Kiếm Muramana",
+          "Ngọn Giáo Shojin"
+        ],
+        "pickRate": "65.31%",
+        "winRate": "54.23%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Tam Hợp Kiếm",
+          "Thần Kiếm Muramana",
+          "Thương Phục Hận Serylda"
+        ],
+        "pickRate": "24.02%",
+        "winRate": "50.34%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Tam Hợp Kiếm",
+          "Thần Kiếm Muramana",
+          "Huyết Kiếm"
+        ],
+        "pickRate": "3.28%",
+        "winRate": "53.64%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Tam Hợp Kiếm",
+          "Thần Kiếm Muramana",
+          "Tim Băng"
+        ],
+        "pickRate": "1.25%",
+        "winRate": "51.16%"
+      },
+      {
+        "items": [
+          "Nước Mắt Nữ Thần",
+          "Tam Hợp Kiếm",
+          "Thần Kiếm Muramana",
+          "Chùy Gai Malmortius"
+        ],
+        "pickRate": "1.05%",
+        "winRate": "50%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Thương Phục Hận Serylda",
+          "winRate": "53.86%",
+          "matches": "3,665"
+        },
+        {
+          "name": "Ngọn Giáo Shojin",
+          "winRate": "52.26%",
+          "matches": "1,483"
+        },
+        {
+          "name": "Huyết Kiếm",
+          "winRate": "56.45%",
+          "matches": "891"
+        },
+        {
+          "name": "Tim Băng",
+          "winRate": "53.05%",
+          "matches": "377"
+        },
+        {
+          "name": "Chùy Gai Malmortius",
+          "winRate": "56.27%",
+          "matches": "343"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Huyết Kiếm",
+          "winRate": "50.9%",
+          "matches": "670"
+        },
+        {
+          "name": "Tim Băng",
+          "winRate": "53.11%",
+          "matches": "241"
+        },
+        {
+          "name": "Thương Phục Hận Serylda",
+          "winRate": "54.7%",
+          "matches": "234"
+        },
+        {
+          "name": "Chùy Gai Malmortius",
+          "winRate": "55.11%",
+          "matches": "225"
+        },
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "57.25%",
+          "matches": "131"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Chùy Gai Malmortius",
+          "winRate": "68.42%",
+          "matches": "19"
+        },
+        {
+          "name": "Tim Băng",
+          "winRate": "42.86%",
+          "matches": "14"
+        },
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "64.29%",
+          "matches": "14"
+        },
+        {
+          "name": "Huyết Kiếm",
+          "winRate": "27.27%",
+          "matches": "11"
+        },
+        {
+          "name": "Thương Phục Hận Serylda",
+          "winRate": "50%",
+          "matches": "6"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Hwei",
+        "winRate": "40.54%",
+        "matches": "74"
+      },
+      {
+        "championName": "Draven",
+        "winRate": "42.14%",
+        "matches": "515"
+      },
+      {
+        "championName": "Yasuo",
+        "winRate": "42.24%",
+        "matches": "116"
+      },
+      {
+        "championName": "Twitch",
+        "winRate": "44.04%",
+        "matches": "361"
+      },
+      {
+        "championName": "Kog'Maw",
+        "winRate": "44.2%",
+        "matches": "138"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Swain",
+        "winRate": "57.14%",
+        "matches": "84"
+      },
+      {
+        "championName": "Ziggs",
+        "winRate": "53.19%",
+        "matches": "141"
+      },
+      {
+        "championName": "Corki",
+        "winRate": "53.05%",
+        "matches": "279"
+      },
+      {
+        "championName": "Mel",
+        "winRate": "50.62%",
+        "matches": "162"
+      },
+      {
+        "championName": "Kalista",
+        "winRate": "50.25%",
+        "matches": "199"
+      }
+    ]
+  }
+}

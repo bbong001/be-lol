@@ -1,0 +1,223 @@
+{
+  "championInfo": {
+    "tier": "3",
+    "winRate": "51.74%",
+    "pickRate": "1.66%",
+    "banRate": "0.23%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Dư Chấn",
+        "Suối Nguồn Sinh Mệnh",
+        "Giáp Cốt"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Cảm Hứng",
+      "runes": [
+        "Kiên Cường",
+        "Giao Hàng Bánh Quy"
+      ]
+    },
+    "statShards": [
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Thiêu Đốt",
+    "Kiệt Sức",
+    "Tốc Biến"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Kích",
+      "Dị",
+      "Non"
+    ],
+    "sequence": [
+      "W",
+      "Q",
+      "E",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "W",
+      "Q",
+      "W",
+      "R",
+      "W",
+      "W",
+      "E",
+      "E"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "97.61%",
+        "winRate": "51.44%"
+      },
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "1.62%",
+        "winRate": "43.48%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Bạc",
+        "pickRate": "59.53%",
+        "winRate": "52.4%"
+      },
+      {
+        "name": "Giày Thép Gai",
+        "pickRate": "14.73%",
+        "winRate": "52.94%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Hành Trang Thám Hiểm",
+          "Dây Chuyền Iron Solari",
+          "Giáp Gai"
+        ],
+        "pickRate": "11.21%",
+        "winRate": "68.33%"
+      },
+      {
+        "items": [
+          "Hành Trang Thám Hiểm",
+          "Dây Chuyền Iron Solari",
+          "Áo Choàng Diệt Vong"
+        ],
+        "pickRate": "7.1%",
+        "winRate": "57.89%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Hành Trang Thám Hiểm",
+          "Giáp Gai"
+        ],
+        "pickRate": "5.05%",
+        "winRate": "66.67%"
+      },
+      {
+        "items": [
+          "Hành Trang Thám Hiểm",
+          "Dây Chuyền Iron Solari",
+          "Lời Thề Hiệp Sĩ"
+        ],
+        "pickRate": "3.36%",
+        "winRate": "72.22%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Hành Trang Thám Hiểm",
+          "Áo Choàng Diệt Vong"
+        ],
+        "pickRate": "2.99%",
+        "winRate": "68.75%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Giáp Gai",
+          "winRate": "38.46%",
+          "matches": "13"
+        },
+        {
+          "name": "Áo Choàng Diệt Vong",
+          "winRate": "57.14%",
+          "matches": "7"
+        },
+        {
+          "name": "Lời Thề Hiệp Sĩ",
+          "winRate": "83.33%",
+          "matches": "6"
+        },
+        {
+          "name": "Jak'Sho, Vỏ Bọc Thích Nghi",
+          "winRate": "50%",
+          "matches": "6"
+        },
+        {
+          "name": "Giáp Tâm Linh",
+          "winRate": "40%",
+          "matches": "5"
+        }
+      ],
+      "fifthItems": [],
+      "sixthItems": []
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Milio",
+        "winRate": "38.03%",
+        "matches": "71"
+      },
+      {
+        "championName": "Neeko",
+        "winRate": "43.75%",
+        "matches": "32"
+      },
+      {
+        "championName": "Blitzcrank",
+        "winRate": "43.9%",
+        "matches": "41"
+      },
+      {
+        "championName": "Morgana",
+        "winRate": "44.68%",
+        "matches": "47"
+      },
+      {
+        "championName": "Leona",
+        "winRate": "45.35%",
+        "matches": "86"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Soraka",
+        "winRate": "66.13%",
+        "matches": "62"
+      },
+      {
+        "championName": "Sona",
+        "winRate": "62.86%",
+        "matches": "35"
+      },
+      {
+        "championName": "Rell",
+        "winRate": "56.94%",
+        "matches": "72"
+      },
+      {
+        "championName": "Senna",
+        "winRate": "56.16%",
+        "matches": "73"
+      },
+      {
+        "championName": "Nautilus",
+        "winRate": "55.56%",
+        "matches": "99"
+      }
+    ]
+  }
+}

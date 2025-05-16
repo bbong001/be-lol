@@ -1,0 +1,247 @@
+{
+  "championInfo": {
+    "tier": "5",
+    "winRate": "46.31%",
+    "pickRate": "0.83%",
+    "banRate": "0.81%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Quyền Năng Bất Diệt",
+        "Nện Khiên",
+        "Kiểm Soát Điều Kiện"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Cảm Hứng",
+      "runes": [
+        "Lan Tràn",
+        "Bước Chân Màu Nhiệm"
+      ]
+    },
+    "statShards": [
+      "Điểm Hồi Kỹ Năng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Trừng Phạt",
+    "Tốc Hành",
+    "Trừng Phạt"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Động",
+      "Chấn",
+      "Ixtal"
+    ],
+    "sequence": [
+      "Q",
+      "W",
+      "E",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "W",
+      "Q",
+      "W",
+      "R",
+      "W",
+      "W",
+      "E",
+      "E"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Linh Hồn Phong Hồ",
+          "Bình Máu"
+        ],
+        "pickRate": "37.12%",
+        "winRate": "44.09%"
+      },
+      {
+        "items": [
+          "Linh Hồn Mộc Long",
+          "Bình Máu"
+        ],
+        "pickRate": "25.49%",
+        "winRate": "45.63%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Thép Gai",
+        "pickRate": "53.75%",
+        "winRate": "45.44%"
+      },
+      {
+        "name": "Giày Thủy Ngân",
+        "pickRate": "42.5%",
+        "winRate": "46.31%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Trái Tim Khổng Thần",
+          "Áo Choàng Diệt Vong",
+          "Giáp Gai"
+        ],
+        "pickRate": "20.06%",
+        "winRate": "54.29%"
+      },
+      {
+        "items": [
+          "Trái Tim Khổng Thần",
+          "Áo Choàng Diệt Vong",
+          "Giáp Tâm Linh"
+        ],
+        "pickRate": "15.62%",
+        "winRate": "51.38%"
+      },
+      {
+        "items": [
+          "Trái Tim Khổng Thần",
+          "Móng Vuốt Sterak",
+          "Áo Choàng Diệt Vong"
+        ],
+        "pickRate": "4.87%",
+        "winRate": "55.88%"
+      },
+      {
+        "items": [
+          "Trái Tim Khổng Thần",
+          "Giáp Gai",
+          "Áo Choàng Diệt Vong"
+        ],
+        "pickRate": "4.15%",
+        "winRate": "37.93%"
+      },
+      {
+        "items": [
+          "Trái Tim Khổng Thần",
+          "Áo Choàng Diệt Vong",
+          "Móng Vuốt Sterak"
+        ],
+        "pickRate": "3.72%",
+        "winRate": "73.08%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Jak'Sho, Vỏ Bọc Thích Nghi",
+          "winRate": "48.21%",
+          "matches": "56"
+        },
+        {
+          "name": "Giáp Tâm Linh",
+          "winRate": "48.84%",
+          "matches": "43"
+        },
+        {
+          "name": "Giáp Gai",
+          "winRate": "43.9%",
+          "matches": "41"
+        },
+        {
+          "name": "Khiên Băng Randuin",
+          "winRate": "67.57%",
+          "matches": "37"
+        },
+        {
+          "name": "Áo Choàng Diệt Vong",
+          "winRate": "46.15%",
+          "matches": "13"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Jak'Sho, Vỏ Bọc Thích Nghi",
+          "winRate": "69.23%",
+          "matches": "13"
+        },
+        {
+          "name": "Khiên Băng Randuin",
+          "winRate": "60%",
+          "matches": "5"
+        },
+        {
+          "name": "Giáp Tâm Linh",
+          "winRate": "75%",
+          "matches": "4"
+        },
+        {
+          "name": "Giáp Gai",
+          "winRate": "100%",
+          "matches": "4"
+        },
+        {
+          "name": "Tim Băng",
+          "winRate": "66.67%",
+          "matches": "3"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Giáp Tâm Linh",
+          "winRate": "100%",
+          "matches": "1"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Pantheon",
+        "winRate": "33.33%",
+        "matches": "48"
+      },
+      {
+        "championName": "Lee Sin",
+        "winRate": "38.33%",
+        "matches": "60"
+      },
+      {
+        "championName": "Hecarim",
+        "winRate": "38.46%",
+        "matches": "39"
+      },
+      {
+        "championName": "Ekko",
+        "winRate": "39.58%",
+        "matches": "48"
+      },
+      {
+        "championName": "Talon",
+        "winRate": "40%",
+        "matches": "40"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Zed",
+        "winRate": "61.29%",
+        "matches": "31"
+      },
+      {
+        "championName": "Viego",
+        "winRate": "59.26%",
+        "matches": "81"
+      },
+      {
+        "championName": "Naafiri",
+        "winRate": "56.67%",
+        "matches": "30"
+      }
+    ]
+  }
+}

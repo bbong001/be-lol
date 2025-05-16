@@ -1,0 +1,244 @@
+{
+  "championInfo": {
+    "tier": "3",
+    "winRate": "50.21%",
+    "pickRate": "4.71%",
+    "banRate": "0.47%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Hộ Vệ",
+        "Suối Nguồn Sinh Mệnh",
+        "Giáp Cốt"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Áp Đảo",
+      "runes": [
+        "Kiên Cường",
+        "Giác Quan Thứ Sáu"
+      ]
+    },
+    "statShards": [
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Thiêu Đốt",
+    "Tốc Biến",
+    "Hồi Máu"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Tráng",
+      "Viện",
+      "Lánh"
+    ],
+    "sequence": [
+      "W",
+      "E",
+      "Q",
+      "W",
+      "W",
+      "R",
+      "W",
+      "E",
+      "W",
+      "E",
+      "R",
+      "E",
+      "E",
+      "Q",
+      "Q"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "97.6%",
+        "winRate": "50.83%"
+      },
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "1.71%",
+        "winRate": "51.09%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Khai Sáng Ionia",
+        "pickRate": "58.63%",
+        "winRate": "51.52%"
+      },
+      {
+        "name": "Giày Thủy Ngân",
+        "pickRate": "17.82%",
+        "winRate": "50.68%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Tụ Bão Zeke",
+          "Lời Thề Hiệp Sĩ"
+        ],
+        "pickRate": "11%",
+        "winRate": "58.43%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Tụ Bão Zeke",
+          "Vương Miện Shurelya"
+        ],
+        "pickRate": "5.56%",
+        "winRate": "63.33%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Tụ Bão Zeke",
+          "Dây Chuyền Chuộc Tội"
+        ],
+        "pickRate": "4.88%",
+        "winRate": "60.76%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Tụ Bão Zeke",
+          "Giáp Gai"
+        ],
+        "pickRate": "4.51%",
+        "winRate": "58.9%"
+      },
+      {
+        "items": [
+          "Tụ Bão Zeke",
+          "Dây Chuyền Iron Solari",
+          "Lời Thề Hiệp Sĩ"
+        ],
+        "pickRate": "3.89%",
+        "winRate": "71.43%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Dây Chuyền Chuộc Tội",
+          "winRate": "72.34%",
+          "matches": "47"
+        },
+        {
+          "name": "Giáp Gai",
+          "winRate": "50%",
+          "matches": "24"
+        },
+        {
+          "name": "Vương Miện Shurelya",
+          "winRate": "65.22%",
+          "matches": "23"
+        },
+        {
+          "name": "Lời Thề Hiệp Sĩ",
+          "winRate": "47.62%",
+          "matches": "21"
+        },
+        {
+          "name": "Tụ Bão Zeke",
+          "winRate": "71.43%",
+          "matches": "14"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Vương Miện Shurelya",
+          "winRate": "100%",
+          "matches": "1"
+        },
+        {
+          "name": "Khiên Băng Randuin",
+          "winRate": "100%",
+          "matches": "1"
+        },
+        {
+          "name": "Tim Băng",
+          "winRate": "0%",
+          "matches": "1"
+        },
+        {
+          "name": "Tụ Bão Zeke",
+          "winRate": "100%",
+          "matches": "1"
+        }
+      ],
+      "sixthItems": []
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Taric",
+        "winRate": "38.18%",
+        "matches": "55"
+      },
+      {
+        "championName": "Leona",
+        "winRate": "44.06%",
+        "matches": "261"
+      },
+      {
+        "championName": "Janna",
+        "winRate": "44.3%",
+        "matches": "158"
+      },
+      {
+        "championName": "Swain",
+        "winRate": "44.44%",
+        "matches": "45"
+      },
+      {
+        "championName": "Pantheon",
+        "winRate": "44.86%",
+        "matches": "107"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "LeBlanc",
+        "winRate": "62.5%",
+        "matches": "40"
+      },
+      {
+        "championName": "Elise",
+        "winRate": "58.2%",
+        "matches": "122"
+      },
+      {
+        "championName": "Zyra",
+        "winRate": "57.5%",
+        "matches": "80"
+      },
+      {
+        "championName": "Renata Glasc",
+        "winRate": "56.9%",
+        "matches": "58"
+      },
+      {
+        "championName": "Morgana",
+        "winRate": "56.67%",
+        "matches": "90"
+      }
+    ]
+  }
+}

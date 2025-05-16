@@ -1,0 +1,229 @@
+{
+  "championInfo": {
+    "tier": "2",
+    "winRate": "50.97%",
+    "pickRate": "5.42%",
+    "banRate": "2.78%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Dư Chấn",
+        "Nện Khiên",
+        "Giáp Cốt"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Cảm Hứng",
+      "runes": [
+        "Kiên Cường",
+        "Tốc Biến Ma Thuật"
+      ]
+    },
+    "statShards": [
+      "Điểm Hồi Kỹ Năng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Thiêu Đốt",
+    "Kiệt Sức",
+    "Tốc Biến"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Giáp",
+      "Đại",
+      "Kích"
+    ],
+    "sequence": [
+      "W",
+      "Q",
+      "E",
+      "W",
+      "W",
+      "R",
+      "W",
+      "E",
+      "W",
+      "E",
+      "R",
+      "E",
+      "E",
+      "Q",
+      "Q"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "98.25%",
+        "winRate": "50.77%"
+      },
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "0.95%",
+        "winRate": "54.55%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Thép Gai",
+        "pickRate": "38.6%",
+        "winRate": "50.47%"
+      },
+      {
+        "name": "Giày Khai Sáng Ionia",
+        "pickRate": "28.23%",
+        "winRate": "53.86%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Tụ Bão Zeke",
+          "Lời Thề Hiệp Sĩ"
+        ],
+        "pickRate": "16.29%",
+        "winRate": "57.19%"
+      },
+      {
+        "items": [
+          "Tụ Bão Zeke",
+          "Dây Chuyền Iron Solari",
+          "Lời Thề Hiệp Sĩ"
+        ],
+        "pickRate": "8.64%",
+        "winRate": "66.27%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Tụ Bão Zeke",
+          "Giáp Gai"
+        ],
+        "pickRate": "7.8%",
+        "winRate": "54.67%"
+      },
+      {
+        "items": [
+          "Dây Chuyền Iron Solari",
+          "Lời Thề Hiệp Sĩ",
+          "Tụ Bão Zeke"
+        ],
+        "pickRate": "4.58%",
+        "winRate": "57.95%"
+      },
+      {
+        "items": [
+          "Tụ Bão Zeke",
+          "Dây Chuyền Iron Solari",
+          "Giáp Gai"
+        ],
+        "pickRate": "4.37%",
+        "winRate": "58.33%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Giáp Gai",
+          "winRate": "56.25%",
+          "matches": "48"
+        },
+        {
+          "name": "Vòng Sắt Cổ Tự",
+          "winRate": "55.26%",
+          "matches": "38"
+        },
+        {
+          "name": "Lời Thề Hiệp Sĩ",
+          "winRate": "48.28%",
+          "matches": "29"
+        },
+        {
+          "name": "Hành Trang Thám Hiểm",
+          "winRate": "57.89%",
+          "matches": "19"
+        },
+        {
+          "name": "Tụ Bão Zeke",
+          "winRate": "50%",
+          "matches": "12"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Hành Trang Thám Hiểm",
+          "winRate": "100%",
+          "matches": "1"
+        }
+      ],
+      "sixthItems": []
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Zoe",
+        "winRate": "36.84%",
+        "matches": "38"
+      },
+      {
+        "championName": "Zyra",
+        "winRate": "42.25%",
+        "matches": "71"
+      },
+      {
+        "championName": "Shaco",
+        "winRate": "43.02%",
+        "matches": "86"
+      },
+      {
+        "championName": "Maokai",
+        "winRate": "43.06%",
+        "matches": "72"
+      },
+      {
+        "championName": "Brand",
+        "winRate": "43.33%",
+        "matches": "30"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Sylas",
+        "winRate": "65.91%",
+        "matches": "44"
+      },
+      {
+        "championName": "Shen",
+        "winRate": "59.18%",
+        "matches": "49"
+      },
+      {
+        "championName": "Mel",
+        "winRate": "58.57%",
+        "matches": "70"
+      },
+      {
+        "championName": "Lux",
+        "winRate": "58.4%",
+        "matches": "125"
+      },
+      {
+        "championName": "Nautilus",
+        "winRate": "58.37%",
+        "matches": "478"
+      }
+    ]
+  }
+}

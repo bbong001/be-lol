@@ -1,0 +1,256 @@
+{
+  "championInfo": {
+    "tier": "3",
+    "winRate": "48.90%",
+    "pickRate": "7.18%",
+    "banRate": "3.47%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Quyền Năng Bất Diệt",
+        "Suối Nguồn Sinh Mệnh",
+        "Giáp Cốt"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Chuẩn Xác",
+      "runes": [
+        "Tiếp Sức",
+        "Hiện Diện Trí Tuệ"
+      ]
+    },
+    "statShards": [
+      "Tốc Độ Đánh",
+      "Sức Mạnh Thích Ứng",
+      "Máu"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Hồi Máu",
+    "Kiệt Sức",
+    "Tốc Biến"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Thấu",
+      "Buộc",
+      "Đen"
+    ],
+    "sequence": [
+      "Q",
+      "W",
+      "E",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "W",
+      "Q",
+      "W",
+      "R",
+      "W",
+      "W",
+      "E",
+      "E"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "96.6%",
+        "winRate": "49.11%"
+      },
+      {
+        "items": [
+          "Bình Máu"
+        ],
+        "pickRate": "2.61%",
+        "winRate": "50.64%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Bạc",
+        "pickRate": "88.22%",
+        "winRate": "50.02%"
+      },
+      {
+        "name": "Giày Thép Gai",
+        "pickRate": "3.69%",
+        "winRate": "48.27%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Rìu Đen",
+          "Đại Bác Liên Thanh",
+          "Vô Cực Kiếm"
+        ],
+        "pickRate": "16.25%",
+        "winRate": "56.29%"
+      },
+      {
+        "items": [
+          "Rìu Đen",
+          "Đại Bác Liên Thanh",
+          "Cưa Xích Hóa Kỹ"
+        ],
+        "pickRate": "4.54%",
+        "winRate": "65.1%"
+      },
+      {
+        "items": [
+          "Rìu Đen",
+          "Đại Bác Liên Thanh",
+          "Súng Hải Tặc"
+        ],
+        "pickRate": "4.36%",
+        "winRate": "57.34%"
+      },
+      {
+        "items": [
+          "Rìu Đen",
+          "Đại Bác Liên Thanh",
+          "Áo Choàng Bóng Tối"
+        ],
+        "pickRate": "4%",
+        "winRate": "62.6%"
+      },
+      {
+        "items": [
+          "Vọng Âm Helia",
+          "Bùa Nguyệt Thạch",
+          "Lõi Bình Minh"
+        ],
+        "pickRate": "3.54%",
+        "winRate": "59.48%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Vô Cực Kiếm",
+          "winRate": "64.29%",
+          "matches": "112"
+        },
+        {
+          "name": "Cưa Xích Hóa Kỹ",
+          "winRate": "63.04%",
+          "matches": "46"
+        },
+        {
+          "name": "Áo Choàng Bóng Tối",
+          "winRate": "59.09%",
+          "matches": "44"
+        },
+        {
+          "name": "Đại Bác Liên Thanh",
+          "winRate": "74.42%",
+          "matches": "43"
+        },
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "52.38%",
+          "matches": "42"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Vô Cực Kiếm",
+          "winRate": "50%",
+          "matches": "6"
+        },
+        {
+          "name": "Giáp Thiên Thần",
+          "winRate": "100%",
+          "matches": "5"
+        },
+        {
+          "name": "Ma Vũ Song Kiếm",
+          "winRate": "25%",
+          "matches": "4"
+        },
+        {
+          "name": "Áo Choàng Bóng Tối",
+          "winRate": "66.67%",
+          "matches": "3"
+        },
+        {
+          "name": "Huyết Kiếm",
+          "winRate": "33.33%",
+          "matches": "3"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Áo Choàng Bóng Tối",
+          "winRate": "100%",
+          "matches": "1"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Taric",
+        "winRate": "31.03%",
+        "matches": "58"
+      },
+      {
+        "championName": "LeBlanc",
+        "winRate": "37.84%",
+        "matches": "37"
+      },
+      {
+        "championName": "Zoe",
+        "winRate": "39.58%",
+        "matches": "48"
+      },
+      {
+        "championName": "Brand",
+        "winRate": "40.68%",
+        "matches": "59"
+      },
+      {
+        "championName": "Zyra",
+        "winRate": "42.11%",
+        "matches": "152"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Annie",
+        "winRate": "66.67%",
+        "matches": "33"
+      },
+      {
+        "championName": "Galio",
+        "winRate": "58.06%",
+        "matches": "31"
+      },
+      {
+        "championName": "Mel",
+        "winRate": "55.04%",
+        "matches": "129"
+      },
+      {
+        "championName": "Rakan",
+        "winRate": "53.02%",
+        "matches": "232"
+      },
+      {
+        "championName": "Nidalee",
+        "winRate": "52.78%",
+        "matches": "36"
+      }
+    ]
+  }
+}

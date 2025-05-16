@@ -1,0 +1,278 @@
+{
+  "championInfo": {
+    "tier": "3",
+    "winRate": "50.10%",
+    "pickRate": "4.69%",
+    "banRate": "5.96%"
+  },
+  "runes": {
+    "primaryTree": {
+      "name": "Chuẩn Xác",
+      "runes": [
+        "Chinh Phục",
+        "Đắc Thắng",
+        "Huyền Thoại: Gia Tốc"
+      ]
+    },
+    "secondaryTree": {
+      "name": "Kiên Định",
+      "runes": [
+        "Chốt Chặn Cuối Cùng",
+        "Giáp Cốt"
+      ]
+    },
+    "statShards": [
+      "Tốc Độ Đánh",
+      "Sức Mạnh Thích Ứng",
+      "Máu Tăng Tiến"
+    ]
+  },
+  "summonerSpells": [
+    "Tốc Biến",
+    "Dịch Chuyển",
+    "Tốc Biến",
+    "Thiêu Đốt"
+  ],
+  "skillOrder": {
+    "priority": [
+      "Diệt",
+      "Chóc",
+      "Diệt"
+    ],
+    "sequence": [
+      "Q",
+      "E",
+      "W",
+      "Q",
+      "Q",
+      "R",
+      "Q",
+      "E",
+      "Q",
+      "E",
+      "R",
+      "E",
+      "E",
+      "W",
+      "W"
+    ]
+  },
+  "items": {
+    "starting": [
+      {
+        "items": [
+          "Nhẫn Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "63.55%",
+        "winRate": "49.92%"
+      },
+      {
+        "items": [
+          "Khiên Doran",
+          "Bình Máu"
+        ],
+        "pickRate": "33.39%",
+        "winRate": "48.38%"
+      }
+    ],
+    "boots": [
+      {
+        "name": "Giày Thép Gai",
+        "pickRate": "60.91%",
+        "winRate": "49.84%"
+      },
+      {
+        "name": "Giày Thủy Ngân",
+        "pickRate": "28.46%",
+        "winRate": "51.47%"
+      }
+    ],
+    "coreBuilds": [
+      {
+        "items": [
+          "Trượng Pha Lê Rylai",
+          "Quyền Trượng Ác Thần",
+          "Mặt Nạ Đọa Đày Liandry"
+        ],
+        "pickRate": "11.32%",
+        "winRate": "53.4%"
+      },
+      {
+        "items": [
+          "Trượng Pha Lê Rylai",
+          "Mặt Nạ Đọa Đày Liandry",
+          "Quyền Trượng Ác Thần"
+        ],
+        "pickRate": "6.77%",
+        "winRate": "60.39%"
+      },
+      {
+        "items": [
+          "Trượng Pha Lê Rylai",
+          "Quyền Trượng Ác Thần",
+          "Giáp Gai"
+        ],
+        "pickRate": "4.88%",
+        "winRate": "50.45%"
+      },
+      {
+        "items": [
+          "Mặt Nạ Đọa Đày Liandry",
+          "Trượng Pha Lê Rylai",
+          "Quyền Trượng Ác Thần"
+        ],
+        "pickRate": "3.23%",
+        "winRate": "59.86%"
+      },
+      {
+        "items": [
+          "Trượng Pha Lê Rylai",
+          "Mặt Nạ Đọa Đày Liandry",
+          "Giáp Gai"
+        ],
+        "pickRate": "2.99%",
+        "winRate": "45.59%"
+      }
+    ],
+    "situational": {
+      "fourthItems": [
+        {
+          "name": "Giáp Tâm Linh",
+          "winRate": "58.12%",
+          "matches": "499"
+        },
+        {
+          "name": "Giáp Gai",
+          "winRate": "56.25%",
+          "matches": "384"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "62.55%",
+          "matches": "259"
+        },
+        {
+          "name": "Jak'Sho, Vỏ Bọc Thích Nghi",
+          "winRate": "63.73%",
+          "matches": "193"
+        },
+        {
+          "name": "Lời Nguyền Huyết Tự",
+          "winRate": "58.54%",
+          "matches": "123"
+        }
+      ],
+      "fifthItems": [
+        {
+          "name": "Giáp Tâm Linh",
+          "winRate": "64%",
+          "matches": "100"
+        },
+        {
+          "name": "Jak'Sho, Vỏ Bọc Thích Nghi",
+          "winRate": "51.65%",
+          "matches": "91"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "51.72%",
+          "matches": "87"
+        },
+        {
+          "name": "Giáp Gai",
+          "winRate": "56.58%",
+          "matches": "76"
+        },
+        {
+          "name": "Khiên Băng Randuin",
+          "winRate": "58.33%",
+          "matches": "36"
+        }
+      ],
+      "sixthItems": [
+        {
+          "name": "Jak'Sho, Vỏ Bọc Thích Nghi",
+          "winRate": "83.33%",
+          "matches": "6"
+        },
+        {
+          "name": "Động Cơ Vũ Trụ",
+          "winRate": "75%",
+          "matches": "4"
+        },
+        {
+          "name": "Mặt Nạ Đọa Đày Liandry",
+          "winRate": "33.33%",
+          "matches": "3"
+        },
+        {
+          "name": "Giáp Liệt Sĩ",
+          "winRate": "33.33%",
+          "matches": "3"
+        },
+        {
+          "name": "Đồng Hồ Cát Zhonya",
+          "winRate": "33.33%",
+          "matches": "3"
+        }
+      ]
+    }
+  },
+  "matchups": {
+    "counters": [
+      {
+        "championName": "Warwick",
+        "winRate": "40.95%",
+        "matches": "105"
+      },
+      {
+        "championName": "Quinn",
+        "winRate": "41.03%",
+        "matches": "39"
+      },
+      {
+        "championName": "Riven",
+        "winRate": "41.46%",
+        "matches": "164"
+      },
+      {
+        "championName": "Vayne",
+        "winRate": "41.46%",
+        "matches": "41"
+      },
+      {
+        "championName": "Sion",
+        "winRate": "42.49%",
+        "matches": "193"
+      }
+    ],
+    "favorable": [
+      {
+        "championName": "Zac",
+        "winRate": "63.64%",
+        "matches": "33"
+      },
+      {
+        "championName": "Varus",
+        "winRate": "60.61%",
+        "matches": "33"
+      },
+      {
+        "championName": "Tahm Kench",
+        "winRate": "56.67%",
+        "matches": "30"
+      },
+      {
+        "championName": "Udyr",
+        "winRate": "54.84%",
+        "matches": "31"
+      },
+      {
+        "championName": "Kled",
+        "winRate": "53.49%",
+        "matches": "43"
+      }
+    ]
+  }
+}
