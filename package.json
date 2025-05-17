@@ -20,9 +20,13 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "seed:articles": "ts-node src/scripts/seed-articles.ts",
-    "crawl:champion-build": "ts-node src/scripts/crawl-champion-build.ts"
+    "crawl:champion-build": "ts-node src/scripts/crawl-champion-build.ts",
+    "crawl:tft-champion": "ts-node src/scripts/crawl-tft-champion-details.ts",
+    "download:tft-page": "ts-node src/scripts/download-tft-page.ts",
+    "crawl:tft-champions-save": "ts-node src/tft/scripts/crawl-and-save-champions.ts"
   },
   "dependencies": {
+    "@nestjs/axios": "^4.0.0",
     "@nestjs/cache-manager": "^3.0.1",
     "@nestjs/common": "^10.0.0",
     "@nestjs/config": "^4.0.2",
@@ -34,6 +38,7 @@
     "@nestjs/swagger": "^7.1.16",
     "@types/bcrypt": "^5.0.2",
     "@types/passport-jwt": "^4.0.1",
+    "axios": "^1.9.0",
     "bcrypt": "^5.1.1",
     "cache-manager": "^6.4.3",
     "cheerio": "^1.0.0",

@@ -15,7 +15,7 @@ async function bootstrap() {
   // Set global prefix for all routes
   app.setGlobalPrefix('api');
 
-  // Swagger setup
+  // Main Swagger setup
   const config = new DocumentBuilder()
     .setTitle('LOL Check API')
     .setDescription(
@@ -32,10 +32,21 @@ async function bootstrap() {
     .addTag('news', 'News and articles endpoints')
     .addTag('comments', 'Comments for news articles')
     .addTag('pc-builds', 'PC build recommendations')
+    .addTag('tft', 'Teamfight Tactics endpoints')
+    .addTag('wildrift', 'Wild Rift endpoints')
     .addTag('default', 'Misc endpoints')
     .build();
 
+  // Create document excluding TFT and WildRift paths
   const document = SwaggerModule.createDocument(app, config);
+  // Filter out TFT and WildRift paths
+  // const filteredPaths = {};
+  // for (const path in document.paths) {
+  //   if (!path.includes('/api/tft') && !path.includes('/api/wildrift')) {
+  //     filteredPaths[path] = document.paths[path];
+  //   }
+  // }
+  // document.paths = filteredPaths;
   SwaggerModule.setup('api/docs', app, document);
 
   // Start the application

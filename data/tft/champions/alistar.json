@@ -1,0 +1,30 @@
+{
+  "name": "Alistar",
+  "imageUrl": "https://sunderarmor.com/characters/Skin/14/Alistar.png",
+  "cost": 1,
+  "recommendedItems": [
+    "Gargoyle Stoneplate",
+    "Sunfire Cape",
+    "Warmog's Armor"
+  ],
+  "health": "650 / 1170 / 2106",
+  "mana": "30 / 100",
+  "armor": "40",
+  "magicResist": "40",
+  "dps": "28 / 50 / 89",
+  "damage": "50 / 90 / 162",
+  "attackSpeed": "0.55",
+  "critRate": "25%",
+  "range": "1",
+  "ability": {
+    "name": "Gilded Endurance",
+    "description": "Passive: Reduce all incoming damage by 10/15/25 (AP). Active: Deal 200/300/450 (AP) magic damage to the current target and Stun them for 2 seconds.",
+    "mana": "30 / 100"
+  },
+  "traits": [
+    "Golden Ox",
+    "Bruiser"
+  ],
+  "set": 14,
+  "patch": "Set 14"
+}

@@ -22,7 +22,8 @@ Hãy giúp tôi khởi tạo cấu trúc dự án backend hoàn chỉnh cho mộ
 6. `pc-build`: tạo & lưu cấu hình máy tính từ nhiều linh kiện
 7. `auth`: xác thực JWT và phân quyền
 8. `common`: provider Riot API (`twisted`), guard `@Roles`, middleware
-
+9 `tft`: Quản lý dữ liệu Đấu Trường Chân Lý (tướng, đội hình, trang bị, lõi nâng cấp).
+10 `wildrift`: Quản lý dữ liệu Liên Minh Tốc Chiến (tướng, trang bị, bảng ngọc, hướng dẫn chơi)
 ---
 
 ✅ **Thư viện cần cài**:
