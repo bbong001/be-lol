@@ -6,6 +6,7 @@ import { WrChampion, WrChampionSchema } from './schemas/wr-champion.schema';
 import { WrItem, WrItemSchema } from './schemas/wr-item.schema';
 import { WrRune, WrRuneSchema } from './schemas/wr-rune.schema';
 import { WrGuide, WrGuideSchema } from './schemas/wr-guide.schema';
+import { WrChampionBuild, WrChampionBuildSchema } from './schemas/wr-champion-build.schema';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { WrGuide, WrGuideSchema } from './schemas/wr-guide.schema';
       { name: WrItem.name, schema: WrItemSchema },
       { name: WrRune.name, schema: WrRuneSchema },
       { name: WrGuide.name, schema: WrGuideSchema },
+      { name: WrChampionBuild.name, schema: WrChampionBuildSchema },
     ]),
   ],
   controllers: [WildriftController],

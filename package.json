@@ -5,25 +5,7 @@
   "author": "",
   "private": true,
   "license": "UNLICENSED",
-  "scripts": {
-    "build": "nest build",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "node dist/src/main.js",
-    "start:dev": "nest start --watch",
-    "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
-    "postinstall": "npm run build",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:cov": "jest --coverage",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json",
-    "seed:articles": "ts-node src/scripts/seed-articles.ts",
-    "crawl:champion-build": "ts-node src/scripts/crawl-champion-build.ts",
-    "crawl:tft-champion": "ts-node src/scripts/crawl-tft-champion-details.ts",
-    "download:tft-page": "ts-node src/scripts/download-tft-page.ts",
-    "crawl:tft-champions-save": "ts-node src/tft/scripts/crawl-and-save-champions.ts"
+    "scripts": {    "build": "nest build",    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",    "start": "node dist/src/main.js",    "start:dev": "nest start --watch",    "start:debug": "nest start --debug --watch",    "start:prod": "node dist/main",    "postinstall": "npm run build",    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",    "test": "jest",    "test:watch": "jest --watch",    "test:cov": "jest --coverage",    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",    "test:e2e": "jest --config ./test/jest-e2e.json",    "seed:articles": "ts-node src/scripts/seed-articles.ts",    "crawl:champion-build": "ts-node src/scripts/crawl-champion-build.ts",    "crawl:tft-champion": "ts-node src/scripts/crawl-tft-champion-details.ts",    "download:tft-page": "ts-node src/scripts/download-tft-page.ts",    "crawl:tft-champions-save": "ts-node src/tft/scripts/crawl-and-save-champions.ts",    "download:wr-page": "ts-node src/wildrift/scripts/download-wr-page.ts",    "crawl:wr-champions": "ts-node src/wildrift/scripts/crawl-wr-champions.ts",    "crawl:wr-builds": "ts-node src/wildrift/scripts/crawl-champion-build.ts",    "crawl:wr-champion-details": "ts-node src/wildrift/scripts/crawl-champion-details-v2.ts",    "check:wr-champion": "ts-node src/wildrift/scripts/check-champion-v2.ts"
   },
   "dependencies": {
     "@nestjs/axios": "^4.0.0",
