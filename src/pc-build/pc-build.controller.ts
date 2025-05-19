@@ -7,6 +7,8 @@ import {
   Query,
   UseGuards,
   Request,
+  Put,
+  Delete,
 } from '@nestjs/common';
 import { PcBuildService } from './pc-build.service';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
@@ -22,16 +24,14 @@ import {
   ApiBearerAuth,
 } from '@nestjs/swagger';
 import { CreatePCBuildDto } from './dtos/create-pc-build.dto';
-import { LolHistoryQueryDto } from './dtos/lol-history.dto';
-import { LolHistoryService } from './lol-history.service';
+
 
 @ApiTags('pc-builds')
 @Controller('pc-build')
 export class PcBuildController {
   constructor(
     private readonly pcBuildService: PcBuildService,
-    private readonly lolHistoryService: LolHistoryService,
-  ) {}
+  ) { }
 
   // PC Component endpoints
   @ApiOperation({ summary: 'Get all PC components' })
@@ -144,13 +144,43 @@ export class PcBuildController {
     };
   }
 
-  @ApiOperation({ summary: 'Lấy lịch sử đấu từ LeagueOfGraphs' })
-  @ApiResponse({ status: 200, description: 'Lịch sử đấu trả về thành công' })
-  @Get('/lol-history')
-  async getLolHistory(@Query() query: LolHistoryQueryDto) {
+  @ApiOperation({ summary: 'Update a PC build' })
+  @ApiParam({ name: 'id', description: 'Build ID' })
+  @ApiResponse({ status: 200, description: 'Build updated successfully' })
+  @ApiResponse({ status: 401, description: 'Unauthorized' })
+  @ApiResponse({ status: 403, description: 'Forbidden' })
+  @ApiResponse({ status: 404, description: 'Build not found' })
+  @ApiBearerAuth()
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(Role.ADMIN)
+  @Put('builds/:id')
+  async updateBuild(
+    @Param('id') id: string,
+    @Body() body: CreatePCBuildDto,
+    @Request() req,
+  ) {
+    const build = await this.pcBuildService.updateBuild(id, body, req.user.userId);
     return {
       status: 'success',
-      data: await this.lolHistoryService.getHistory(query.name, query.tag),
+      data: build,
+    };
+  }
+
+  @ApiOperation({ summary: 'Delete a PC build' })
+  @ApiParam({ name: 'id', description: 'Build ID' })
+  @ApiResponse({ status: 200, description: 'Build deleted successfully' })
+  @ApiResponse({ status: 401, description: 'Unauthorized' })
+  @ApiResponse({ status: 403, description: 'Forbidden' })
+  @ApiResponse({ status: 404, description: 'Build not found' })
+  @ApiBearerAuth()
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(Role.ADMIN)
+  @Delete('builds/:id')
+  async deleteBuild(@Param('id') id: string, @Request() req) {
+    await this.pcBuildService.deleteBuild(id, req.user.userId);
+    return {
+      status: 'success',
+      message: 'Build deleted successfully',
     };
   }
 }

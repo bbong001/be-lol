@@ -58,7 +58,7 @@ export class WildriftController {
 
   @Get('champions/:id/with-builds')
   @ApiOperation({ summary: 'Get a Wild Rift champion by ID with its builds' })
-  @ApiParam({ name: 'id', description: 'Champion ID' })
+  // @ApiParam({ name: 'id', description: 'Champion ID' })
   @ApiResponse({ status: 200, description: 'Return the Wild Rift champion with its builds' })
   @ApiResponse({ status: 404, description: 'Champion not found' })
   async getChampionWithBuilds(@Param('id') id: string) {
@@ -115,9 +115,9 @@ export class WildriftController {
   @ApiResponse({ status: 200, description: 'Return the champion builds' })
   findChampionBuilds(
     @Param('championId') championId: string,
-    @Query() paginationDto: PaginationDto
+    // @Query() paginationDto: PaginationDto
   ) {
-    return this.wildriftService.findChampionBuilds(championId, paginationDto);
+    return this.wildriftService.findChampionBuilds(championId);
   }
 
   @Get('builds/:id')

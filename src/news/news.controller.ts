@@ -7,9 +7,12 @@ import {
   Query,
   UseGuards,
   Request,
+  Put,
+  Delete,
 } from '@nestjs/common';
 import { NewsService } from './news.service';
 import { CreateArticleDto } from './dtos/create-article.dto';
+import { UpdateArticleDto } from './dtos/update-article.dto';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { RolesGuard } from '../common/guards/roles.guard';
 import { Roles } from '../common/decorators/roles.decorator';
@@ -108,6 +111,45 @@ export class NewsController {
     return {
       status: 'success',
       data: await this.newsService.create(createArticleDto, req.user.userId),
+    };
+  }
+
+  @ApiOperation({ summary: 'Update an article (Admin only)' })
+  @ApiParam({ name: 'slug', description: 'Article slug' })
+  @ApiResponse({ status: 200, description: 'Article updated successfully' })
+  @ApiResponse({ status: 400, description: 'Bad request' })
+  @ApiResponse({ status: 401, description: 'Unauthorized' })
+  @ApiResponse({ status: 403, description: 'Forbidden - Admin only' })
+  @ApiResponse({ status: 404, description: 'Article not found' })
+  @ApiBearerAuth()
+  @Put(':slug')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(Role.ADMIN)
+  async update(
+    @Param('slug') slug: string,
+    @Body() updateArticleDto: UpdateArticleDto,
+  ) {
+    return {
+      status: 'success',
+      data: await this.newsService.update(slug, updateArticleDto),
+    };
+  }
+
+  @ApiOperation({ summary: 'Delete an article (Admin only)' })
+  @ApiParam({ name: 'slug', description: 'Article slug' })
+  @ApiResponse({ status: 200, description: 'Article deleted successfully' })
+  @ApiResponse({ status: 401, description: 'Unauthorized' })
+  @ApiResponse({ status: 403, description: 'Forbidden - Admin only' })
+  @ApiResponse({ status: 404, description: 'Article not found' })
+  @ApiBearerAuth()
+  @Delete(':slug')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(Role.ADMIN)
+  async delete(@Param('slug') slug: string) {
+    await this.newsService.delete(slug);
+    return {
+      status: 'success',
+      message: 'Article deleted successfully',
     };
   }
 }

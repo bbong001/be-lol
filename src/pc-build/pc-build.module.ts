@@ -4,7 +4,6 @@ import { PcBuildController } from './pc-build.controller';
 import { PcBuildService } from './pc-build.service';
 import { PCComponent, PCComponentSchema } from './schemas/pc-component.schema';
 import { PCBuild, PCBuildSchema } from './schemas/pc-build.schema';
-import { LolHistoryService } from './lol-history.service';
 
 @Module({
   imports: [
@@ -14,7 +13,7 @@ import { LolHistoryService } from './lol-history.service';
     ]),
   ],
   controllers: [PcBuildController],
-  providers: [PcBuildService, LolHistoryService],
+  providers: [PcBuildService],
   exports: [PcBuildService],
 })
 export class PcBuildModule {}
