@@ -28,6 +28,14 @@ export class Comment {
   @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'PCBuild', default: null })
   pcBuildId: MongooseSchema.Types.ObjectId | null;
 
+  @ApiProperty({
+    description: 'ID of the champion this comment belongs to',
+    example: '507f1f77bcf86cd799439011',
+    required: false,
+  })
+  @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'Champion', default: null })
+  championId: MongooseSchema.Types.ObjectId | null;
+
   @ApiProperty({ description: 'Name of the author', example: 'John Doe' })
   @Prop({ required: true })
   authorName: string;

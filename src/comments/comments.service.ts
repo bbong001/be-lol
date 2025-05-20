@@ -19,10 +19,12 @@ export class CommentsService {
     page = 1,
     newsId?: string,
     pcBuildId?: string,
+    championId?: string,
   ): Promise<{ comments: Comment[]; total: number }> {
     const filter: any = {};
     if (newsId) filter.newsId = newsId;
     if (pcBuildId) filter.pcBuildId = pcBuildId;
+    if (championId) filter.championId = championId;
     const skip = (page - 1) * limit;
 
     const [comments, total] = await Promise.all([
@@ -61,7 +63,7 @@ export class CommentsService {
     limit = 10,
     page = 1,
   ): Promise<{ comments: Comment[]; total: number }> {
-    return this.findAll(limit, page, newsId, undefined);
+    return this.findAll(limit, page, newsId, undefined, undefined);
   }
 
   async findByPcBuildId(
@@ -69,7 +71,15 @@ export class CommentsService {
     limit = 10,
     page = 1,
   ): Promise<{ comments: Comment[]; total: number }> {
-    return this.findAll(limit, page, undefined, pcBuildId);
+    return this.findAll(limit, page, undefined, pcBuildId, undefined);
+  }
+
+  async findByChampionId(
+    championId: string,
+    limit = 10,
+    page = 1,
+  ): Promise<{ comments: Comment[]; total: number }> {
+    return this.findAll(limit, page, undefined, undefined, championId);
   }
 
   async deleteById(id: string): Promise<void> {

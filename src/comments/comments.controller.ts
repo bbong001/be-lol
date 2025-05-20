@@ -133,6 +133,40 @@ export class CommentsController {
     };
   }
 
+  @ApiOperation({ summary: 'Get comments for a specific champion' })
+  @ApiParam({ name: 'championId', description: 'Champion ID' })
+  @ApiQuery({
+    name: 'limit',
+    description: 'Number of comments to return',
+    required: false,
+    type: Number,
+  })
+  @ApiQuery({
+    name: 'page',
+    description: 'Page number',
+    required: false,
+    type: Number,
+  })
+  @ApiResponse({ status: 200, description: 'Comments retrieved successfully' })
+  @ApiResponse({ status: 400, description: 'Invalid Champion ID' })
+  @Get('/champion/:championId')
+  async findByChampionId(
+    @Param('championId') championId: string,
+    @Query('limit') limit: string,
+    @Query('page') page: string,
+  ) {
+    const limitNumber = limit ? parseInt(limit, 10) : 10;
+    const pageNumber = page ? parseInt(page, 10) : 1;
+    return {
+      status: 'success',
+      data: await this.commentsService.findByChampionId(
+        championId,
+        limitNumber,
+        pageNumber,
+      ),
+    };
+  }
+
   @ApiOperation({ summary: 'Create a new comment for a news article' })
   @ApiResponse({ status: 201, description: 'Comment created successfully' })
   @ApiResponse({ status: 400, description: 'Bad request' })
@@ -146,6 +180,7 @@ export class CommentsController {
       ...dto,
       newsId: new Types.ObjectId(newsId),
       pcBuildId: undefined,
+      championId: undefined,
       userId: req.user ? req.user.userId : undefined,
       authorName: req.user ? req.user.name : 'Ẩn danh',
     };
@@ -168,6 +203,30 @@ export class CommentsController {
       ...dto,
       pcBuildId: new Types.ObjectId(pcBuildId),
       newsId: undefined,
+      championId: undefined,
+      userId: req.user ? req.user.userId : undefined,
+      authorName: req.user ? req.user.name : 'Ẩn danh',
+    };
+    return {
+      status: 'success',
+      data: await this.commentsService.create(commentData),
+    };
+  }
+
+  @ApiOperation({ summary: 'Create a new comment for a champion' })
+  @ApiResponse({ status: 201, description: 'Comment created successfully' })
+  @ApiResponse({ status: 400, description: 'Bad request' })
+  @Post('/champion/:championId')
+  async createForChampion(
+    @Param('championId') championId: string,
+    @Body() dto: CreateCommentDto,
+    @Request() req,
+  ) {
+    const commentData: any = {
+      ...dto,
+      championId: new Types.ObjectId(championId),
+      newsId: undefined,
+      pcBuildId: undefined,
       userId: req.user ? req.user.userId : undefined,
       authorName: req.user ? req.user.name : 'Ẩn danh',
     };
