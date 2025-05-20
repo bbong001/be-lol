@@ -14,7 +14,7 @@ import slugify from 'slugify';
 export class NewsService {
   constructor(
     @InjectModel(Article.name) private articleModel: Model<ArticleDocument>,
-  ) {}
+  ) { }
 
   async findAll(
     limit = 10,
@@ -147,14 +147,15 @@ export class NewsService {
     const skip = (page - 1) * limit;
     const [articles, total] = await Promise.all([
       this.articleModel
-        .find()
+        .find({})
         .sort({ publishedAt: -1 })
         .skip(skip)
         .limit(limit)
         .populate('author', 'name')
         .lean(),
-      this.articleModel.countDocuments(),
+      this.articleModel.countDocuments({}),
     ]);
+
     return { articles, total };
   }
 }

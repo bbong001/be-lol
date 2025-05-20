@@ -155,7 +155,7 @@ export class NewsController {
 
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles(Role.ADMIN)
-  @Get('admin')
+  @Get()
   async findAllAdmin(
     @Query('limit') limit: string,
     @Query('page') page: string,
