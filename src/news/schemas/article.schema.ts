@@ -13,8 +13,8 @@ export class Article {
   @Prop({ required: true, unique: true })
   slug: string;
 
-  @Prop({ required: true,type: [String] })
-  content: string[];
+  @Prop({ required: true })
+  content: string;
 
   @Prop()
   summary: string;

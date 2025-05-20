@@ -13,8 +13,8 @@ export class PCBuild {
   @Prop()
   description: string;
 
-  @Prop({ required: true,type: [String] })
-  content: string[];
+  @Prop({ required: true })
+  content: string;
 
   @Prop()
   imageUrl: string;
