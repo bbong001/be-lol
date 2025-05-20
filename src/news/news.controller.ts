@@ -55,7 +55,33 @@ export class NewsController {
       data: await this.newsService.findAll(limitNumber, pageNumber),
     };
   }
+  @ApiOperation({ summary: 'Get all news articles' })
+  @ApiQuery({
+    name: 'limit',
+    description: 'Number of articles to return',
+    required: false,
+    type: Number,
+  })
+  @ApiQuery({
+    name: 'page',
+    description: 'Page number',
+    required: false,
+    type: Number,
+  })
+  @ApiResponse({ status: 200, description: 'Articles retrieved successfully' })
+  @Get('admin')
+  async findAllAdmin(
+    @Query('limit') limit: string,
+    @Query('page') page: string,
+  ) {
+    const limitNumber = limit ? parseInt(limit, 10) : 10;
+    const pageNumber = page ? parseInt(page, 10) : 1;
 
+    return {
+      status: 'success',
+      data: await this.newsService.findAll(limitNumber, pageNumber),
+    };
+  }
   @ApiOperation({ summary: 'Get articles by tag' })
   @ApiParam({ name: 'tag', description: 'Tag to filter articles by' })
   @ApiQuery({
@@ -153,18 +179,5 @@ export class NewsController {
     };
   }
 
-  @UseGuards(JwtAuthGuard, RolesGuard)
-  @Roles(Role.ADMIN)
-  @Get()
-  async findAllAdmin(
-    @Query('limit') limit: string,
-    @Query('page') page: string,
-  ) {
-    const limitNumber = limit ? parseInt(limit, 10) : 10;
-    const pageNumber = page ? parseInt(page, 10) : 1;
-    return {
-      status: 'success',
-      data: await this.newsService.findAllAdmin(limitNumber, pageNumber),
-    };
-  }
+
 }

@@ -23,13 +23,13 @@ export class NewsService {
     const skip = (page - 1) * limit;
     const [articles, total] = await Promise.all([
       this.articleModel
-        .find({ published: true })
+        .find({})
         .sort({ publishedAt: -1 })
         .skip(skip)
         .limit(limit)
         .populate('author', 'name')
         .lean(),
-      this.articleModel.countDocuments({ published: true }),
+      this.articleModel.countDocuments({}),
     ]);
 
     return { articles, total };
