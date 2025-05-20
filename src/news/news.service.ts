@@ -139,4 +139,22 @@ export class NewsService {
       throw new NotFoundException(`Article with slug "${slug}" not found`);
     }
   }
+
+  async findAllAdmin(
+    limit = 10,
+    page = 1,
+  ): Promise<{ articles: Article[]; total: number }> {
+    const skip = (page - 1) * limit;
+    const [articles, total] = await Promise.all([
+      this.articleModel
+        .find()
+        .sort({ publishedAt: -1 })
+        .skip(skip)
+        .limit(limit)
+        .populate('author', 'name')
+        .lean(),
+      this.articleModel.countDocuments(),
+    ]);
+    return { articles, total };
+  }
 }

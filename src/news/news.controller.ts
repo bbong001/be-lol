@@ -152,4 +152,19 @@ export class NewsController {
       message: 'Article deleted successfully',
     };
   }
+
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(Role.ADMIN)
+  @Get('admin')
+  async findAllAdmin(
+    @Query('limit') limit: string,
+    @Query('page') page: string,
+  ) {
+    const limitNumber = limit ? parseInt(limit, 10) : 10;
+    const pageNumber = page ? parseInt(page, 10) : 1;
+    return {
+      status: 'success',
+      data: await this.newsService.findAllAdmin(limitNumber, pageNumber),
+    };
+  }
 }
