@@ -14,7 +14,7 @@ import slugify from 'slugify';
 export class NewsService {
   constructor(
     @InjectModel(Article.name) private articleModel: Model<ArticleDocument>,
-  ) {}
+  ) { }
 
   async findAll(
     limit = 10,
@@ -37,7 +37,7 @@ export class NewsService {
 
   async findBySlug(slug: string): Promise<Article> {
     const article = await this.articleModel
-      .findOne({ slug, published: true })
+      .findOne({ slug })
       .populate('author', 'name')
       .lean();
     if (!article) {
