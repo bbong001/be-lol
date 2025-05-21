@@ -748,8 +748,21 @@ async function bootstrap() {
 
         await championModel.findOneAndUpdate(
           { name: championDetails.name },
-          championDetails,
-          { upsert: true, new: true },
+          {
+            $set: {
+              ...(championDetails.title ? { title: championDetails.title } : {}),
+              ...(championDetails.description ? { description: championDetails.description } : {}),
+              ...(championDetails.roles && championDetails.roles.length > 0 ? { roles: championDetails.roles } : {}),
+              ...(championDetails.abilities && Object.keys(championDetails.abilities).length > 0 ? { abilities: championDetails.abilities } : {}),
+              ...(championDetails.stats ? { stats: championDetails.stats } : {}),
+              ...(championDetails.recommendedItems && championDetails.recommendedItems.length > 0 ? { recommendedItems: championDetails.recommendedItems } : {}),
+              ...(championDetails.patch ? { patch: championDetails.patch } : {}),
+              ...(championDetails.skillOrder ? { skillOrder: championDetails.skillOrder } : {}),
+              ...(championDetails.imageUrl && championDetails.imageUrl.trim() !== '' ? { imageUrl: championDetails.imageUrl } : {}),
+              ...(championDetails.splashUrl && championDetails.splashUrl.trim() !== '' ? { splashUrl: championDetails.splashUrl } : {}),
+            }
+          },
+          { upsert: true, new: true }
         );
 
         console.log(`Saved/updated ${championDetails.name} in database`);
@@ -782,8 +795,21 @@ async function bootstrap() {
 
         await championModel.findOneAndUpdate(
           { name: championDetails.name },
-          championDetails,
-          { upsert: true, new: true },
+          {
+            $set: {
+              ...(championDetails.title ? { title: championDetails.title } : {}),
+              ...(championDetails.description ? { description: championDetails.description } : {}),
+              ...(championDetails.roles && championDetails.roles.length > 0 ? { roles: championDetails.roles } : {}),
+              ...(championDetails.abilities && Object.keys(championDetails.abilities).length > 0 ? { abilities: championDetails.abilities } : {}),
+              ...(championDetails.stats ? { stats: championDetails.stats } : {}),
+              ...(championDetails.recommendedItems && championDetails.recommendedItems.length > 0 ? { recommendedItems: championDetails.recommendedItems } : {}),
+              ...(championDetails.patch ? { patch: championDetails.patch } : {}),
+              ...(championDetails.skillOrder ? { skillOrder: championDetails.skillOrder } : {}),
+              ...(championDetails.imageUrl && championDetails.imageUrl.trim() !== '' ? { imageUrl: championDetails.imageUrl } : {}),
+              ...(championDetails.splashUrl && championDetails.splashUrl.trim() !== '' ? { splashUrl: championDetails.splashUrl } : {}),
+            }
+          },
+          { upsert: true, new: true }
         );
 
         console.log(`Saved ${championDetails.name} to database`);
@@ -824,7 +850,20 @@ async function bootstrap() {
 
             await championModel.findOneAndUpdate(
               { _id: champion._id },
-              championDetails,
+              {
+                $set: {
+                  ...(championDetails.title ? { title: championDetails.title } : {}),
+                  ...(championDetails.description ? { description: championDetails.description } : {}),
+                  ...(championDetails.roles && championDetails.roles.length > 0 ? { roles: championDetails.roles } : {}),
+                  ...(championDetails.abilities && Object.keys(championDetails.abilities).length > 0 ? { abilities: championDetails.abilities } : {}),
+                  ...(championDetails.stats ? { stats: championDetails.stats } : {}),
+                  ...(championDetails.recommendedItems && championDetails.recommendedItems.length > 0 ? { recommendedItems: championDetails.recommendedItems } : {}),
+                  ...(championDetails.patch ? { patch: championDetails.patch } : {}),
+                  ...(championDetails.skillOrder ? { skillOrder: championDetails.skillOrder } : {}),
+                  ...(championDetails.imageUrl && championDetails.imageUrl.trim() !== '' ? { imageUrl: championDetails.imageUrl } : {}),
+                  ...(championDetails.splashUrl && championDetails.splashUrl.trim() !== '' ? { splashUrl: championDetails.splashUrl } : {}),
+                }
+              },
               { new: true },
             );
 

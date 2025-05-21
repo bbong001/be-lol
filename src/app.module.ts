@@ -14,6 +14,7 @@ import { CommonModule } from './common/common.module';
 import { CommentsModule } from './comments/comments.module';
 import { TftModule } from './tft/tft.module';
 import { WildriftModule } from './wildrift/wildrift.module';
+import { HomeModule } from './home/home.module';
 
 @Module({
   imports: [
@@ -38,6 +39,7 @@ import { WildriftModule } from './wildrift/wildrift.module';
     CommonModule,
     TftModule,
     WildriftModule,
+    HomeModule,
   ],
   controllers: [AppController],
   providers: [AppService],
