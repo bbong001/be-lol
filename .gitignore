@@ -13,7 +13,11 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 /wildrift/scripts/
-
+/logs
+/output
+/tft/scripts/
+/src/data
+/src/scripts/
 # OS
 .DS_Store
 
