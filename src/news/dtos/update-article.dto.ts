@@ -6,4 +6,4 @@ export class UpdateArticleDto extends PartialType(CreateArticleDto) {
   @IsOptional()
   @IsDate()
   publishedAt?: Date;
-} 
+}

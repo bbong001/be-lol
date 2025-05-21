@@ -7,7 +7,11 @@ export class WrGuide extends Document {
   @Prop({ required: true })
   title: string;
 
-  @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'WrChampion', required: true })
+  @Prop({
+    type: MongooseSchema.Types.ObjectId,
+    ref: 'WrChampion',
+    required: true,
+  })
   championId: WrChampion;
 
   @Prop()
@@ -46,4 +50,4 @@ export class WrGuide extends Document {
   patch: string;
 }
 
-export const WrGuideSchema = SchemaFactory.createForClass(WrGuide); 
+export const WrGuideSchema = SchemaFactory.createForClass(WrGuide);

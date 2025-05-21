@@ -31,7 +31,7 @@ export class TftCrawlerService {
         const imageUrl = $(el).find('.character-icon').attr('src');
         const cost = this.getCostFromClass($(el).attr('class'));
         const set = this.getSetFromClass($(el).attr('class'));
-        
+
         champions.push({
           name,
           imageUrl,
@@ -64,7 +64,7 @@ export class TftCrawlerService {
         const imageUrl = $(el).find('.character-icon').attr('src');
         const cost = this.getCostFromClass($(el).attr('class'));
         const set = this.getSetFromClass($(el).attr('class'));
-        
+
         champions.push({
           name,
           imageUrl,
@@ -78,7 +78,9 @@ export class TftCrawlerService {
       this.logger.log(`Parsed ${champions.length} TFT champions from HTML`);
       return champions;
     } catch (error) {
-      this.logger.error(`Error parsing TFT champions from HTML: ${error.message}`);
+      this.logger.error(
+        `Error parsing TFT champions from HTML: ${error.message}`,
+      );
       throw error;
     }
   }
@@ -91,47 +93,48 @@ export class TftCrawlerService {
       // Convert champion name to URL format (lowercase, no spaces)
       const formattedName = championName.toLowerCase().replace(/\s+/g, '-');
       const url = `https://tftactics.gg/champions/${formattedName}/`;
-      
+
       this.logger.log(`Crawling details for ${championName} from ${url}`);
-      
+
       const { data } = await axios.get(url);
       const $ = cheerio.load(data);
-      
+
       // Extract cost from the stats list
       const costText = $('.stats-list li:contains("Cost:")').text();
       const costMatch = costText.match(/Cost:\s*(\d+)/);
       const cost = costMatch ? parseInt(costMatch[1]) : 1;
-      
+
       // Extract recommended items with their images
       const recommendedItems: string[] = [];
-      const recommendedItemsData: Array<{ name: string; imageUrl: string }> = [];
-      
+      const recommendedItemsData: Array<{ name: string; imageUrl: string }> =
+        [];
+
       $('.items-list img, .champion-build-items img').each((i, el) => {
         const itemName = $(el).attr('alt');
         const itemImageUrl = $(el).attr('src');
-        
+
         if (itemName) {
           recommendedItems.push(itemName);
-          
+
           if (itemImageUrl) {
             recommendedItemsData.push({
               name: itemName,
               imageUrl: itemImageUrl,
             });
-            
+
             // Save or update item in database
             this.saveItemData(itemName, itemImageUrl);
           }
         }
       });
-      
+
       // Extract stats
       const statsMap: Record<string, string> = {};
-      
+
       // Process each stat item in the stats list
       $('.stats-list li').each((i, el) => {
         const text = $(el).text().trim();
-        
+
         if (text.includes('Health:')) {
           statsMap['health'] = text.replace('Health:', '').trim();
         } else if (text.includes('Mana:')) {
@@ -152,12 +155,15 @@ export class TftCrawlerService {
           statsMap['range'] = text.replace('Range:', '').trim();
         }
       });
-      
+
       // Extract ability details
-      const abilityName = $('.ability-description-name h2').first().text().trim();
+      const abilityName = $('.ability-description-name h2')
+        .first()
+        .text()
+        .trim();
       const abilityMana = $('.ability-description-cost span').text().trim();
       const abilityDescription = $('.ability-bonus').first().text().trim();
-      
+
       // Extract traits
       const traits: string[] = [];
       $('.character-ability .ability-description-name h2').each((i, el) => {
@@ -167,10 +173,11 @@ export class TftCrawlerService {
           traits.push(trait);
         }
       });
-      
+
       // Extract image URL
-      const imageUrl = $('.character-portrait .character-image').attr('src') || '';
-      
+      const imageUrl =
+        $('.character-portrait .character-image').attr('src') || '';
+
       const championDetail = {
         name: championName,
         imageUrl,
@@ -197,10 +204,12 @@ export class TftCrawlerService {
         setNumber: 14, // Current set
         patch: `Set ${14}`,
       };
-      
+
       return championDetail;
     } catch (error) {
-      this.logger.error(`Error crawling details for ${championName}: ${error.message}`);
+      this.logger.error(
+        `Error crawling details for ${championName}: ${error.message}`,
+      );
       throw error;
     }
   }
@@ -208,24 +217,29 @@ export class TftCrawlerService {
   /**
    * Save or update item data in the database
    */
-  private async saveItemData(itemName: string, imageUrl: string): Promise<void> {
+  private async saveItemData(
+    itemName: string,
+    imageUrl: string,
+  ): Promise<void> {
     try {
       await this.tftItemModel.findOneAndUpdate(
         { name: itemName },
-        { 
-          $set: { 
+        {
+          $set: {
             imageUrl,
             patch: `Set ${14}`, // Current set
           },
           $setOnInsert: {
             name: itemName,
             isBasic: false,
-          }
+          },
         },
         { upsert: true, new: true },
       );
     } catch (error) {
-      this.logger.error(`Error saving item data for ${itemName}: ${error.message}`);
+      this.logger.error(
+        `Error saving item data for ${itemName}: ${error.message}`,
+      );
     }
   }
 
@@ -244,7 +258,7 @@ export class TftCrawlerService {
         const name = $(el).find('.character-name').text().trim();
         const imageUrl = $(el).find('.character-icon').attr('src');
         const isBasic = $(el).hasClass('basic-item');
-        
+
         items.push({
           name,
           imageUrl,
@@ -267,15 +281,14 @@ export class TftCrawlerService {
   async saveCrawledItems(): Promise<void> {
     try {
       const items = await this.crawlItems();
-      
+
       for (const item of items) {
-        await this.tftItemModel.findOneAndUpdate(
-          { name: item.name },
-          item,
-          { upsert: true, new: true },
-        );
+        await this.tftItemModel.findOneAndUpdate({ name: item.name }, item, {
+          upsert: true,
+          new: true,
+        });
       }
-      
+
       this.logger.log(`Saved ${items.length} TFT items to database`);
     } catch (error) {
       this.logger.error(`Error saving TFT items: ${error.message}`);
@@ -289,7 +302,7 @@ export class TftCrawlerService {
   async updateChampionDetails(championName: string): Promise<TftChampion> {
     try {
       const championDetail = await this.crawlChampionDetails(championName);
-      
+
       // Find the champion by name and update with new details
       const updatedChampion = await this.tftChampionModel.findOneAndUpdate(
         { name: championName },
@@ -308,11 +321,13 @@ export class TftCrawlerService {
         },
         { new: true, upsert: true },
       );
-      
+
       this.logger.log(`Updated champion details for ${championName}`);
       return updatedChampion;
     } catch (error) {
-      this.logger.error(`Error updating champion details for ${championName}: ${error.message}`);
+      this.logger.error(
+        `Error updating champion details for ${championName}: ${error.message}`,
+      );
       throw error;
     }
   }
@@ -320,30 +335,37 @@ export class TftCrawlerService {
   /**
    * Update details for all champions in the database
    */
-  async updateAllChampionDetails(): Promise<{ updated: number; failed: number }> {
+  async updateAllChampionDetails(): Promise<{
+    updated: number;
+    failed: number;
+  }> {
     try {
       const champions = await this.tftChampionModel.find({});
       this.logger.log(`Found ${champions.length} champions to update`);
-      
+
       let updated = 0;
       let failed = 0;
-      
+
       for (const champion of champions) {
         try {
           await this.updateChampionDetails(champion.name);
           updated++;
-          
+
           // Wait a bit to avoid rate limiting
-          await new Promise(resolve => setTimeout(resolve, 1000));
+          await new Promise((resolve) => setTimeout(resolve, 1000));
         } catch (error) {
-          this.logger.error(`Failed to update ${champion.name}: ${error.message}`);
+          this.logger.error(
+            `Failed to update ${champion.name}: ${error.message}`,
+          );
           failed++;
         }
       }
-      
+
       return { updated, failed };
     } catch (error) {
-      this.logger.error(`Error updating all champion details: ${error.message}`);
+      this.logger.error(
+        `Error updating all champion details: ${error.message}`,
+      );
       throw error;
     }
   }
@@ -355,10 +377,10 @@ export class TftCrawlerService {
     try {
       const champions = await this.crawlChampions();
       this.logger.log(`Got ${champions.length} champions to save`);
-      
+
       let savedCount = 0;
       let errorCount = 0;
-      
+
       for (const champion of champions) {
         try {
           // Make sure we have the required fields according to the schema
@@ -384,22 +406,28 @@ export class TftCrawlerService {
             recommendedItems: [],
             recommendedItemsData: [],
           };
-          
+
           const result = await this.tftChampionModel.findOneAndUpdate(
             { name: champion.name, patch: champion.patch },
             championToSave,
             { upsert: true, new: true },
           );
-          
-          this.logger.log(`Saved champion: ${result.name} with ID: ${result._id}`);
+
+          this.logger.log(
+            `Saved champion: ${result.name} with ID: ${result._id}`,
+          );
           savedCount++;
         } catch (error) {
-          this.logger.error(`Error saving champion ${champion.name}: ${error.message}`);
+          this.logger.error(
+            `Error saving champion ${champion.name}: ${error.message}`,
+          );
           errorCount++;
         }
       }
-      
-      this.logger.log(`Saved ${savedCount} TFT champions to database, ${errorCount} errors`);
+
+      this.logger.log(
+        `Saved ${savedCount} TFT champions to database, ${errorCount} errors`,
+      );
     } catch (error) {
       this.logger.error(`Error saving TFT champions: ${error.message}`);
       throw error;
@@ -412,7 +440,7 @@ export class TftCrawlerService {
   async saveChampionsFromHtml(html: string): Promise<void> {
     try {
       const champions = this.parseChampionsFromHtml(html);
-      
+
       for (const champion of champions) {
         await this.tftChampionModel.findOneAndUpdate(
           { name: champion.name, patch: champion.patch },
@@ -420,10 +448,14 @@ export class TftCrawlerService {
           { upsert: true, new: true },
         );
       }
-      
-      this.logger.log(`Saved ${champions.length} TFT champions from HTML to database`);
+
+      this.logger.log(
+        `Saved ${champions.length} TFT champions from HTML to database`,
+      );
     } catch (error) {
-      this.logger.error(`Error saving TFT champions from HTML: ${error.message}`);
+      this.logger.error(
+        `Error saving TFT champions from HTML: ${error.message}`,
+      );
       throw error;
     }
   }
@@ -434,7 +466,7 @@ export class TftCrawlerService {
    */
   private getCostFromClass(classAttr: string): number {
     if (!classAttr) return 0;
-    
+
     const costMatch = classAttr.match(/c(\d+)/);
     if (costMatch && costMatch[1]) {
       return parseInt(costMatch[1], 10);
@@ -448,11 +480,11 @@ export class TftCrawlerService {
    */
   private getSetFromClass(classAttr: string): number {
     if (!classAttr) return 0;
-    
+
     const setMatch = classAttr.match(/s(\d+)/);
     if (setMatch && setMatch[1]) {
       return parseInt(setMatch[1], 10);
     }
     return 0;
   }
-} 
+}

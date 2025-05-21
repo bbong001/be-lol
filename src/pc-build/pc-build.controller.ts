@@ -25,53 +25,50 @@ import {
 } from '@nestjs/swagger';
 import { CreatePCBuildDto } from './dtos/create-pc-build.dto';
 
-
 @ApiTags('pc-builds')
 @Controller('pc-build')
 export class PcBuildController {
-  constructor(
-    private readonly pcBuildService: PcBuildService,
-  ) { }
+  constructor(private readonly pcBuildService: PcBuildService) {}
 
   // PC Component endpoints
-  @ApiOperation({ summary: 'Get all PC components' })
-  @ApiResponse({
-    status: 200,
-    description: 'Components retrieved successfully',
-  })
-  @Get('components')
-  async getAllComponents() {
-    return {
-      status: 'success',
-      data: await this.pcBuildService.findAllComponents(),
-    };
-  }
+  // @ApiOperation({ summary: 'Get all PC components' })
+  // @ApiResponse({
+  //   status: 200,
+  //   description: 'Components retrieved successfully',
+  // })
+  // @Get('components')
+  // async getAllComponents() {
+  //   return {
+  //     status: 'success',
+  //     data: await this.pcBuildService.findAllComponents(),
+  //   };
+  // }
 
-  @ApiOperation({ summary: 'Get PC components by type' })
-  @ApiParam({ name: 'type', description: 'Component type (CPU, GPU, etc.)' })
-  @ApiResponse({
-    status: 200,
-    description: 'Components retrieved successfully',
-  })
-  @Get('components/type/:type')
-  async getComponentsByType(@Param('type') type: string) {
-    return {
-      status: 'success',
-      data: await this.pcBuildService.findComponentsByType(type),
-    };
-  }
+  // @ApiOperation({ summary: 'Get PC components by type' })
+  // @ApiParam({ name: 'type', description: 'Component type (CPU, GPU, etc.)' })
+  // @ApiResponse({
+  //   status: 200,
+  //   description: 'Components retrieved successfully',
+  // })
+  // @Get('components/type/:type')
+  // async getComponentsByType(@Param('type') type: string) {
+  //   return {
+  //     status: 'success',
+  //     data: await this.pcBuildService.findComponentsByType(type),
+  //   };
+  // }
 
-  @ApiOperation({ summary: 'Get PC component by ID' })
-  @ApiParam({ name: 'id', description: 'Component ID' })
-  @ApiResponse({ status: 200, description: 'Component retrieved successfully' })
-  @ApiResponse({ status: 404, description: 'Component not found' })
-  @Get('components/:id')
-  async getComponentById(@Param('id') id: string) {
-    return {
-      status: 'success',
-      data: await this.pcBuildService.findComponentById(id),
-    };
-  }
+  // @ApiOperation({ summary: 'Get PC component by ID' })
+  // @ApiParam({ name: 'id', description: 'Component ID' })
+  // @ApiResponse({ status: 200, description: 'Component retrieved successfully' })
+  // @ApiResponse({ status: 404, description: 'Component not found' })
+  // @Get('components/:id')
+  // async getComponentById(@Param('id') id: string) {
+  //   return {
+  //     status: 'success',
+  //     data: await this.pcBuildService.findComponentById(id),
+  //   };
+  // }
 
   // PC Build endpoints
   @ApiOperation({ summary: 'Get all PC builds' })
@@ -159,7 +156,11 @@ export class PcBuildController {
     @Body() body: CreatePCBuildDto,
     @Request() req,
   ) {
-    const build = await this.pcBuildService.updateBuild(id, body, req.user.userId);
+    const build = await this.pcBuildService.updateBuild(
+      id,
+      body,
+      req.user.userId,
+    );
     return {
       status: 'success',
       data: build,

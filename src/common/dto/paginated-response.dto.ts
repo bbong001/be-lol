@@ -21,4 +21,4 @@ export class PaginatedResponseDto<T> {
 
   @ApiProperty({ description: 'Whether there is a previous page' })
   hasPreviousPage: boolean;
-} 
+}

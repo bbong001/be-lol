@@ -178,6 +178,4 @@ export class NewsController {
       message: 'Article deleted successfully',
     };
   }
-
-
 }

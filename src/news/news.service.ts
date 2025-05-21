@@ -14,7 +14,7 @@ import slugify from 'slugify';
 export class NewsService {
   constructor(
     @InjectModel(Article.name) private articleModel: Model<ArticleDocument>,
-  ) { }
+  ) {}
 
   async findAll(
     limit = 10,

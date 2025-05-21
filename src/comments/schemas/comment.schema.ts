@@ -36,6 +36,30 @@ export class Comment {
   @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'Champion', default: null })
   championId: MongooseSchema.Types.ObjectId | null;
 
+  @ApiProperty({
+    description: 'ID of the TFT champion this comment belongs to',
+    example: '507f1f77bcf86cd799439011',
+    required: false,
+  })
+  @Prop({
+    type: MongooseSchema.Types.ObjectId,
+    ref: 'TftChampion',
+    default: null,
+  })
+  tftChampionId: MongooseSchema.Types.ObjectId | null;
+
+  @ApiProperty({
+    description: 'ID of the Wild Rift champion this comment belongs to',
+    example: '507f1f77bcf86cd799439011',
+    required: false,
+  })
+  @Prop({
+    type: MongooseSchema.Types.ObjectId,
+    ref: 'WrChampion',
+    default: null,
+  })
+  wrChampionId: MongooseSchema.Types.ObjectId | null;
+
   @ApiProperty({ description: 'Name of the author', example: 'John Doe' })
   @Prop({ required: true })
   authorName: string;

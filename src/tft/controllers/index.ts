@@ -1,1 +1,1 @@
-export * from './tft-crawler.controller'; 
+export * from './tft-crawler.controller';

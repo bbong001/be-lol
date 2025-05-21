@@ -1,4 +1,12 @@
-import { IsNotEmpty, IsString, IsArray, IsOptional, IsObject, IsNumber, IsBoolean } from 'class-validator';
+import {
+  IsNotEmpty,
+  IsString,
+  IsArray,
+  IsOptional,
+  IsObject,
+  IsNumber,
+  IsBoolean,
+} from 'class-validator';
 
 export class CreateWrItemDto {
   @IsString()
@@ -50,4 +58,4 @@ export class CreateWrItemDto {
   @IsString()
   @IsNotEmpty()
   patch: string;
-} 
+}

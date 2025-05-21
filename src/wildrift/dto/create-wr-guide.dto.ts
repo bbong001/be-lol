@@ -1,4 +1,12 @@
-import { IsNotEmpty, IsString, IsArray, IsOptional, IsObject, IsMongoId, ValidateNested } from 'class-validator';
+import {
+  IsNotEmpty,
+  IsString,
+  IsArray,
+  IsOptional,
+  IsObject,
+  IsMongoId,
+  ValidateNested,
+} from 'class-validator';
 import { Type } from 'class-transformer';
 
 class SkillOrderDto {
@@ -73,4 +81,4 @@ export class CreateWrGuideDto {
   @IsString()
   @IsNotEmpty()
   patch: string;
-} 
+}

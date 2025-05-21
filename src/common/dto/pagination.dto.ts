@@ -42,4 +42,4 @@ export class PaginationDto {
   @IsOptional()
   @IsString()
   sortDirection?: 'asc' | 'desc' = 'asc';
-} 
+}

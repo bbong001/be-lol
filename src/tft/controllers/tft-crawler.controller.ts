@@ -4,12 +4,12 @@ import { JwtAuthGuard } from '../../auth/guards/jwt-auth.guard';
 import { RolesGuard } from '../../common/guards/roles.guard';
 import { Roles } from '../../common/decorators/roles.decorator';
 import { Role } from '../../common/decorators/roles.decorator';
-import { 
-  ApiTags, 
-  ApiOperation, 
-  ApiResponse, 
-  ApiBearerAuth, 
-  ApiBody, 
+import {
+  ApiTags,
+  ApiOperation,
+  ApiResponse,
+  ApiBearerAuth,
+  ApiBody,
   ApiParam,
 } from '@nestjs/swagger';
 import { TftService } from '../tft.service';
@@ -25,8 +25,8 @@ export class TftCrawlerController {
 
   @Get('champions')
   @ApiOperation({ summary: 'Crawl TFT champions data from tftactics.gg' })
-  @ApiResponse({ 
-    status: 200, 
+  @ApiResponse({
+    status: 200,
     description: 'Return crawled TFT champions data',
   })
   async getChampions() {
@@ -38,8 +38,8 @@ export class TftCrawlerController {
   @Roles(Role.ADMIN)
   @ApiBearerAuth()
   @ApiOperation({ summary: 'Crawl and save TFT champions to database' })
-  @ApiResponse({ 
-    status: 201, 
+  @ApiResponse({
+    status: 201,
     description: 'TFT champions crawled and saved successfully',
   })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
@@ -55,8 +55,8 @@ export class TftCrawlerController {
   @ApiBearerAuth()
   @ApiOperation({ summary: 'Parse TFT champions from provided HTML' })
   @ApiBody({ description: 'HTML content to parse', type: Object })
-  @ApiResponse({ 
-    status: 201, 
+  @ApiResponse({
+    status: 201,
     description: 'TFT champions parsed from HTML and saved successfully',
   })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
@@ -71,8 +71,8 @@ export class TftCrawlerController {
   @ApiBearerAuth()
   @ApiOperation({ summary: 'Parse and save TFT champions from provided HTML' })
   @ApiBody({ description: 'HTML content to parse and save', type: Object })
-  @ApiResponse({ 
-    status: 201, 
+  @ApiResponse({
+    status: 201,
     description: 'TFT champions parsed from HTML and saved successfully',
   })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
@@ -83,12 +83,12 @@ export class TftCrawlerController {
   }
 
   @Get('champions/:name/details')
-  @ApiOperation({ 
+  @ApiOperation({
     summary: 'Crawl detailed information for a specific TFT champion',
   })
   @ApiParam({ name: 'name', description: 'Champion name' })
-  @ApiResponse({ 
-    status: 200, 
+  @ApiResponse({
+    status: 200,
     description: 'Return detailed champion information',
   })
   @ApiResponse({ status: 404, description: 'Champion not found' })
@@ -100,20 +100,21 @@ export class TftCrawlerController {
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles(Role.ADMIN)
   @ApiBearerAuth()
-  @ApiOperation({ 
+  @ApiOperation({
     summary: 'Crawl and update details for a specific TFT champion',
   })
   @ApiParam({ name: 'name', description: 'Champion name' })
-  @ApiResponse({ 
-    status: 200, 
+  @ApiResponse({
+    status: 200,
     description: 'Champion details updated successfully',
   })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
   @ApiResponse({ status: 403, description: 'Forbidden' })
   @ApiResponse({ status: 404, description: 'Champion not found' })
   async updateChampionDetails(@Param('name') name: string) {
-    const updatedChampion = await this.tftCrawlerService.updateChampionDetails(name);
-    
+    const updatedChampion =
+      await this.tftCrawlerService.updateChampionDetails(name);
+
     return {
       message: `Champion ${name} details updated successfully`,
       champion: updatedChampion,
@@ -149,8 +150,8 @@ export class TftCrawlerController {
   @Roles(Role.ADMIN)
   @ApiBearerAuth()
   @ApiOperation({ summary: 'Crawl and save TFT items to database' })
-  @ApiResponse({ 
-    status: 201, 
+  @ApiResponse({
+    status: 201,
     description: 'TFT items crawled and saved successfully',
   })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
@@ -161,18 +162,19 @@ export class TftCrawlerController {
   }
 
   @Get('champions/:name/items')
-  @ApiOperation({ 
+  @ApiOperation({
     summary: 'Get recommended items for a specific TFT champion with images',
   })
   @ApiParam({ name: 'name', description: 'Champion name' })
-  @ApiResponse({ 
-    status: 200, 
+  @ApiResponse({
+    status: 200,
     description: 'Return champion recommended items with images',
   })
   @ApiResponse({ status: 404, description: 'Champion not found' })
   async getChampionItems(@Param('name') name: string) {
-    const championDetail = await this.tftCrawlerService.crawlChampionDetails(name);
-    
+    const championDetail =
+      await this.tftCrawlerService.crawlChampionDetails(name);
+
     return {
       name: championDetail.name,
       recommendedItems: championDetail.recommendedItemsData || [],
@@ -180,17 +182,18 @@ export class TftCrawlerController {
   }
 
   @Get('champions/:name/recommended-items')
-  @ApiOperation({ 
-    summary: 'Get recommended items with images for a specific champion from database',
+  @ApiOperation({
+    summary:
+      'Get recommended items with images for a specific champion from database',
   })
   @ApiParam({ name: 'name', description: 'Champion name' })
-  @ApiResponse({ 
-    status: 200, 
+  @ApiResponse({
+    status: 200,
     description: 'Return champion recommended items with images',
   })
   @ApiResponse({ status: 404, description: 'Champion not found' })
-  async getChampionRecommendedItems(@Param('name') name: string): Promise<{ 
-    name: string; 
+  async getChampionRecommendedItems(@Param('name') name: string): Promise<{
+    name: string;
     recommendedItems: RecommendedItemData[];
   }> {
     const champion = await this.tftService.findChampionByName(name);
@@ -201,17 +204,17 @@ export class TftCrawlerController {
   }
 
   @Get('champions/items/all')
-  @ApiOperation({ 
+  @ApiOperation({
     summary: 'Get all champions with their recommended items and images',
   })
-  @ApiResponse({ 
-    status: 200, 
+  @ApiResponse({
+    status: 200,
     description: 'Return all champions with their recommended items and images',
   })
   async getAllChampionsWithItems() {
     const champions = await this.tftService.findAllChampions();
-    
-    return champions.map(champion => ({
+
+    return champions.map((champion) => ({
       name: champion.name,
       cost: champion.cost,
       imageUrl: champion.imageUrl,
@@ -221,15 +224,15 @@ export class TftCrawlerController {
   }
 
   @Get('items/all')
-  @ApiOperation({ 
+  @ApiOperation({
     summary: 'Get all TFT items with images from database',
   })
-  @ApiResponse({ 
-    status: 200, 
+  @ApiResponse({
+    status: 200,
     description: 'Return all TFT items with images',
   })
   async getAllItems() {
     const items = await this.tftService.findAllItems();
     return items;
   }
-} 
+}

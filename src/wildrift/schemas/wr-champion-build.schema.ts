@@ -28,7 +28,11 @@ class BuildRune {
 
 @Schema({ timestamps: true })
 export class WrChampionBuild extends Document {
-  @Prop({ type: MongooseSchema.Types.ObjectId, ref: WrChampion.name, required: true })
+  @Prop({
+    type: MongooseSchema.Types.ObjectId,
+    ref: WrChampion.name,
+    required: true,
+  })
   championId: MongooseSchema.Types.ObjectId;
 
   @Prop({ type: [BuildItem] })
@@ -68,4 +72,5 @@ export class WrChampionBuild extends Document {
   sourceUrl: string;
 }
 
-export const WrChampionBuildSchema = SchemaFactory.createForClass(WrChampionBuild); 
+export const WrChampionBuildSchema =
+  SchemaFactory.createForClass(WrChampionBuild);

@@ -9,6 +9,7 @@ import { TftAugment, TftAugmentSchema } from './schemas/tft-augment.schema';
 import { TftCrawlerService } from './services/tft-crawler.service';
 // import { TftCrawlerController } from './controllers/tft-crawler.controller';
 import { HttpModule } from '@nestjs/axios';
+import { CommentsModule } from '../comments/comments.module';
 
 @Module({
   imports: [
@@ -19,9 +20,10 @@ import { HttpModule } from '@nestjs/axios';
       { name: TftAugment.name, schema: TftAugmentSchema },
     ]),
     HttpModule,
+    CommentsModule,
   ],
   controllers: [TftController],
   providers: [TftService, TftCrawlerService],
   exports: [TftService, TftCrawlerService],
 })
-export class TftModule {} 
+export class TftModule {}

@@ -1,4 +1,12 @@
-import { IsNotEmpty, IsNumber, IsString, IsArray, IsOptional, ValidateNested, IsObject } from 'class-validator';
+import {
+  IsNotEmpty,
+  IsNumber,
+  IsString,
+  IsArray,
+  IsOptional,
+  ValidateNested,
+  IsObject,
+} from 'class-validator';
 import { Type } from 'class-transformer';
 import { RecommendedItemData } from '../schemas/tft-champion.schema';
 
@@ -112,4 +120,4 @@ export class CreateTftChampionDto {
   @IsNumber()
   @IsOptional()
   setNumber?: number;
-} 
+}

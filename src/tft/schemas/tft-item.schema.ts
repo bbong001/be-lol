@@ -25,4 +25,4 @@ export class TftItem extends Document {
   patch: string;
 }
 
-export const TftItemSchema = SchemaFactory.createForClass(TftItem); 
+export const TftItemSchema = SchemaFactory.createForClass(TftItem);

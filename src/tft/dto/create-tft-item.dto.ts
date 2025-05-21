@@ -1,4 +1,11 @@
-import { IsNotEmpty, IsString, IsArray, IsOptional, IsObject, IsBoolean } from 'class-validator';
+import {
+  IsNotEmpty,
+  IsString,
+  IsArray,
+  IsOptional,
+  IsObject,
+  IsBoolean,
+} from 'class-validator';
 
 export class CreateTftItemDto {
   @IsString()

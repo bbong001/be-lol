@@ -1,4 +1,12 @@
-import { IsNotEmpty, IsString, IsArray, IsOptional, ValidateNested, IsObject, IsNumber } from 'class-validator';
+import {
+  IsNotEmpty,
+  IsString,
+  IsArray,
+  IsOptional,
+  ValidateNested,
+  IsObject,
+  IsNumber,
+} from 'class-validator';
 import { Type } from 'class-transformer';
 
 class AbilityDto {
@@ -150,4 +158,4 @@ export class CreateWrChampionDto {
   @IsString()
   @IsNotEmpty()
   patch: string;
-} 
+}

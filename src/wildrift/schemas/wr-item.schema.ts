@@ -40,4 +40,4 @@ export class WrItem extends Document {
   patch: string;
 }
 
-export const WrItemSchema = SchemaFactory.createForClass(WrItem); 
+export const WrItemSchema = SchemaFactory.createForClass(WrItem);

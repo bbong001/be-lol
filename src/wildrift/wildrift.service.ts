@@ -22,17 +22,28 @@ export class WildriftService {
     @InjectModel(WrItem.name) private wrItemModel: Model<WrItem>,
     @InjectModel(WrRune.name) private wrRuneModel: Model<WrRune>,
     @InjectModel(WrGuide.name) private wrGuideModel: Model<WrGuide>,
-    @InjectModel(WrChampionBuild.name) private wrChampionBuildModel: Model<WrChampionBuild>,
+    @InjectModel(WrChampionBuild.name)
+    private wrChampionBuildModel: Model<WrChampionBuild>,
   ) {}
 
   // Champions methods
-  async findAllChampions(paginationDto?: PaginationDto, role?: string): Promise<PaginatedResponseDto<WrChampion>> {
-    const { page = 1, limit = 10, sortBy, sortDirection = 'asc' } = paginationDto || {};
+  async findAllChampions(
+    paginationDto?: PaginationDto,
+    role?: string,
+  ): Promise<PaginatedResponseDto<WrChampion>> {
+    const {
+      page = 1,
+      limit = 10,
+      sortBy,
+      sortDirection = 'asc',
+    } = paginationDto || {};
     const skip = (page - 1) * limit;
     const query = role ? { roles: { $in: [role] } } : {};
-    
-    const sort = sortBy ? { [sortBy]: sortDirection === 'asc' ? 1 : -1 } : undefined;
-    
+
+    const sort = sortBy
+      ? { [sortBy]: sortDirection === 'asc' ? 1 : -1 }
+      : undefined;
+
     const [items, total] = await Promise.all([
       this.wrChampionModel
         .find(query)
@@ -42,7 +53,7 @@ export class WildriftService {
         .lean(),
       this.wrChampionModel.countDocuments(query),
     ]);
-    
+
     const totalPages = Math.ceil(total / limit);
 
     return {
@@ -56,12 +67,19 @@ export class WildriftService {
     };
   }
 
-  async getAllChampionsWithBuilds(paginationDto?: PaginationDto): Promise<PaginatedResponseDto<any>> {
-    const { page = 1, limit = 10, sortBy = 'name', sortDirection = 'asc' } = paginationDto || {};
+  async getAllChampionsWithBuilds(
+    paginationDto?: PaginationDto,
+  ): Promise<PaginatedResponseDto<any>> {
+    const {
+      page = 1,
+      limit = 10,
+      sortBy = 'name',
+      sortDirection = 'asc',
+    } = paginationDto || {};
     const skip = (page - 1) * limit;
-    
+
     const sort = { [sortBy]: sortDirection === 'asc' ? 1 : -1 };
-    
+
     const [champions, total] = await Promise.all([
       this.wrChampionModel
         .find()
@@ -71,32 +89,32 @@ export class WildriftService {
         .lean(),
       this.wrChampionModel.countDocuments(),
     ]);
-    
-    const championIds = champions.map(champion => champion._id.toString());
-    
+
+    const championIds = champions.map((champion) => champion._id.toString());
+
     const builds = await this.wrChampionBuildModel
       .find({ championId: { $in: championIds } })
       .lean();
-    
+
     const buildsByChampionId = {};
-    builds.forEach(build => {
+    builds.forEach((build) => {
       const championId = build.championId.toString();
       if (!buildsByChampionId[championId]) {
         buildsByChampionId[championId] = [];
       }
       buildsByChampionId[championId].push(build);
     });
-    
-    const items = champions.map(champion => {
+
+    const items = champions.map((champion) => {
       const championId = champion._id.toString();
       return {
         ...champion,
         builds: buildsByChampionId[championId] || [],
       };
     });
-    
+
     const totalPages = Math.ceil(total / limit);
-    
+
     return {
       items,
       total,
@@ -121,18 +139,20 @@ export class WildriftService {
     if (!champion) {
       throw new NotFoundException(`Wild Rift Champion with ID ${id} not found`);
     }
-    
+
     const builds = await this.wrChampionBuildModel
       .find({ championId: id })
       .lean();
-      
+
     return {
       ...champion,
       builds,
     };
   }
 
-  async createChampion(createWrChampionDto: CreateWrChampionDto): Promise<WrChampion> {
+  async createChampion(
+    createWrChampionDto: CreateWrChampionDto,
+  ): Promise<WrChampion> {
     const newChampion = new this.wrChampionModel(createWrChampionDto);
     return newChampion.save();
   }
@@ -158,13 +178,23 @@ export class WildriftService {
   }
 
   // Champion Builds methods
-  async findChampionBuilds(championId: string, paginationDto?: PaginationDto): Promise<PaginatedResponseDto<WrChampionBuild>> {
-    const { page = 1, limit = 10, sortBy, sortDirection = 'asc' } = paginationDto || {};
+  async findChampionBuilds(
+    championId: string,
+    paginationDto?: PaginationDto,
+  ): Promise<PaginatedResponseDto<WrChampionBuild>> {
+    const {
+      page = 1,
+      limit = 10,
+      sortBy,
+      sortDirection = 'asc',
+    } = paginationDto || {};
     const skip = (page - 1) * limit;
     const query = { championId };
-    
-    const sort = sortBy ? { [sortBy]: sortDirection === 'asc' ? 1 : -1 } : undefined;
-    
+
+    const sort = sortBy
+      ? { [sortBy]: sortDirection === 'asc' ? 1 : -1 }
+      : undefined;
+
     const [items, total] = await Promise.all([
       this.wrChampionBuildModel
         .find(query)
@@ -174,7 +204,7 @@ export class WildriftService {
         .lean(),
       this.wrChampionBuildModel.countDocuments(query),
     ]);
-    
+
     const totalPages = Math.ceil(total / limit);
 
     return {
@@ -196,7 +226,9 @@ export class WildriftService {
     return build;
   }
 
-  async createChampionBuild(championBuildDto: WrChampionBuildDto): Promise<WrChampionBuild> {
+  async createChampionBuild(
+    championBuildDto: WrChampionBuildDto,
+  ): Promise<WrChampionBuild> {
     const newBuild = new this.wrChampionBuildModel(championBuildDto);
     return newBuild.save();
   }
@@ -222,12 +254,21 @@ export class WildriftService {
   }
 
   // Items methods
-  async findAllItems(paginationDto?: PaginationDto): Promise<PaginatedResponseDto<WrItem>> {
-    const { page = 1, limit = 10, sortBy, sortDirection = 'asc' } = paginationDto || {};
+  async findAllItems(
+    paginationDto?: PaginationDto,
+  ): Promise<PaginatedResponseDto<WrItem>> {
+    const {
+      page = 1,
+      limit = 10,
+      sortBy,
+      sortDirection = 'asc',
+    } = paginationDto || {};
     const skip = (page - 1) * limit;
-    
-    const sort = sortBy ? { [sortBy]: sortDirection === 'asc' ? 1 : -1 } : undefined;
-    
+
+    const sort = sortBy
+      ? { [sortBy]: sortDirection === 'asc' ? 1 : -1 }
+      : undefined;
+
     const [items, total] = await Promise.all([
       this.wrItemModel
         .find()
@@ -237,7 +278,7 @@ export class WildriftService {
         .lean(),
       this.wrItemModel.countDocuments(),
     ]);
-    
+
     const totalPages = Math.ceil(total / limit);
 
     return {
@@ -265,13 +306,23 @@ export class WildriftService {
   }
 
   // Guides methods
-  async findAllGuides(paginationDto?: PaginationDto, championId?: string): Promise<PaginatedResponseDto<WrGuide>> {
-    const { page = 1, limit = 10, sortBy, sortDirection = 'asc' } = paginationDto || {};
+  async findAllGuides(
+    paginationDto?: PaginationDto,
+    championId?: string,
+  ): Promise<PaginatedResponseDto<WrGuide>> {
+    const {
+      page = 1,
+      limit = 10,
+      sortBy,
+      sortDirection = 'asc',
+    } = paginationDto || {};
     const skip = (page - 1) * limit;
     const query = championId ? { championId } : {};
-    
-    const sort = sortBy ? { [sortBy]: sortDirection === 'asc' ? 1 : -1 } : undefined;
-    
+
+    const sort = sortBy
+      ? { [sortBy]: sortDirection === 'asc' ? 1 : -1 }
+      : undefined;
+
     const [items, total] = await Promise.all([
       this.wrGuideModel
         .find(query)
@@ -282,7 +333,7 @@ export class WildriftService {
         .lean(),
       this.wrGuideModel.countDocuments(query),
     ]);
-    
+
     const totalPages = Math.ceil(total / limit);
 
     return {
@@ -301,7 +352,7 @@ export class WildriftService {
       .findById(id)
       .populate('championId')
       .lean();
-      
+
     if (!guide) {
       throw new NotFoundException(`Wild Rift Guide with ID ${id} not found`);
     }
@@ -325,4 +376,4 @@ export class WildriftService {
     }
     return updatedGuide;
   }
-} 
+}

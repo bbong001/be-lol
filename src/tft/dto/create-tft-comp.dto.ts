@@ -1,4 +1,11 @@
-import { IsNotEmpty, IsString, IsArray, IsOptional, IsObject, IsMongoId } from 'class-validator';
+import {
+  IsNotEmpty,
+  IsString,
+  IsArray,
+  IsOptional,
+  IsObject,
+  IsMongoId,
+} from 'class-validator';
 import { Type } from 'class-transformer';
 
 export class CreateTftCompDto {
@@ -48,4 +55,4 @@ export class CreateTftCompDto {
   @IsString()
   @IsOptional()
   imageUrl?: string;
-} 
+}

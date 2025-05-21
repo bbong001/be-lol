@@ -82,4 +82,4 @@ export class WrChampion extends Document {
   patch: string;
 }
 
-export const WrChampionSchema = SchemaFactory.createForClass(WrChampion); 
+export const WrChampionSchema = SchemaFactory.createForClass(WrChampion);

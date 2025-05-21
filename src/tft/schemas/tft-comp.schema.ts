@@ -38,4 +38,4 @@ export class TftComp extends Document {
   imageUrl: string;
 }
 
-export const TftCompSchema = SchemaFactory.createForClass(TftComp); 
+export const TftCompSchema = SchemaFactory.createForClass(TftComp);

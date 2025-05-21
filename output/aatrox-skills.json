@@ -1,0 +1,59 @@
+{
+  "champion": "Aatrox",
+  "skills": [
+    {
+      "name": "",
+      "description": "",
+      "imageUrl": "https://www.mobafire.com/images/ability/aatrox-deathbringer-stance.png",
+      "key": "passive"
+    },
+    {
+      "name": "",
+      "description": "",
+      "imageUrl": "https://www.mobafire.com/images/ability/aatrox-the-darkin-blade.png",
+      "key": "q"
+    },
+    {
+      "name": "",
+      "description": "",
+      "imageUrl": "https://www.mobafire.com/images/ability/aatrox-infernal-chains.png",
+      "key": "w"
+    },
+    {
+      "name": "",
+      "description": "",
+      "imageUrl": "https://www.mobafire.com/images/ability/aatrox-umbral-dash.png",
+      "key": "e"
+    },
+    {
+      "name": "",
+      "description": "",
+      "imageUrl": "https://www.mobafire.com/images/ability/aatrox-world-ender.png",
+      "key": "r"
+    }
+  ],
+  "skillOrder": {
+    "sequence": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "priority": [
+      "q",
+      "e",
+      "w"
+    ]
+  }
+}

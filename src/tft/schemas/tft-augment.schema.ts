@@ -22,4 +22,4 @@ export class TftAugment extends Document {
   patch: string;
 }
 
-export const TftAugmentSchema = SchemaFactory.createForClass(TftAugment); 
+export const TftAugmentSchema = SchemaFactory.createForClass(TftAugment);

@@ -8,11 +8,11 @@ async function downloadWrPage() {
     const url = 'https://www.wildriftfire.com';
     const response = await axios.get(url);
     const htmlContent = response.data;
-    
+
     // Save the HTML content to a file
     const filePath = path.resolve(process.cwd(), 'wildrift-page.html');
     fs.writeFileSync(filePath, htmlContent);
-    
+
     console.log(`Successfully downloaded and saved HTML to ${filePath}`);
     console.log(`File size: ${(htmlContent.length / 1024).toFixed(2)} KB`);
   } catch (error) {
@@ -20,4 +20,4 @@ async function downloadWrPage() {
   }
 }
 
-downloadWrPage(); 
+downloadWrPage();

@@ -25,4 +25,4 @@ export class WrRune extends Document {
   patch: string;
 }
 
-export const WrRuneSchema = SchemaFactory.createForClass(WrRune); 
+export const WrRuneSchema = SchemaFactory.createForClass(WrRune);

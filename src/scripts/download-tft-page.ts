@@ -12,13 +12,13 @@ const url = `https://tftactics.gg/champions/${formattedName}/`;
 async function downloadPage() {
   try {
     console.log(`Downloading HTML from ${url}`);
-    
+
     const { data } = await axios.get(url);
-    
+
     // Save the HTML to a file
     const outputPath = path.join(__dirname, '../../data/tft-page.html');
     fs.writeFileSync(outputPath, data);
-    
+
     console.log(`HTML content saved to ${outputPath}`);
   } catch (error) {
     console.error(`Error downloading page:`, error);
@@ -27,4 +27,4 @@ async function downloadPage() {
 
 downloadPage()
   .then(() => console.log('Done!'))
-  .catch(err => console.error('Error:', err)); 
+  .catch((err) => console.error('Error:', err));

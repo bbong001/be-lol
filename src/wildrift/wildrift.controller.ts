@@ -19,33 +19,48 @@ import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { RolesGuard } from '../common/guards/roles.guard';
 import { Roles } from '../common/decorators/roles.decorator';
 import { Role } from '../common/decorators/roles.decorator';
-import { ApiTags, ApiOperation, ApiResponse, ApiBearerAuth, ApiParam, ApiQuery } from '@nestjs/swagger';
+import {
+  ApiTags,
+  ApiOperation,
+  ApiResponse,
+  ApiBearerAuth,
+  ApiParam,
+  ApiQuery,
+} from '@nestjs/swagger';
 import { PaginationDto } from '../common/dto/pagination.dto';
 import { WrChampionBuildDto } from './dto/wr-champion-build.dto';
+import { CommentsService } from '../comments/comments.service';
 
 @ApiTags('wildrift')
 @Controller('wildrift')
 export class WildriftController {
-  constructor(private readonly wildriftService: WildriftService) {}
+  constructor(
+    private readonly wildriftService: WildriftService,
+    private readonly commentsService: CommentsService,
+  ) {}
 
   // Champions endpoints
   @Get('champions')
   @ApiOperation({ summary: 'Get all Wild Rift champions' })
-  @ApiQuery({ name: 'role', required: false, description: 'Filter champions by role' })
+  @ApiQuery({
+    name: 'role',
+    required: false,
+    description: 'Filter champions by role',
+  })
   @ApiResponse({ status: 200, description: 'Return all Wild Rift champions' })
   findAllChampions(
     @Query() paginationDto: PaginationDto,
-    @Query('role') role?: string
+    @Query('role') role?: string,
   ) {
     return this.wildriftService.findAllChampions(paginationDto, role);
   }
 
-  @Get('champions/with-builds')
-  @ApiOperation({ summary: 'Get all Wild Rift champions with their builds' })
-  @ApiResponse({ status: 200, description: 'Return all Wild Rift champions with their builds' })
-  async getAllChampionsWithBuilds(@Query() paginationDto: PaginationDto) {
-    return this.wildriftService.getAllChampionsWithBuilds(paginationDto);
-  }
+  // @Get('champions/with-builds')
+  // @ApiOperation({ summary: 'Get all Wild Rift champions with their builds' })
+  // @ApiResponse({ status: 200, description: 'Return all Wild Rift champions with their builds' })
+  // async getAllChampionsWithBuilds(@Query() paginationDto: PaginationDto) {
+  //   return this.wildriftService.getAllChampionsWithBuilds(paginationDto);
+  // }
 
   @Get('champions/:id')
   @ApiOperation({ summary: 'Get a Wild Rift champion by ID' })
@@ -59,10 +74,50 @@ export class WildriftController {
   @Get('champions/:id/with-builds')
   @ApiOperation({ summary: 'Get a Wild Rift champion by ID with its builds' })
   // @ApiParam({ name: 'id', description: 'Champion ID' })
-  @ApiResponse({ status: 200, description: 'Return the Wild Rift champion with its builds' })
+  @ApiResponse({
+    status: 200,
+    description: 'Return the Wild Rift champion with its builds',
+  })
   @ApiResponse({ status: 404, description: 'Champion not found' })
   async getChampionWithBuilds(@Param('id') id: string) {
     return this.wildriftService.getChampionWithBuilds(id);
+  }
+
+  @Get('champions/:id/comments')
+  @ApiOperation({ summary: 'Get comments for a Wild Rift champion' })
+  @ApiParam({ name: 'id', description: 'Wild Rift Champion ID' })
+  @ApiQuery({
+    name: 'limit',
+    required: false,
+    description: 'Number of comments per page',
+  })
+  @ApiQuery({ name: 'page', required: false, description: 'Page number' })
+  @ApiResponse({
+    status: 200,
+    description: 'Return comments for the Wild Rift champion',
+  })
+  @ApiResponse({ status: 404, description: 'Wild Rift Champion not found' })
+  async getWrChampionComments(
+    @Param('id') id: string,
+    @Query('limit') limit: string,
+    @Query('page') page: string,
+  ) {
+    // First verify the champion exists
+    await this.wildriftService.findOneChampion(id);
+
+    const limitNumber = limit ? parseInt(limit, 10) : 10;
+    const pageNumber = page ? parseInt(page, 10) : 1;
+
+    const comments = await this.commentsService.findByWrChampionId(
+      id,
+      limitNumber,
+      pageNumber,
+    );
+
+    return {
+      status: 'success',
+      data: comments,
+    };
   }
 
   @Post('champions')
@@ -70,7 +125,10 @@ export class WildriftController {
   @Roles(Role.ADMIN)
   @ApiBearerAuth()
   @ApiOperation({ summary: 'Create a new Wild Rift champion' })
-  @ApiResponse({ status: 201, description: 'The champion has been successfully created' })
+  @ApiResponse({
+    status: 201,
+    description: 'The champion has been successfully created',
+  })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
   @ApiResponse({ status: 403, description: 'Forbidden' })
   createChampion(@Body() createWrChampionDto: CreateWrChampionDto) {
@@ -83,7 +141,10 @@ export class WildriftController {
   @ApiBearerAuth()
   @ApiOperation({ summary: 'Update a Wild Rift champion' })
   @ApiParam({ name: 'id', description: 'Champion ID' })
-  @ApiResponse({ status: 200, description: 'The champion has been successfully updated' })
+  @ApiResponse({
+    status: 200,
+    description: 'The champion has been successfully updated',
+  })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
   @ApiResponse({ status: 403, description: 'Forbidden' })
   @ApiResponse({ status: 404, description: 'Champion not found' })
@@ -100,7 +161,10 @@ export class WildriftController {
   @ApiBearerAuth()
   @ApiOperation({ summary: 'Delete a Wild Rift champion' })
   @ApiParam({ name: 'id', description: 'Champion ID' })
-  @ApiResponse({ status: 200, description: 'The champion has been successfully deleted' })
+  @ApiResponse({
+    status: 200,
+    description: 'The champion has been successfully deleted',
+  })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
   @ApiResponse({ status: 403, description: 'Forbidden' })
   @ApiResponse({ status: 404, description: 'Champion not found' })
@@ -134,7 +198,10 @@ export class WildriftController {
   @Roles(Role.ADMIN)
   @ApiBearerAuth()
   @ApiOperation({ summary: 'Create a new champion build' })
-  @ApiResponse({ status: 201, description: 'The build has been successfully created' })
+  @ApiResponse({
+    status: 201,
+    description: 'The build has been successfully created',
+  })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
   @ApiResponse({ status: 403, description: 'Forbidden' })
   createChampionBuild(@Body() championBuildDto: WrChampionBuildDto) {
@@ -147,13 +214,16 @@ export class WildriftController {
   @ApiBearerAuth()
   @ApiOperation({ summary: 'Update a champion build' })
   @ApiParam({ name: 'id', description: 'Build ID' })
-  @ApiResponse({ status: 200, description: 'The build has been successfully updated' })
+  @ApiResponse({
+    status: 200,
+    description: 'The build has been successfully updated',
+  })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
   @ApiResponse({ status: 403, description: 'Forbidden' })
   @ApiResponse({ status: 404, description: 'Build not found' })
   updateChampionBuild(
     @Param('id') id: string,
-    @Body() championBuildDto: WrChampionBuildDto
+    @Body() championBuildDto: WrChampionBuildDto,
   ) {
     return this.wildriftService.updateChampionBuild(id, championBuildDto);
   }
@@ -164,7 +234,10 @@ export class WildriftController {
   @ApiBearerAuth()
   @ApiOperation({ summary: 'Delete a champion build' })
   @ApiParam({ name: 'id', description: 'Build ID' })
-  @ApiResponse({ status: 200, description: 'The build has been successfully deleted' })
+  @ApiResponse({
+    status: 200,
+    description: 'The build has been successfully deleted',
+  })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
   @ApiResponse({ status: 403, description: 'Forbidden' })
   @ApiResponse({ status: 404, description: 'Build not found' })
@@ -194,7 +267,10 @@ export class WildriftController {
   @Roles(Role.ADMIN)
   @ApiBearerAuth()
   @ApiOperation({ summary: 'Create a new Wild Rift item' })
-  @ApiResponse({ status: 201, description: 'The item has been successfully created' })
+  @ApiResponse({
+    status: 201,
+    description: 'The item has been successfully created',
+  })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
   @ApiResponse({ status: 403, description: 'Forbidden' })
   createItem(@Body() createWrItemDto: CreateWrItemDto) {
@@ -204,11 +280,15 @@ export class WildriftController {
   // Guides endpoints
   @Get('guides')
   @ApiOperation({ summary: 'Get all Wild Rift guides' })
-  @ApiQuery({ name: 'championId', required: false, description: 'Filter guides by champion ID' })
+  @ApiQuery({
+    name: 'championId',
+    required: false,
+    description: 'Filter guides by champion ID',
+  })
   @ApiResponse({ status: 200, description: 'Return all Wild Rift guides' })
   findAllGuides(
     @Query() paginationDto: PaginationDto,
-    @Query('championId') championId?: string
+    @Query('championId') championId?: string,
   ) {
     return this.wildriftService.findAllGuides(paginationDto, championId);
   }
@@ -227,7 +307,10 @@ export class WildriftController {
   @Roles(Role.ADMIN)
   @ApiBearerAuth()
   @ApiOperation({ summary: 'Create a new Wild Rift guide' })
-  @ApiResponse({ status: 201, description: 'The guide has been successfully created' })
+  @ApiResponse({
+    status: 201,
+    description: 'The guide has been successfully created',
+  })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
   @ApiResponse({ status: 403, description: 'Forbidden' })
   createGuide(@Body() createWrGuideDto: CreateWrGuideDto) {
@@ -240,7 +323,10 @@ export class WildriftController {
   @ApiBearerAuth()
   @ApiOperation({ summary: 'Update a Wild Rift guide' })
   @ApiParam({ name: 'id', description: 'Guide ID' })
-  @ApiResponse({ status: 200, description: 'The guide has been successfully updated' })
+  @ApiResponse({
+    status: 200,
+    description: 'The guide has been successfully updated',
+  })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
   @ApiResponse({ status: 403, description: 'Forbidden' })
   @ApiResponse({ status: 404, description: 'Guide not found' })
@@ -250,4 +336,4 @@ export class WildriftController {
   ) {
     return this.wildriftService.updateGuide(id, updateWrGuideDto);
   }
-} 
+}

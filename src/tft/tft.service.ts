@@ -88,10 +88,7 @@ export class TftService {
   // Comps methods
   async findAllComps(patch?: string): Promise<TftComp[]> {
     const query = patch ? { patch } : {};
-    return this.tftCompModel
-      .find(query)
-      .populate('champions')
-      .lean();
+    return this.tftCompModel.find(query).populate('champions').lean();
   }
 
   async findOneComp(id: string): Promise<TftComp> {
@@ -122,4 +119,4 @@ export class TftService {
     }
     return updatedComp;
   }
-} 
+}

@@ -54,4 +54,4 @@ export class TftChampion extends Document {
   setNumber: number;
 }
 
-export const TftChampionSchema = SchemaFactory.createForClass(TftChampion); 
+export const TftChampionSchema = SchemaFactory.createForClass(TftChampion);

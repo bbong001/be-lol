@@ -1,1 +1,1 @@
-export * from './tft-crawler.service'; 
+export * from './tft-crawler.service';

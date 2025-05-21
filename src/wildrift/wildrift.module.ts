@@ -6,7 +6,11 @@ import { WrChampion, WrChampionSchema } from './schemas/wr-champion.schema';
 import { WrItem, WrItemSchema } from './schemas/wr-item.schema';
 import { WrRune, WrRuneSchema } from './schemas/wr-rune.schema';
 import { WrGuide, WrGuideSchema } from './schemas/wr-guide.schema';
-import { WrChampionBuild, WrChampionBuildSchema } from './schemas/wr-champion-build.schema';
+import {
+  WrChampionBuild,
+  WrChampionBuildSchema,
+} from './schemas/wr-champion-build.schema';
+import { CommentsModule } from '../comments/comments.module';
 
 @Module({
   imports: [
@@ -17,9 +21,10 @@ import { WrChampionBuild, WrChampionBuildSchema } from './schemas/wr-champion-bu
       { name: WrGuide.name, schema: WrGuideSchema },
       { name: WrChampionBuild.name, schema: WrChampionBuildSchema },
     ]),
+    CommentsModule,
   ],
   controllers: [WildriftController],
   providers: [WildriftService],
   exports: [WildriftService],
 })
-export class WildriftModule {} 
+export class WildriftModule {}

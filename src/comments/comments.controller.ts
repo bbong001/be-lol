@@ -167,6 +167,74 @@ export class CommentsController {
     };
   }
 
+  @ApiOperation({ summary: 'Get comments for a specific TFT champion' })
+  @ApiParam({ name: 'tftChampionId', description: 'TFT Champion ID' })
+  @ApiQuery({
+    name: 'limit',
+    description: 'Number of comments to return',
+    required: false,
+    type: Number,
+  })
+  @ApiQuery({
+    name: 'page',
+    description: 'Page number',
+    required: false,
+    type: Number,
+  })
+  @ApiResponse({ status: 200, description: 'Comments retrieved successfully' })
+  @ApiResponse({ status: 400, description: 'Invalid TFT Champion ID' })
+  @Get('/tft-champion/:tftChampionId')
+  async findByTftChampionId(
+    @Param('tftChampionId') tftChampionId: string,
+    @Query('limit') limit: string,
+    @Query('page') page: string,
+  ) {
+    const limitNumber = limit ? parseInt(limit, 10) : 10;
+    const pageNumber = page ? parseInt(page, 10) : 1;
+    return {
+      status: 'success',
+      data: await this.commentsService.findByTftChampionId(
+        tftChampionId,
+        limitNumber,
+        pageNumber,
+      ),
+    };
+  }
+
+  @ApiOperation({ summary: 'Get comments for a specific WR champion' })
+  @ApiParam({ name: 'wrChampionId', description: 'Wild Rift Champion ID' })
+  @ApiQuery({
+    name: 'limit',
+    description: 'Number of comments to return',
+    required: false,
+    type: Number,
+  })
+  @ApiQuery({
+    name: 'page',
+    description: 'Page number',
+    required: false,
+    type: Number,
+  })
+  @ApiResponse({ status: 200, description: 'Comments retrieved successfully' })
+  @ApiResponse({ status: 400, description: 'Invalid WR Champion ID' })
+  @Get('/wr-champion/:wrChampionId')
+  async findByWrChampionId(
+    @Param('wrChampionId') wrChampionId: string,
+    @Query('limit') limit: string,
+    @Query('page') page: string,
+  ) {
+    const limitNumber = limit ? parseInt(limit, 10) : 10;
+    const pageNumber = page ? parseInt(page, 10) : 1;
+    return {
+      status: 'success',
+      data: await this.commentsService.findByWrChampionId(
+        wrChampionId,
+        limitNumber,
+        pageNumber,
+      ),
+    };
+  }
+
   @ApiOperation({ summary: 'Create a new comment for a news article' })
   @ApiResponse({ status: 201, description: 'Comment created successfully' })
   @ApiResponse({ status: 400, description: 'Bad request' })
@@ -227,6 +295,55 @@ export class CommentsController {
       championId: new Types.ObjectId(championId),
       newsId: undefined,
       pcBuildId: undefined,
+      userId: req.user ? req.user.userId : undefined,
+      authorName: req.user ? req.user.name : 'Ẩn danh',
+    };
+    return {
+      status: 'success',
+      data: await this.commentsService.create(commentData),
+    };
+  }
+
+  @ApiOperation({ summary: 'Create a new comment for a TFT champion' })
+  @ApiResponse({ status: 201, description: 'Comment created successfully' })
+  @ApiResponse({ status: 400, description: 'Bad request' })
+  @Post('/tft-champion/:tftChampionId')
+  async createForTftChampion(
+    @Param('tftChampionId') tftChampionId: string,
+    @Body() dto: CreateCommentDto,
+    @Request() req,
+  ) {
+    const commentData: any = {
+      ...dto,
+      tftChampionId: new Types.ObjectId(tftChampionId),
+      newsId: undefined,
+      pcBuildId: undefined,
+      championId: undefined,
+      userId: req.user ? req.user.userId : undefined,
+      authorName: req.user ? req.user.name : 'Ẩn danh',
+    };
+    return {
+      status: 'success',
+      data: await this.commentsService.create(commentData),
+    };
+  }
+
+  @ApiOperation({ summary: 'Create a new comment for a WR champion' })
+  @ApiResponse({ status: 201, description: 'Comment created successfully' })
+  @ApiResponse({ status: 400, description: 'Bad request' })
+  @Post('/wr-champion/:wrChampionId')
+  async createForWrChampion(
+    @Param('wrChampionId') wrChampionId: string,
+    @Body() dto: CreateCommentDto,
+    @Request() req,
+  ) {
+    const commentData: any = {
+      ...dto,
+      wrChampionId: new Types.ObjectId(wrChampionId),
+      newsId: undefined,
+      pcBuildId: undefined,
+      championId: undefined,
+      tftChampionId: undefined,
       userId: req.user ? req.user.userId : undefined,
       authorName: req.user ? req.user.name : 'Ẩn danh',
     };

@@ -63,4 +63,4 @@ export class WrChampionBuildDto {
 
   @ApiProperty({ description: 'Build source URL' })
   sourceUrl: string;
-} 
+}

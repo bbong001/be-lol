@@ -1,4 +1,8 @@
-import { Injectable, NotFoundException, ForbiddenException } from '@nestjs/common';
+import {
+  Injectable,
+  NotFoundException,
+  ForbiddenException,
+} from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import {
@@ -93,21 +97,19 @@ export class PcBuildService {
     userId: string,
   ): Promise<PCBuild> {
     const build = await this.pcBuildModel.findById(id);
-    
+
     if (!build) {
       throw new NotFoundException(`PC Build with ID ${id} not found`);
     }
 
     if (build.user.toString() !== userId) {
-      throw new ForbiddenException('You are not authorized to update this build');
+      throw new ForbiddenException(
+        'You are not authorized to update this build',
+      );
     }
 
     const updatedBuild = await this.pcBuildModel
-      .findByIdAndUpdate(
-        id,
-        { $set: updatePCBuildDto },
-        { new: true }
-      )
+      .findByIdAndUpdate(id, { $set: updatePCBuildDto }, { new: true })
       .populate('user', 'name')
       .lean();
 
@@ -116,13 +118,15 @@ export class PcBuildService {
 
   async deleteBuild(id: string, userId: string): Promise<void> {
     const build = await this.pcBuildModel.findById(id);
-    
+
     if (!build) {
       throw new NotFoundException(`PC Build with ID ${id} not found`);
     }
 
     if (build.user.toString() !== userId) {
-      throw new ForbiddenException('You are not authorized to delete this build');
+      throw new ForbiddenException(
+        'You are not authorized to delete this build',
+      );
     }
 
     await this.pcBuildModel.findByIdAndDelete(id);

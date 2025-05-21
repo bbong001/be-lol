@@ -99,11 +99,11 @@ async function crawlChampionDetails(
 ) {
   try {
     console.log(`Crawling champion details from ${championUrl}...`);
-    
+
     const response = await axios.get(championUrl);
     const html = response.data;
     const $ = cheerio.load(html);
-    
+
     // Extract champion name and title
     let championName = $('h1.wf-page-header__champion-name').text().trim();
     if (!championName) {
@@ -111,28 +111,29 @@ async function crawlChampionDetails(
     }
     if (!championName) {
       // Extract from URL if not found in HTML
-      championName = championUrl
-        .split('/')
-        .pop()
-        ?.split('-')
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ') || 'Unknown Champion';
+      championName =
+        championUrl
+          .split('/')
+          .pop()
+          ?.split('-')
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(' ') || 'Unknown Champion';
     }
-    
+
     const championTitle = $('.wf-page-header__champion-title').text().trim();
-    
+
     console.log(`Crawling details for ${championName} - ${championTitle}`);
-    
+
     // Save HTML for debugging
     saveHtmlForDebug(html, championName);
-    
+
     // Extract roles
     const roles: string[] = [];
     $('.wf-page-header__champion-roles span').each((i, el) => {
       const role = $(el).text().trim();
       if (role) roles.push(role);
     });
-    
+
     // If no roles found via spans, try direct text
     if (roles.length === 0) {
       const rolesText = $('.wf-page-header__champion-roles').text().trim();
@@ -143,7 +144,7 @@ async function crawlChampionDetails(
         });
       }
     }
-    
+
     // If still no roles, try to infer from other content
     if (roles.length === 0) {
       if (html.includes('Baron Lane') || html.includes('Solo Lane')) {
@@ -162,19 +163,20 @@ async function crawlChampionDetails(
         roles.push('Support');
       }
     }
-    
+
     // Default role if none found
     if (roles.length === 0) {
       roles.push('Unknown Role');
     }
-    
+
     // Extract champion description
     let description = $('.wf-champion-lore').text().trim();
     if (!description) {
-      description = $('.wf-champion-description').text().trim() ||
+      description =
+        $('.wf-champion-description').text().trim() ||
         'No description available';
     }
-    
+
     // Extract stats
     const stats: ChampionStats = {
       health: 0,
@@ -184,27 +186,33 @@ async function crawlChampionDetails(
       attackSpeed: 0,
       moveSpeed: 0,
     };
-    
+
     // Try different selectors for stats
     $('.wf-champion-stats .wf-stat').each((i, el) => {
       const statName = $(el).find('.wf-stat__name').text().trim();
       const statValue = $(el).find('.wf-stat__value').text().trim();
-      
+
       if (statName && statValue) {
         const numValue = parseFloat(statValue);
-        
+
         if (statName.includes('Health') && !statName.includes('Regen')) {
           stats.health = numValue || 0;
         } else if (statName.includes('Armor')) {
           stats.armor = numValue || 0;
-        } else if (statName.includes('Magic Resist') ||
-          statName.includes('MR')) {
+        } else if (
+          statName.includes('Magic Resist') ||
+          statName.includes('MR')
+        ) {
           stats.magicResist = numValue || 0;
-        } else if (statName.includes('Attack Damage') ||
-          statName.includes('AD')) {
+        } else if (
+          statName.includes('Attack Damage') ||
+          statName.includes('AD')
+        ) {
           stats.attackDamage = numValue || 0;
-        } else if (statName.includes('Attack Speed') ||
-          statName.includes('AS')) {
+        } else if (
+          statName.includes('Attack Speed') ||
+          statName.includes('AS')
+        ) {
           stats.attackSpeed = numValue || 0;
         } else if (statName.includes('Move Speed') || statName.includes('MS')) {
           stats.moveSpeed = numValue || 0;
@@ -213,28 +221,34 @@ async function crawlChampionDetails(
         }
       }
     });
-    
+
     // Try alternative stats layout
     if (stats.health === 0) {
       $('.wf-champion-stats div').each((i, el) => {
         const text = $(el).text().trim();
         if (!text.includes(':')) return;
-        
+
         const [statName, statValue] = text.split(':').map((s) => s.trim());
         const numValue = parseFloat(statValue);
-        
+
         if (statName.includes('Health') && !statName.includes('Regen')) {
           stats.health = numValue || 630;
         } else if (statName.includes('Armor')) {
           stats.armor = numValue || 36;
-        } else if (statName.includes('Magic Resist') ||
-          statName.includes('MR')) {
+        } else if (
+          statName.includes('Magic Resist') ||
+          statName.includes('MR')
+        ) {
           stats.magicResist = numValue || 32;
-        } else if (statName.includes('Attack Damage') ||
-          statName.includes('AD')) {
+        } else if (
+          statName.includes('Attack Damage') ||
+          statName.includes('AD')
+        ) {
           stats.attackDamage = numValue || 60;
-        } else if (statName.includes('Attack Speed') ||
-          statName.includes('AS')) {
+        } else if (
+          statName.includes('Attack Speed') ||
+          statName.includes('AS')
+        ) {
           stats.attackSpeed = numValue || 0.7;
         } else if (statName.includes('Move Speed') || statName.includes('MS')) {
           stats.moveSpeed = numValue || 340;
@@ -243,7 +257,7 @@ async function crawlChampionDetails(
         }
       });
     }
-    
+
     // Extract abilities
     const abilities = {
       passive: extractAbility($, html, 'passive', championName),
@@ -252,18 +266,18 @@ async function crawlChampionDetails(
       e: extractAbility($, html, 'e', championName),
       ultimate: extractAbility($, html, 'r', championName),
     };
-    
+
     // Extract champion images
     let imageUrl = $('.wf-page-header__champion-avatar img').attr('src') || '';
     if (!imageUrl) {
       imageUrl = $('.wf-guide__header img').attr('src') || '';
     }
-    
+
     let splashUrl = $('.wf-page-header__champion-splash img').attr('src') || '';
     if (!splashUrl) {
       splashUrl = imageUrl;
     }
-    
+
     // Extract recommended items
     const recommendedItems: string[] = [];
     $('.wf-item__name').each((i, el) => {
@@ -272,13 +286,13 @@ async function crawlChampionDetails(
         recommendedItems.push(itemName);
       }
     });
-    
+
     // Extract current patch
     let patch = $('.wf-page-header__patch').text().trim();
     if (!patch) {
       patch = '14.0.0'; // Default patch if not found
     }
-    
+
     return {
       name: championName,
       title: championTitle,
@@ -339,60 +353,70 @@ function extractAbility(
       cost: [0],
     },
   };
-  
+
   // For Aatrox, set default abilities
   if (championName === 'Aatrox') {
     defaultAbilities.passive = {
       name: 'Deathbringer Stance',
-      description: "Aatrox periodically empowers his next attack to deal bonus damage and heal him based on the target's max health.",
-      imageUrl: 'https://www.wildriftfire.com/static/img/champ-abilities/aatrox-passive.png',
+      description:
+        "Aatrox periodically empowers his next attack to deal bonus damage and heal him based on the target's max health.",
+      imageUrl:
+        'https://www.wildriftfire.com/static/img/champ-abilities/aatrox-passive.png',
     };
     defaultAbilities.q = {
       name: 'The Darkin Blade',
-      description: 'Aatrox slams his greatsword, dealing damage. He can cast this ability two more times, each one hitting a different area.',
-      imageUrl: 'https://www.wildriftfire.com/static/img/champ-abilities/aatrox-q.png',
+      description:
+        'Aatrox slams his greatsword, dealing damage. He can cast this ability two more times, each one hitting a different area.',
+      imageUrl:
+        'https://www.wildriftfire.com/static/img/champ-abilities/aatrox-q.png',
       cooldown: [14, 12, 10, 8],
       cost: [0, 0, 0, 0],
     };
     defaultAbilities.w = {
       name: 'Infernal Chains',
-      description: "Aatrox smashes the ground, dealing damage and slowing the first enemy hit. Champions and large monsters have to leave the impact area quickly or they're dragged back to the center.",
-      imageUrl: 'https://www.wildriftfire.com/static/img/champ-abilities/aatrox-w.png',
+      description:
+        "Aatrox smashes the ground, dealing damage and slowing the first enemy hit. Champions and large monsters have to leave the impact area quickly or they're dragged back to the center.",
+      imageUrl:
+        'https://www.wildriftfire.com/static/img/champ-abilities/aatrox-w.png',
       cooldown: [14, 13, 12, 11],
       cost: [0, 0, 0, 0],
     };
     defaultAbilities.e = {
       name: 'Umbral Dash',
-      description: 'Aatrox dashes in the target direction, gaining attack damage. This ability can store up to 2 charges.',
-      imageUrl: 'https://www.wildriftfire.com/static/img/champ-abilities/aatrox-e.png',
+      description:
+        'Aatrox dashes in the target direction, gaining attack damage. This ability can store up to 2 charges.',
+      imageUrl:
+        'https://www.wildriftfire.com/static/img/champ-abilities/aatrox-e.png',
       cooldown: [9, 8, 7, 6],
       cost: [0, 0, 0, 0],
     };
     defaultAbilities.r = {
       name: 'World Ender',
-      description: 'Aatrox unleashes his demonic form, gaining attack damage, increased healing, and movement speed. This effect refreshes on takedown.',
-      imageUrl: 'https://www.wildriftfire.com/static/img/champ-abilities/aatrox-r.png',
+      description:
+        'Aatrox unleashes his demonic form, gaining attack damage, increased healing, and movement speed. This effect refreshes on takedown.',
+      imageUrl:
+        'https://www.wildriftfire.com/static/img/champ-abilities/aatrox-r.png',
       cooldown: [120, 100, 80],
       cost: [0, 0, 0],
     };
   }
-  
+
   try {
     let name = '';
     let description = '';
     let imageUrl = '';
     let cooldown: number[] = [];
     let cost: number[] = [];
-    
+
     // Find the ability section based on key
     const abilityKeyUpper = abilityKey.toUpperCase();
     const isPassive = abilityKey === 'passive';
-    
+
     // Try different selectors based on the website structure
     const abilitySection = isPassive
       ? $('.wf-ability[data-ability="passive"]')
       : $(`.wf-ability[data-ability="${abilityKeyUpper}"]`);
-      
+
     if (abilitySection.length > 0) {
       name = abilitySection.find('.wf-ability__name').text().trim();
       description = abilitySection
@@ -400,7 +424,7 @@ function extractAbility(
         .text()
         .trim();
       imageUrl = abilitySection.find('img').attr('src') || '';
-      
+
       // Extract cooldown and costs if not passive
       if (!isPassive) {
         const cooldownText = abilitySection
@@ -412,14 +436,14 @@ function extractAbility(
             .split('/')
             .map((cd) => parseFloat(cd.trim())) || [0];
         }
-        
+
         const costText = abilitySection.find('.wf-ability__cost').text().trim();
         if (costText) {
           cost = costText.split('/').map((c) => parseFloat(c.trim())) || [0];
         }
       }
     }
-    
+
     // Return available data or fall back to defaults
     return {
       name: name || defaultAbilities[abilityKey].name,
@@ -428,12 +452,11 @@ function extractAbility(
       ...(isPassive
         ? {}
         : {
-            cooldown: cooldown.length > 0
-              ? cooldown
-              : defaultAbilities[abilityKey].cooldown,
-            cost: cost.length > 0
-              ? cost
-              : defaultAbilities[abilityKey].cost,
+            cooldown:
+              cooldown.length > 0
+                ? cooldown
+                : defaultAbilities[abilityKey].cooldown,
+            cost: cost.length > 0 ? cost : defaultAbilities[abilityKey].cost,
           }),
     };
   } catch (error) {
@@ -444,38 +467,38 @@ function extractAbility(
 
 async function bootstrap() {
   const app = await NestFactory.createApplicationContext(AppModule);
-  
+
   try {
     console.log('Starting to crawl Wild Rift champion details...');
-    
+
     // Get the services and models
     const wildriftService = app.get(WildriftService);
     const championModel = app.get(getModelToken('WrChampion'));
-    
+
     // Get all champions from database
     const championsResult = await wildriftService.findAllChampions({
       limit: 1000,
     });
     const champions = championsResult.items;
-    
+
     console.log(`Found ${champions.length} champions in the database.`);
-    
+
     if (champions.length === 0) {
       console.log('No champions found. Crawling Aatrox as example...');
-      
+
       // Crawl Aatrox as an example if no champions in database
       const championUrl = 'https://www.wildriftfire.com/guide/aatrox';
       const championDetails = await crawlChampionDetails(championUrl);
-      
+
       if (championDetails) {
         console.log(`Successfully crawled data for ${championDetails.name}`);
-        
+
         await championModel.findOneAndUpdate(
           { name: championDetails.name },
           championDetails,
           { upsert: true, new: true },
         );
-        
+
         console.log(`Saved ${championDetails.name} to database`);
       } else {
         console.error('Failed to crawl Aatrox data');
@@ -484,14 +507,14 @@ async function bootstrap() {
       // Crawl details for all champions
       const limit = process.argv[2] ? parseInt(process.argv[2]) : undefined;
       const championsToCrawl = limit ? champions.slice(0, limit) : champions;
-      
+
       console.log(
         `Will crawl details for ${championsToCrawl.length} champions...`,
       );
-      
+
       let successCount = 0;
       let errorCount = 0;
-      
+
       for (const champion of championsToCrawl) {
         try {
           const championNameForUrl = champion.name
@@ -499,23 +522,23 @@ async function bootstrap() {
             .replace(/[.']/g, '')
             .toLowerCase();
           const url = `https://www.wildriftfire.com/guide/${championNameForUrl}`;
-          
+
           console.log(`Crawling details for ${champion.name} from ${url}`);
-          
+
           // Add a small delay to avoid overwhelming the server
           await new Promise((resolve) => setTimeout(resolve, 1500));
-          
+
           const championDetails = await crawlChampionDetails(url);
-          
+
           if (championDetails) {
             console.log(`Successfully crawled data for ${champion.name}`);
-            
+
             await championModel.findOneAndUpdate(
               { _id: champion._id },
               championDetails,
               { new: true },
             );
-            
+
             console.log(`Updated ${champion.name} in database`);
             successCount++;
           } else {
@@ -527,16 +550,16 @@ async function bootstrap() {
           errorCount++;
         }
       }
-      
+
       console.log(
         `Finished crawling champion details! Success: ${successCount}, Errors: ${errorCount}`,
       );
     }
-    
+
     // Verify data by getting a count
     const totalChampions = await championModel.countDocuments();
     console.log(`Total champions in database: ${totalChampions}`);
-    
+
     // Check one champion as example
     const aatrox = await championModel.findOne({ name: 'Aatrox' }).lean();
     if (aatrox) {
