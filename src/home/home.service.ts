@@ -16,6 +16,11 @@ export class HomeService {
   ) {}
 
   async getHomePageData() {
+    // TODO: Consider implementing cache here for better performance
+    // const cacheKey = 'home-page-data';
+    // const cachedData = await this.cacheService.get(cacheKey);
+    // if (cachedData) return cachedData;
+
     // Get latest news (limit to 5)
     const latestNews = await this.newsService.findAll(5, 1);
 
@@ -27,7 +32,7 @@ export class HomeService {
     const randomTftChampions = await this.getRandomTftChampions(5);
     const randomWrChampions = await this.getRandomWildriftChampions(5);
 
-    return {
+    const result = {
       status: 'success',
       data: {
         latestNews,
@@ -37,6 +42,11 @@ export class HomeService {
         randomWrChampions,
       },
     };
+
+    // TODO: Cache the result with expiration
+    // await this.cacheService.set(cacheKey, result, 300); // 5 minutes
+
+    return result;
   }
 
   // Helper method to get random League of Legends champions
@@ -45,8 +55,9 @@ export class HomeService {
       // Champions service has findAll method that returns paginated response
       const championsResponse = await this.championsService.findAll(1, 100);
       return this.getRandomItems(championsResponse.data, count);
-    } catch (_) {
+    } catch (error) {
       // Fallback to empty array if method fails
+      console.error('Error fetching LOL champions:', error);
       return [];
     }
   }
@@ -57,8 +68,9 @@ export class HomeService {
       // TFT service has findAllChampions method that returns an array of champions
       const champions = await this.tftService.findAllChampions();
       return this.getRandomItems(champions, count);
-    } catch (_) {
+    } catch (error) {
       // Fallback to empty array if method fails
+      console.error('Error fetching TFT champions:', error);
       return [];
     }
   }
@@ -72,8 +84,9 @@ export class HomeService {
         page: 1,
       });
       return this.getRandomItems(response.items, count);
-    } catch (_) {
+    } catch (error) {
       // Fallback to empty array if method fails
+      console.error('Error fetching Wild Rift champions:', error);
       return [];
     }
   }
@@ -81,8 +94,8 @@ export class HomeService {
   // Utility to get random items from an array
   private getRandomItems(items: any[], count: number) {
     if (!items || items.length === 0) return [];
-    
+
     const shuffled = [...items].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, Math.min(count, items.length));
   }
-} 
+}

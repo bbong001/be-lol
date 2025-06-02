@@ -5,11 +5,29 @@ export type ChampionDocument = Champion & Document;
 
 @Schema()
 export class Ability {
-  @Prop({ required: true })
-  name: string;
+  @Prop({
+    type: {
+      en: String,
+      vi: String,
+    },
+    required: true,
+  })
+  name: {
+    en: string;
+    vi: string;
+  };
 
-  @Prop({ required: true })
-  description: string;
+  @Prop({
+    type: {
+      en: String,
+      vi: String,
+    },
+    required: true,
+  })
+  description: {
+    en: string;
+    vi: string;
+  };
 
   @Prop()
   imageUrl: string;
@@ -17,14 +35,31 @@ export class Ability {
 
 @Schema()
 export class Champion {
-  @Prop({ required: true, unique: true })
-  name: string;
+  @Prop({
+    type: {
+      en: String,
+      vi: String,
+    },
+    required: true,
+  })
+  name: {
+    en: string;
+    vi: string;
+  };
 
   @Prop({ required: true, unique: true })
   id: string;
 
-  @Prop()
-  title: string;
+  @Prop({
+    type: {
+      en: String,
+      vi: String,
+    },
+  })
+  title: {
+    en: string;
+    vi: string;
+  };
 
   @Prop()
   imageUrl: string;

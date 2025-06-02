@@ -1,0 +1,1471 @@
+{
+  "timestamp": "2025-05-25T08:39:19.949Z",
+  "totalFound": 162,
+  "newItems": 0,
+  "updatedItems": 162,
+  "errors": 0,
+  "itemsByCategory": {
+    "Physical": [
+      {
+        "name": "Chempunk Chainsword",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/11/chempunk-chainsword-1.png",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Oceanid's Trident",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/11/oceanids-trident.png",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Magnetic Blaster",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/11/magnetic-blaster.png",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Talisman of Ascension",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/07/talisman-of-ascension.png",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "The Collector",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/07/the-collector.png",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Immortal Shieldbow",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/07/immortal-shieldbow-1.png",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Lord Dominik's Regards",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/12/lord-dominiks-regards.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Black Mist Scythe",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/09/blackmist-scythe.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Serpent's Fang",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/09/serpents-fang.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Hullbreaker",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/03/hullbreaker.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Divine Sunderer",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/03/divine-sunderer.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Edge of Night",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2021/12/edge-of-night.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Wit's End",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2021/07/wits-end.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Stormrazor",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2021/07/stormrazor.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Solari Chargeblade",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2021/07/solari-chargeblade.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Serylda's Grudge",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2021/07/seryldas-grudge-1.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Navori Quickblades",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2021/07/navori-quickblades.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Essence Reaver",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2021/07/essence-reaver.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Muramana",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Muramana.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Umbral Glaive",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Umbral_Glaive.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Phantom Dancer",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Panthom_Dancer.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Death's Dance",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Deaths_Dance.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Maw of Malmortius",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Maw_of_Malmortius.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Trinity Force",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Trinity_Force.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Manamune",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Manamune.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Black Cleaver",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Black_Cleaver.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Mortal Reminder",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Mortal_Reminder.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Ruin - Infinity Edge",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Infinity_Edge.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Duskblade of Draktharr",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Dusk_blade_of_Draktharr.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Light - Youmuu's Ghostblade",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Youmuu_sGhostblade.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Runaan's Hurricane",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Runaan_sHurricane.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Ruin - Sterak's Gage",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Sterak_sGage.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Guardian Angel",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Guardian_Angel.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Rapid Firecannon",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/RapidFire_cannon.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Ruin - Blade of the Ruined King",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Blade_of_the_RuinedKing.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Statikk Shiv",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Statikk_Shiv.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Nashor's Tooth",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Nashor_sTooth.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Bloodthirster",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Blood_thirster.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Nashor's Talon",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/11/nashors-talon.png",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Targon's Buckler",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/09/targons-buckler.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Harrowing Crescent",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/09/harrowing-crescent.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Seeker's Armguard",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2021/07/seekers-armguard.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Caulfields Warhammer",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Caulfield_sWarhammer.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Stinger",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Stinger.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Phage",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Phage.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Executioners Calling",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Executioner_sCalling.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Last Whisper",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Last_Whisper.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Recurve Bow",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Recurve_Bow.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Cloak Of Agility",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Cloak_of_Agility.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "BF Sword",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/BF_sword.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Serrated Dirk",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Serrated_Dirk.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Kircheis Shard",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Kircheis_Shard.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Zeal",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Zeal.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Vampiric Scepter",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Vampiric_Scepter.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Spectral Sickle",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/09/spectral-sickle.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Relic Shield",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/09/relic-shield.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Dagger",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Dagger.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Brawler's Gloves",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Brawler_sGloves.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Long Sword",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Long_Sword.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Crown of the Shattered Queen",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/11/crown-of-the-shattered-queen.png",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Light - Horizon Focus",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/12/horizon-focus.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Imperial Mandate",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/09/imperial-mandate.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Cosmic Drive",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/09/cosmic-drive.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Light - Riftmaker",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/09/riftmaker.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Banshee's Veil",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2021/12/banshees-veil.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Staff of Flowing Waters",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2021/07/staff-of-flowing-waters.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Crystalline Reflector",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2021/07/crystalline-reflector.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Light - Infinity Orb",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Infinity_Orb.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Awakened Soulstealer",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Awakened_Soul_stealer.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Athene's Unholy Grail",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Athene_sHolyGrail.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Light - Harmonic Echo",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Harmonic_Echo.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Hextech Gunblade",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Hextech_Gunblade.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Ardent Censer",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Ardent_Censer.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Archangel's Staff",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Archangel_sstaff.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Lich Bane",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Lich_Bane.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Rod of Ages",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/RodofAges.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Liandry's Torment",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Liandry_sTorment.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Rylai's Crystal Scepter",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Rylai_sCrystalScepter.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Ruin - Rabadon's Deathcap",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Rabadon_sDeathcap.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Void Staff",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Void_Staff.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Morellonomicon",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Morellonomicon.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Luden's Echo",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Luden_sEcho.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Mejai's Soulstealer",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/11/mejais-soulstealer-1.png",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Ring of Revelation",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/11/ring-of-revelation.png",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Prophet's Pendant",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2021/07/prophets-pendant.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Void Amethyst",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Void_Amethyst.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Oblivion Orb",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Oblivion_Orb.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Hextech Revolver",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Hextech_Revolver.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Sheen",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Sheen.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Haunting Guise",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Haunting_Guise.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Needlessly Large Rod",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Needlessly_Large_Rod.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Blasting Wand",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Blasting_Wand.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Fiendish Codex",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Fiendish_Codex.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Lost Chapter",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Lost_Chapter.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Aether Wisp",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Aether_Wisp.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Tear of the Goddess",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Tear_of_the_Goddess.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Amplifying Tome",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/amplifying-tome.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Sapphire Crystal",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/sapphire-crystal.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Ruin - Amaranth Twinguard",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/03/amaranth-twinguard.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Searing Crown",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/03/searing-crown.png",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Mantle of the Twelfth Hour",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/03/mantle-of-the-twelfth.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Light - Dawnshroud",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/01/dawnshroud.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Bulwark of the Mountain",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/09/bulwark-of-the-mountain.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Fimbulwinter",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/08/fimbulwinter.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Hextech Megadrive",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2021/12/hextech-megadrive.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Ixtali Seedjar",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2021/12/ixtal-seedjar.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Frozen Heart",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2021/03/Frozen_Heart.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Winter's Approach",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Winter_sApproach.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Protector's Vow",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Protector_sVow.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Zeke's Convergence",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Zeke_sConvergence.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Abyssal Mask",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Abyssal_Mask.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Force Of Nature",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Force_Of_Nature.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Dead Man's Plate",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Deadman_sPlate.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Iceborn Gauntlet",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Iceborn_Gauntlet.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Ruin - Warmog's Armor",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Warmog_sArmor.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Frozen Mallet",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Frozen_Mallet.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Thornmail",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Thornmail.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Randuin's Omen",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Randuin_sOmen.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Spirit Visage",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Spirit_Visage.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Sunfire Aegis",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Sunfire_Aegis.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Surging Scales",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/11/surging-scales.png",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Winged Moonplate",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2021/03/winged-moonplate.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Glacial Shroud",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/GlacialShroud.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Negatron Cloak",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/NegatronCloak.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Hexdrinker",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Hexdrinker.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Jaurim's Fist",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Jaurim_sFist.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Bramble Vest",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/BrambleVest.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Chain Vest",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/ChainVest.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Catalyst of Aeons",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/CatalystofAeons.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Warden's Mail",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Warden_sMail.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Giant's Belt",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Giant_sBelt.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Kindlegem",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Kindlegem.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Spectre's Cowl",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Spectre_sCowl.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Bami's Cinder",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Bami_sCinder.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Ancient Coin",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/07/ancient-coin.png",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Null-Magic Mantle",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Null-Magic-Mantle.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Cloth Armor",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Cloth-Armor.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      },
+      {
+        "name": "Ruby Crystal",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/RubyCrystal.jpg",
+        "category": "Physical",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Physical item",
+        "stats": {}
+      }
+    ],
+    "Boots": [
+      {
+        "name": "Boots of Dynamism",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/07/boots-of-dynamism-1.png",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Berserker's Greaves",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/07/berserkers-greaves-1.png",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Boots of Mana",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/07/boots-of-mana-1.png",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Ionian Boots of Lucidity",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Ionian_Boots_of_Lucidity.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Plated Steelcaps",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Plated_Steel_Caps.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Mercury's Treads",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Mercury_sTreads.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Boots of Furor",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Boots_of_Swiftness.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Gluttonous Greaves",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Gluttonous_Greaves.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Revival Enchant",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2023/07/revival-enchant.png",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Meteor Enchant",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/12/meteor-enchant.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Protect Enchant",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/12/protect-enchant.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Veil Enchant",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/07/veil-enchant-1.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Repulsor Enchant",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/07/repulsor-enchant-1.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Magnetron Enchant",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2022/07/magnetron-enchant-2.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Teleport Enchant",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Teleport_Enchant.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Shadows Enchant",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Shadows_Enchant.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Redeeming Enchant",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Redemption_Enchant.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Stoneplate Enchant",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Stoneplate_Enchant.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Quicksilver Enchant",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Quicksilver_Enchant.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Protobelt Enchant",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Protobelt_Enchant.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Glorious Enchant",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Glorious_Enchant.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Locket Enchant",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Locket_Enchant.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Stasis Enchant",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/Stasis_Enchant.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      },
+      {
+        "name": "Boots of Speed",
+        "imageUrl": "https://lolwildriftbuild.com/wp-content/uploads/2020/10/boots-of-speed.jpg",
+        "category": "Boots",
+        "tier": "upgraded",
+        "price": 0,
+        "description": "Boots item",
+        "stats": {}
+      }
+    ]
+  }
+}

@@ -3,6 +3,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { WrChampion } from './schemas/wr-champion.schema';
 import { WrItem } from './schemas/wr-item.schema';
+import { WrItemsEn } from './schemas/wr-item-en.schema';
 import { WrRune } from './schemas/wr-rune.schema';
 import { WrGuide } from './schemas/wr-guide.schema';
 import { WrChampionBuild } from './schemas/wr-champion-build.schema';
@@ -20,11 +21,17 @@ export class WildriftService {
   constructor(
     @InjectModel(WrChampion.name) private wrChampionModel: Model<WrChampion>,
     @InjectModel(WrItem.name) private wrItemModel: Model<WrItem>,
+    @InjectModel(WrItemsEn.name) private wrItemEnModel: Model<WrItemsEn>,
     @InjectModel(WrRune.name) private wrRuneModel: Model<WrRune>,
     @InjectModel(WrGuide.name) private wrGuideModel: Model<WrGuide>,
     @InjectModel(WrChampionBuild.name)
     private wrChampionBuildModel: Model<WrChampionBuild>,
   ) {}
+
+  // Helper method to get correct item model based on language
+  private getItemModel(lang: string = 'vi') {
+    return lang === 'en' ? this.wrItemEnModel : this.wrItemModel;
+  }
 
   // Champions methods
   async findAllChampions(
@@ -38,7 +45,11 @@ export class WildriftService {
       sortDirection = 'asc',
     } = paginationDto || {};
     const skip = (page - 1) * limit;
-    const query = role ? { roles: { $in: [role] } } : {};
+
+    const query: any = {}; // Remove lang filter since existing data doesn't have it
+    if (role) {
+      query.roles = { $in: [role] };
+    }
 
     const sort = sortBy
       ? { [sortBy]: sortDirection === 'asc' ? 1 : -1 }
@@ -82,12 +93,12 @@ export class WildriftService {
 
     const [champions, total] = await Promise.all([
       this.wrChampionModel
-        .find()
+        .find({}) // Remove lang filter
         .sort(sort as any)
         .skip(skip)
         .limit(limit)
         .lean(),
-      this.wrChampionModel.countDocuments(),
+      this.wrChampionModel.countDocuments({}),
     ]);
 
     const championIds = champions.map((champion) => champion._id.toString());
@@ -127,15 +138,31 @@ export class WildriftService {
   }
 
   async findOneChampion(id: string): Promise<WrChampion> {
-    const champion = await this.wrChampionModel.findById(id).lean();
+    const query: any = { _id: id }; // Remove lang filter
+
+    const champion = await this.wrChampionModel.findOne(query).lean();
     if (!champion) {
       throw new NotFoundException(`Wild Rift Champion with ID ${id} not found`);
     }
     return champion;
   }
 
+  async findChampionByName(name: string): Promise<WrChampion> {
+    const champion = await this.wrChampionModel
+      .findOne({ name }) // Remove lang filter
+      .lean();
+    if (!champion) {
+      throw new NotFoundException(
+        `Wild Rift Champion with name ${name} not found`,
+      );
+    }
+    return champion;
+  }
+
   async getChampionWithBuilds(id: string): Promise<any> {
-    const champion = await this.wrChampionModel.findById(id).lean();
+    const query: any = { _id: id }; // Remove lang filter
+
+    const champion = await this.wrChampionModel.findOne(query).lean();
     if (!champion) {
       throw new NotFoundException(`Wild Rift Champion with ID ${id} not found`);
     }
@@ -256,7 +283,8 @@ export class WildriftService {
   // Items methods
   async findAllItems(
     paginationDto?: PaginationDto,
-  ): Promise<PaginatedResponseDto<WrItem>> {
+    lang: string = 'vi',
+  ): Promise<PaginatedResponseDto<WrItem | WrItemsEn>> {
     const {
       page = 1,
       limit = 10,
@@ -269,14 +297,16 @@ export class WildriftService {
       ? { [sortBy]: sortDirection === 'asc' ? 1 : -1 }
       : undefined;
 
+    const itemModel = this.getItemModel(lang);
+
     const [items, total] = await Promise.all([
-      this.wrItemModel
+      itemModel
         .find()
         .sort(sort as any)
         .skip(skip)
         .limit(limit)
         .lean(),
-      this.wrItemModel.countDocuments(),
+      itemModel.countDocuments(),
     ]);
 
     const totalPages = Math.ceil(total / limit);
@@ -292,16 +322,36 @@ export class WildriftService {
     };
   }
 
-  async findOneItem(id: string): Promise<WrItem> {
-    const item = await this.wrItemModel.findById(id).lean();
+  async findOneItem(
+    id: string,
+    lang: string = 'vi',
+  ): Promise<WrItem | WrItemsEn> {
+    const itemModel = this.getItemModel(lang);
+    const item = await itemModel.findById(id).lean();
     if (!item) {
       throw new NotFoundException(`Wild Rift Item with ID ${id} not found`);
     }
     return item;
   }
 
-  async createItem(createWrItemDto: CreateWrItemDto): Promise<WrItem> {
-    const newItem = new this.wrItemModel(createWrItemDto);
+  async findItemByName(
+    name: string,
+    lang: string = 'vi',
+  ): Promise<WrItem | WrItemsEn> {
+    const itemModel = this.getItemModel(lang);
+    const item = await itemModel.findOne({ name }).lean();
+    if (!item) {
+      throw new NotFoundException(`Wild Rift Item with name ${name} not found`);
+    }
+    return item;
+  }
+
+  async createItem(
+    createWrItemDto: CreateWrItemDto,
+    lang: string = 'vi',
+  ): Promise<WrItem | WrItemsEn> {
+    const ItemModel = this.getItemModel(lang);
+    const newItem = new ItemModel(createWrItemDto);
     return newItem.save();
   }
 

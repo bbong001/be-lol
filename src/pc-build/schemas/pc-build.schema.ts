@@ -27,6 +27,9 @@ export class PCBuild {
 
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User' })
   user: User;
+
+  @Prop({ type: String, enum: ['vi', 'en'], default: 'vi' })
+  lang: string;
 }
 
 export const PCBuildSchema = SchemaFactory.createForClass(PCBuild);

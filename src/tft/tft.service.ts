@@ -7,8 +7,17 @@ import { TftComp } from './schemas/tft-comp.schema';
 import { TftAugment } from './schemas/tft-augment.schema';
 import { CreateTftChampionDto } from './dto/create-tft-champion.dto';
 import { CreateTftItemDto } from './dto/create-tft-item.dto';
+import { UpdateTftItemDto } from './dto/update-tft-item.dto';
 import { CreateTftCompDto } from './dto/create-tft-comp.dto';
 import { UpdateTftCompDto } from './dto/update-tft-comp.dto';
+import {
+  SupportedLanguage,
+  validateLanguage,
+  transformTftChampion,
+  transformTftChampions,
+  transformTftItem,
+  transformTftItems,
+} from './utils/i18n.util';
 
 @Injectable()
 export class TftService {
@@ -19,25 +28,41 @@ export class TftService {
     @InjectModel(TftAugment.name) private tftAugmentModel: Model<TftAugment>,
   ) {}
 
-  // Champions methods
-  async findAllChampions(): Promise<TftChampion[]> {
-    return this.tftChampionModel.find().lean();
+  // Champions methods with i18n support
+  async findAllChampions(lang?: string): Promise<any[]> {
+    const validatedLang: SupportedLanguage = validateLanguage(lang);
+    const champions = await this.tftChampionModel.find().lean();
+    return transformTftChampions(champions, validatedLang);
   }
 
-  async findOneChampion(id: string): Promise<TftChampion> {
+  async findOneChampion(id: string, lang?: string): Promise<any> {
+    const validatedLang: SupportedLanguage = validateLanguage(lang);
     const champion = await this.tftChampionModel.findById(id).lean();
     if (!champion) {
       throw new NotFoundException(`TFT Champion with ID ${id} not found`);
     }
-    return champion;
+    return transformTftChampion(champion, validatedLang);
   }
 
-  async findChampionByName(name: string): Promise<TftChampion> {
-    const champion = await this.tftChampionModel.findOne({ name }).lean();
+  async findChampionByName(name: string, lang?: string): Promise<any> {
+    const validatedLang: SupportedLanguage = validateLanguage(lang);
+
+    // Try to find by multilingual name first
+    const champion = await this.tftChampionModel
+      .findOne({
+        $or: [
+          { 'name.en': name },
+          { 'name.vi': name },
+          { name: name }, // fallback for old format
+        ],
+      })
+      .lean();
+
     if (!champion) {
       throw new NotFoundException(`TFT Champion with name ${name} not found`);
     }
-    return champion;
+
+    return transformTftChampion(champion, validatedLang);
   }
 
   async createChampion(
@@ -67,22 +92,66 @@ export class TftService {
     }
   }
 
-  // Items methods
-  async findAllItems(): Promise<TftItem[]> {
-    return this.tftItemModel.find().lean();
+  // Items methods with i18n support
+  async findAllItems(lang?: string): Promise<any[]> {
+    const validatedLang: SupportedLanguage = validateLanguage(lang);
+    const items = await this.tftItemModel.find().lean();
+    return transformTftItems(items, validatedLang);
   }
 
-  async findOneItem(id: string): Promise<TftItem> {
+  async findOneItem(id: string, lang?: string): Promise<any> {
+    const validatedLang: SupportedLanguage = validateLanguage(lang);
     const item = await this.tftItemModel.findById(id).lean();
     if (!item) {
       throw new NotFoundException(`TFT Item with ID ${id} not found`);
     }
-    return item;
+    return transformTftItem(item, validatedLang);
+  }
+
+  async findItemByName(name: string, lang?: string): Promise<any> {
+    const validatedLang: SupportedLanguage = validateLanguage(lang);
+
+    // Try to find by multilingual name first
+    const item = await this.tftItemModel
+      .findOne({
+        $or: [
+          { 'name.en': name },
+          { 'name.vi': name },
+          { name: name }, // fallback for old format
+        ],
+      })
+      .lean();
+
+    if (!item) {
+      throw new NotFoundException(`TFT Item with name ${name} not found`);
+    }
+
+    return transformTftItem(item, validatedLang);
   }
 
   async createItem(createTftItemDto: CreateTftItemDto): Promise<TftItem> {
     const newItem = new this.tftItemModel(createTftItemDto);
     return newItem.save();
+  }
+
+  async updateItem(
+    id: string,
+    updateTftItemDto: UpdateTftItemDto,
+  ): Promise<TftItem> {
+    const updatedItem = await this.tftItemModel
+      .findByIdAndUpdate(id, updateTftItemDto, { new: true })
+      .lean();
+    if (!updatedItem) {
+      throw new NotFoundException(`TFT Item with ID ${id} not found`);
+    }
+    return updatedItem;
+  }
+
+  async removeItem(id: string): Promise<void> {
+    const result = await this.tftItemModel.deleteOne({ _id: id });
+    if (result.deletedCount === 0) {
+      throw new NotFoundException(`TFT Item with ID ${id} not found`);
+    }
   }
 
   // Comps methods
@@ -118,5 +187,12 @@ export class TftService {
       throw new NotFoundException(`TFT Comp with ID ${id} not found`);
     }
     return updatedComp;
+  }
+
+  async removeComp(id: string): Promise<void> {
+    const result = await this.tftCompModel.deleteOne({ _id: id });
+    if (result.deletedCount === 0) {
+      throw new NotFoundException(`TFT Comp with ID ${id} not found`);
+    }
   }
 }

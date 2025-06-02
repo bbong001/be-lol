@@ -246,7 +246,9 @@ async function fixChampionImages(
 
 async function bootstrap() {
   const logger = setupLogger();
-  logger.log('Bắt đầu cập nhật hình ảnh cho tất cả champion bằng Data Dragon API...');
+  logger.log(
+    'Bắt đầu cập nhật hình ảnh cho tất cả champion bằng Data Dragon API...',
+  );
 
   const app = await NestFactory.createApplicationContext(AppModule);
   const wrChampionModel = app.get(getModelToken('WrChampion'));
@@ -263,7 +265,11 @@ async function bootstrap() {
     // Xử lý từng champion
     for (const champion of champions) {
       logger.log(`\nXử lý ${champion.name}...`);
-      const updated = await fixChampionImages(champion, logger, wrChampionModel);
+      const updated = await fixChampionImages(
+        champion,
+        logger,
+        wrChampionModel,
+      );
       if (updated) {
         championsUpdated++;
       }
@@ -281,4 +287,4 @@ async function bootstrap() {
   }
 }
 
-bootstrap(); 
+bootstrap();

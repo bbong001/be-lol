@@ -4,6 +4,7 @@ import {
   IsOptional,
   IsArray,
   IsBoolean,
+  IsEnum,
 } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
@@ -48,4 +49,15 @@ export class CreatePCBuildDto {
   @IsBoolean()
   @IsOptional()
   isPublic?: boolean;
+
+  @ApiProperty({
+    example: 'vi',
+    enum: ['vi', 'en'],
+    description: 'Language of the PC build (vi for Vietnamese, en for English)',
+    required: false,
+    default: 'vi',
+  })
+  @IsEnum(['vi', 'en'])
+  @IsOptional()
+  lang?: string;
 }

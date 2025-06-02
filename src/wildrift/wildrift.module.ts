@@ -4,6 +4,8 @@ import { WildriftController } from './wildrift.controller';
 import { WildriftService } from './wildrift.service';
 import { WrChampion, WrChampionSchema } from './schemas/wr-champion.schema';
 import { WrItem, WrItemSchema } from './schemas/wr-item.schema';
+import { WrItemsEn, WrItemEnSchema } from './schemas/wr-item-en.schema';
+
 import { WrRune, WrRuneSchema } from './schemas/wr-rune.schema';
 import { WrGuide, WrGuideSchema } from './schemas/wr-guide.schema';
 import {
@@ -20,6 +22,7 @@ import { CommentsModule } from '../comments/comments.module';
       { name: WrRune.name, schema: WrRuneSchema },
       { name: WrGuide.name, schema: WrGuideSchema },
       { name: WrChampionBuild.name, schema: WrChampionBuildSchema },
+      { name: WrItemsEn.name, schema: WrItemEnSchema },
     ]),
     CommentsModule,
   ],

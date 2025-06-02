@@ -10,6 +10,8 @@ import {
   PCComponentDocument,
 } from './schemas/pc-component.schema';
 import { PCBuild, PCBuildDocument } from './schemas/pc-build.schema';
+import { CreatePCBuildDto } from './dtos/create-pc-build.dto';
+import { UpdatePCBuildDto } from './dtos/update-pc-build.dto';
 
 @Injectable()
 export class PcBuildService {
@@ -36,21 +38,24 @@ export class PcBuildService {
     return component;
   }
 
-  // PC Build methods
+  // PC Build methods with language support
   async findAllBuilds(
     limit = 10,
     page = 1,
+    lang = 'vi',
   ): Promise<{ builds: PCBuild[]; total: number }> {
     const skip = (page - 1) * limit;
+    const filter = { isPublic: true, lang };
+
     const [builds, total] = await Promise.all([
       this.pcBuildModel
-        .find({ isPublic: true })
+        .find(filter)
         .sort({ createdAt: -1 })
         .skip(skip)
         .limit(limit)
         .populate('user', 'name')
         .lean(),
-      this.pcBuildModel.countDocuments({ isPublic: true }),
+      this.pcBuildModel.countDocuments(filter),
     ]);
 
     return { builds, total };
@@ -69,32 +74,59 @@ export class PcBuildService {
     return build;
   }
 
-  async findUserBuilds(userId: string): Promise<PCBuild[]> {
-    return this.pcBuildModel
-      .find({ user: userId })
-      .sort({ createdAt: -1 })
-      .lean();
+  async findUserBuilds(userId: string, lang?: string): Promise<PCBuild[]> {
+    const filter: any = { user: userId };
+    if (lang) {
+      filter.lang = lang;
+    }
+
+    return this.pcBuildModel.find(filter).sort({ createdAt: -1 }).lean();
   }
 
-  async createBuild(createPCBuildDto: any, userId: string): Promise<PCBuild> {
+  async findByTag(
+    tag: string,
+    limit = 10,
+    page = 1,
+    lang = 'vi',
+  ): Promise<{ builds: PCBuild[]; total: number }> {
+    const skip = (page - 1) * limit;
+    const filter = { tags: tag, isPublic: true, lang };
+
+    const [builds, total] = await Promise.all([
+      this.pcBuildModel
+        .find(filter)
+        .sort({ createdAt: -1 })
+        .skip(skip)
+        .limit(limit)
+        .populate('user', 'name')
+        .lean(),
+      this.pcBuildModel.countDocuments(filter),
+    ]);
+
+    return { builds, total };
+  }
+
+  async createBuild(
+    createPCBuildDto: CreatePCBuildDto,
+    userId: string,
+  ): Promise<PCBuild> {
     const build = new this.pcBuildModel({
       ...createPCBuildDto,
       user: userId,
+      lang: createPCBuildDto.lang || 'vi',
     });
     await build.save();
-    return (
-      this.pcBuildModel
-        .findById(build._id)
-        .populate('user', 'name')
-        // .populate('components.component')
-        .lean()
-    );
+    return this.pcBuildModel
+      .findById(build._id)
+      .populate('user', 'name')
+      .lean();
   }
 
   async updateBuild(
     id: string,
-    updatePCBuildDto: any,
+    updatePCBuildDto: UpdatePCBuildDto,
     userId: string,
+    userRoles?: string[],
   ): Promise<PCBuild> {
     const build = await this.pcBuildModel.findById(id);
 
@@ -102,7 +134,11 @@ export class PcBuildService {
       throw new NotFoundException(`PC Build with ID ${id} not found`);
     }
 
-    if (build.user.toString() !== userId) {
+    // Admin có thể update bất kỳ build nào, user chỉ có thể update build của mình
+    const isAdmin = userRoles && userRoles.includes('admin');
+    const isOwner = build.user.toString() === userId;
+
+    if (!isAdmin && !isOwner) {
       throw new ForbiddenException(
         'You are not authorized to update this build',
       );
@@ -116,19 +152,50 @@ export class PcBuildService {
     return updatedBuild;
   }
 
-  async deleteBuild(id: string, userId: string): Promise<void> {
+  async deleteBuild(
+    id: string,
+    userId: string,
+    userRoles?: string[],
+  ): Promise<void> {
     const build = await this.pcBuildModel.findById(id);
 
     if (!build) {
       throw new NotFoundException(`PC Build with ID ${id} not found`);
     }
 
-    if (build.user.toString() !== userId) {
+    // Admin có thể delete bất kỳ build nào, user chỉ có thể delete build của mình
+    const isAdmin = userRoles && userRoles.includes('admin');
+    const isOwner = build.user.toString() === userId;
+
+    if (!isAdmin && !isOwner) {
       throw new ForbiddenException(
         'You are not authorized to delete this build',
       );
     }
 
     await this.pcBuildModel.findByIdAndDelete(id);
+  }
+
+  // Admin methods
+  async findAllBuildsAdmin(
+    limit = 10,
+    page = 1,
+    lang?: string,
+  ): Promise<{ builds: PCBuild[]; total: number }> {
+    const skip = (page - 1) * limit;
+    const filter = lang ? { lang } : {};
+
+    const [builds, total] = await Promise.all([
+      this.pcBuildModel
+        .find(filter)
+        .sort({ createdAt: -1 })
+        .skip(skip)
+        .limit(limit)
+        .populate('user', 'name')
+        .lean(),
+      this.pcBuildModel.countDocuments(filter),
+    ]);
+
+    return { builds, total };
   }
 }

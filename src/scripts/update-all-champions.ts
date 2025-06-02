@@ -26,7 +26,7 @@ async function main() {
 
     // Process champions with a delay between requests to avoid rate limiting
     let successCount = 0;
-    let failedChampions = [];
+    const failedChampions = [];
 
     // Process champions one by one
     for (const championId of championIds) {

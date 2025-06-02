@@ -6,8 +6,65 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  // Enable CORS
-  app.enableCors();
+  // Enable CORS with improved configuration
+  const corsOrigins =
+    process.env.CORS_ORIGINS ||
+    'http://localhost:3000,http://localhost:8080,http://15.235.130.193:8080,https://cms.loltips.net';
+
+  app.enableCors({
+    origin: (origin, callback) => {
+      // Allow requests with no origin (like mobile apps or curl requests)
+      if (!origin) return callback(null, true);
+
+      const allowedOrigins = corsOrigins
+        .split(',')
+        .map((origin) => origin.trim());
+
+      // Check if the origin is in the allowed list
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      // Allow localhost in development (both IPv4 and IPv6)
+      if (process.env.NODE_ENV === 'development') {
+        // Check for localhost patterns (IPv4 and IPv6)
+        const localhostPatterns = [
+          /^http:\/\/localhost:\d+$/,
+          /^https:\/\/localhost:\d+$/,
+          /^http:\/\/127\.0\.0\.1:\d+$/,
+          /^https:\/\/127\.0\.0\.1:\d+$/,
+          /^http:\/\/\[::1\]:\d+$/,
+          /^https:\/\/\[::1\]:\d+$/,
+        ];
+
+        const isLocalhost = localhostPatterns.some((pattern) =>
+          pattern.test(origin),
+        );
+        if (isLocalhost) {
+          return callback(null, true);
+        }
+      }
+
+      console.log(`CORS blocked origin: ${origin}`);
+      return callback(new Error('Not allowed by CORS'), false);
+    },
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    allowedHeaders: [
+      'Origin',
+      'X-Requested-With',
+      'Content-Type',
+      'Accept',
+      'Authorization',
+      'Bearer',
+      'X-Token',
+      'Cache-Control',
+      'Pragma',
+    ],
+    exposedHeaders: ['Authorization'],
+    optionsSuccessStatus: 200, // For legacy browser support
+    maxAge: 86400, // Cache preflight requests for 24 hours
+  });
 
   // Add validation pipe
   app.useGlobalPipes(new ValidationPipe({ transform: true }));

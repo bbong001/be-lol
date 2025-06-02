@@ -10,6 +10,7 @@ import * as mongoose from 'mongoose';
 import * as dotenv from 'dotenv';
 import * as fs from 'fs';
 import * as path from 'path';
+import { transformText } from '../tft/utils/i18n.util';
 
 // Load environment variables
 dotenv.config({ path: path.join(__dirname, '../../config.env') });
@@ -296,9 +297,9 @@ async function crawlAllChampions(): Promise<void> {
 
     // Crawl details for each champion
     for (const champion of champions) {
-      console.log(`Processing champion: ${champion.name}`);
+      console.log(`Processing champion: ${transformText(champion.name)}`);
 
-      const championDetail = await crawlChampionDetails(champion.name);
+      const championDetail = await crawlChampionDetails(transformText(champion.name));
 
       if (championDetail) {
         await updateChampionInDatabase(championDetail);

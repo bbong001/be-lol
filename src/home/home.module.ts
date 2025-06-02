@@ -20,4 +20,4 @@ import { WildriftModule } from '../wildrift/wildrift.module';
   providers: [HomeService],
   exports: [HomeService],
 })
-export class HomeModule {} 
+export class HomeModule {}

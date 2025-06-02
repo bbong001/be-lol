@@ -8,9 +8,24 @@ import {
   IsObject,
 } from 'class-validator';
 import { Type } from 'class-transformer';
-import { RecommendedItemData } from '../schemas/tft-champion.schema';
+import {
+  RecommendedItemData,
+  MultilingualText,
+  ChampionAbility,
+  ChampionStats,
+} from '../schemas/tft-champion.schema';
 
-class ChampionStatsDto {
+class MultilingualTextDto implements MultilingualText {
+  @IsString()
+  @IsNotEmpty()
+  en: string;
+
+  @IsString()
+  @IsNotEmpty()
+  vi: string;
+}
+
+class ChampionStatsDto implements ChampionStats {
   @IsString()
   @IsOptional()
   health?: string;
@@ -48,14 +63,18 @@ class ChampionStatsDto {
   range?: string;
 }
 
-class AbilityDto {
-  @IsString()
+class AbilityDto implements ChampionAbility {
+  @IsObject()
+  @ValidateNested()
+  @Type(() => MultilingualTextDto)
   @IsOptional()
-  name?: string;
+  name?: MultilingualText;
 
-  @IsString()
+  @IsObject()
+  @ValidateNested()
+  @Type(() => MultilingualTextDto)
   @IsOptional()
-  description?: string;
+  description?: MultilingualText;
 
   @IsString()
   @IsOptional()
@@ -63,9 +82,11 @@ class AbilityDto {
 }
 
 class RecommendedItemDataDto implements RecommendedItemData {
-  @IsString()
+  @IsObject()
+  @ValidateNested()
+  @Type(() => MultilingualTextDto)
   @IsNotEmpty()
-  name: string;
+  name: MultilingualText;
 
   @IsString()
   @IsNotEmpty()
@@ -73,18 +94,21 @@ class RecommendedItemDataDto implements RecommendedItemData {
 }
 
 export class CreateTftChampionDto {
-  @IsString()
+  @IsObject()
+  @ValidateNested()
+  @Type(() => MultilingualTextDto)
   @IsNotEmpty()
-  name: string;
+  name: MultilingualText;
 
   @IsNumber()
   @IsNotEmpty()
   cost: number;
 
   @IsArray()
-  @IsString({ each: true })
+  @ValidateNested({ each: true })
+  @Type(() => MultilingualTextDto)
   @IsNotEmpty()
-  traits: string[];
+  traits: MultilingualText[];
 
   @IsObject()
   @ValidateNested()
@@ -99,9 +123,10 @@ export class CreateTftChampionDto {
   stats?: ChampionStatsDto;
 
   @IsArray()
-  @IsString({ each: true })
+  @ValidateNested({ each: true })
+  @Type(() => MultilingualTextDto)
   @IsOptional()
-  recommendedItems?: string[];
+  recommendedItems?: MultilingualTextDto[];
 
   @IsArray()
   @ValidateNested({ each: true })
@@ -120,4 +145,8 @@ export class CreateTftChampionDto {
   @IsNumber()
   @IsOptional()
   setNumber?: number;
+
+  @IsString()
+  @IsOptional()
+  lang?: string;
 }

@@ -132,7 +132,7 @@ function extractFromDivSections($: cheerio.CheerioAPI): ChampionSkill[] {
 
       if (abilitySection.length) {
         // Get the text and clean it
-        let abilityText = abilitySection.text().trim();
+        const abilityText = abilitySection.text().trim();
 
         // Extract name
         const name = abilityName;
@@ -148,7 +148,7 @@ function extractFromDivSections($: cheerio.CheerioAPI): ChampionSkill[] {
         }
 
         // Extract description
-        let description = abilityText
+        const description = abilityText
           .replace(name, '')
           .replace(/Cooldown:\s*(\d+(?:\s*\/\s*\d+)*)/i, '')
           .trim();
@@ -210,7 +210,7 @@ function extractUsingRegex(html: string): ChampionSkill[] {
       const match = html.match(pattern);
 
       if (match) {
-        let abilityText = match[0].trim();
+        const abilityText = match[0].trim();
 
         // Extract cooldown if present
         let cooldown: number[] = [];
@@ -223,7 +223,7 @@ function extractUsingRegex(html: string): ChampionSkill[] {
         }
 
         // Extract description
-        let description = abilityText
+        const description = abilityText
           .replace(abilityName, '')
           .replace(/Cooldown:\s*(\d+(?:\s*\/\s*\d+)*)/i, '')
           .trim();

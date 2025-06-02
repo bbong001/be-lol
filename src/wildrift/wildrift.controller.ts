@@ -71,9 +71,18 @@ export class WildriftController {
     return this.wildriftService.findOneChampion(id);
   }
 
+  @Get('champions/name/:name')
+  @ApiOperation({ summary: 'Get a Wild Rift champion by name' })
+  @ApiParam({ name: 'name', description: 'Champion name' })
+  @ApiResponse({ status: 200, description: 'Return the Wild Rift champion' })
+  @ApiResponse({ status: 404, description: 'Champion not found' })
+  findChampionByName(@Param('name') name: string) {
+    return this.wildriftService.findChampionByName(name);
+  }
+
   @Get('champions/:id/with-builds')
   @ApiOperation({ summary: 'Get a Wild Rift champion by ID with its builds' })
-  // @ApiParam({ name: 'id', description: 'Champion ID' })
+  @ApiParam({ name: 'id', description: 'Champion ID' })
   @ApiResponse({
     status: 200,
     description: 'Return the Wild Rift champion with its builds',
@@ -248,18 +257,51 @@ export class WildriftController {
   // Items endpoints
   @Get('items')
   @ApiOperation({ summary: 'Get all Wild Rift items' })
+  @ApiQuery({
+    name: 'lang',
+    required: false,
+    description: 'Language code (vi for Vietnamese, en for English)',
+    example: 'vi',
+  })
   @ApiResponse({ status: 200, description: 'Return all Wild Rift items' })
-  findAllItems(@Query() paginationDto: PaginationDto) {
-    return this.wildriftService.findAllItems(paginationDto);
+  findAllItems(
+    @Query() paginationDto: PaginationDto,
+    @Query('lang') lang: string = 'vi',
+  ) {
+    return this.wildriftService.findAllItems(paginationDto, lang);
   }
 
   @Get('items/:id')
   @ApiOperation({ summary: 'Get a Wild Rift item by ID' })
   @ApiParam({ name: 'id', description: 'Item ID' })
+  @ApiQuery({
+    name: 'lang',
+    required: false,
+    description: 'Language code (vi for Vietnamese, en for English)',
+    example: 'vi',
+  })
   @ApiResponse({ status: 200, description: 'Return the Wild Rift item' })
   @ApiResponse({ status: 404, description: 'Item not found' })
-  findOneItem(@Param('id') id: string) {
-    return this.wildriftService.findOneItem(id);
+  findOneItem(@Param('id') id: string, @Query('lang') lang: string = 'vi') {
+    return this.wildriftService.findOneItem(id, lang);
+  }
+
+  @Get('items/name/:name')
+  @ApiOperation({ summary: 'Get a Wild Rift item by name' })
+  @ApiParam({ name: 'name', description: 'Item name' })
+  @ApiQuery({
+    name: 'lang',
+    required: false,
+    description: 'Language code (vi for Vietnamese, en for English)',
+    example: 'vi',
+  })
+  @ApiResponse({ status: 200, description: 'Return the Wild Rift item' })
+  @ApiResponse({ status: 404, description: 'Item not found' })
+  findItemByName(
+    @Param('name') name: string,
+    @Query('lang') lang: string = 'vi',
+  ) {
+    return this.wildriftService.findItemByName(name, lang);
   }
 
   @Post('items')
@@ -267,14 +309,23 @@ export class WildriftController {
   @Roles(Role.ADMIN)
   @ApiBearerAuth()
   @ApiOperation({ summary: 'Create a new Wild Rift item' })
+  @ApiQuery({
+    name: 'lang',
+    required: false,
+    description: 'Language code (vi for Vietnamese, en for English)',
+    example: 'vi',
+  })
   @ApiResponse({
     status: 201,
     description: 'The item has been successfully created',
   })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
   @ApiResponse({ status: 403, description: 'Forbidden' })
-  createItem(@Body() createWrItemDto: CreateWrItemDto) {
-    return this.wildriftService.createItem(createWrItemDto);
+  createItem(
+    @Body() createWrItemDto: CreateWrItemDto,
+    @Query('lang') lang: string = 'vi',
+  ) {
+    return this.wildriftService.createItem(createWrItemDto, lang);
   }
 
   // Guides endpoints

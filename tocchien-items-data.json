@@ -1,0 +1,382 @@
+[
+  {
+    "name": "ÁO CHOÀNG BÓNG TỐI",
+    "imageUrl": "",
+    "category": "Defense",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "ÁO CHOÀNG BÓNG TỐI - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "ÁO CHOÀNG HỘ MỆNH",
+    "imageUrl": "",
+    "category": "Defense",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "ÁO CHOÀNG HỘ MỆNH - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "ÁO CHOÀNG NĂNG LƯỢNG",
+    "imageUrl": "",
+    "category": "Defense",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "ÁO CHOÀNG NĂNG LƯỢNG - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "BĂNG GIÁP",
+    "imageUrl": "",
+    "category": "Defense",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "BĂNG GIÁP - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "BẪY YORDLE",
+    "imageUrl": "",
+    "category": "Other",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "BẪY YORDLE - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "BÚA RÌU SÁT THẦN",
+    "imageUrl": "",
+    "category": "Physical",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "BÚA RÌU SÁT THẦN - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "BÙA THĂNG HOA",
+    "imageUrl": "",
+    "category": "Other",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "BÙA THĂNG HOA - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "CHẤN TỬ PHA LÊ",
+    "imageUrl": "",
+    "category": "Other",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "CHẤN TỬ PHA LÊ - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "CHIẾN GIÁP RỰC ĐỎ",
+    "imageUrl": "",
+    "category": "Defense",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "CHIẾN GIÁP RỰC ĐỎ - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "CHÙY GAI MALMORTIUS",
+    "imageUrl": "",
+    "category": "Other",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "CHÙY GAI MALMORTIUS - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "CƯA XÍCH HÓA KỸ",
+    "imageUrl": "",
+    "category": "Other",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "CƯA XÍCH HÓA KỸ - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "CUỒNG CUNG RUNAAN",
+    "imageUrl": "",
+    "category": "Physical",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "CUỒNG CUNG RUNAAN - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "DẠ KIẾM DRAKTHARR",
+    "imageUrl": "",
+    "category": "Physical",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "DẠ KIẾM DRAKTHARR - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "ĐAI LƯNG NĂNG LƯỢNG",
+    "imageUrl": "",
+    "category": "Other",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "ĐAI LƯNG NĂNG LƯỢNG - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "ĐAO TÍM",
+    "imageUrl": "",
+    "category": "Other",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "ĐAO TÍM - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "DÂY CHUYỀN CHUỘC TỘI",
+    "imageUrl": "",
+    "category": "Support",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "DÂY CHUYỀN CHUỘC TỘI - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "DÂY CHUYỀN NĂNG LƯỢNG",
+    "imageUrl": "",
+    "category": "Support",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "DÂY CHUYỀN NĂNG LƯỢNG - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "DỊCH CHUYỂN NĂNG LƯỢNG",
+    "imageUrl": "",
+    "category": "Other",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "DỊCH CHUYỂN NĂNG LƯỢNG - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "ĐINH BA HẢI TINH",
+    "imageUrl": "",
+    "category": "Other",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "ĐINH BA HẢI TINH - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "ĐOẢN ĐAO NAVORI",
+    "imageUrl": "",
+    "category": "Other",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "ĐOẢN ĐAO NAVORI - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "ĐỘNG CƠ VŨ TRỤ",
+    "imageUrl": "",
+    "category": "Other",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "ĐỘNG CƠ VŨ TRỤ - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "ĐỒNG XU CỔ ĐẠI",
+    "imageUrl": "",
+    "category": "Other",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "ĐỒNG XU CỔ ĐẠI - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "GĂNG TAY BĂNG GIÁ",
+    "imageUrl": "",
+    "category": "Other",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "GĂNG TAY BĂNG GIÁ - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "GIẢI THUẬT NĂNG LƯỢNG",
+    "imageUrl": "",
+    "category": "Other",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "GIẢI THUẬT NĂNG LƯỢNG - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "GIÁO THIÊN LY",
+    "imageUrl": "",
+    "category": "Other",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "GIÁO THIÊN LY - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "GIÁP GAI",
+    "imageUrl": "",
+    "category": "Defense",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "GIÁP GAI - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "GIÁP LIỆT SĨ",
+    "imageUrl": "",
+    "category": "Defense",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "GIÁP LIỆT SĨ - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "GIÁP MÁU WARMOG",
+    "imageUrl": "",
+    "category": "Defense",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "GIÁP MÁU WARMOG - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "GIÁP TÂM LINH",
+    "imageUrl": "",
+    "category": "Defense",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "GIÁP TÂM LINH - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "GIÁP THIÊN NHIÊN",
+    "imageUrl": "",
+    "category": "Defense",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "GIÁP THIÊN NHIÊN - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "GIÁP THIÊN THẦN",
+    "imageUrl": "",
+    "category": "Defense",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "GIÁP THIÊN THẦN - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "GIÀY CUỒNG NỘ",
+    "imageUrl": "",
+    "category": "Boots",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "GIÀY CUỒNG NỘ - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "GIÀY KHAI SÁNG IONIA",
+    "imageUrl": "",
+    "category": "Boots",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "GIÀY KHAI SÁNG IONIA - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "GIÀY NĂNG ĐỘNG",
+    "imageUrl": "",
+    "category": "Boots",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "GIÀY NĂNG ĐỘNG - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "GIÀY NĂNG LƯỢNG",
+    "imageUrl": "",
+    "category": "Boots",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "GIÀY NĂNG LƯỢNG - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "GIÀY PHÀM ĂN",
+    "imageUrl": "",
+    "category": "Boots",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "GIÀY PHÀM ĂN - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "GIÀY THÉP GAI",
+    "imageUrl": "",
+    "category": "Boots",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "GIÀY THÉP GAI - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  },
+  {
+    "name": "GIÀY THỦY NGÂN",
+    "imageUrl": "",
+    "category": "Boots",
+    "tier": "upgraded",
+    "price": 0,
+    "description": "GIÀY THỦY NGÂN - Trang bị Liên Minh Tốc Chiến",
+    "stats": {},
+    "detailUrl": ""
+  }
+]

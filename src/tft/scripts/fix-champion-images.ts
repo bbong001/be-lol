@@ -47,10 +47,10 @@ async function getChampionDataFromDDragon(championName: string): Promise<any> {
 
     // Map tên champion sang format Data Dragon
     const formattedName = championName
-      .replace(/['\s&]/g, '')  // Loại bỏ dấu ' và khoảng trắng
-      .replace(/\./g, '')      // Loại bỏ dấu chấm
+      .replace(/['\s&]/g, '') // Loại bỏ dấu ' và khoảng trắng
+      .replace(/\./g, '') // Loại bỏ dấu chấm
       .replace(/&Willump/g, '') // Trường hợp đặc biệt: Nunu & Willump -> Nunu
-      .replace(/Kai'Sa/g, 'Kaisa');  // Trường hợp đặc biệt
+      .replace(/Kai'Sa/g, 'Kaisa'); // Trường hợp đặc biệt
 
     // Lấy tất cả champion từ Data Dragon
     const allChampionsResponse = await axios.get(
@@ -63,9 +63,11 @@ async function getChampionDataFromDDragon(championName: string): Promise<any> {
     for (const key in allChampions) {
       const champ = allChampions[key];
       const ddName = champ.name.replace(/['\s&]/g, '').replace(/\./g, '');
-      
-      if (ddName.toLowerCase() === formattedName.toLowerCase() || 
-          key.toLowerCase() === formattedName.toLowerCase()) {
+
+      if (
+        ddName.toLowerCase() === formattedName.toLowerCase() ||
+        key.toLowerCase() === formattedName.toLowerCase()
+      ) {
         matchedChamp = champ;
         break;
       }
@@ -135,7 +137,9 @@ async function fixChampionImages(
 
 async function bootstrap() {
   const logger = setupLogger();
-  logger.log('Bắt đầu cập nhật hình ảnh cho tất cả TFT champion bằng Data Dragon API...');
+  logger.log(
+    'Bắt đầu cập nhật hình ảnh cho tất cả TFT champion bằng Data Dragon API...',
+  );
 
   const app = await NestFactory.createApplicationContext(AppModule);
   const tftChampionModel = app.get(getModelToken('TftChampion'));
@@ -152,7 +156,11 @@ async function bootstrap() {
     // Xử lý từng champion
     for (const champion of champions) {
       logger.log(`\nXử lý ${champion.name}...`);
-      const updated = await fixChampionImages(champion, logger, tftChampionModel);
+      const updated = await fixChampionImages(
+        champion,
+        logger,
+        tftChampionModel,
+      );
       if (updated) {
         championsUpdated++;
       }
@@ -170,4 +178,4 @@ async function bootstrap() {
   }
 }
 
-bootstrap(); 
+bootstrap();

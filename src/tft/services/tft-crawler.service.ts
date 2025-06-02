@@ -348,14 +348,25 @@ export class TftCrawlerService {
 
       for (const champion of champions) {
         try {
-          await this.updateChampionDetails(champion.name);
+          // Handle both string and MultilingualText name formats
+          const championName =
+            typeof champion.name === 'string'
+              ? champion.name
+              : champion.name?.en || 'Unknown';
+
+          await this.updateChampionDetails(championName);
           updated++;
 
           // Wait a bit to avoid rate limiting
           await new Promise((resolve) => setTimeout(resolve, 1000));
         } catch (error) {
+          const championName =
+            typeof champion.name === 'string'
+              ? champion.name
+              : champion.name?.en || 'Unknown';
+
           this.logger.error(
-            `Failed to update ${champion.name}: ${error.message}`,
+            `Failed to update ${championName}: ${error.message}`,
           );
           failed++;
         }
@@ -414,7 +425,7 @@ export class TftCrawlerService {
           );
 
           this.logger.log(
-            `Saved champion: ${result.name} with ID: ${result._id}`,
+            `Saved champion: ${typeof result.name === 'string' ? result.name : result.name?.en || 'Unknown'} with ID: ${result._id}`,
           );
           savedCount++;
         } catch (error) {

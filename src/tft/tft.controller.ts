@@ -11,9 +11,9 @@ import {
 } from '@nestjs/common';
 import { TftService } from './tft.service';
 import { CreateTftChampionDto } from './dto/create-tft-champion.dto';
-// import { UpdateTftChampionDto } from './dto/update-tft-champion.dto';
+import { UpdateTftChampionDto } from './dto/update-tft-champion.dto';
 import { CreateTftItemDto } from './dto/create-tft-item.dto';
-// import { UpdateTftItemDto } from './dto/update-tft-item.dto';
+import { UpdateTftItemDto } from './dto/update-tft-item.dto';
 import { CreateTftCompDto } from './dto/create-tft-comp.dto';
 import { UpdateTftCompDto } from './dto/update-tft-comp.dto';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
@@ -38,30 +38,51 @@ export class TftController {
     private readonly commentsService: CommentsService,
   ) {}
 
-  // Champions endpoints
+  // Champions endpoints with i18n support
   @Get('champions')
   @ApiOperation({ summary: 'Get all TFT champions' })
+  @ApiQuery({
+    name: 'lang',
+    required: false,
+    description: 'Language for response (en, vi)',
+    enum: ['en', 'vi'],
+  })
   @ApiResponse({ status: 200, description: 'Return all TFT champions' })
-  findAllChampions() {
-    return this.tftService.findAllChampions();
+  findAllChampions(@Query('lang') lang?: string) {
+    return this.tftService.findAllChampions(lang);
   }
 
   @Get('champions/:id')
   @ApiOperation({ summary: 'Get a TFT champion by ID' })
   @ApiParam({ name: 'id', description: 'Champion ID' })
+  @ApiQuery({
+    name: 'lang',
+    required: false,
+    description: 'Language for response (en, vi)',
+    enum: ['en', 'vi'],
+  })
   @ApiResponse({ status: 200, description: 'Return the TFT champion' })
   @ApiResponse({ status: 404, description: 'Champion not found' })
-  findOneChampion(@Param('id') id: string) {
-    return this.tftService.findOneChampion(id);
+  findOneChampion(@Param('id') id: string, @Query('lang') lang?: string) {
+    return this.tftService.findOneChampion(id, lang);
   }
 
   @Get('champions/name/:name')
   @ApiOperation({ summary: 'Get a TFT champion by name' })
   @ApiParam({ name: 'name', description: 'Champion name' })
+  @ApiQuery({
+    name: 'lang',
+    required: false,
+    description: 'Language for response (en, vi)',
+    enum: ['en', 'vi'],
+  })
   @ApiResponse({ status: 200, description: 'Return the TFT champion' })
   @ApiResponse({ status: 404, description: 'Champion not found' })
-  findChampionByName(@Param('name') name: string) {
-    return this.tftService.findChampionByName(name);
+  findChampionByName(
+    @Param('name') name: string,
+    @Query('lang') lang?: string,
+  ) {
+    return this.tftService.findChampionByName(name, lang);
   }
 
   @Post('champions')
@@ -79,22 +100,25 @@ export class TftController {
     return this.tftService.createChampion(createTftChampionDto);
   }
 
-  //   @Put('champions/:id')
-  //   @UseGuards(JwtAuthGuard, RolesGuard)
-  //   @Roles(Role.ADMIN)
-  //   @ApiBearerAuth()
-  //   @ApiOperation({ summary: 'Update a TFT champion' })
-  //   @ApiParam({ name: 'id', description: 'Champion ID' })
-  //   @ApiResponse({ status: 200, description: 'The champion has been successfully updated' })
-  //   @ApiResponse({ status: 401, description: 'Unauthorized' })
-  //   @ApiResponse({ status: 403, description: 'Forbidden' })
-  //   @ApiResponse({ status: 404, description: 'Champion not found' })
-  //   updateChampion(
-  //     @Param('id') id: string,
-  //     @Body() updateTftChampionDto: UpdateTftChampionDto,
-  //   ) {
-  //     return this.tftService.updateChampion(id, updateTftChampionDto);
-  //   }
+  @Put('champions/:id')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(Role.ADMIN)
+  @ApiBearerAuth()
+  @ApiOperation({ summary: 'Update a TFT champion' })
+  @ApiParam({ name: 'id', description: 'Champion ID' })
+  @ApiResponse({
+    status: 200,
+    description: 'The champion has been successfully updated',
+  })
+  @ApiResponse({ status: 401, description: 'Unauthorized' })
+  @ApiResponse({ status: 403, description: 'Forbidden' })
+  @ApiResponse({ status: 404, description: 'Champion not found' })
+  updateChampion(
+    @Param('id') id: string,
+    @Body() updateTftChampionDto: UpdateTftChampionDto,
+  ) {
+    return this.tftService.updateChampion(id, updateTftChampionDto);
+  }
 
   @Delete('champions/:id')
   @UseGuards(JwtAuthGuard, RolesGuard)
@@ -150,21 +174,48 @@ export class TftController {
     };
   }
 
-  // Items endpoints
+  // Items endpoints with i18n support
   @Get('items')
   @ApiOperation({ summary: 'Get all TFT items' })
+  @ApiQuery({
+    name: 'lang',
+    required: false,
+    description: 'Language for response (en, vi)',
+    enum: ['en', 'vi'],
+  })
   @ApiResponse({ status: 200, description: 'Return all TFT items' })
-  findAllItems() {
-    return this.tftService.findAllItems();
+  findAllItems(@Query('lang') lang?: string) {
+    return this.tftService.findAllItems(lang);
   }
 
   @Get('items/:id')
   @ApiOperation({ summary: 'Get a TFT item by ID' })
   @ApiParam({ name: 'id', description: 'Item ID' })
+  @ApiQuery({
+    name: 'lang',
+    required: false,
+    description: 'Language for response (en, vi)',
+    enum: ['en', 'vi'],
+  })
   @ApiResponse({ status: 200, description: 'Return the TFT item' })
   @ApiResponse({ status: 404, description: 'Item not found' })
-  findOneItem(@Param('id') id: string) {
-    return this.tftService.findOneItem(id);
+  findOneItem(@Param('id') id: string, @Query('lang') lang?: string) {
+    return this.tftService.findOneItem(id, lang);
+  }
+
+  @Get('items/name/:name')
+  @ApiOperation({ summary: 'Get a TFT item by name' })
+  @ApiParam({ name: 'name', description: 'Item name' })
+  @ApiQuery({
+    name: 'lang',
+    required: false,
+    description: 'Language for response (en, vi)',
+    enum: ['en', 'vi'],
+  })
+  @ApiResponse({ status: 200, description: 'Return the TFT item' })
+  @ApiResponse({ status: 404, description: 'Item not found' })
+  findItemByName(@Param('name') name: string, @Query('lang') lang?: string) {
+    return this.tftService.findItemByName(name, lang);
   }
 
   @Post('items')
@@ -180,6 +231,43 @@ export class TftController {
   @ApiResponse({ status: 403, description: 'Forbidden' })
   createItem(@Body() createTftItemDto: CreateTftItemDto) {
     return this.tftService.createItem(createTftItemDto);
+  }
+
+  @Put('items/:id')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(Role.ADMIN)
+  @ApiBearerAuth()
+  @ApiOperation({ summary: 'Update a TFT item' })
+  @ApiParam({ name: 'id', description: 'Item ID' })
+  @ApiResponse({
+    status: 200,
+    description: 'The item has been successfully updated',
+  })
+  @ApiResponse({ status: 401, description: 'Unauthorized' })
+  @ApiResponse({ status: 403, description: 'Forbidden' })
+  @ApiResponse({ status: 404, description: 'Item not found' })
+  updateItem(
+    @Param('id') id: string,
+    @Body() updateTftItemDto: UpdateTftItemDto,
+  ) {
+    return this.tftService.updateItem(id, updateTftItemDto);
+  }
+
+  @Delete('items/:id')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(Role.ADMIN)
+  @ApiBearerAuth()
+  @ApiOperation({ summary: 'Delete a TFT item' })
+  @ApiParam({ name: 'id', description: 'Item ID' })
+  @ApiResponse({
+    status: 200,
+    description: 'The item has been successfully deleted',
+  })
+  @ApiResponse({ status: 401, description: 'Unauthorized' })
+  @ApiResponse({ status: 403, description: 'Forbidden' })
+  @ApiResponse({ status: 404, description: 'Item not found' })
+  removeItem(@Param('id') id: string) {
+    return this.tftService.removeItem(id);
   }
 
   // Comps endpoints
@@ -237,5 +325,22 @@ export class TftController {
     @Body() updateTftCompDto: UpdateTftCompDto,
   ) {
     return this.tftService.updateComp(id, updateTftCompDto);
+  }
+
+  @Delete('comps/:id')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(Role.ADMIN)
+  @ApiBearerAuth()
+  @ApiOperation({ summary: 'Delete a TFT composition' })
+  @ApiParam({ name: 'id', description: 'Composition ID' })
+  @ApiResponse({
+    status: 200,
+    description: 'The composition has been successfully deleted',
+  })
+  @ApiResponse({ status: 401, description: 'Unauthorized' })
+  @ApiResponse({ status: 403, description: 'Forbidden' })
+  @ApiResponse({ status: 404, description: 'Composition not found' })
+  removeComp(@Param('id') id: string) {
+    return this.tftService.removeComp(id);
   }
 }

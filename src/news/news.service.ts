@@ -14,35 +14,45 @@ import slugify from 'slugify';
 export class NewsService {
   constructor(
     @InjectModel(Article.name) private articleModel: Model<ArticleDocument>,
-  ) { }
+  ) {}
 
   async findAll(
     limit = 10,
     page = 1,
+    lang = 'vi',
   ): Promise<{ articles: Article[]; total: number }> {
     const skip = (page - 1) * limit;
+    const filter = { published: true, lang };
+
     const [articles, total] = await Promise.all([
       this.articleModel
-        .find({})
+        .find(filter)
         .sort({ publishedAt: -1 })
         .skip(skip)
         .limit(limit)
         .populate('author', 'name')
         .lean(),
-      this.articleModel.countDocuments({}),
+      this.articleModel.countDocuments(filter),
     ]);
 
     return { articles, total };
   }
 
-  async findBySlug(slug: string): Promise<Article> {
+  async findBySlug(slug: string, lang = 'vi'): Promise<Article> {
     const article = await this.articleModel
-      .findOne({ slug })
+      .findOne({ slug, lang, published: true })
       .populate('author', 'name')
       .lean();
     if (!article) {
       throw new NotFoundException(`Article with slug "${slug}" not found`);
     }
+
+    // Increment view count
+    await this.articleModel.updateOne(
+      { slug, lang },
+      { $inc: { viewCount: 1 } },
+    );
+
     return article;
   }
 
@@ -50,17 +60,20 @@ export class NewsService {
     tag: string,
     limit = 10,
     page = 1,
+    lang = 'vi',
   ): Promise<{ articles: Article[]; total: number }> {
     const skip = (page - 1) * limit;
+    const filter = { tags: tag, published: true, lang };
+
     const [articles, total] = await Promise.all([
       this.articleModel
-        .find({ tags: tag, published: true })
+        .find(filter)
         .sort({ publishedAt: -1 })
         .skip(skip)
         .limit(limit)
         .populate('author', 'name')
         .lean(),
-      this.articleModel.countDocuments({ tags: tag, published: true }),
+      this.articleModel.countDocuments(filter),
     ]);
 
     return { articles, total };
@@ -73,11 +86,14 @@ export class NewsService {
     const slug =
       createArticleDto.slug || this.generateSlug(createArticleDto.title);
 
-    // Check if slug already exists
-    const existingArticle = await this.articleModel.findOne({ slug });
+    // Check if slug already exists for the same language
+    const existingArticle = await this.articleModel.findOne({
+      slug,
+      lang: createArticleDto.lang || 'vi',
+    });
     if (existingArticle) {
       throw new ConflictException(
-        `An article with slug "${slug}" already exists`,
+        `An article with slug "${slug}" already exists for this language`,
       );
     }
 
@@ -85,6 +101,7 @@ export class NewsService {
       ...createArticleDto,
       slug,
       author: userId,
+      lang: createArticleDto.lang || 'vi',
       publishedAt: createArticleDto.published ? new Date() : null,
     });
 
@@ -143,17 +160,20 @@ export class NewsService {
   async findAllAdmin(
     limit = 10,
     page = 1,
+    lang?: string,
   ): Promise<{ articles: Article[]; total: number }> {
     const skip = (page - 1) * limit;
+    const filter = lang ? { lang } : {};
+
     const [articles, total] = await Promise.all([
       this.articleModel
-        .find({})
-        .sort({ publishedAt: -1 })
+        .find(filter)
+        .sort({ createdAt: -1 })
         .skip(skip)
         .limit(limit)
         .populate('author', 'name')
         .lean(),
-      this.articleModel.countDocuments({}),
+      this.articleModel.countDocuments(filter),
     ]);
 
     return { articles, total };

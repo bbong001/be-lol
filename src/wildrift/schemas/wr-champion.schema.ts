@@ -3,8 +3,11 @@ import { Document } from 'mongoose';
 
 @Schema({ timestamps: true })
 export class WrChampion extends Document {
-  @Prop({ required: true, unique: true })
+  @Prop({ required: true })
   name: string;
+
+  @Prop({ required: true, default: 'vi' })
+  lang: string;
 
   @Prop()
   title: string;
@@ -83,3 +86,6 @@ export class WrChampion extends Document {
 }
 
 export const WrChampionSchema = SchemaFactory.createForClass(WrChampion);
+
+// Tạo compound index cho name + lang để tối ưu query và đảm bảo unique
+WrChampionSchema.index({ name: 1, lang: 1 }, { unique: true });

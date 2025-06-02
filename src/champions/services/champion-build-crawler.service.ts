@@ -230,7 +230,7 @@ export class ChampionBuildCrawlerService {
         })
         .get()
         .filter((seq) => seq.length > 0)
-        .slice(0, 15); // First 15 levels
+        .slice(0, 18); // First 18 levels
 
       return {
         priority: skillPriority,

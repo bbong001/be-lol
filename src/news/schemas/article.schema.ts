@@ -36,6 +36,13 @@ export class Article {
 
   @Prop({ default: 0 })
   viewCount: number;
+
+  @Prop({
+    type: String,
+    enum: ['vi', 'en'],
+    default: 'vi',
+  })
+  lang: string;
 }
 
 export const ArticleSchema = SchemaFactory.createForClass(Article);

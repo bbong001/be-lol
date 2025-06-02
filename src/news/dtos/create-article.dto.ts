@@ -4,6 +4,7 @@ import {
   IsOptional,
   IsArray,
   IsBoolean,
+  IsEnum,
 } from 'class-validator';
 
 export class CreateArticleDto {
@@ -34,4 +35,8 @@ export class CreateArticleDto {
   @IsBoolean()
   @IsOptional()
   published?: boolean;
+
+  @IsEnum(['vi', 'en'])
+  @IsOptional()
+  lang?: string;
 }
