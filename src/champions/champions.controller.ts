@@ -9,6 +9,8 @@ import {
   Query,
   UseGuards,
   NotFoundException,
+  Request,
+  Header,
 } from '@nestjs/common';
 import { ChampionsService } from './champions.service';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
@@ -23,6 +25,7 @@ import {
   ApiParam,
   ApiQuery,
   ApiBody,
+  ApiBearerAuth,
 } from '@nestjs/swagger';
 import { ChampionBuildCrawlerService } from './services/champion-build-crawler.service';
 import { validateLanguage, SupportedLanguage } from './utils/i18n.util';
@@ -59,6 +62,9 @@ export class ChampionsController {
     description: 'Language code (en|vi, default: en)',
     enum: ['en', 'vi'],
   })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   @Get()
   async findAll(
     @Query('page') page: number = 1,

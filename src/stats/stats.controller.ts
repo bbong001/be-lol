@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Query, UseGuards } from '@nestjs/common';
+import { Controller, Get, Param, Query, UseGuards, Header } from '@nestjs/common';
 import { StatsService } from './stats.service';
 import {
   ApiTags,
@@ -22,6 +22,9 @@ export class StatsController {
     status: 200,
     description: 'Champion statistics retrieved successfully',
   })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   @Get('champions')
   async getAllChampionStats() {
     return {
@@ -37,6 +40,9 @@ export class StatsController {
     description: 'Champion statistics retrieved successfully',
   })
   @ApiResponse({ status: 404, description: 'Champion not found' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   @Get('champions/:id')
   async getChampionStats(@Param('id') id: string) {
     return {

@@ -8,6 +8,8 @@ import {
   Delete,
   UseGuards,
   Query,
+  Request,
+  Header,
 } from '@nestjs/common';
 import { WildriftService } from './wildrift.service';
 import { CreateWrChampionDto } from './dto/create-wr-champion.dto';
@@ -48,6 +50,9 @@ export class WildriftController {
     description: 'Filter champions by role',
   })
   @ApiResponse({ status: 200, description: 'Return all Wild Rift champions' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   findAllChampions(
     @Query() paginationDto: PaginationDto,
     @Query('role') role?: string,
@@ -67,6 +72,9 @@ export class WildriftController {
   @ApiParam({ name: 'id', description: 'Champion ID' })
   @ApiResponse({ status: 200, description: 'Return the Wild Rift champion' })
   @ApiResponse({ status: 404, description: 'Champion not found' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   findOneChampion(@Param('id') id: string) {
     return this.wildriftService.findOneChampion(id);
   }
@@ -76,6 +84,9 @@ export class WildriftController {
   @ApiParam({ name: 'name', description: 'Champion name' })
   @ApiResponse({ status: 200, description: 'Return the Wild Rift champion' })
   @ApiResponse({ status: 404, description: 'Champion not found' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   findChampionByName(@Param('name') name: string) {
     return this.wildriftService.findChampionByName(name);
   }
@@ -88,6 +99,9 @@ export class WildriftController {
     description: 'Return the Wild Rift champion with its builds',
   })
   @ApiResponse({ status: 404, description: 'Champion not found' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   async getChampionWithBuilds(@Param('id') id: string) {
     return this.wildriftService.getChampionWithBuilds(id);
   }

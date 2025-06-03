@@ -6,8 +6,9 @@ import {
   Param,
   Put,
   Delete,
-  UseGuards,
   Query,
+  UseGuards,
+  Header,
 } from '@nestjs/common';
 import { TftService } from './tft.service';
 import { CreateTftChampionDto } from './dto/create-tft-champion.dto';
@@ -48,6 +49,9 @@ export class TftController {
     enum: ['en', 'vi'],
   })
   @ApiResponse({ status: 200, description: 'Return all TFT champions' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   findAllChampions(@Query('lang') lang?: string) {
     return this.tftService.findAllChampions(lang);
   }
@@ -63,6 +67,9 @@ export class TftController {
   })
   @ApiResponse({ status: 200, description: 'Return the TFT champion' })
   @ApiResponse({ status: 404, description: 'Champion not found' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   findOneChampion(@Param('id') id: string, @Query('lang') lang?: string) {
     return this.tftService.findOneChampion(id, lang);
   }
@@ -78,6 +85,9 @@ export class TftController {
   })
   @ApiResponse({ status: 200, description: 'Return the TFT champion' })
   @ApiResponse({ status: 404, description: 'Champion not found' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   findChampionByName(
     @Param('name') name: string,
     @Query('lang') lang?: string,
@@ -184,6 +194,9 @@ export class TftController {
     enum: ['en', 'vi'],
   })
   @ApiResponse({ status: 200, description: 'Return all TFT items' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   findAllItems(@Query('lang') lang?: string) {
     return this.tftService.findAllItems(lang);
   }
@@ -199,6 +212,9 @@ export class TftController {
   })
   @ApiResponse({ status: 200, description: 'Return the TFT item' })
   @ApiResponse({ status: 404, description: 'Item not found' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   findOneItem(@Param('id') id: string, @Query('lang') lang?: string) {
     return this.tftService.findOneItem(id, lang);
   }
@@ -214,6 +230,9 @@ export class TftController {
   })
   @ApiResponse({ status: 200, description: 'Return the TFT item' })
   @ApiResponse({ status: 404, description: 'Item not found' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   findItemByName(@Param('name') name: string, @Query('lang') lang?: string) {
     return this.tftService.findItemByName(name, lang);
   }
@@ -229,6 +248,9 @@ export class TftController {
   })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
   @ApiResponse({ status: 403, description: 'Forbidden' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   createItem(@Body() createTftItemDto: CreateTftItemDto) {
     return this.tftService.createItem(createTftItemDto);
   }
@@ -246,6 +268,9 @@ export class TftController {
   @ApiResponse({ status: 401, description: 'Unauthorized' })
   @ApiResponse({ status: 403, description: 'Forbidden' })
   @ApiResponse({ status: 404, description: 'Item not found' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   updateItem(
     @Param('id') id: string,
     @Body() updateTftItemDto: UpdateTftItemDto,
@@ -266,6 +291,9 @@ export class TftController {
   @ApiResponse({ status: 401, description: 'Unauthorized' })
   @ApiResponse({ status: 403, description: 'Forbidden' })
   @ApiResponse({ status: 404, description: 'Item not found' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   removeItem(@Param('id') id: string) {
     return this.tftService.removeItem(id);
   }
@@ -279,6 +307,9 @@ export class TftController {
     description: 'Filter by patch version',
   })
   @ApiResponse({ status: 200, description: 'Return all TFT compositions' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   findAllComps(@Query('patch') patch?: string) {
     return this.tftService.findAllComps(patch);
   }
@@ -288,6 +319,9 @@ export class TftController {
   @ApiParam({ name: 'id', description: 'Composition ID' })
   @ApiResponse({ status: 200, description: 'Return the TFT composition' })
   @ApiResponse({ status: 404, description: 'Composition not found' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   findOneComp(@Param('id') id: string) {
     return this.tftService.findOneComp(id);
   }
@@ -303,6 +337,9 @@ export class TftController {
   })
   @ApiResponse({ status: 401, description: 'Unauthorized' })
   @ApiResponse({ status: 403, description: 'Forbidden' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   createComp(@Body() createTftCompDto: CreateTftCompDto) {
     return this.tftService.createComp(createTftCompDto);
   }
@@ -320,6 +357,9 @@ export class TftController {
   @ApiResponse({ status: 401, description: 'Unauthorized' })
   @ApiResponse({ status: 403, description: 'Forbidden' })
   @ApiResponse({ status: 404, description: 'Composition not found' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   updateComp(
     @Param('id') id: string,
     @Body() updateTftCompDto: UpdateTftCompDto,
@@ -340,6 +380,9 @@ export class TftController {
   @ApiResponse({ status: 401, description: 'Unauthorized' })
   @ApiResponse({ status: 403, description: 'Forbidden' })
   @ApiResponse({ status: 404, description: 'Composition not found' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   removeComp(@Param('id') id: string) {
     return this.tftService.removeComp(id);
   }

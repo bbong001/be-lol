@@ -146,7 +146,8 @@
     "test:tft-full-crud": "ts-node src/tft/scripts/test-full-crud.ts",
     "migrate:tft-items-i18n": "ts-node src/tft/scripts/migrate-items-to-i18n.ts",
     "test:tft-items-i18n": "ts-node src/tft/scripts/test-items-i18n.ts",
-    "update:tft-items-vietnamese": "ts-node src/tft/scripts/update-vietnamese-translations.ts"
+    "update:tft-items-vietnamese": "ts-node src/tft/scripts/update-vietnamese-translations.ts",
+    "test:home-i18n": "ts-node src/home/scripts/test-home-i18n.ts"
   },
   "dependencies": {
     "@nestjs/axios": "^4.0.0",

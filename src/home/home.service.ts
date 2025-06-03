@@ -15,22 +15,22 @@ export class HomeService {
     private readonly wildriftService: WildriftService,
   ) {}
 
-  async getHomePageData() {
+  async getHomePageData(lang: string = 'vi') {
     // TODO: Consider implementing cache here for better performance
-    // const cacheKey = 'home-page-data';
+    // const cacheKey = `home-page-data-${lang}`;
     // const cachedData = await this.cacheService.get(cacheKey);
     // if (cachedData) return cachedData;
 
-    // Get latest news (limit to 5)
-    const latestNews = await this.newsService.findAll(5, 1);
+    // Get latest news (limit to 5) with language support
+    const latestNews = await this.newsService.findAll(5, 1, lang);
 
-    // Get latest PC builds (limit to 3)
-    const latestPcBuilds = await this.pcBuildService.findAllBuilds(3, 1);
+    // Get latest PC builds (limit to 3) with language support
+    const latestPcBuilds = await this.pcBuildService.findAllBuilds(3, 1, lang);
 
-    // Get 5 random champions from each game
-    const randomChampions = await this.getRandomLolChampions(5);
-    const randomTftChampions = await this.getRandomTftChampions(5);
-    const randomWrChampions = await this.getRandomWildriftChampions(5);
+    // Get 5 random champions from each game with language support
+    const randomChampions = await this.getRandomLolChampions(5, lang);
+    const randomTftChampions = await this.getRandomTftChampions(5, lang);
+    const randomWrChampions = await this.getRandomWildriftChampions(5, lang);
 
     const result = {
       status: 'success',
@@ -50,10 +50,14 @@ export class HomeService {
   }
 
   // Helper method to get random League of Legends champions
-  private async getRandomLolChampions(count: number) {
+  private async getRandomLolChampions(count: number, lang: string) {
     try {
       // Champions service has findAll method that returns paginated response
-      const championsResponse = await this.championsService.findAll(1, 100);
+      const championsResponse = await this.championsService.findAll(
+        1,
+        100,
+        lang as any,
+      );
       return this.getRandomItems(championsResponse.data, count);
     } catch (error) {
       // Fallback to empty array if method fails
@@ -63,10 +67,10 @@ export class HomeService {
   }
 
   // Helper method to get random TFT champions
-  private async getRandomTftChampions(count: number) {
+  private async getRandomTftChampions(count: number, lang: string) {
     try {
       // TFT service has findAllChampions method that returns an array of champions
-      const champions = await this.tftService.findAllChampions();
+      const champions = await this.tftService.findAllChampions(lang);
       return this.getRandomItems(champions, count);
     } catch (error) {
       // Fallback to empty array if method fails
@@ -76,9 +80,10 @@ export class HomeService {
   }
 
   // Helper method to get random Wild Rift champions
-  private async getRandomWildriftChampions(count: number) {
+  private async getRandomWildriftChampions(count: number, _lang: string) {
     try {
       // WildRift service findAllChampions returns a paginated response with items array
+      // Note: WildRift service doesn't support language parameter yet
       const response = await this.wildriftService.findAllChampions({
         limit: 100,
         page: 1,

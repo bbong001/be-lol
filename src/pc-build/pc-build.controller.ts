@@ -293,6 +293,9 @@ export class PcBuildController {
   @ApiBearerAuth()
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles(Role.ADMIN)
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   @Get('admin')
   async getAllBuildsAdmin(
     @Query('limit') limit: string,

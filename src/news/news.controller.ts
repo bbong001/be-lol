@@ -9,6 +9,7 @@ import {
   Request,
   Put,
   Delete,
+  Header,
 } from '@nestjs/common';
 import { NewsService } from './news.service';
 import { CreateArticleDto } from './dtos/create-article.dto';
@@ -52,6 +53,9 @@ export class NewsController {
     enum: ['vi', 'en'],
   })
   @ApiResponse({ status: 200, description: 'Articles retrieved successfully' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   @Get()
   async findAll(
     @Query('limit') limit: string,
@@ -92,6 +96,9 @@ export class NewsController {
   @ApiBearerAuth()
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles(Role.ADMIN)
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   @Get('admin')
   async findAllAdmin(
     @Query('limit') limit: string,
@@ -129,6 +136,9 @@ export class NewsController {
     enum: ['vi', 'en'],
   })
   @ApiResponse({ status: 200, description: 'Articles retrieved successfully' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   @Get('tag/:tag')
   async findByTag(
     @Param('tag') tag: string,
@@ -162,6 +172,9 @@ export class NewsController {
   })
   @ApiResponse({ status: 200, description: 'Article retrieved successfully' })
   @ApiResponse({ status: 404, description: 'Article not found' })
+  @Header('Cache-Control', 'no-cache, no-store, must-revalidate')
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   @Get(':slug')
   async findOne(@Param('slug') slug: string, @Query('lang') lang: string) {
     const language = lang || 'vi';
